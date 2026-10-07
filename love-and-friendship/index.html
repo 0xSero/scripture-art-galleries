@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Love and Friendship &mdash; a reading list from the King James Bible</title>
+<meta name="description" content="41 passages of the King James Bible on love and on friendship, quoted whole, with notes.">
+<style>
+:root {
+  --paper: #fcfbf9;
+  --ink: #17161a;
+  --muted: #6c6862;
+  --rule: #ddd8d0;
+  --rule-soft: #ebe7e1;
+  --accent: #7a2e2e;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --measure: 62ch;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #14140f; --ink: #ece8e1; --muted: #9b958c; --rule: #34322c;
+           --rule-soft: #24231e; --accent: #d99a9a; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans);
+       font-size: 16px; line-height: 1.6; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 28px 96px; }
+a { color: inherit; }
+a:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+header.masthead { padding: 68px 0 0; border-bottom: 1px solid var(--rule); }
+.kicker { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin: 0 0 18px; }
+h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(32px, 5.4vw, 52px); line-height: 1.05; letter-spacing: -.015em; margin: 0 0 16px; }
+h1 em { font-style: italic; color: var(--accent); }
+.lede { font-family: var(--serif); font-size: clamp(17px, 2vw, 20px); line-height: 1.5; max-width: var(--measure); margin: 0 0 14px; }
+.method { max-width: var(--measure); font-size: 14px; line-height: 1.65; color: var(--muted); margin: 0 0 34px; }
+.method b { color: var(--ink); font-weight: 600; }
+.controls { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; padding: 0 0 30px; border-bottom: 1px solid var(--rule); }
+.controls label { font-size: 11px; letter-spacing: .13em; text-transform: uppercase; color: var(--muted); }
+.controls input { font: inherit; font-size: 14px; padding: 7px 10px; border: 1px solid var(--rule); background: transparent; color: inherit; min-width: 260px; }
+.controls .count { font-size: 12.5px; color: var(--muted); margin-left: auto; }
+
+.sec { padding-top: 70px; }
+.sec-h { border-top: 1px solid var(--ink); padding-top: 15px; margin-bottom: 26px; }
+.sec-h h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 3.6vw, 33px); margin: 0 0 10px; letter-spacing: -.01em; }
+.blurb { font-family: var(--serif); font-size: 16px; line-height: 1.55; color: var(--muted); max-width: var(--measure); margin: 0; }
+
+nav.mini { margin: 0 0 44px; }
+nav.mini ol { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 34px; }
+nav.mini li { break-inside: avoid; padding: 6px 0; border-bottom: 1px solid var(--rule-soft); display: flex; gap: 10px; align-items: baseline; }
+nav.mini a { font-family: var(--serif); font-size: 15px; text-decoration: none; white-space: nowrap; }
+nav.mini a:hover { color: var(--accent); }
+nav.mini .tt { font-size: 12.5px; color: var(--muted); }
+
+.passage { margin: 0 0 54px; padding-top: 22px; border-top: 1px solid var(--rule-soft); max-width: 760px; }
+.ph { margin-bottom: 16px; }
+.ref { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin: 0 0 7px; display: flex; gap: 12px; }
+.ref .wc { color: var(--muted); letter-spacing: .08em; }
+.ph h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(20px, 2.8vw, 26px); line-height: 1.2; margin: 0 0 8px; }
+.note { font-size: 14px; line-height: 1.6; color: var(--muted); margin: 0; }
+.text { font-family: var(--serif); font-size: 17px; line-height: 1.62; }
+.text .v { margin: 0 0 9px; padding-left: 34px; text-indent: -34px; }
+.text .vn { display: inline-block; width: 26px; text-indent: 0; font-family: var(--sans); font-size: 11px; color: var(--muted); vertical-align: .18em; }
+.text .key { padding-left: 34px; }
+.text .key .vn { color: var(--accent); font-weight: 700; }
+.passage[hidden] { display: none; }
+
+footer { margin-top: 80px; border-top: 1px solid var(--rule); padding-top: 24px; font-size: 13.5px; line-height: 1.7; color: var(--muted); max-width: var(--measure); }
+footer h2 { font-family: var(--serif); font-weight: 400; font-size: 17px; color: var(--ink); margin: 0 0 12px; }
+footer code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+.companion { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--rule-soft); }
+.companion a { color: var(--accent); }
+@media (max-width: 640px) {
+  .wrap { padding: 0 18px 72px; }
+  nav.mini ol { columns: 1; }
+  .controls .count { margin-left: 0; }
+}
+@media print {
+  nav.mini, .controls { display: none; }
+  .passage { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="kicker">A reading list &middot; King James Version &middot; 41 passages</p>
+    <h1>Love, <em>and Friendship</em></h1>
+    <p class="lede">The Bible talks about love more than it talks about almost anything else, and about friendship in a smaller, sharper set of passages &mdash; covenants made in fields, proverbs reduced to a line, and farewells, which is where friendship is tested. Every passage below is quoted whole, not excerpted, and every verse is the King James text.</p>
+    <p class="method">Two sections. <b>Love</b> runs from the love of God for people, through the commandment to love one's neighbour, to the Song of Solomon and the one chapter that is read at weddings and funerals both. <b>Friendship</b> runs from David and Jonathan, through the proverbs, to Paul's last letters and the friends who stayed and the ones who left. The verses that carry the passage are marked in red; the rest are there because a passage read in pieces is not the passage.</p>
+  </header>
+
+  <div class="controls">
+    <label for="q">Filter</label>
+    <input id="q" type="search" placeholder="love, Jonathan, neighbour, wept&hellip;" autocomplete="off">
+    <span class="count" id="count">41 passages</span>
+  </div>
+
+  <main>
+    <section class="sec" id="sec-love">
+      <header class="sec-h">
+        <h2>Love</h2>
+        <p class="blurb">Twenty passages, in the order they are worth reading: the love of God for people, the love of people for each other, and the one chapter that is read aloud at both weddings and funerals.</p>
+      </header>
+      <nav class="mini" aria-label="Love contents">
+        <ol>
+          <li><a href="#love-1">1 John 4:7–21</a><span class="tt">God is love</span></li>
+          <li><a href="#love-2">John 3:14–21</a><span class="tt">For God so loved the world</span></li>
+          <li><a href="#love-3">Romans 8:31–39</a><span class="tt">Who shall separate us</span></li>
+          <li><a href="#love-4">Hosea 11:1–11</a><span class="tt">When Israel was a child</span></li>
+          <li><a href="#love-5">Jeremiah 31:1–6</a><span class="tt">I have loved thee with an everlasting love</span></li>
+          <li><a href="#love-6">Isaiah 54:4–10</a><span class="tt">With everlasting kindness</span></li>
+          <li><a href="#love-7">Deuteronomy 6:4–9</a><span class="tt">Thou shalt love the LORD thy God</span></li>
+          <li><a href="#love-8">Psalms 103:8–14</a><span class="tt">Like as a father pitieth his children</span></li>
+          <li><a href="#love-9">1 Corinthians 13:1–13</a><span class="tt">The greatest of these is charity</span></li>
+          <li><a href="#love-10">Song of Solomon 2:1–17</a><span class="tt">My beloved is mine</span></li>
+          <li><a href="#love-11">Song of Solomon 8:6–7</a><span class="tt">Love is strong as death</span></li>
+          <li><a href="#love-12">Genesis 29:15–20</a><span class="tt">Jacob served seven years for Rachel</span></li>
+          <li><a href="#love-13">Matthew 22:34–40</a><span class="tt">On these two commandments hang all the law</span></li>
+          <li><a href="#love-14">Leviticus 19:9–18</a><span class="tt">Thou shalt love thy neighbour as thyself</span></li>
+          <li><a href="#love-15">John 13:31–35</a><span class="tt">A new commandment I give unto you</span></li>
+          <li><a href="#love-16">John 15:9–17</a><span class="tt">Greater love hath no man than this</span></li>
+          <li><a href="#love-17">Romans 12:9–21</a><span class="tt">Let love be without dissimulation</span></li>
+          <li><a href="#love-18">1 Peter 4:8–11</a><span class="tt">Charity shall cover the multitude of sins</span></li>
+          <li><a href="#love-19">1 John 3:14–18</a><span class="tt">Let us not love in word</span></li>
+          <li><a href="#love-20">Ruth 1:14–18</a><span class="tt">Thy people shall be my people</span></li>
+        </ol>
+      </nav>
+      <article class="passage" id="love-1" data-search="god is love 1 john 4:7–21 beloved, let us love one another: for love is of god; and every one that loveth is born of god, and knoweth god. he that loveth not knoweth not god; for god is love. in this was manifested the love of god toward us, because that god sent his only begotten son into the world, that we might live through him. herein is love, not that we loved god, but that he loved us, and sent his son to be the propitiation for our sins. beloved, if god so loved us, we ought also to love one another. no man hath seen god at any time. if we love one another, god dwelleth in us, and his love is perfected in us. hereby know we that we dwell in him, and he in us, because he hath given us of his spirit. and we have seen and do testify that the father sent the son to be the saviour of the world. whosoever shall confess that jesus is the son of god, god dwelleth in him, and he in god. and we have known and believed the love that god hath to us. god is love; and he that dwelleth in love dwelleth in god, and god in him. herein is our love made perfect, that we may have boldness in the day of judgment: because as he is, so are we in this world. there is no fear in love; but perfect love casteth out fear: because fear hath torment. he that feareth is not made perfect in love. we love him, because he first loved us. if a man say, i love god, and hateth his brother, he is a liar: for he that loveth not his brother whom he hath seen, how can he love god whom he hath not seen? and this commandment have we from him, that he who loveth god love his brother also.">
+        <header class="ph">
+          <p class="ref">1 John 4:7–21<span class="wc">320 words</span></p>
+          <h3>God is love</h3>
+          <p class="note">The clearest statement of the subject in the Bible, and the one that turns it into an obligation: if God loved us, we ought also to love one another.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">7</span>Beloved, let us love one another: for love is of God; and every one that loveth is born of God, and knoweth God.</p>
+          <p class="v key"><span class="vn">8</span>He that loveth not knoweth not God; for God is love.</p>
+          <p class="v"><span class="vn">9</span>In this was manifested the love of God toward us, because that God sent his only begotten Son into the world, that we might live through him.</p>
+          <p class="v"><span class="vn">10</span>Herein is love, not that we loved God, but that he loved us, and sent his Son to be the propitiation for our sins.</p>
+          <p class="v"><span class="vn">11</span>Beloved, if God so loved us, we ought also to love one another.</p>
+          <p class="v"><span class="vn">12</span>No man hath seen God at any time. If we love one another, God dwelleth in us, and his love is perfected in us.</p>
+          <p class="v"><span class="vn">13</span>Hereby know we that we dwell in him, and he in us, because he hath given us of his Spirit.</p>
+          <p class="v"><span class="vn">14</span>And we have seen and do testify that the Father sent the Son to be the Saviour of the world.</p>
+          <p class="v"><span class="vn">15</span>Whosoever shall confess that Jesus is the Son of God, God dwelleth in him, and he in God.</p>
+          <p class="v key"><span class="vn">16</span>And we have known and believed the love that God hath to us. God is love; and he that dwelleth in love dwelleth in God, and God in him.</p>
+          <p class="v"><span class="vn">17</span>Herein is our love made perfect, that we may have boldness in the day of judgment: because as he is, so are we in this world.</p>
+          <p class="v"><span class="vn">18</span>There is no fear in love; but perfect love casteth out fear: because fear hath torment. He that feareth is not made perfect in love.</p>
+          <p class="v key"><span class="vn">19</span>We love him, because he first loved us.</p>
+          <p class="v"><span class="vn">20</span>If a man say, I love God, and hateth his brother, he is a liar: for he that loveth not his brother whom he hath seen, how can he love God whom he hath not seen?</p>
+          <p class="v"><span class="vn">21</span>And this commandment have we from him, That he who loveth God love his brother also.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="love-2" data-search="for god so loved the world john 3:14–21 and as moses lifted up the serpent in the wilderness, even so must the son of man be lifted up: that whosoever believeth in him should not perish, but have eternal life. for god so loved the world, that he gave his only begotten son, that whosoever believeth in him should not perish, but have everlasting life. for god sent not his son into the world to condemn the world; but that the world through him might be saved. he that believeth on him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten son of god. and this is the condemnation, that light is come into the world, and men loved darkness rather than light, because their deeds were evil. for every one that doeth evil hateth the light, neither cometh to the light, lest his deeds should be reproved. but he that doeth truth cometh to the light, that his deeds may be made manifest, that they are wrought in god.">
+        <header class="ph">
+          <p class="ref">John 3:14–21<span class="wc">176 words</span></p>
+          <h3>For God so loved the world</h3>
+          <p class="note">The verse everybody knows, in the argument it actually belongs to — love measured by what it is willing to give up.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">14</span>And as Moses lifted up the serpent in the wilderness, even so must the Son of man be lifted up:</p>
+          <p class="v"><span class="vn">15</span>That whosoever believeth in him should not perish, but have eternal life.</p>
+          <p class="v key"><span class="vn">16</span>For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.</p>
+          <p class="v"><span class="vn">17</span>For God sent not his Son into the world to condemn the world; but that the world through him might be saved.</p>
+          <p class="v"><span class="vn">18</span>He that believeth on him is not condemned: but he that believeth not is condemned already, because he hath not believed in the name of the only begotten Son of God.</p>
+          <p class="v"><span class="vn">19</span>And this is the condemnation, that light is come into the world, and men loved darkness rather than light, because their deeds were evil.</p>
+          <p class="v"><span class="vn">20</span>For every one that doeth evil hateth the light, neither cometh to the light, lest his deeds should be reproved.</p>
+          <p class="v"><span class="vn">21</span>But he that doeth truth cometh to the light, that his deeds may be made manifest, that they are wrought in God.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="love-3" data-search="who shall separate us romans 8:31–39 what shall we then say to these things? if god be for us, who can be against us? he that spared not his own son, but delivered him up for us all, how shall he not with him also freely give us all things? who shall lay any thing to the charge of god’s elect? it is god that justifieth. who is he that condemneth? it is christ that died, yea rather, that is risen again, who is even at the right hand of god, who also maketh intercession for us. who shall separate us from the love of christ? shall tribulation, or distress, or persecution, or famine, or nakedness, or peril, or sword? as it is written, for thy sake we are killed all the day long; we are accounted as sheep for the slaughter. nay, in all these things we are more than conquerors through him that loved us. for i am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come, nor height, nor depth, nor any other creature, shall be able to separate us from the love of god, which is in christ jesus our lord.">
+        <header class="ph">
+          <p class="ref">Romans 8:31–39<span class="wc">199 words</span></p>
+          <h3>Who shall separate us</h3>
+          <p class="note">Paul at his most uncompromising: a list of everything that might come between God and his people, and the verdict that none of it can.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">31</span>What shall we then say to these things? If God be for us, who can be against us?</p>
+          <p class="v"><span class="vn">32</span>He that spared not his own Son, but delivered him up for us all, how shall he not with him also freely give us all things?</p>
+          <p class="v"><span class="vn">33</span>Who shall lay any thing to the charge of God’s elect? It is God that justifieth.</p>
+          <p class="v"><span class="vn">34</span>Who is he that condemneth? It is Christ that died, yea rather, that is risen again, who is even at the right hand of God, who also maketh intercession for us.</p>
+          <p class="v key"><span class="vn">35</span>Who shall separate us from the love of Christ? shall tribulation, or distress, or persecution, or famine, or nakedness, or peril, or sword?</p>
+          <p class="v"><span class="vn">36</span>As it is written, For thy sake we are killed all the day long; we are accounted as sheep for the slaughter.</p>
+          <p class="v"><span class="vn">37</span>Nay, in all these things we are more than conquerors through him that loved us.</p>
+          <p class="v key"><span class="vn">38</span>For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come,</p>
+          <p class="v key"><span class="vn">39</span>Nor height, nor depth, nor any other creature, shall be able to separate us from the love of God, which is in Christ Jesus our Lord.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="love-4" data-search="when israel was a child hosea 11:1–11 when israel was a child, then i loved him, and called my son out of egypt. as they called them, so they went from them: they sacrificed unto baalim, and burned incense to graven images. i taught ephraim also to go, taking them by their arms; but they knew not that i healed them. i drew them with cords of a man, with bands of love: and i was to them as they that take off the yoke on their jaws, and i laid meat unto them. he shall not return into the land of egypt, but the assyrian shall be his king, because they refused to return. and the sword shall abide on his cities, and shall consume his branches, and devour them, because of their own counsels. and my people are bent to backsliding from me: though they called them to the most high, none at all would exalt him. how shall i give thee up, ephraim? how shall i deliver thee, israel? how shall i make thee as admah? how shall i set thee as zeboim? mine heart is turned within me, my repentings are kindled together. i will not execute the fierceness of mine anger, i will not return to destroy ephraim: for i am god, and not man; the holy one in the midst of thee: and i will not enter into the city. they shall walk after the lord: he shall roar like a lion: when he shall roar, then the children shall tremble from the west. they shall tremble as a bird out of egypt, and as a dove out of the land of assyria: and i will place them in their houses, saith the lord.">
+        <header class="ph">
+          <p class="ref">Hosea 11:1–11<span class="wc">283 words</span></p>
+          <h3>When Israel was a child</h3>
+          <p class="note">God as a parent teaching a child to walk, and then unable to let him go. The tenderest passage in the prophets.</p>
+        </header>
+        <div class="text">
+          <p class="v key"><span class="vn">1</span>When Israel was a child, then I loved him, and called my son out of Egypt.</p>
+          <p class="v"><span class="vn">2</span>As they called them, so they went from them: they sacrificed unto Baalim, and burned incense to graven images.</p>
+          <p class="v key"><span class="vn">3</span>I taught Ephraim also to go, taking them by their arms; but they knew not that I healed them.</p>
+          <p class="v"><span class="vn">4</span>I drew them with cords of a man, with bands of love: and I was to them as they that take off the yoke on their jaws, and I laid meat unto them.</p>
+          <p class="v"><span class="vn">5</span>He shall not return into the land of Egypt, but the Assyrian shall be his king, because they refused to return.</p>
+          <p class="v"><span class="vn">6</span>And the sword shall abide on his cities, and shall consume his branches, and devour them, because of their own counsels.</p>
+          <p class="v"><span class="vn">7</span>And my people are bent to backsliding from me: though they called them to the most High, none at all would exalt him.</p>
+          <p class="v key"><span class="vn">8</span>How shall I give thee up, Ephraim? how shall I deliver thee, Israel? how shall I make thee as Admah? how shall I set thee as Zeboim? mine heart is turned within me, my repentings are kindled together.</p>
+          <p class="v"><span class="vn">9</span>I will not execute the fierceness of mine anger, I will not return to destroy Ephraim: for I am God, and not man; the Holy One in the midst of thee: and I will not enter into the city.</p>
+          <p class="v"><span class="vn">10</span>They shall walk after the LORD: he shall roar like a lion: when he shall roar, then the children shall tremble from the west.</p>
+          <p class="v"><span class="vn">11</span>They shall tremble as a bird out of Egypt, and as a dove out of the land of Assyria: and I will place them in their houses, saith the LORD.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="love-5" data-search="i have loved thee with an everlasting love jeremiah 31:1–6 at the same time, saith the lord, will i be the god of all the families of israel, and they shall be my people. thus saith the lord, the people which were left of the sword found grace in the wilderness; even israel, when i went to cause him to rest. the lord hath appeared of old unto me, saying, yea, i have loved thee with an everlasting love: therefore with lovingkindness have i drawn thee. again i will build thee, and thou shalt be built, o virgin of israel: thou shalt again be adorned with thy tabrets, and shalt go forth in the dances of them that make merry. thou shalt yet plant vines upon the mountains of samaria: the planters shall plant, and shall eat them as common things. for there shall be a day, that the watchmen upon the mount ephraim shall cry, arise ye, and let us go up to zion unto the lord our god.">
+        <header class="ph">
+          <p class="ref">Jeremiah 31:1–6<span class="wc">160 words</span></p>
+          <h3>I have loved thee with an everlasting love</h3>
+          <p class="note">The promise of return, given to a people already in exile, and grounded not in their faithfulness but in his.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">1</span>At the same time, saith the LORD, will I be the God of all the families of Israel, and they shall be my people.</p>
+          <p class="v"><span class="vn">2</span>Thus saith the LORD, The people which were left of the sword found grace in the wilderness; even Israel, when I went to cause him to rest.</p>
+          <p class="v key"><span class="vn">3</span>The LORD hath appeared of old unto me, saying, Yea, I have loved thee with an everlasting love: therefore with lovingkindness have I drawn thee.</p>
+          <p class="v"><span class="vn">4</span>Again I will build thee, and thou shalt be built, O virgin of Israel: thou shalt again be adorned with thy tabrets, and shalt go forth in the dances of them that make merry.</p>
+          <p class="v"><span class="vn">5</span>Thou shalt yet plant vines upon the mountains of Samaria: the planters shall plant, and shall eat them as common things.</p>
+          <p class="v"><span class="vn">6</span>For there shall be a day, that the watchmen upon the mount Ephraim shall cry, Arise ye, and let us go up to Zion unto the LORD our God.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="love-6" data-search="with everlasting kindness isaiah 54:4–10 fear not; for thou shalt not be ashamed: neither be thou confounded; for thou shalt not be put to shame: for thou shalt forget the shame of thy youth, and shalt not remember the reproach of thy widowhood any more. for thy maker is thine husband; the lord of hosts is his name; and thy redeemer the holy one of israel; the god of the whole earth shall he be called. for the lord hath called thee as a woman forsaken and grieved in spirit, and a wife of youth, when thou wast refused, saith thy god. for a small moment have i forsaken thee; but with great mercies will i gather thee. in a little wrath i hid my face from thee for a moment; but with everlasting kindness will i have mercy on thee, saith the lord thy redeemer. for this is as the waters of noah unto me: for as i have sworn that the waters of noah should no more go over the earth; so have i sworn that i would not be wroth with thee, nor rebuke thee. for the mountains shall depart, and the hills be removed; but my kindness shall not depart from thee, neither shall the covenant of my peace be removed, saith the lord that hath mercy on thee.">
+        <header class="ph">
+          <p class="ref">Isaiah 54:4–10<span class="wc">218 words</span></p>
+          <h3>With everlasting kindness</h3>
+          <p class="note">A deserted wife told she will not be forgotten; the covenant of peace put in the language of a marriage.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">4</span>Fear not; for thou shalt not be ashamed: neither be thou confounded; for thou shalt not be put to shame: for thou shalt forget the shame of thy youth, and shalt not remember the reproach of thy widowhood any more.</p>
+          <p class="v"><span class="vn">5</span>For thy Maker is thine husband; the LORD of hosts is his name; and thy Redeemer the Holy One of Israel; The God of the whole earth shall he be called.</p>
+          <p class="v"><span class="vn">6</span>For the LORD hath called thee as a woman forsaken and grieved in spirit, and a wife of youth, when thou wast refused, saith thy God.</p>
+          <p class="v"><span class="vn">7</span>For a small moment have I forsaken thee; but with great mercies will I gather thee.</p>
+          <p class="v key"><span class="vn">8</span>In a little wrath I hid my face from thee for a moment; but with everlasting kindness will I have mercy on thee, saith the LORD thy Redeemer.</p>
+          <p class="v"><span class="vn">9</span>For this is as the waters of Noah unto me: for as I have sworn that the waters of Noah should no more go over the earth; so have I sworn that I would not be wroth with thee, nor rebuke thee.</p>
+          <p class="v key"><span class="vn">10</span>For the mountains shall depart, and the hills be removed; but my kindness shall not depart from thee, neither shall the covenant of my peace be removed, saith the LORD that hath mercy on thee.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="love-7" data-search="thou shalt love the lord thy god deuteronomy 6:4–9 hear, o israel: the lord our god is one lord: and thou shalt love the lord thy god with all thine heart, and with all thy soul, and with all thy might. and these words, which i command thee this day, shall be in thine heart: and thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thine house, and when thou walkest by the way, and when thou liest down, and when thou risest up. and thou shalt bind them for a sign upon thine hand, and they shall be as frontlets between thine eyes. and thou shalt write them upon the posts of thy house, and on thy gates.">
+        <header class="ph">
+          <p class="ref">Deuteronomy 6:4–9<span class="wc">118 words</span></p>
+          <h3>Thou shalt love the LORD thy God</h3>
+          <p class="note">The Shema, and the first commandment of love: whole heart, whole soul, whole might, and taught to the children.</p>
+        </header>
+        <div class="text">
+          <p class="v key"><span class="vn">4</span>Hear, O Israel: The LORD our God is one LORD:</p>
+          <p class="v key"><span class="vn">5</span>And thou shalt love the LORD thy God with all thine heart, and with all thy soul, and with all thy might.</p>
+          <p class="v"><span class="vn">6</span>And these words, which I command thee this day, shall be in thine heart:</p>
+          <p class="v"><span class="vn">7</span>And thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thine house, and when thou walkest by the way, and when thou liest down, and when thou risest up.</p>
+          <p class="v"><span class="vn">8</span>And thou shalt bind them for a sign upon thine hand, and they shall be as frontlets between thine eyes.</p>
+          <p class="v"><span class="vn">9</span>And thou shalt write them upon the posts of thy house, and on thy gates.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="love-8" data-search="like as a father pitieth his children psalms 103:8–14 the lord is merciful and gracious, slow to anger, and plenteous in mercy. he will not always chide: neither will he keep his anger for ever. he hath not dealt with us after our sins; nor rewarded us according to our iniquities. for as the heaven is high above the earth, so great is his mercy toward them that fear him. as far as the east is from the west, so far hath he removed our transgressions from us. like as a father pitieth his children, so the lord pitieth them that fear him. for he knoweth our frame; he remembereth that we are dust.">
+        <header class="ph">
+          <p class="ref">Psalms 103:8–14<span class="wc">105 words</span></p>
+          <h3>Like as a father pitieth his children</h3>
+          <p class="note">Love described by what it remembers and what it does not hold against you.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">8</span>The LORD is merciful and gracious, slow to anger, and plenteous in mercy.</p>
+          <p class="v"><span class="vn">9</span>He will not always chide: neither will he keep his anger for ever.</p>
+          <p class="v"><span class="vn">10</span>He hath not dealt with us after our sins; nor rewarded us according to our iniquities.</p>
+          <p class="v"><span class="vn">11</span>For as the heaven is high above the earth, so great is his mercy toward them that fear him.</p>
+          <p class="v"><span class="vn">12</span>As far as the east is from the west, so far hath he removed our transgressions from us.</p>
+          <p class="v key"><span class="vn">13</span>Like as a father pitieth his children, so the LORD pitieth them that fear him.</p>
+          <p class="v"><span class="vn">14</span>For he knoweth our frame; he remembereth that we are dust.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="love-9" data-search="the greatest of these is charity 1 corinthians 13:1–13 though i speak with the tongues of men and of angels, and have not charity, i am become as sounding brass, or a tinkling cymbal. and though i have the gift of prophecy, and understand all mysteries, and all knowledge; and though i have all faith, so that i could remove mountains, and have not charity, i am nothing. and though i bestow all my goods to feed the poor, and though i give my body to be burned, and have not charity, it profiteth me nothing. charity suffereth long, and is kind; charity envieth not; charity vaunteth not itself, is not puffed up, doth not behave itself unseemly, seeketh not her own, is not easily provoked, thinketh no evil; rejoiceth not in iniquity, but rejoiceth in the truth; beareth all things, believeth all things, hopeth all things, endureth all things. charity never faileth: but whether there be prophecies, they shall fail; whether there be tongues, they shall cease; whether there be knowledge, it shall vanish away. for we know in part, and we prophesy in part. but when that which is perfect is come, then that which is in part shall be done away. when i was a child, i spake as a child, i understood as a child, i thought as a child: but when i became a man, i put away childish things. for now we see through a glass, darkly; but then face to face: now i know in part; but then shall i know even as also i am known. and now abideth faith, hope, charity, these three; but the greatest of these is charity.">
+        <header class="ph">
+          <p class="ref">1 Corinthians 13:1–13<span class="wc">270 words</span></p>
+          <h3>The greatest of these is charity</h3>
+          <p class="note">Thirteen verses that are read at weddings and funerals both, and the only place in the Bible where love is defined by what it does without.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">1</span>Though I speak with the tongues of men and of angels, and have not charity, I am become as sounding brass, or a tinkling cymbal.</p>
+          <p class="v"><span class="vn">2</span>And though I have the gift of prophecy, and understand all mysteries, and all knowledge; and though I have all faith, so that I could remove mountains, and have not charity, I am nothing.</p>
+          <p class="v"><span class="vn">3</span>And though I bestow all my goods to feed the poor, and though I give my body to be burned, and have not charity, it profiteth me nothing.</p>
+          <p class="v key"><span class="vn">4</span>Charity suffereth long, and is kind; charity envieth not; charity vaunteth not itself, is not puffed up,</p>
+          <p class="v"><span class="vn">5</span>Doth not behave itself unseemly, seeketh not her own, is not easily provoked, thinketh no evil;</p>
+          <p class="v"><span class="vn">6</span>Rejoiceth not in iniquity, but rejoiceth in the truth;</p>
+          <p class="v"><span class="vn">7</span>Beareth all things, believeth all things, hopeth all things, endureth all things.</p>
+          <p class="v"><span class="vn">8</span>Charity never faileth: but whether there be prophecies, they shall fail; whether there be tongues, they shall cease; whether there be knowledge, it shall vanish away.</p>
+          <p class="v"><span class="vn">9</span>For we know in part, and we prophesy in part.</p>
+          <p class="v"><span class="vn">10</span>But when that which is perfect is come, then that which is in part shall be done away.</p>
+          <p class="v"><span class="vn">11</span>When I was a child, I spake as a child, I understood as a child, I thought as a child: but when I became a man, I put away childish things.</p>
+          <p class="v"><span class="vn">12</span>For now we see through a glass, darkly; but then face to face: now I know in part; but then shall I know even as also I am known.</p>
+          <p class="v key"><span class="vn">13</span>And now abideth faith, hope, charity, these three; but the greatest of these is charity.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="love-10" data-search="my beloved is mine song of solomon 2:1–17 i am the rose of sharon, and the lily of the valleys. as the lily among thorns, so is my love among the daughters. as the apple tree among the trees of the wood, so is my beloved among the sons. i sat down under his shadow with great delight, and his fruit was sweet to my taste. he brought me to the banqueting house, and his banner over me was love. stay me with flagons, comfort me with apples: for i am sick of love. his left hand is under my head, and his right hand doth embrace me. i charge you, o ye daughters of jerusalem, by the roes, and by the hinds of the field, that ye stir not up, nor awake my love, till he please. the voice of my beloved! behold, he cometh leaping upon the mountains, skipping upon the hills. my beloved is like a roe or a young hart: behold, he standeth behind our wall, he looketh forth at the windows, shewing himself through the lattice. my beloved spake, and said unto me, rise up, my love, my fair one, and come away. for, lo, the winter is past, the rain is over and gone; the flowers appear on the earth; the time of the singing of birds is come, and the voice of the turtle is heard in our land; the fig tree putteth forth her green figs, and the vines with the tender grape give a good smell. arise, my love, my fair one, and come away. o my dove, that art in the clefts of the rock, in the secret places of the stairs, let me see thy countenance, let me hear thy voice; for sweet is thy voice, and thy countenance is comely. take us the foxes, the little foxes, that spoil the vines: for our vines have tender grapes. my beloved is mine, and i am his: he feedeth among the lilies. until the day break, and the shadows flee away, turn, my beloved, and be thou like a roe or a young hart upon the mountains of bether.">
+        <header class="ph">
+          <p class="ref">Song of Solomon 2:1–17<span class="wc">351 words</span></p>
+          <h3>My beloved is mine</h3>
+          <p class="note">Spring, and the voice of the beloved at the window. The Bible's love poem at its most lyrical.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">1</span>I am the rose of Sharon, and the lily of the valleys.</p>
+          <p class="v"><span class="vn">2</span>As the lily among thorns, so is my love among the daughters.</p>
+          <p class="v"><span class="vn">3</span>As the apple tree among the trees of the wood, so is my beloved among the sons. I sat down under his shadow with great delight, and his fruit was sweet to my taste.</p>
+          <p class="v key"><span class="vn">4</span>He brought me to the banqueting house, and his banner over me was love.</p>
+          <p class="v"><span class="vn">5</span>Stay me with flagons, comfort me with apples: for I am sick of love.</p>
+          <p class="v"><span class="vn">6</span>His left hand is under my head, and his right hand doth embrace me.</p>
+          <p class="v"><span class="vn">7</span>I charge you, O ye daughters of Jerusalem, by the roes, and by the hinds of the field, that ye stir not up, nor awake my love, till he please.</p>
+          <p class="v"><span class="vn">8</span>The voice of my beloved! behold, he cometh leaping upon the mountains, skipping upon the hills.</p>
+          <p class="v"><span class="vn">9</span>My beloved is like a roe or a young hart: behold, he standeth behind our wall, he looketh forth at the windows, shewing himself through the lattice.</p>
+          <p class="v"><span class="vn">10</span>My beloved spake, and said unto me, Rise up, my love, my fair one, and come away.</p>
+          <p class="v"><span class="vn">11</span>For, lo, the winter is past, the rain is over and gone;</p>
+          <p class="v"><span class="vn">12</span>The flowers appear on the earth; the time of the singing of birds is come, and the voice of the turtle is heard in our land;</p>
+          <p class="v"><span class="vn">13</span>The fig tree putteth forth her green figs, and the vines with the tender grape give a good smell. Arise, my love, my fair one, and come away.</p>
+          <p class="v"><span class="vn">14</span>O my dove, that art in the clefts of the rock, in the secret places of the stairs, let me see thy countenance, let me hear thy voice; for sweet is thy voice, and thy countenance is comely.</p>
+          <p class="v"><span class="vn">15</span>Take us the foxes, the little foxes, that spoil the vines: for our vines have tender grapes.</p>
+          <p class="v key"><span class="vn">16</span>My beloved is mine, and I am his: he feedeth among the lilies.</p>
+          <p class="v"><span class="vn">17</span>Until the day break, and the shadows flee away, turn, my beloved, and be thou like a roe or a young hart upon the mountains of Bether.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="love-11" data-search="love is strong as death song of solomon 8:6–7 set me as a seal upon thine heart, as a seal upon thine arm: for love is strong as death; jealousy is cruel as the grave: the coals thereof are coals of fire, which hath a most vehement flame. many waters cannot quench love, neither can the floods drown it: if a man would give all the substance of his house for love, it would utterly be contemned.">
+        <header class="ph">
+          <p class="ref">Song of Solomon 8:6–7<span class="wc">68 words</span></p>
+          <h3>Love is strong as death</h3>
+          <p class="note">One verse that puts love and death in the same scale, and finds love heavier — jealousy cruel as the grave, and many waters unable to quench it.</p>
+        </header>
+        <div class="text">
+          <p class="v key"><span class="vn">6</span>Set me as a seal upon thine heart, as a seal upon thine arm: for love is strong as death; jealousy is cruel as the grave: the coals thereof are coals of fire, which hath a most vehement flame.</p>
+          <p class="v key"><span class="vn">7</span>Many waters cannot quench love, neither can the floods drown it: if a man would give all the substance of his house for love, it would utterly be contemned.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="love-12" data-search="jacob served seven years for rachel genesis 29:15–20 and laban said unto jacob, because thou art my brother, shouldest thou therefore serve me for nought? tell me, what shall thy wages be? and laban had two daughters: the name of the elder was leah, and the name of the younger was rachel. leah was tender eyed; but rachel was beautiful and well favoured. and jacob loved rachel; and said, i will serve thee seven years for rachel thy younger daughter. and laban said, it is better that i give her to thee, than that i should give her to another man: abide with me. and jacob served seven years for rachel; and they seemed unto him but a few days, for the love he had to her.">
+        <header class="ph">
+          <p class="ref">Genesis 29:15–20<span class="wc">119 words</span></p>
+          <h3>Jacob served seven years for Rachel</h3>
+          <p class="note">Seven years that seemed but a few days, for the love he had to her. The plainest account of what love costs and how it feels.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">15</span>And Laban said unto Jacob, Because thou art my brother, shouldest thou therefore serve me for nought? tell me, what shall thy wages be?</p>
+          <p class="v"><span class="vn">16</span>And Laban had two daughters: the name of the elder was Leah, and the name of the younger was Rachel.</p>
+          <p class="v"><span class="vn">17</span>Leah was tender eyed; but Rachel was beautiful and well favoured.</p>
+          <p class="v"><span class="vn">18</span>And Jacob loved Rachel; and said, I will serve thee seven years for Rachel thy younger daughter.</p>
+          <p class="v"><span class="vn">19</span>And Laban said, It is better that I give her to thee, than that I should give her to another man: abide with me.</p>
+          <p class="v key"><span class="vn">20</span>And Jacob served seven years for Rachel; and they seemed unto him but a few days, for the love he had to her.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="love-13" data-search="on these two commandments hang all the law matthew 22:34–40 but when the pharisees had heard that he had put the sadducees to silence, they were gathered together. then one of them, which was a lawyer, asked him a question, tempting him, and saying, master, which is the great commandment in the law? jesus said unto him, thou shalt love the lord thy god with all thy heart, and with all thy soul, and with all thy mind. this is the first and great commandment. and the second is like unto it, thou shalt love thy neighbour as thyself. on these two commandments hang all the law and the prophets.">
+        <header class="ph">
+          <p class="ref">Matthew 22:34–40<span class="wc">100 words</span></p>
+          <h3>On these two commandments hang all the law</h3>
+          <p class="note">The lawyer's question, and the answer that reduces everything to love of God and love of neighbour.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">34</span>But when the Pharisees had heard that he had put the Sadducees to silence, they were gathered together.</p>
+          <p class="v"><span class="vn">35</span>Then one of them, which was a lawyer, asked him a question, tempting him, and saying,</p>
+          <p class="v"><span class="vn">36</span>Master, which is the great commandment in the law?</p>
+          <p class="v key"><span class="vn">37</span>Jesus said unto him, Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind.</p>
+          <p class="v"><span class="vn">38</span>This is the first and great commandment.</p>
+          <p class="v key"><span class="vn">39</span>And the second is like unto it, Thou shalt love thy neighbour as thyself.</p>
+          <p class="v key"><span class="vn">40</span>On these two commandments hang all the law and the prophets.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="love-14" data-search="thou shalt love thy neighbour as thyself leviticus 19:9–18 and when ye reap the harvest of your land, thou shalt not wholly reap the corners of thy field, neither shalt thou gather the gleanings of thy harvest. and thou shalt not glean thy vineyard, neither shalt thou gather every grape of thy vineyard; thou shalt leave them for the poor and stranger: i am the lord your god. ye shall not steal, neither deal falsely, neither lie one to another. and ye shall not swear by my name falsely, neither shalt thou profane the name of thy god: i am the lord. thou shalt not defraud thy neighbour, neither rob him: the wages of him that is hired shall not abide with thee all night until the morning. thou shalt not curse the deaf, nor put a stumblingblock before the blind, but shalt fear thy god: i am the lord. ye shall do no unrighteousness in judgment: thou shalt not respect the person of the poor, nor honour the person of the mighty: but in righteousness shalt thou judge thy neighbour. thou shalt not go up and down as a talebearer among thy people: neither shalt thou stand against the blood of thy neighbour: i am the lord. thou shalt not hate thy brother in thine heart: thou shalt in any wise rebuke thy neighbour, and not suffer sin upon him. thou shalt not avenge, nor bear any grudge against the children of thy people, but thou shalt love thy neighbour as thyself: i am the lord.">
+        <header class="ph">
+          <p class="ref">Leviticus 19:9–18<span class="wc">248 words</span></p>
+          <h3>Thou shalt love thy neighbour as thyself</h3>
+          <p class="note">The command in the law book, in a chapter mostly about leaving the corners of the field for the poor.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">9</span>And when ye reap the harvest of your land, thou shalt not wholly reap the corners of thy field, neither shalt thou gather the gleanings of thy harvest.</p>
+          <p class="v"><span class="vn">10</span>And thou shalt not glean thy vineyard, neither shalt thou gather every grape of thy vineyard; thou shalt leave them for the poor and stranger: I am the LORD your God.</p>
+          <p class="v"><span class="vn">11</span>Ye shall not steal, neither deal falsely, neither lie one to another.</p>
+          <p class="v"><span class="vn">12</span>And ye shall not swear by my name falsely, neither shalt thou profane the name of thy God: I am the LORD.</p>
+          <p class="v"><span class="vn">13</span>Thou shalt not defraud thy neighbour, neither rob him: the wages of him that is hired shall not abide with thee all night until the morning.</p>
+          <p class="v"><span class="vn">14</span>Thou shalt not curse the deaf, nor put a stumblingblock before the blind, but shalt fear thy God: I am the LORD.</p>
+          <p class="v"><span class="vn">15</span>Ye shall do no unrighteousness in judgment: thou shalt not respect the person of the poor, nor honour the person of the mighty: but in righteousness shalt thou judge thy neighbour.</p>
+          <p class="v"><span class="vn">16</span>Thou shalt not go up and down as a talebearer among thy people: neither shalt thou stand against the blood of thy neighbour: I am the LORD.</p>
+          <p class="v"><span class="vn">17</span>Thou shalt not hate thy brother in thine heart: thou shalt in any wise rebuke thy neighbour, and not suffer sin upon him.</p>
+          <p class="v key"><span class="vn">18</span>Thou shalt not avenge, nor bear any grudge against the children of thy people, but thou shalt love thy neighbour as thyself: I am the LORD.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="love-15" data-search="a new commandment i give unto you john 13:31–35 therefore, when he was gone out, jesus said, now is the son of man glorified, and god is glorified in him. if god be glorified in him, god shall also glorify him in himself, and shall straightway glorify him. little children, yet a little while i am with you. ye shall seek me: and as i said unto the jews, whither i go, ye cannot come; so now i say to you. a new commandment i give unto you, that ye love one another; as i have loved you, that ye also love one another. by this shall all men know that ye are my disciples, if ye have love one to another.">
+        <header class="ph">
+          <p class="ref">John 13:31–35<span class="wc">113 words</span></p>
+          <h3>A new commandment I give unto you</h3>
+          <p class="note">Given on the night he was betrayed, and given as a sign: by this shall all men know that ye are my disciples.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">31</span>Therefore, when he was gone out, Jesus said, Now is the Son of man glorified, and God is glorified in him.</p>
+          <p class="v"><span class="vn">32</span>If God be glorified in him, God shall also glorify him in himself, and shall straightway glorify him.</p>
+          <p class="v"><span class="vn">33</span>Little children, yet a little while I am with you. Ye shall seek me: and as I said unto the Jews, Whither I go, ye cannot come; so now I say to you.</p>
+          <p class="v key"><span class="vn">34</span>A new commandment I give unto you, That ye love one another; as I have loved you, that ye also love one another.</p>
+          <p class="v key"><span class="vn">35</span>By this shall all men know that ye are my disciples, if ye have love one to another.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="love-16" data-search="greater love hath no man than this john 15:9–17 as the father hath loved me, so have i loved you: continue ye in my love. if ye keep my commandments, ye shall abide in my love; even as i have kept my father’s commandments, and abide in his love. these things have i spoken unto you, that my joy might remain in you, and that your joy might be full. this is my commandment, that ye love one another, as i have loved you. greater love hath no man than this, that a man lay down his life for his friends. ye are my friends, if ye do whatsoever i command you. henceforth i call you not servants; for the servant knoweth not what his lord doeth: but i have called you friends; for all things that i have heard of my father i have made known unto you. ye have not chosen me, but i have chosen you, and ordained you, that ye should go and bring forth fruit, and that your fruit should remain: that whatsoever ye shall ask of the father in my name, he may give it you. these things i command you, that ye love one another.">
+        <header class="ph">
+          <p class="ref">John 15:9–17<span class="wc">193 words</span></p>
+          <h3>Greater love hath no man than this</h3>
+          <p class="note">The vine, the branches, and the command to love — the passage that also calls the disciples friends rather than servants.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">9</span>As the Father hath loved me, so have I loved you: continue ye in my love.</p>
+          <p class="v"><span class="vn">10</span>If ye keep my commandments, ye shall abide in my love; even as I have kept my Father’s commandments, and abide in his love.</p>
+          <p class="v"><span class="vn">11</span>These things have I spoken unto you, that my joy might remain in you, and that your joy might be full.</p>
+          <p class="v"><span class="vn">12</span>This is my commandment, That ye love one another, as I have loved you.</p>
+          <p class="v key"><span class="vn">13</span>Greater love hath no man than this, that a man lay down his life for his friends.</p>
+          <p class="v"><span class="vn">14</span>Ye are my friends, if ye do whatsoever I command you.</p>
+          <p class="v key"><span class="vn">15</span>Henceforth I call you not servants; for the servant knoweth not what his lord doeth: but I have called you friends; for all things that I have heard of my Father I have made known unto you.</p>
+          <p class="v"><span class="vn">16</span>Ye have not chosen me, but I have chosen you, and ordained you, that ye should go and bring forth fruit, and that your fruit should remain: that whatsoever ye shall ask of the Father in my name, he may give it you.</p>
+          <p class="v"><span class="vn">17</span>These things I command you, that ye love one another.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="love-17" data-search="let love be without dissimulation romans 12:9–21 let love be without dissimulation. abhor that which is evil; cleave to that which is good. be kindly affectioned one to another with brotherly love; in honour preferring one another; not slothful in business; fervent in spirit; serving the lord; rejoicing in hope; patient in tribulation; continuing instant in prayer; distributing to the necessity of saints; given to hospitality. bless them which persecute you: bless, and curse not. rejoice with them that do rejoice, and weep with them that weep. be of the same mind one toward another. mind not high things, but condescend to men of low estate. be not wise in your own conceits. recompense to no man evil for evil. provide things honest in the sight of all men. if it be possible, as much as lieth in you, live peaceably with all men. dearly beloved, avenge not yourselves, but rather give place unto wrath: for it is written, vengeance is mine; i will repay, saith the lord. therefore if thine enemy hunger, feed him; if he thirst, give him drink: for in so doing thou shalt heap coals of fire on his head. be not overcome of evil, but overcome evil with good.">
+        <header class="ph">
+          <p class="ref">Romans 12:9–21<span class="wc">197 words</span></p>
+          <h3>Let love be without dissimulation</h3>
+          <p class="note">Love as a list of practical instructions: abhor evil, cleave to good, feed your enemy, overcome evil with good.</p>
+        </header>
+        <div class="text">
+          <p class="v key"><span class="vn">9</span>Let love be without dissimulation. Abhor that which is evil; cleave to that which is good.</p>
+          <p class="v"><span class="vn">10</span>Be kindly affectioned one to another with brotherly love; in honour preferring one another;</p>
+          <p class="v"><span class="vn">11</span>Not slothful in business; fervent in spirit; serving the Lord;</p>
+          <p class="v"><span class="vn">12</span>Rejoicing in hope; patient in tribulation; continuing instant in prayer;</p>
+          <p class="v"><span class="vn">13</span>Distributing to the necessity of saints; given to hospitality.</p>
+          <p class="v"><span class="vn">14</span>Bless them which persecute you: bless, and curse not.</p>
+          <p class="v key"><span class="vn">15</span>Rejoice with them that do rejoice, and weep with them that weep.</p>
+          <p class="v"><span class="vn">16</span>Be of the same mind one toward another. Mind not high things, but condescend to men of low estate. Be not wise in your own conceits.</p>
+          <p class="v"><span class="vn">17</span>Recompense to no man evil for evil. Provide things honest in the sight of all men.</p>
+          <p class="v"><span class="vn">18</span>If it be possible, as much as lieth in you, live peaceably with all men.</p>
+          <p class="v"><span class="vn">19</span>Dearly beloved, avenge not yourselves, but rather give place unto wrath: for it is written, Vengeance is mine; I will repay, saith the Lord.</p>
+          <p class="v"><span class="vn">20</span>Therefore if thine enemy hunger, feed him; if he thirst, give him drink: for in so doing thou shalt heap coals of fire on his head.</p>
+          <p class="v key"><span class="vn">21</span>Be not overcome of evil, but overcome evil with good.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="love-18" data-search="charity shall cover the multitude of sins 1 peter 4:8–11 and above all things have fervent charity among yourselves: for charity shall cover the multitude of sins. use hospitality one to another without grudging. as every man hath received the gift, even so minister the same one to another, as good stewards of the manifold grace of god. if any man speak, let him speak as the oracles of god; if any man minister, let him do it as of the ability which god giveth: that god in all things may be glorified through jesus christ, to whom be praise and dominion for ever and ever. amen.">
+        <header class="ph">
+          <p class="ref">1 Peter 4:8–11<span class="wc">97 words</span></p>
+          <h3>Charity shall cover the multitude of sins</h3>
+          <p class="note">Love put among the ordinary duties of hospitality, and given the largest of promises.</p>
+        </header>
+        <div class="text">
+          <p class="v key"><span class="vn">8</span>And above all things have fervent charity among yourselves: for charity shall cover the multitude of sins.</p>
+          <p class="v"><span class="vn">9</span>Use hospitality one to another without grudging.</p>
+          <p class="v"><span class="vn">10</span>As every man hath received the gift, even so minister the same one to another, as good stewards of the manifold grace of God.</p>
+          <p class="v"><span class="vn">11</span>If any man speak, let him speak as the oracles of God; if any man minister, let him do it as of the ability which God giveth: that God in all things may be glorified through Jesus Christ, to whom be praise and dominion for ever and ever. Amen.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="love-19" data-search="let us not love in word 1 john 3:14–18 we know that we have passed from death unto life, because we love the brethren. he that loveth not his brother abideth in death. whosoever hateth his brother is a murderer: and ye know that no murderer hath eternal life abiding in him. hereby perceive we the love of god, because he laid down his life for us: and we ought to lay down our lives for the brethren. but whoso hath this world’s good, and seeth his brother have need, and shutteth up his bowels of compassion from him, how dwelleth the love of god in him? my little children, let us not love in word, neither in tongue; but in deed and in truth.">
+        <header class="ph">
+          <p class="ref">1 John 3:14–18<span class="wc">116 words</span></p>
+          <h3>Let us not love in word</h3>
+          <p class="note">The test of love moved from feeling to deed: whoso hath this world's good, and shutteth up his bowels of compassion.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">14</span>We know that we have passed from death unto life, because we love the brethren. He that loveth not his brother abideth in death.</p>
+          <p class="v"><span class="vn">15</span>Whosoever hateth his brother is a murderer: and ye know that no murderer hath eternal life abiding in him.</p>
+          <p class="v key"><span class="vn">16</span>Hereby perceive we the love of God, because he laid down his life for us: and we ought to lay down our lives for the brethren.</p>
+          <p class="v"><span class="vn">17</span>But whoso hath this world’s good, and seeth his brother have need, and shutteth up his bowels of compassion from him, how dwelleth the love of God in him?</p>
+          <p class="v key"><span class="vn">18</span>My little children, let us not love in word, neither in tongue; but in deed and in truth.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="love-20" data-search="thy people shall be my people ruth 1:14–18 and they lifted up their voice, and wept again: and orpah kissed her mother in law; but ruth clave unto her. and she said, behold, thy sister in law is gone back unto her people, and unto her gods: return thou after thy sister in law. and ruth said, intreat me not to leave thee, or to return from following after thee: for whither thou goest, i will go; and where thou lodgest, i will lodge: thy people shall be my people, and thy god my god: where thou diest, will i die, and there will i be buried: the lord do so to me, and more also, if ought but death part thee and me. when she saw that she was stedfastly minded to go with her, then she left speaking unto her.">
+        <header class="ph">
+          <p class="ref">Ruth 1:14–18<span class="wc">134 words</span></p>
+          <h3>Thy people shall be my people</h3>
+          <p class="note">A daughter-in-law's vow to a mother-in-law, made after both their husbands are dead — love and friendship in the same speech.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">14</span>And they lifted up their voice, and wept again: and Orpah kissed her mother in law; but Ruth clave unto her.</p>
+          <p class="v"><span class="vn">15</span>And she said, Behold, thy sister in law is gone back unto her people, and unto her gods: return thou after thy sister in law.</p>
+          <p class="v key"><span class="vn">16</span>And Ruth said, Intreat me not to leave thee, or to return from following after thee: for whither thou goest, I will go; and where thou lodgest, I will lodge: thy people shall be my people, and thy God my God:</p>
+          <p class="v key"><span class="vn">17</span>Where thou diest, will I die, and there will I be buried: the LORD do so to me, and more also, if ought but death part thee and me.</p>
+          <p class="v"><span class="vn">18</span>When she saw that she was stedfastly minded to go with her, then she left speaking unto her.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="sec" id="sec-friendship">
+      <header class="sec-h">
+        <h2>Friendship</h2>
+        <p class="blurb">Twenty-one passages about friends — the covenant between David and Jonathan, the proverbs that reduce the subject to a line, and the farewells, which is where friendship is tested.</p>
+      </header>
+      <nav class="mini" aria-label="Friendship contents">
+        <ol>
+          <li><a href="#friendship-1">1 Samuel 18:1–4</a><span class="tt">The soul of Jonathan was knit with the soul of David</span></li>
+          <li><a href="#friendship-2">1 Samuel 20:12–17</a><span class="tt">The LORD be between thee and me for ever</span></li>
+          <li><a href="#friendship-3">1 Samuel 23:14–18</a><span class="tt">Jonathan strengthened his hand in God</span></li>
+          <li><a href="#friendship-4">2 Samuel 1:17–27</a><span class="tt">Very pleasant hast thou been unto me</span></li>
+          <li><a href="#friendship-5">Proverbs 17:17</a><span class="tt">A friend loveth at all times</span></li>
+          <li><a href="#friendship-6">Proverbs 18:24</a><span class="tt">There is a friend that sticketh closer than a brother</span></li>
+          <li><a href="#friendship-7">Proverbs 27:5–17</a><span class="tt">Iron sharpeneth iron</span></li>
+          <li><a href="#friendship-8">Ecclesiastes 4:7–12</a><span class="tt">Two are better than one</span></li>
+          <li><a href="#friendship-9">Job 2:11–13</a><span class="tt">They sat down with him seven days</span></li>
+          <li><a href="#friendship-10">Job 6:14–21</a><span class="tt">Pity should be shewed from his friend</span></li>
+          <li><a href="#friendship-11">Job 16:20–22</a><span class="tt">Mine eye poureth out tears unto God</span></li>
+          <li><a href="#friendship-12">Exodus 33:7–11</a><span class="tt">As a man speaketh unto his friend</span></li>
+          <li><a href="#friendship-13">2 Kings 2:1–14</a><span class="tt">My father, my father</span></li>
+          <li><a href="#friendship-14">John 11:1–44</a><span class="tt">Jesus wept</span></li>
+          <li><a href="#friendship-15">John 15:12–15</a><span class="tt">I have called you friends</span></li>
+          <li><a href="#friendship-16">James 2:20–24</a><span class="tt">Abraham was called the friend of God</span></li>
+          <li><a href="#friendship-17">Acts 20:17–38</a><span class="tt">Sorrowing most of all</span></li>
+          <li><a href="#friendship-18">Romans 16:1–16</a><span class="tt">Greet Priscilla and Aquila</span></li>
+          <li><a href="#friendship-19">Philippians 4:1–3</a><span class="tt">My joy and crown</span></li>
+          <li><a href="#friendship-20">2 Timothy 4:9–16</a><span class="tt">Only Luke is with me</span></li>
+          <li><a href="#friendship-21">Philemon 1:4–22</a><span class="tt">A brother beloved</span></li>
+        </ol>
+      </nav>
+      <article class="passage" id="friendship-1" data-search="the soul of jonathan was knit with the soul of david 1 samuel 18:1–4 and it came to pass, when he had made an end of speaking unto saul, that the soul of jonathan was knit with the soul of david, and jonathan loved him as his own soul. and saul took him that day, and would let him go no more home to his father’s house. then jonathan and david made a covenant, because he loved him as his own soul. and jonathan stripped himself of the robe that was upon him, and gave it to david, and his garments, even to his sword, and to his bow, and to his girdle.">
+        <header class="ph">
+          <p class="ref">1 Samuel 18:1–4<span class="wc">99 words</span></p>
+          <h3>The soul of Jonathan was knit with the soul of David</h3>
+          <p class="note">The Bible's first great friendship, made in a single verse and sealed with a robe and a sword.</p>
+        </header>
+        <div class="text">
+          <p class="v key"><span class="vn">1</span>And it came to pass, when he had made an end of speaking unto Saul, that the soul of Jonathan was knit with the soul of David, and Jonathan loved him as his own soul.</p>
+          <p class="v"><span class="vn">2</span>And Saul took him that day, and would let him go no more home to his father’s house.</p>
+          <p class="v key"><span class="vn">3</span>Then Jonathan and David made a covenant, because he loved him as his own soul.</p>
+          <p class="v"><span class="vn">4</span>And Jonathan stripped himself of the robe that was upon him, and gave it to David, and his garments, even to his sword, and to his bow, and to his girdle.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="friendship-2" data-search="the lord be between thee and me for ever 1 samuel 20:12–17 and jonathan said unto david, o lord god of israel, when i have sounded my father about to morrow any time, or the third day, and, behold, if there be good toward david, and i then send not unto thee, and shew it thee; the lord do so and much more to jonathan: but if it please my father to do thee evil, then i will shew it thee, and send thee away, that thou mayest go in peace: and the lord be with thee, as he hath been with my father. and thou shalt not only while yet i live shew me the kindness of the lord, that i die not: but also thou shalt not cut off thy kindness from my house for ever: no, not when the lord hath cut off the enemies of david every one from the face of the earth. so jonathan made a covenant with the house of david, saying, let the lord even require it at the hand of david’s enemies. and jonathan caused david to swear again, because he loved him: for he loved him as he loved his own soul.">
+        <header class="ph">
+          <p class="ref">1 Samuel 20:12–17<span class="wc">190 words</span></p>
+          <h3>The LORD be between thee and me for ever</h3>
+          <p class="note">A covenant made in a field, between the heir to the throne and the man who will take it — Jonathan chooses David anyway.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">12</span>And Jonathan said unto David, O LORD God of Israel, when I have sounded my father about to morrow any time, or the third day, and, behold, if there be good toward David, and I then send not unto thee, and shew it thee;</p>
+          <p class="v"><span class="vn">13</span>The LORD do so and much more to Jonathan: but if it please my father to do thee evil, then I will shew it thee, and send thee away, that thou mayest go in peace: and the LORD be with thee, as he hath been with my father.</p>
+          <p class="v"><span class="vn">14</span>And thou shalt not only while yet I live shew me the kindness of the LORD, that I die not:</p>
+          <p class="v"><span class="vn">15</span>But also thou shalt not cut off thy kindness from my house for ever: no, not when the LORD hath cut off the enemies of David every one from the face of the earth.</p>
+          <p class="v key"><span class="vn">16</span>So Jonathan made a covenant with the house of David, saying, Let the LORD even require it at the hand of David’s enemies.</p>
+          <p class="v key"><span class="vn">17</span>And Jonathan caused David to swear again, because he loved him: for he loved him as he loved his own soul.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="friendship-3" data-search="jonathan strengthened his hand in god 1 samuel 23:14–18 and david abode in the wilderness in strong holds, and remained in a mountain in the wilderness of ziph. and saul sought him every day, but god delivered him not into his hand. and david saw that saul was come out to seek his life: and david was in the wilderness of ziph in a wood. and jonathan saul’s son arose, and went to david into the wood, and strengthened his hand in god. and he said unto him, fear not: for the hand of saul my father shall not find thee; and thou shalt be king over israel, and i shall be next unto thee; and that also saul my father knoweth. and they two made a covenant before the lord: and david abode in the wood, and jonathan went to his house.">
+        <header class="ph">
+          <p class="ref">1 Samuel 23:14–18<span class="wc">134 words</span></p>
+          <h3>Jonathan strengthened his hand in God</h3>
+          <p class="note">The last meeting: Jonathan goes to David in the wilderness to tell him not to be afraid, though he knows what it costs him.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">14</span>And David abode in the wilderness in strong holds, and remained in a mountain in the wilderness of Ziph. And Saul sought him every day, but God delivered him not into his hand.</p>
+          <p class="v"><span class="vn">15</span>And David saw that Saul was come out to seek his life: and David was in the wilderness of Ziph in a wood.</p>
+          <p class="v key"><span class="vn">16</span>And Jonathan Saul’s son arose, and went to David into the wood, and strengthened his hand in God.</p>
+          <p class="v key"><span class="vn">17</span>And he said unto him, Fear not: for the hand of Saul my father shall not find thee; and thou shalt be king over Israel, and I shall be next unto thee; and that also Saul my father knoweth.</p>
+          <p class="v"><span class="vn">18</span>And they two made a covenant before the LORD: and David abode in the wood, and Jonathan went to his house.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="friendship-4" data-search="very pleasant hast thou been unto me 2 samuel 1:17–27 and david lamented with this lamentation over saul and over jonathan his son: (also he bade them teach the children of judah the use of the bow: behold, it is written in the book of jasher.) the beauty of israel is slain upon thy high places: how are the mighty fallen! tell it not in gath, publish it not in the streets of askelon; lest the daughters of the philistines rejoice, lest the daughters of the uncircumcised triumph. ye mountains of gilboa, let there be no dew, neither let there be rain, upon you, nor fields of offerings: for there the shield of the mighty is vilely cast away, the shield of saul, as though he had not been anointed with oil. from the blood of the slain, from the fat of the mighty, the bow of jonathan turned not back, and the sword of saul returned not empty. saul and jonathan were lovely and pleasant in their lives, and in their death they were not divided: they were swifter than eagles, they were stronger than lions. ye daughters of israel, weep over saul, who clothed you in scarlet, with other delights, who put on ornaments of gold upon your apparel. how are the mighty fallen in the midst of the battle! o jonathan, thou wast slain in thine high places. i am distressed for thee, my brother jonathan: very pleasant hast thou been unto me: thy love to me was wonderful, passing the love of women. how are the mighty fallen, and the weapons of war perished!">
+        <header class="ph">
+          <p class="ref">2 Samuel 1:17–27<span class="wc">258 words</span></p>
+          <h3>Very pleasant hast thou been unto me</h3>
+          <p class="note">David's lament for Saul and Jonathan, and the one line that has kept their friendship alive: passing the love of women.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">17</span>And David lamented with this lamentation over Saul and over Jonathan his son:</p>
+          <p class="v"><span class="vn">18</span>(Also he bade them teach the children of Judah the use of the bow: behold, it is written in the book of Jasher.)</p>
+          <p class="v"><span class="vn">19</span>The beauty of Israel is slain upon thy high places: how are the mighty fallen!</p>
+          <p class="v"><span class="vn">20</span>Tell it not in Gath, publish it not in the streets of Askelon; lest the daughters of the Philistines rejoice, lest the daughters of the uncircumcised triumph.</p>
+          <p class="v"><span class="vn">21</span>Ye mountains of Gilboa, let there be no dew, neither let there be rain, upon you, nor fields of offerings: for there the shield of the mighty is vilely cast away, the shield of Saul, as though he had not been anointed with oil.</p>
+          <p class="v"><span class="vn">22</span>From the blood of the slain, from the fat of the mighty, the bow of Jonathan turned not back, and the sword of Saul returned not empty.</p>
+          <p class="v key"><span class="vn">23</span>Saul and Jonathan were lovely and pleasant in their lives, and in their death they were not divided: they were swifter than eagles, they were stronger than lions.</p>
+          <p class="v"><span class="vn">24</span>Ye daughters of Israel, weep over Saul, who clothed you in scarlet, with other delights, who put on ornaments of gold upon your apparel.</p>
+          <p class="v"><span class="vn">25</span>How are the mighty fallen in the midst of the battle! O Jonathan, thou wast slain in thine high places.</p>
+          <p class="v key"><span class="vn">26</span>I am distressed for thee, my brother Jonathan: very pleasant hast thou been unto me: thy love to me was wonderful, passing the love of women.</p>
+          <p class="v"><span class="vn">27</span>How are the mighty fallen, and the weapons of war perished!</p>
+        </div>
+      </article>
+
+      <article class="passage" id="friendship-5" data-search="a friend loveth at all times proverbs 17:17 a friend loveth at all times, and a brother is born for adversity.">
+        <header class="ph">
+          <p class="ref">Proverbs 17:17<span class="wc">13 words</span></p>
+          <h3>A friend loveth at all times</h3>
+          <p class="note">One verse, and a whole doctrine of friendship: constancy, and a brother born for adversity.</p>
+        </header>
+        <div class="text">
+          <p class="v key"><span class="vn">17</span>A friend loveth at all times, and a brother is born for adversity.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="friendship-6" data-search="there is a friend that sticketh closer than a brother proverbs 18:24 a man that hath friends must shew himself friendly: and there is a friend that sticketh closer than a brother.">
+        <header class="ph">
+          <p class="ref">Proverbs 18:24<span class="wc">20 words</span></p>
+          <h3>There is a friend that sticketh closer than a brother</h3>
+          <p class="note">The other half of the proverb: the friend you keep is worth more than the family you are given.</p>
+        </header>
+        <div class="text">
+          <p class="v key"><span class="vn">24</span>A man that hath friends must shew himself friendly: and there is a friend that sticketh closer than a brother.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="friendship-7" data-search="iron sharpeneth iron proverbs 27:5–17 open rebuke is better than secret love. faithful are the wounds of a friend; but the kisses of an enemy are deceitful. the full soul loatheth an honeycomb; but to the hungry soul every bitter thing is sweet. as a bird that wandereth from her nest, so is a man that wandereth from his place. ointment and perfume rejoice the heart: so doth the sweetness of a man’s friend by hearty counsel. thine own friend, and thy father’s friend, forsake not; neither go into thy brother’s house in the day of thy calamity: for better is a neighbour that is near than a brother far off. my son, be wise, and make my heart glad, that i may answer him that reproacheth me. a prudent man foreseeth the evil, and hideth himself; but the simple pass on, and are punished. take his garment that is surety for a stranger, and take a pledge of him for a strange woman. he that blesseth his friend with a loud voice, rising early in the morning, it shall be counted a curse to him. a continual dropping in a very rainy day and a contentious woman are alike. whosoever hideth her hideth the wind, and the ointment of his right hand, which bewrayeth itself. iron sharpeneth iron; so a man sharpeneth the countenance of his friend.">
+        <header class="ph">
+          <p class="ref">Proverbs 27:5–17<span class="wc">223 words</span></p>
+          <h3>Iron sharpeneth iron</h3>
+          <p class="note">Friendship as plain dealing: open rebuke better than hidden love, the wounds of a friend faithful, and counsel that sharpens a face.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">5</span>Open rebuke is better than secret love.</p>
+          <p class="v key"><span class="vn">6</span>Faithful are the wounds of a friend; but the kisses of an enemy are deceitful.</p>
+          <p class="v"><span class="vn">7</span>The full soul loatheth an honeycomb; but to the hungry soul every bitter thing is sweet.</p>
+          <p class="v"><span class="vn">8</span>As a bird that wandereth from her nest, so is a man that wandereth from his place.</p>
+          <p class="v key"><span class="vn">9</span>Ointment and perfume rejoice the heart: so doth the sweetness of a man’s friend by hearty counsel.</p>
+          <p class="v"><span class="vn">10</span>Thine own friend, and thy father’s friend, forsake not; neither go into thy brother’s house in the day of thy calamity: for better is a neighbour that is near than a brother far off.</p>
+          <p class="v"><span class="vn">11</span>My son, be wise, and make my heart glad, that I may answer him that reproacheth me.</p>
+          <p class="v"><span class="vn">12</span>A prudent man foreseeth the evil, and hideth himself; but the simple pass on, and are punished.</p>
+          <p class="v"><span class="vn">13</span>Take his garment that is surety for a stranger, and take a pledge of him for a strange woman.</p>
+          <p class="v"><span class="vn">14</span>He that blesseth his friend with a loud voice, rising early in the morning, it shall be counted a curse to him.</p>
+          <p class="v"><span class="vn">15</span>A continual dropping in a very rainy day and a contentious woman are alike.</p>
+          <p class="v"><span class="vn">16</span>Whosoever hideth her hideth the wind, and the ointment of his right hand, which bewrayeth itself.</p>
+          <p class="v key"><span class="vn">17</span>Iron sharpeneth iron; so a man sharpeneth the countenance of his friend.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="friendship-8" data-search="two are better than one ecclesiastes 4:7–12 then i returned, and i saw vanity under the sun. there is one alone, and there is not a second; yea, he hath neither child nor brother: yet is there no end of all his labour; neither is his eye satisfied with riches; neither saith he, for whom do i labour, and bereave my soul of good? this is also vanity, yea, it is a sore travail. two are better than one; because they have a good reward for their labour. for if they fall, the one will lift up his fellow: but woe to him that is alone when he falleth; for he hath not another to help him up. again, if two lie together, then they have heat: but how can one be warm alone? and if one prevail against him, two shall withstand him; and a threefold cord is not quickly broken.">
+        <header class="ph">
+          <p class="ref">Ecclesiastes 4:7–12<span class="wc">145 words</span></p>
+          <h3>Two are better than one</h3>
+          <p class="note">The loneliest book in the Bible on company: a threefold cord is not quickly broken.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">7</span>Then I returned, and I saw vanity under the sun.</p>
+          <p class="v"><span class="vn">8</span>There is one alone, and there is not a second; yea, he hath neither child nor brother: yet is there no end of all his labour; neither is his eye satisfied with riches; neither saith he, For whom do I labour, and bereave my soul of good? This is also vanity, yea, it is a sore travail.</p>
+          <p class="v key"><span class="vn">9</span>Two are better than one; because they have a good reward for their labour.</p>
+          <p class="v key"><span class="vn">10</span>For if they fall, the one will lift up his fellow: but woe to him that is alone when he falleth; for he hath not another to help him up.</p>
+          <p class="v"><span class="vn">11</span>Again, if two lie together, then they have heat: but how can one be warm alone?</p>
+          <p class="v key"><span class="vn">12</span>And if one prevail against him, two shall withstand him; and a threefold cord is not quickly broken.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="friendship-9" data-search="they sat down with him seven days job 2:11–13 now when job’s three friends heard of all this evil that was come upon him, they came every one from his own place; eliphaz the temanite, and bildad the shuhite, and zophar the naamathite: for they had made an appointment together to come to mourn with him and to comfort him. and when they lifted up their eyes afar off, and knew him not, they lifted up their voice, and wept; and they rent every one his mantle, and sprinkled dust upon their heads toward heaven. so they sat down with him upon the ground seven days and seven nights, and none spake a word unto him: for they saw that his grief was very great.">
+        <header class="ph">
+          <p class="ref">Job 2:11–13<span class="wc">116 words</span></p>
+          <h3>They sat down with him seven days</h3>
+          <p class="note">Three friends come to comfort Job, and do the one thing that helps: they say nothing for a week.</p>
+        </header>
+        <div class="text">
+          <p class="v key"><span class="vn">11</span>Now when Job’s three friends heard of all this evil that was come upon him, they came every one from his own place; Eliphaz the Temanite, and Bildad the Shuhite, and Zophar the Naamathite: for they had made an appointment together to come to mourn with him and to comfort him.</p>
+          <p class="v"><span class="vn">12</span>And when they lifted up their eyes afar off, and knew him not, they lifted up their voice, and wept; and they rent every one his mantle, and sprinkled dust upon their heads toward heaven.</p>
+          <p class="v key"><span class="vn">13</span>So they sat down with him upon the ground seven days and seven nights, and none spake a word unto him: for they saw that his grief was very great.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="friendship-10" data-search="pity should be shewed from his friend job 6:14–21 to him that is afflicted pity should be shewed from his friend; but he forsaketh the fear of the almighty. my brethren have dealt deceitfully as a brook, and as the stream of brooks they pass away; which are blackish by reason of the ice, and wherein the snow is hid: what time they wax warm, they vanish: when it is hot, they are consumed out of their place. the paths of their way are turned aside; they go to nothing, and perish. the troops of tema looked, the companies of sheba waited for them. they were confounded because they had hoped; they came thither, and were ashamed. for now ye are nothing; ye see my casting down, and are afraid.">
+        <header class="ph">
+          <p class="ref">Job 6:14–21<span class="wc">121 words</span></p>
+          <h3>Pity should be shewed from his friend</h3>
+          <p class="note">Job's reply to the friends who have just spoken: the disappointment of being argued with instead of comforted.</p>
+        </header>
+        <div class="text">
+          <p class="v key"><span class="vn">14</span>To him that is afflicted pity should be shewed from his friend; but he forsaketh the fear of the Almighty.</p>
+          <p class="v"><span class="vn">15</span>My brethren have dealt deceitfully as a brook, and as the stream of brooks they pass away;</p>
+          <p class="v"><span class="vn">16</span>Which are blackish by reason of the ice, and wherein the snow is hid:</p>
+          <p class="v"><span class="vn">17</span>What time they wax warm, they vanish: when it is hot, they are consumed out of their place.</p>
+          <p class="v"><span class="vn">18</span>The paths of their way are turned aside; they go to nothing, and perish.</p>
+          <p class="v"><span class="vn">19</span>The troops of Tema looked, the companies of Sheba waited for them.</p>
+          <p class="v"><span class="vn">20</span>They were confounded because they had hoped; they came thither, and were ashamed.</p>
+          <p class="v"><span class="vn">21</span>For now ye are nothing; ye see my casting down, and are afraid.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="friendship-11" data-search="mine eye poureth out tears unto god job 16:20–22 my friends scorn me: but mine eye poureth out tears unto god. o that one might plead for a man with god, as a man pleadeth for his neighbour! when a few years are come, then i shall go the way whence i shall not return.">
+        <header class="ph">
+          <p class="ref">Job 16:20–22<span class="wc">46 words</span></p>
+          <h3>Mine eye poureth out tears unto God</h3>
+          <p class="note">Job with no one left to plead his case, asking for a friend who will stand between him and God.</p>
+        </header>
+        <div class="text">
+          <p class="v key"><span class="vn">20</span>My friends scorn me: but mine eye poureth out tears unto God.</p>
+          <p class="v key"><span class="vn">21</span>O that one might plead for a man with God, as a man pleadeth for his neighbour!</p>
+          <p class="v"><span class="vn">22</span>When a few years are come, then I shall go the way whence I shall not return.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="friendship-12" data-search="as a man speaketh unto his friend exodus 33:7–11 and moses took the tabernacle, and pitched it without the camp, afar off from the camp, and called it the tabernacle of the congregation. and it came to pass, that every one which sought the lord went out unto the tabernacle of the congregation, which was without the camp. and it came to pass, when moses went out unto the tabernacle, that all the people rose up, and stood every man at his tent door, and looked after moses, until he was gone into the tabernacle. and it came to pass, as moses entered into the tabernacle, the cloudy pillar descended, and stood at the door of the tabernacle, and the lord talked with moses. and all the people saw the cloudy pillar stand at the tabernacle door: and all the people rose up and worshipped, every man in his tent door. and the lord spake unto moses face to face, as a man speaketh unto his friend. and he turned again into the camp: but his servant joshua, the son of nun, a young man, departed not out of the tabernacle.">
+        <header class="ph">
+          <p class="ref">Exodus 33:7–11<span class="wc">182 words</span></p>
+          <h3>As a man speaketh unto his friend</h3>
+          <p class="note">Moses in the tabernacle, and God talking with him face to face — friendship with God described in the plainest human terms.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">7</span>And Moses took the tabernacle, and pitched it without the camp, afar off from the camp, and called it the Tabernacle of the congregation. And it came to pass, that every one which sought the LORD went out unto the tabernacle of the congregation, which was without the camp.</p>
+          <p class="v"><span class="vn">8</span>And it came to pass, when Moses went out unto the tabernacle, that all the people rose up, and stood every man at his tent door, and looked after Moses, until he was gone into the tabernacle.</p>
+          <p class="v"><span class="vn">9</span>And it came to pass, as Moses entered into the tabernacle, the cloudy pillar descended, and stood at the door of the tabernacle, and the LORD talked with Moses.</p>
+          <p class="v"><span class="vn">10</span>And all the people saw the cloudy pillar stand at the tabernacle door: and all the people rose up and worshipped, every man in his tent door.</p>
+          <p class="v key"><span class="vn">11</span>And the LORD spake unto Moses face to face, as a man speaketh unto his friend. And he turned again into the camp: but his servant Joshua, the son of Nun, a young man, departed not out of the tabernacle.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="friendship-13" data-search="my father, my father 2 kings 2:1–14 and it came to pass, when the lord would take up elijah into heaven by a whirlwind, that elijah went with elisha from gilgal. and elijah said unto elisha, tarry here, i pray thee; for the lord hath sent me to beth-el. and elisha said unto him, as the lord liveth, and as thy soul liveth, i will not leave thee. so they went down to beth-el. and the sons of the prophets that were at beth-el came forth to elisha, and said unto him, knowest thou that the lord will take away thy master from thy head to day? and he said, yea, i know it; hold ye your peace. and elijah said unto him, elisha, tarry here, i pray thee; for the lord hath sent me to jericho. and he said, as the lord liveth, and as thy soul liveth, i will not leave thee. so they came to jericho. and the sons of the prophets that were at jericho came to elisha, and said unto him, knowest thou that the lord will take away thy master from thy head to day? and he answered, yea, i know it; hold ye your peace. and elijah said unto him, tarry, i pray thee, here; for the lord hath sent me to jordan. and he said, as the lord liveth, and as thy soul liveth, i will not leave thee. and they two went on. and fifty men of the sons of the prophets went, and stood to view afar off: and they two stood by jordan. and elijah took his mantle, and wrapped it together, and smote the waters, and they were divided hither and thither, so that they two went over on dry ground. and it came to pass, when they were gone over, that elijah said unto elisha, ask what i shall do for thee, before i be taken away from thee. and elisha said, i pray thee, let a double portion of thy spirit be upon me. and he said, thou hast asked a hard thing: nevertheless, if thou see me when i am taken from thee, it shall be so unto thee; but if not, it shall not be so. and it came to pass, as they still went on, and talked, that, behold, there appeared a chariot of fire, and horses of fire, and parted them both asunder; and elijah went up by a whirlwind into heaven. and elisha saw it, and he cried, my father, my father, the chariot of israel, and the horsemen thereof. and he saw him no more: and he took hold of his own clothes, and rent them in two pieces. he took up also the mantle of elijah that fell from him, and went back, and stood by the bank of jordan; and he took the mantle of elijah that fell from him, and smote the waters, and said, where is the lord god of elijah? and when he also had smitten the waters, they parted hither and thither: and elisha went over.">
+        <header class="ph">
+          <p class="ref">2 Kings 2:1–14<span class="wc">505 words</span></p>
+          <h3>My father, my father</h3>
+          <p class="note">Elisha will not leave Elijah, and asks for a double portion of his spirit; the chariot parts them at the Jordan.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">1</span>And it came to pass, when the LORD would take up Elijah into heaven by a whirlwind, that Elijah went with Elisha from Gilgal.</p>
+          <p class="v key"><span class="vn">2</span>And Elijah said unto Elisha, Tarry here, I pray thee; for the LORD hath sent me to Beth-el. And Elisha said unto him, As the LORD liveth, and as thy soul liveth, I will not leave thee. So they went down to Beth-el.</p>
+          <p class="v"><span class="vn">3</span>And the sons of the prophets that were at Beth-el came forth to Elisha, and said unto him, Knowest thou that the LORD will take away thy master from thy head to day? And he said, Yea, I know it; hold ye your peace.</p>
+          <p class="v"><span class="vn">4</span>And Elijah said unto him, Elisha, tarry here, I pray thee; for the LORD hath sent me to Jericho. And he said, As the LORD liveth, and as thy soul liveth, I will not leave thee. So they came to Jericho.</p>
+          <p class="v"><span class="vn">5</span>And the sons of the prophets that were at Jericho came to Elisha, and said unto him, Knowest thou that the LORD will take away thy master from thy head to day? And he answered, Yea, I know it; hold ye your peace.</p>
+          <p class="v key"><span class="vn">6</span>And Elijah said unto him, Tarry, I pray thee, here; for the LORD hath sent me to Jordan. And he said, As the LORD liveth, and as thy soul liveth, I will not leave thee. And they two went on.</p>
+          <p class="v"><span class="vn">7</span>And fifty men of the sons of the prophets went, and stood to view afar off: and they two stood by Jordan.</p>
+          <p class="v"><span class="vn">8</span>And Elijah took his mantle, and wrapped it together, and smote the waters, and they were divided hither and thither, so that they two went over on dry ground.</p>
+          <p class="v"><span class="vn">9</span>And it came to pass, when they were gone over, that Elijah said unto Elisha, Ask what I shall do for thee, before I be taken away from thee. And Elisha said, I pray thee, let a double portion of thy spirit be upon me.</p>
+          <p class="v"><span class="vn">10</span>And he said, Thou hast asked a hard thing: nevertheless, if thou see me when I am taken from thee, it shall be so unto thee; but if not, it shall not be so.</p>
+          <p class="v"><span class="vn">11</span>And it came to pass, as they still went on, and talked, that, behold, there appeared a chariot of fire, and horses of fire, and parted them both asunder; and Elijah went up by a whirlwind into heaven.</p>
+          <p class="v key"><span class="vn">12</span>And Elisha saw it, and he cried, My father, my father, the chariot of Israel, and the horsemen thereof. And he saw him no more: and he took hold of his own clothes, and rent them in two pieces.</p>
+          <p class="v"><span class="vn">13</span>He took up also the mantle of Elijah that fell from him, and went back, and stood by the bank of Jordan;</p>
+          <p class="v"><span class="vn">14</span>And he took the mantle of Elijah that fell from him, and smote the waters, and said, Where is the LORD God of Elijah? and when he also had smitten the waters, they parted hither and thither: and Elisha went over.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="friendship-14" data-search="jesus wept john 11:1–44 now a certain man was sick, named lazarus, of bethany, the town of mary and her sister martha. (it was that mary which anointed the lord with ointment, and wiped his feet with her hair, whose brother lazarus was sick.) therefore his sisters sent unto him, saying, lord, behold, he whom thou lovest is sick. when jesus heard that, he said, this sickness is not unto death, but for the glory of god, that the son of god might be glorified thereby. now jesus loved martha, and her sister, and lazarus. when he had heard therefore that he was sick, he abode two days still in the same place where he was. then after that saith he to his disciples, let us go into judæa again. his disciples say unto him, master, the jews of late sought to stone thee; and goest thou thither again? jesus answered, are there not twelve hours in the day? if any man walk in the day, he stumbleth not, because he seeth the light of this world. but if a man walk in the night, he stumbleth, because there is no light in him. these things said he: and after that he saith unto them, our friend lazarus sleepeth; but i go, that i may awake him out of sleep. then said his disciples, lord, if he sleep, he shall do well. howbeit jesus spake of his death: but they thought that he had spoken of taking of rest in sleep. then said jesus unto them plainly, lazarus is dead. and i am glad for your sakes that i was not there, to the intent ye may believe; nevertheless let us go unto him. then said thomas, which is called didymus, unto his fellowdisciples, let us also go, that we may die with him. then when jesus came, he found that he had lain in the grave four days already. now bethany was nigh unto jerusalem, about fifteen furlongs off: and many of the jews came to martha and mary, to comfort them concerning their brother. then martha, as soon as she heard that jesus was coming, went and met him: but mary sat still in the house. then said martha unto jesus, lord, if thou hadst been here, my brother had not died. but i know, that even now, whatsoever thou wilt ask of god, god will give it thee. jesus saith unto her, thy brother shall rise again. martha saith unto him, i know that he shall rise again in the resurrection at the last day. jesus said unto her, i am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live: and whosoever liveth and believeth in me shall never die. believest thou this? she saith unto him, yea, lord: i believe that thou art the christ, the son of god, which should come into the world. and when she had so said, she went her way, and called mary her sister secretly, saying, the master is come, and calleth for thee. as soon as she heard that, she arose quickly, and came unto him. now jesus was not yet come into the town, but was in that place where martha met him. the jews then which were with her in the house, and comforted her, when they saw mary, that she rose up hastily and went out, followed her, saying, she goeth unto the grave to weep there. then when mary was come where jesus was, and saw him, she fell down at his feet, saying unto him, lord, if thou hadst been here, my brother had not died. when jesus therefore saw her weeping, and the jews also weeping which came with her, he groaned in the spirit, and was troubled, and said, where have ye laid him? they said unto him, lord, come and see. jesus wept. then said the jews, behold how he loved him! and some of them said, could not this man, which opened the eyes of the blind, have caused that even this man should not have died? jesus therefore again groaning in himself cometh to the grave. it was a cave, and a stone lay upon it. jesus said, take ye away the stone. martha, the sister of him that was dead, saith unto him, lord, by this time he stinketh: for he hath been dead four days. jesus saith unto her, said i not unto thee, that, if thou wouldest believe, thou shouldest see the glory of god? then they took away the stone from the place where the dead was laid. and jesus lifted up his eyes, and said, father, i thank thee that thou hast heard me. and i knew that thou hearest me always: but because of the people which stand by i said it, that they may believe that thou hast sent me. and when he thus had spoken, he cried with a loud voice, lazarus, come forth. and he that was dead came forth, bound hand and foot with graveclothes: and his face was bound about with a napkin. jesus saith unto them, loose him, and let him go.">
+        <header class="ph">
+          <p class="ref">John 11:1–44<span class="wc">860 words</span></p>
+          <h3>Jesus wept</h3>
+          <p class="note">Lazarus dead four days, and the shortest verse in the Bible standing in the middle of the longest friendship in the Gospels.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">1</span>Now a certain man was sick, named Lazarus, of Bethany, the town of Mary and her sister Martha.</p>
+          <p class="v"><span class="vn">2</span>(It was that Mary which anointed the Lord with ointment, and wiped his feet with her hair, whose brother Lazarus was sick.)</p>
+          <p class="v key"><span class="vn">3</span>Therefore his sisters sent unto him, saying, Lord, behold, he whom thou lovest is sick.</p>
+          <p class="v"><span class="vn">4</span>When Jesus heard that, he said, This sickness is not unto death, but for the glory of God, that the Son of God might be glorified thereby.</p>
+          <p class="v key"><span class="vn">5</span>Now Jesus loved Martha, and her sister, and Lazarus.</p>
+          <p class="v"><span class="vn">6</span>When he had heard therefore that he was sick, he abode two days still in the same place where he was.</p>
+          <p class="v"><span class="vn">7</span>Then after that saith he to his disciples, Let us go into Judæa again.</p>
+          <p class="v"><span class="vn">8</span>His disciples say unto him, Master, the Jews of late sought to stone thee; and goest thou thither again?</p>
+          <p class="v"><span class="vn">9</span>Jesus answered, Are there not twelve hours in the day? If any man walk in the day, he stumbleth not, because he seeth the light of this world.</p>
+          <p class="v"><span class="vn">10</span>But if a man walk in the night, he stumbleth, because there is no light in him.</p>
+          <p class="v"><span class="vn">11</span>These things said he: and after that he saith unto them, Our friend Lazarus sleepeth; but I go, that I may awake him out of sleep.</p>
+          <p class="v"><span class="vn">12</span>Then said his disciples, Lord, if he sleep, he shall do well.</p>
+          <p class="v"><span class="vn">13</span>Howbeit Jesus spake of his death: but they thought that he had spoken of taking of rest in sleep.</p>
+          <p class="v"><span class="vn">14</span>Then said Jesus unto them plainly, Lazarus is dead.</p>
+          <p class="v"><span class="vn">15</span>And I am glad for your sakes that I was not there, to the intent ye may believe; nevertheless let us go unto him.</p>
+          <p class="v"><span class="vn">16</span>Then said Thomas, which is called Didymus, unto his fellowdisciples, Let us also go, that we may die with him.</p>
+          <p class="v"><span class="vn">17</span>Then when Jesus came, he found that he had lain in the grave four days already.</p>
+          <p class="v"><span class="vn">18</span>Now Bethany was nigh unto Jerusalem, about fifteen furlongs off:</p>
+          <p class="v"><span class="vn">19</span>And many of the Jews came to Martha and Mary, to comfort them concerning their brother.</p>
+          <p class="v"><span class="vn">20</span>Then Martha, as soon as she heard that Jesus was coming, went and met him: but Mary sat still in the house.</p>
+          <p class="v"><span class="vn">21</span>Then said Martha unto Jesus, Lord, if thou hadst been here, my brother had not died.</p>
+          <p class="v"><span class="vn">22</span>But I know, that even now, whatsoever thou wilt ask of God, God will give it thee.</p>
+          <p class="v"><span class="vn">23</span>Jesus saith unto her, Thy brother shall rise again.</p>
+          <p class="v"><span class="vn">24</span>Martha saith unto him, I know that he shall rise again in the resurrection at the last day.</p>
+          <p class="v"><span class="vn">25</span>Jesus said unto her, I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live:</p>
+          <p class="v"><span class="vn">26</span>And whosoever liveth and believeth in me shall never die. Believest thou this?</p>
+          <p class="v"><span class="vn">27</span>She saith unto him, Yea, Lord: I believe that thou art the Christ, the Son of God, which should come into the world.</p>
+          <p class="v"><span class="vn">28</span>And when she had so said, she went her way, and called Mary her sister secretly, saying, The Master is come, and calleth for thee.</p>
+          <p class="v"><span class="vn">29</span>As soon as she heard that, she arose quickly, and came unto him.</p>
+          <p class="v"><span class="vn">30</span>Now Jesus was not yet come into the town, but was in that place where Martha met him.</p>
+          <p class="v"><span class="vn">31</span>The Jews then which were with her in the house, and comforted her, when they saw Mary, that she rose up hastily and went out, followed her, saying, She goeth unto the grave to weep there.</p>
+          <p class="v"><span class="vn">32</span>Then when Mary was come where Jesus was, and saw him, she fell down at his feet, saying unto him, Lord, if thou hadst been here, my brother had not died.</p>
+          <p class="v"><span class="vn">33</span>When Jesus therefore saw her weeping, and the Jews also weeping which came with her, he groaned in the spirit, and was troubled,</p>
+          <p class="v"><span class="vn">34</span>And said, Where have ye laid him? They said unto him, Lord, come and see.</p>
+          <p class="v key"><span class="vn">35</span>Jesus wept.</p>
+          <p class="v key"><span class="vn">36</span>Then said the Jews, Behold how he loved him!</p>
+          <p class="v"><span class="vn">37</span>And some of them said, Could not this man, which opened the eyes of the blind, have caused that even this man should not have died?</p>
+          <p class="v"><span class="vn">38</span>Jesus therefore again groaning in himself cometh to the grave. It was a cave, and a stone lay upon it.</p>
+          <p class="v"><span class="vn">39</span>Jesus said, Take ye away the stone. Martha, the sister of him that was dead, saith unto him, Lord, by this time he stinketh: for he hath been dead four days.</p>
+          <p class="v"><span class="vn">40</span>Jesus saith unto her, Said I not unto thee, that, if thou wouldest believe, thou shouldest see the glory of God?</p>
+          <p class="v"><span class="vn">41</span>Then they took away the stone from the place where the dead was laid. And Jesus lifted up his eyes, and said, Father, I thank thee that thou hast heard me.</p>
+          <p class="v"><span class="vn">42</span>And I knew that thou hearest me always: but because of the people which stand by I said it, that they may believe that thou hast sent me.</p>
+          <p class="v"><span class="vn">43</span>And when he thus had spoken, he cried with a loud voice, Lazarus, come forth.</p>
+          <p class="v"><span class="vn">44</span>And he that was dead came forth, bound hand and foot with graveclothes: and his face was bound about with a napkin. Jesus saith unto them, Loose him, and let him go.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="friendship-15" data-search="i have called you friends john 15:12–15 this is my commandment, that ye love one another, as i have loved you. greater love hath no man than this, that a man lay down his life for his friends. ye are my friends, if ye do whatsoever i command you. henceforth i call you not servants; for the servant knoweth not what his lord doeth: but i have called you friends; for all things that i have heard of my father i have made known unto you.">
+        <header class="ph">
+          <p class="ref">John 15:12–15<span class="wc">79 words</span></p>
+          <h3>I have called you friends</h3>
+          <p class="note">The disciples promoted from servants to friends, on the ground that a servant does not know what his lord does.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">12</span>This is my commandment, That ye love one another, as I have loved you.</p>
+          <p class="v key"><span class="vn">13</span>Greater love hath no man than this, that a man lay down his life for his friends.</p>
+          <p class="v"><span class="vn">14</span>Ye are my friends, if ye do whatsoever I command you.</p>
+          <p class="v key"><span class="vn">15</span>Henceforth I call you not servants; for the servant knoweth not what his lord doeth: but I have called you friends; for all things that I have heard of my Father I have made known unto you.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="friendship-16" data-search="abraham was called the friend of god james 2:20–24 but wilt thou know, o vain man, that faith without works is dead? was not abraham our father justified by works, when he had offered isaac his son upon the altar? seest thou how faith wrought with his works, and by works was faith made perfect? and the scripture was fulfilled which saith, abraham believed god, and it was imputed unto him for righteousness: and he was called the friend of god. ye see then how that by works a man is justified, and not by faith only.">
+        <header class="ph">
+          <p class="ref">James 2:20–24<span class="wc">88 words</span></p>
+          <h3>Abraham was called the friend of God</h3>
+          <p class="note">Faith argued from a friendship: Abraham believed God, and it was imputed to him for righteousness.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">20</span>But wilt thou know, O vain man, that faith without works is dead?</p>
+          <p class="v"><span class="vn">21</span>Was not Abraham our father justified by works, when he had offered Isaac his son upon the altar?</p>
+          <p class="v"><span class="vn">22</span>Seest thou how faith wrought with his works, and by works was faith made perfect?</p>
+          <p class="v key"><span class="vn">23</span>And the scripture was fulfilled which saith, Abraham believed God, and it was imputed unto him for righteousness: and he was called the Friend of God.</p>
+          <p class="v"><span class="vn">24</span>Ye see then how that by works a man is justified, and not by faith only.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="friendship-17" data-search="sorrowing most of all acts 20:17–38 and from miletus he sent to ephesus, and called the elders of the church. and when they were come to him, he said unto them, ye know, from the first day that i came into asia, after what manner i have been with you at all seasons, serving the lord with all humility of mind, and with many tears, and temptations, which befell me by the lying in wait of the jews: and how i kept back nothing that was profitable unto you, but have shewed you, and have taught you publickly, and from house to house, testifying both to the jews, and also to the greeks, repentance toward god, and faith toward our lord jesus christ. and now, behold, i go bound in the spirit unto jerusalem, not knowing the things that shall befall me there: save that the holy ghost witnesseth in every city, saying that bonds and afflictions abide me. but none of these things move me, neither count i my life dear unto myself, so that i might finish my course with joy, and the ministry, which i have received of the lord jesus, to testify the gospel of the grace of god. and now, behold, i know that ye all, among whom i have gone preaching the kingdom of god, shall see my face no more. wherefore i take you to record this day, that i am pure from the blood of all men. for i have not shunned to declare unto you all the counsel of god. take heed therefore unto yourselves, and to all the flock, over the which the holy ghost hath made you overseers, to feed the church of god, which he hath purchased with his own blood. for i know this, that after my departing shall grievous wolves enter in among you, not sparing the flock. also of your own selves shall men arise, speaking perverse things, to draw away disciples after them. therefore watch, and remember, that by the space of three years i ceased not to warn every one night and day with tears. and now, brethren, i commend you to god, and to the word of his grace, which is able to build you up, and to give you an inheritance among all them which are sanctified. i have coveted no man’s silver, or gold, or apparel. yea, ye yourselves know, that these hands have ministered unto my necessities, and to them that were with me. i have shewed you all things, how that so labouring ye ought to support the weak, and to remember the words of the lord jesus, how he said, it is more blessed to give than to receive. and when he had thus spoken, he kneeled down, and prayed with them all. and they all wept sore, and fell on paul’s neck, and kissed him, sorrowing most of all for the words which he spake, that they should see his face no more. and they accompanied him unto the ship.">
+        <header class="ph">
+          <p class="ref">Acts 20:17–38<span class="wc">498 words</span></p>
+          <h3>Sorrowing most of all</h3>
+          <p class="note">Paul's farewell to the elders of Ephesus: the parting that hurts most is the thought of not seeing a face again.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">17</span>And from Miletus he sent to Ephesus, and called the elders of the church.</p>
+          <p class="v"><span class="vn">18</span>And when they were come to him, he said unto them, Ye know, from the first day that I came into Asia, after what manner I have been with you at all seasons,</p>
+          <p class="v"><span class="vn">19</span>Serving the Lord with all humility of mind, and with many tears, and temptations, which befell me by the lying in wait of the Jews:</p>
+          <p class="v"><span class="vn">20</span>And how I kept back nothing that was profitable unto you, but have shewed you, and have taught you publickly, and from house to house,</p>
+          <p class="v"><span class="vn">21</span>Testifying both to the Jews, and also to the Greeks, repentance toward God, and faith toward our Lord Jesus Christ.</p>
+          <p class="v"><span class="vn">22</span>And now, behold, I go bound in the spirit unto Jerusalem, not knowing the things that shall befall me there:</p>
+          <p class="v"><span class="vn">23</span>Save that the Holy Ghost witnesseth in every city, saying that bonds and afflictions abide me.</p>
+          <p class="v"><span class="vn">24</span>But none of these things move me, neither count I my life dear unto myself, so that I might finish my course with joy, and the ministry, which I have received of the Lord Jesus, to testify the gospel of the grace of God.</p>
+          <p class="v"><span class="vn">25</span>And now, behold, I know that ye all, among whom I have gone preaching the kingdom of God, shall see my face no more.</p>
+          <p class="v"><span class="vn">26</span>Wherefore I take you to record this day, that I am pure from the blood of all men.</p>
+          <p class="v"><span class="vn">27</span>For I have not shunned to declare unto you all the counsel of God.</p>
+          <p class="v"><span class="vn">28</span>Take heed therefore unto yourselves, and to all the flock, over the which the Holy Ghost hath made you overseers, to feed the church of God, which he hath purchased with his own blood.</p>
+          <p class="v"><span class="vn">29</span>For I know this, that after my departing shall grievous wolves enter in among you, not sparing the flock.</p>
+          <p class="v"><span class="vn">30</span>Also of your own selves shall men arise, speaking perverse things, to draw away disciples after them.</p>
+          <p class="v"><span class="vn">31</span>Therefore watch, and remember, that by the space of three years I ceased not to warn every one night and day with tears.</p>
+          <p class="v"><span class="vn">32</span>And now, brethren, I commend you to God, and to the word of his grace, which is able to build you up, and to give you an inheritance among all them which are sanctified.</p>
+          <p class="v"><span class="vn">33</span>I have coveted no man’s silver, or gold, or apparel.</p>
+          <p class="v"><span class="vn">34</span>Yea, ye yourselves know, that these hands have ministered unto my necessities, and to them that were with me.</p>
+          <p class="v"><span class="vn">35</span>I have shewed you all things, how that so labouring ye ought to support the weak, and to remember the words of the Lord Jesus, how he said, It is more blessed to give than to receive.</p>
+          <p class="v key"><span class="vn">36</span>And when he had thus spoken, he kneeled down, and prayed with them all.</p>
+          <p class="v key"><span class="vn">37</span>And they all wept sore, and fell on Paul’s neck, and kissed him,</p>
+          <p class="v key"><span class="vn">38</span>Sorrowing most of all for the words which he spake, that they should see his face no more. And they accompanied him unto the ship.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="friendship-18" data-search="greet priscilla and aquila romans 16:1–16 i commend unto you phebe our sister, which is a servant of the church which is at cenchrea: that ye receive her in the lord, as becometh saints, and that ye assist her in whatsoever business she hath need of you: for she hath been a succourer of many, and of myself also. greet priscilla and aquila my helpers in christ jesus: who have for my life laid down their own necks: unto whom not only i give thanks, but also all the churches of the gentiles. likewise greet the church that is in their house. salute my wellbeloved epaenetus, who is the firstfruits of achaia unto christ. greet mary, who bestowed much labour on us. salute andronicus and junia, my kinsmen, and my fellowprisoners, who are of note among the apostles, who also were in christ before me. greet amplias my beloved in the lord. salute urbane, our helper in christ, and stachys my beloved. salute apelles approved in christ. salute them which are of aristobulus’ household. salute herodion my kinsman. greet them that be of the household of narcissus, which are in the lord. salute tryphena and tryphosa, who labour in the lord. salute the beloved persis, which laboured much in the lord. salute rufus chosen in the lord, and his mother and mine. salute asyncritus, phlegon, hermas, patrobas, hermes, and the brethren which are with them. salute philologus, and julia, nereus, and his sister, and olympas, and all the saints which are with them. salute one another with an holy kiss. the churches of christ salute you.">
+        <header class="ph">
+          <p class="ref">Romans 16:1–16<span class="wc">260 words</span></p>
+          <h3>Greet Priscilla and Aquila</h3>
+          <p class="note">A chapter that is mostly a list of names — the only place in the New Testament where the friends of one man are all recorded together.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">1</span>I commend unto you Phebe our sister, which is a servant of the church which is at Cenchrea:</p>
+          <p class="v"><span class="vn">2</span>That ye receive her in the Lord, as becometh saints, and that ye assist her in whatsoever business she hath need of you: for she hath been a succourer of many, and of myself also.</p>
+          <p class="v key"><span class="vn">3</span>Greet Priscilla and Aquila my helpers in Christ Jesus:</p>
+          <p class="v key"><span class="vn">4</span>Who have for my life laid down their own necks: unto whom not only I give thanks, but also all the churches of the Gentiles.</p>
+          <p class="v"><span class="vn">5</span>Likewise greet the church that is in their house. Salute my wellbeloved Epaenetus, who is the firstfruits of Achaia unto Christ.</p>
+          <p class="v"><span class="vn">6</span>Greet Mary, who bestowed much labour on us.</p>
+          <p class="v"><span class="vn">7</span>Salute Andronicus and Junia, my kinsmen, and my fellowprisoners, who are of note among the apostles, who also were in Christ before me.</p>
+          <p class="v"><span class="vn">8</span>Greet Amplias my beloved in the Lord.</p>
+          <p class="v"><span class="vn">9</span>Salute Urbane, our helper in Christ, and Stachys my beloved.</p>
+          <p class="v"><span class="vn">10</span>Salute Apelles approved in Christ. Salute them which are of Aristobulus’ household.</p>
+          <p class="v"><span class="vn">11</span>Salute Herodion my kinsman. Greet them that be of the household of Narcissus, which are in the Lord.</p>
+          <p class="v"><span class="vn">12</span>Salute Tryphena and Tryphosa, who labour in the Lord. Salute the beloved Persis, which laboured much in the Lord.</p>
+          <p class="v key"><span class="vn">13</span>Salute Rufus chosen in the Lord, and his mother and mine.</p>
+          <p class="v"><span class="vn">14</span>Salute Asyncritus, Phlegon, Hermas, Patrobas, Hermes, and the brethren which are with them.</p>
+          <p class="v"><span class="vn">15</span>Salute Philologus, and Julia, Nereus, and his sister, and Olympas, and all the saints which are with them.</p>
+          <p class="v"><span class="vn">16</span>Salute one another with an holy kiss. The churches of Christ salute you.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="friendship-19" data-search="my joy and crown philippians 4:1–3 therefore, my brethren dearly beloved and longed for, my joy and crown, so stand fast in the lord, my dearly beloved. i beseech euodias, and beseech syntyche, that they be of the same mind in the lord. and i intreat thee also, true yokefellow, help those women which laboured with me in the gospel, with clement also, and with other my fellowlabourers, whose names are in the book of life.">
+        <header class="ph">
+          <p class="ref">Philippians 4:1–3<span class="wc">70 words</span></p>
+          <h3>My joy and crown</h3>
+          <p class="note">Paul to the church that supported him: the people he wants to see, and the two women he asks to agree.</p>
+        </header>
+        <div class="text">
+          <p class="v key"><span class="vn">1</span>Therefore, my brethren dearly beloved and longed for, my joy and crown, so stand fast in the Lord, my dearly beloved.</p>
+          <p class="v"><span class="vn">2</span>I beseech Euodias, and beseech Syntyche, that they be of the same mind in the Lord.</p>
+          <p class="v key"><span class="vn">3</span>And I intreat thee also, true yokefellow, help those women which laboured with me in the gospel, with Clement also, and with other my fellowlabourers, whose names are in the book of life.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="friendship-20" data-search="only luke is with me 2 timothy 4:9–16 do thy diligence to come shortly unto me: for demas hath forsaken me, having loved this present world, and is departed unto thessalonica; crescens to galatia, titus unto dalmatia. only luke is with me. take mark, and bring him with thee: for he is profitable to me for the ministry. and tychicus have i sent to ephesus. the cloke that i left at troas with carpus, when thou comest, bring with thee, and the books, but especially the parchments. alexander the coppersmith did me much evil: the lord reward him according to his works: of whom be thou ware also; for he hath greatly withstood our words. at my first answer no man stood with me, but all men forsook me: i pray god that it may not be laid to their charge.">
+        <header class="ph">
+          <p class="ref">2 Timothy 4:9–16<span class="wc">133 words</span></p>
+          <h3>Only Luke is with me</h3>
+          <p class="note">The last letter, near the end: Demas has gone, and the list of the friends who stayed and the friends who did not.</p>
+        </header>
+        <div class="text">
+          <p class="v key"><span class="vn">9</span>Do thy diligence to come shortly unto me:</p>
+          <p class="v"><span class="vn">10</span>For Demas hath forsaken me, having loved this present world, and is departed unto Thessalonica; Crescens to Galatia, Titus unto Dalmatia.</p>
+          <p class="v key"><span class="vn">11</span>Only Luke is with me. Take Mark, and bring him with thee: for he is profitable to me for the ministry.</p>
+          <p class="v"><span class="vn">12</span>And Tychicus have I sent to Ephesus.</p>
+          <p class="v"><span class="vn">13</span>The cloke that I left at Troas with Carpus, when thou comest, bring with thee, and the books, but especially the parchments.</p>
+          <p class="v"><span class="vn">14</span>Alexander the coppersmith did me much evil: the Lord reward him according to his works:</p>
+          <p class="v"><span class="vn">15</span>Of whom be thou ware also; for he hath greatly withstood our words.</p>
+          <p class="v key"><span class="vn">16</span>At my first answer no man stood with me, but all men forsook me: I pray God that it may not be laid to their charge.</p>
+        </div>
+      </article>
+
+      <article class="passage" id="friendship-21" data-search="a brother beloved philemon 1:4–22 i thank my god, making mention of thee always in my prayers, hearing of thy love and faith, which thou hast toward the lord jesus, and toward all saints; that the communication of thy faith may become effectual by the acknowledging of every good thing which is in you in christ jesus. for we have great joy and consolation in thy love, because the bowels of the saints are refreshed by thee, brother. wherefore, though i might be much bold in christ to enjoin thee that which is convenient, yet for love’s sake i rather beseech thee, being such an one as paul the aged, and now also a prisoner of jesus christ. i beseech thee for my son onesimus, whom i have begotten in my bonds: which in time past was to thee unprofitable, but now profitable to thee and to me: whom i have sent again: thou therefore receive him, that is, mine own bowels: whom i would have retained with me, that in thy stead he might have ministered unto me in the bonds of the gospel: but without thy mind would i do nothing; that thy benefit should not be as it were of necessity, but willingly. for perhaps he therefore departed for a season, that thou shouldest receive him for ever; not now as a servant, but above a servant, a brother beloved, specially to me, but how much more unto thee, both in the flesh, and in the lord? if thou count me therefore a partner, receive him as myself. if he hath wronged thee, or oweth thee ought, put that on mine account; i paul have written it with mine own hand, i will repay it: albeit i do not say to thee how thou owest unto me even thine own self besides. yea, brother, let me have joy of thee in the lord: refresh my bowels in the lord. having confidence in thy obedience i wrote unto thee, knowing that thou wilt also do more than i say. but withal prepare me also a lodging: for i trust that through your prayers i shall be given unto you.">
+        <header class="ph">
+          <p class="ref">Philemon 1:4–22<span class="wc">356 words</span></p>
+          <h3>A brother beloved</h3>
+          <p class="note">A whole letter written to ask a favour for a runaway slave who has become a friend — friendship as the ground of a request.</p>
+        </header>
+        <div class="text">
+          <p class="v"><span class="vn">4</span>I thank my God, making mention of thee always in my prayers,</p>
+          <p class="v"><span class="vn">5</span>Hearing of thy love and faith, which thou hast toward the Lord Jesus, and toward all saints;</p>
+          <p class="v"><span class="vn">6</span>That the communication of thy faith may become effectual by the acknowledging of every good thing which is in you in Christ Jesus.</p>
+          <p class="v key"><span class="vn">7</span>For we have great joy and consolation in thy love, because the bowels of the saints are refreshed by thee, brother.</p>
+          <p class="v"><span class="vn">8</span>Wherefore, though I might be much bold in Christ to enjoin thee that which is convenient,</p>
+          <p class="v"><span class="vn">9</span>Yet for love’s sake I rather beseech thee, being such an one as Paul the aged, and now also a prisoner of Jesus Christ.</p>
+          <p class="v"><span class="vn">10</span>I beseech thee for my son Onesimus, whom I have begotten in my bonds:</p>
+          <p class="v"><span class="vn">11</span>Which in time past was to thee unprofitable, but now profitable to thee and to me:</p>
+          <p class="v"><span class="vn">12</span>Whom I have sent again: thou therefore receive him, that is, mine own bowels:</p>
+          <p class="v"><span class="vn">13</span>Whom I would have retained with me, that in thy stead he might have ministered unto me in the bonds of the gospel:</p>
+          <p class="v"><span class="vn">14</span>But without thy mind would I do nothing; that thy benefit should not be as it were of necessity, but willingly.</p>
+          <p class="v"><span class="vn">15</span>For perhaps he therefore departed for a season, that thou shouldest receive him for ever;</p>
+          <p class="v key"><span class="vn">16</span>Not now as a servant, but above a servant, a brother beloved, specially to me, but how much more unto thee, both in the flesh, and in the Lord?</p>
+          <p class="v"><span class="vn">17</span>If thou count me therefore a partner, receive him as myself.</p>
+          <p class="v"><span class="vn">18</span>If he hath wronged thee, or oweth thee ought, put that on mine account;</p>
+          <p class="v"><span class="vn">19</span>I Paul have written it with mine own hand, I will repay it: albeit I do not say to thee how thou owest unto me even thine own self besides.</p>
+          <p class="v"><span class="vn">20</span>Yea, brother, let me have joy of thee in the Lord: refresh my bowels in the Lord.</p>
+          <p class="v"><span class="vn">21</span>Having confidence in thy obedience I wrote unto thee, knowing that thou wilt also do more than I say.</p>
+          <p class="v"><span class="vn">22</span>But withal prepare me also a lodging: for I trust that through your prayers I shall be given unto you.</p>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <h2>On the text</h2>
+      <p>All 41 passages are quoted from the King James Version of 1611, in full, with verse numbers. The corpus holds 31,102 verses across the 66 books; the selection here comes to 7,981 words of scripture. Nothing is paraphrased and nothing is cut, so a passage can be read aloud straight from the page.</p>
+      <p>The notes are editorial and say what each passage does. Where a passage appears in both sections &mdash; John 15, Ruth 1, 2 Samuel 1 &mdash; it is set once under love and once under friendship, because it belongs to both.</p>
+      <p class="companion">Companion galleries, where these subjects are the pictures: <a href="../love-gallery/index.html">Love, Abstracted</a> (46 works) &middot; <a href="../friends-gallery/index.html">Friends, Abstracted</a> (25 works) &middot; <a href="../parents-gallery/index.html">Parents, Abstracted</a> (25 works) &middot; <a href="../grief-gallery/index.html">Grief, and the Night</a> (201 works).</p>
+    </footer>
+  </main>
+</div>
+
+<script>
+const q = document.getElementById('q');
+const count = document.getElementById('count');
+const arts = Array.from(document.querySelectorAll('.passage'));
+const heads = Array.from(document.querySelectorAll('.sec'));
+function apply() {
+  const s = q.value.trim().toLowerCase();
+  let n = 0;
+  arts.forEach(a => {
+    const hit = !s || a.dataset.search.includes(s);
+    a.hidden = !hit;
+    if (hit) n++;
+  });
+  heads.forEach(sec => {
+    const vis = sec.querySelectorAll('.passage:not([hidden])').length;
+    sec.hidden = vis === 0;
+    const mini = sec.querySelector('nav.mini');
+    if (mini) mini.hidden = !!s;
+  });
+  count.textContent = s ? n + ' of ' + arts.length + ' passages' : arts.length + ' passages';
+}
+q.addEventListener('input', apply);
+</script>
+</body>
+</html>

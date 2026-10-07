@@ -1,0 +1,502 @@
+[
+ {
+  "slug": "madonna-litta",
+  "title": "Madonna Litta",
+  "artist": "Leonardo da Vinci (1452-1519)",
+  "date": "c. 1490-91",
+  "medium": "Tempera on canvas, transferred from panel",
+  "place": "State Hermitage Museum, Saint Petersburg",
+  "note": "A closed circuit of attention between mother and son.",
+  "tags": [
+   "tempera",
+   "mother and child"
+  ],
+  "source_title": "File:Leonardo da Vinci - Madonna Litta - WGA12702.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3ALeonardo_da_Vinci_-_Madonna_Litta_-_WGA12702.jpg",
+  "source_license": "Public domain",
+  "source_artist": "Leonardo da Vinci",
+  "full": "img/full/madonna-litta.jpg",
+  "thumb": "img/thumb/madonna-litta.jpg",
+  "px": "1600x2059"
+ },
+ {
+  "slug": "madonna-granduca",
+  "title": "Madonna del Granduca",
+  "artist": "Raphael (1483-1520)",
+  "date": "1505",
+  "medium": "Oil on panel",
+  "place": "Galleria Palatina, Palazzo Pitti, Florence",
+  "note": "The mother appears out of black, the child held across.",
+  "tags": [
+   "high renaissance",
+   "mother and child"
+  ],
+  "source_title": "File:Raphael - Madonna dell Granduca.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3ARaphael_-_Madonna_dell_Granduca.jpg",
+  "source_license": "Public domain",
+  "source_artist": "Raphael",
+  "full": "img/full/madonna-granduca.jpg",
+  "thumb": "img/thumb/madonna-granduca.jpg",
+  "px": "1600x2458"
+ },
+ {
+  "slug": "madonna-pomegranate",
+  "title": "Madonna of the Pomegranate",
+  "artist": "Sandro Botticelli (c. 1445-1510)",
+  "date": "1487",
+  "medium": "Tempera on panel",
+  "place": "Galleria degli Uffizi, Florence",
+  "note": "An emblem of fruit turned into a family gesture.",
+  "tags": [
+   "florentine",
+   "mother and child"
+  ],
+  "source_title": "File:Botticelli, madonna della melagrana 01.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3ABotticelli%2C_madonna_della_melagrana_01.jpg",
+  "source_license": "Public domain",
+  "source_artist": "Sandro Botticelli",
+  "full": "img/full/madonna-pomegranate.jpg",
+  "thumb": "img/thumb/madonna-pomegranate.jpg",
+  "px": "1600x1604"
+ },
+ {
+  "slug": "madonna-dove",
+  "title": "Madonna and Child with a Dove",
+  "artist": "Piero di Cosimo (1462-1522)",
+  "date": "c. 1500",
+  "medium": "Oil on panel",
+  "place": "Mus\u00e9e du Louvre, Paris",
+  "note": "The child leans out, offering a dove, off-centre.",
+  "tags": [
+   "florentine",
+   "dove"
+  ],
+  "source_title": "File:Madonna and Child with a Dove - Piero di Cosimo - Louvre INV 817.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3AMadonna_and_Child_with_a_Dove_-_Piero_di_Cosimo_-_Louvre_INV_817.jpg",
+  "source_license": "Public domain",
+  "source_artist": "Piero di Cosimo",
+  "full": "img/full/madonna-dove.jpg",
+  "thumb": "img/thumb/madonna-dove.jpg",
+  "px": "1600x2499"
+ },
+ {
+  "slug": "virgin-child-st-anne",
+  "title": "The Virgin and Child with Saint Anne",
+  "artist": "Leonardo da Vinci (1452-1519)",
+  "date": "c. 1503-19",
+  "medium": "Oil on poplar",
+  "place": "Mus\u00e9e du Louvre, Paris",
+  "note": "Three generations climbing one another in a single spiral.",
+  "tags": [
+   "high renaissance",
+   "three generations"
+  ],
+  "source_title": "File:Leonardo da Vinci - Virgin and Child with St Anne C2RMF retouched.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3ALeonardo_da_Vinci_-_Virgin_and_Child_with_St_Anne_C2RMF_retouched.jpg",
+  "source_license": "Public domain",
+  "source_artist": "",
+  "full": "img/full/virgin-child-st-anne.jpg",
+  "thumb": "img/thumb/virgin-child-st-anne.jpg",
+  "px": "1600x2146"
+ },
+ {
+  "slug": "banjo-lesson",
+  "title": "The Banjo Lesson",
+  "artist": "Henry Ossawa Tanner (1859-1937)",
+  "date": "1893",
+  "medium": "Oil on canvas",
+  "place": "Hampton University Museum, Virginia",
+  "note": "A lesson taught by touch, not by speech.",
+  "tags": [
+   "care",
+   "teaching"
+  ],
+  "source_title": "File:Henry Ossawa Tanner - The Banjo Lesson.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3AHenry_Ossawa_Tanner_-_The_Banjo_Lesson.jpg",
+  "source_license": "Public domain",
+  "source_artist": "Henry Ossawa Tanner",
+  "full": "img/full/banjo-lesson.jpg",
+  "thumb": "img/thumb/banjo-lesson.jpg",
+  "px": "1600x2247"
+ },
+ {
+  "slug": "tobit-anna",
+  "title": "Tobit and Anna with the Kid",
+  "artist": "Rembrandt van Rijn (1606-1669)",
+  "date": "1626",
+  "medium": "Oil on panel",
+  "place": "Rijksmuseum, Amsterdam",
+  "note": "Authority sits in the lap, not in the gesture.",
+  "tags": [
+   "interior",
+   "household"
+  ],
+  "source_title": "File:Tobit en Anna met het bokje Rijksmuseum SK-A-4717.jpeg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3ATobit_en_Anna_met_het_bokje_Rijksmuseum_SK-A-4717.jpeg",
+  "source_license": "Public domain",
+  "source_artist": "Rembrandt",
+  "full": "img/full/tobit-anna.jpg",
+  "thumb": "img/thumb/tobit-anna.jpg",
+  "px": "1600x2118"
+ },
+ {
+  "slug": "old-man-grandson",
+  "title": "An Old Man and His Grandson",
+  "artist": "Domenico Ghirlandaio (1449-1494)",
+  "date": "c. 1490",
+  "medium": "Tempera on panel",
+  "place": "Mus\u00e9e du Louvre, Paris",
+  "note": "Two generations seen in one unmarked glance.",
+  "tags": [
+   "portrait",
+   "generations"
+  ],
+  "source_title": "File:Ghirlandaio, Domenico - An Old Man and His Grandson - Louvre - Google Art Project.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3AGhirlandaio%2C_Domenico_-_An_Old_Man_and_His_Grandson_-_Louvre_-_Google_Art_Project.jpg",
+  "source_license": "Public domain",
+  "source_artist": "Domenico Ghirlandaio",
+  "full": "img/full/old-man-grandson.jpg",
+  "thumb": "img/thumb/old-man-grandson.jpg",
+  "px": "1600x2170"
+ },
+ {
+  "slug": "isaac-blessing-jacob",
+  "title": "Isaac Blessing Jacob",
+  "artist": "Govert Flinck (1615-1660)",
+  "date": "1638",
+  "medium": "Oil on canvas",
+  "place": "Rijksmuseum, Amsterdam",
+  "note": "A blessing given to the wrong son, knowingly.",
+  "tags": [
+   "old testament",
+   "blessing"
+  ],
+  "source_title": "File:Govert Flinck - Isaac Blessing Jacob - WGA07930.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3AGovert_Flinck_-_Isaac_Blessing_Jacob_-_WGA07930.jpg",
+  "source_license": "Public domain",
+  "source_artist": "Govert Flinck",
+  "full": "img/full/isaac-blessing-jacob.jpg",
+  "thumb": "img/thumb/isaac-blessing-jacob.jpg",
+  "px": "1600x1288"
+ },
+ {
+  "slug": "prodigal-tavern",
+  "title": "The Prodigal Son in the Tavern",
+  "artist": "Rembrandt van Rijn (1606-1669)",
+  "date": "c. 1635",
+  "medium": "Oil on canvas",
+  "place": "Gem\u00e4ldegalerie Alte Meister, Dresden",
+  "note": "The father is absent, which is the whole point.",
+  "tags": [
+   "parable",
+   "self-portrait"
+  ],
+  "source_title": "File:Rembrandt - Rembrandt and Saskia in the Scene of the Prodigal Son - Google Art Project.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3ARembrandt_-_Rembrandt_and_Saskia_in_the_Scene_of_the_Prodigal_Son_-_Google_Art_Project.jpg",
+  "source_license": "Public domain",
+  "source_artist": "Rembrandt",
+  "full": "img/full/prodigal-tavern.jpg",
+  "thumb": "img/thumb/prodigal-tavern.jpg",
+  "px": "1600x2028"
+ },
+ {
+  "slug": "cezanne-mother",
+  "title": "Portrait of the Artist's Mother",
+  "artist": "Paul C\u00e9zanne (1839-1906)",
+  "date": "1866-67",
+  "medium": "Oil on canvas",
+  "place": "Saint Louis Art Museum",
+  "note": "A son's first portrait, and his most unsentimental.",
+  "tags": [
+   "portrait",
+   "unsentimental"
+  ],
+  "source_title": "File:Portrait of the Artist\u2019s Mother by Paul C\u00e9zanne, 1866-1867, oil on canvas, Saint Louis Art Museum.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3APortrait_of_the_Artist%E2%80%99s_Mother_by_Paul_C%C3%A9zanne%2C_1866-1867%2C_oil_on_canvas%2C_Saint_Louis_Art_Museum.jpg",
+  "source_license": "CC0",
+  "source_artist": "Hiart",
+  "full": "img/full/cezanne-mother.jpg",
+  "thumb": "img/thumb/cezanne-mother.jpg",
+  "px": "1600x2048"
+ },
+ {
+  "slug": "orlai-mother",
+  "title": "Portrait of the Artist's Mother",
+  "artist": "Soma Orlai Petrich (1822-1880)",
+  "date": "1853",
+  "medium": "Oil on canvas",
+  "place": "Private collection",
+  "note": "Ordinary dress, ordinary room, and no ideal anywhere.",
+  "tags": [
+   "portrait",
+   "domestic"
+  ],
+  "source_title": "File:Orlai Portrait of the Artist's Mother 1853.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3AOrlai_Portrait_of_the_Artist%27s_Mother_1853.jpg",
+  "source_license": "Public domain",
+  "source_artist": "Soma Orlai Petrich",
+  "full": "img/full/orlai-mother.jpg",
+  "thumb": "img/thumb/orlai-mother.jpg",
+  "px": "1600x2054"
+ },
+ {
+  "slug": "tanner-mother",
+  "title": "Portrait of the Artist's Mother",
+  "artist": "Henry Ossawa Tanner (1859-1937)",
+  "date": "1897",
+  "medium": "Oil on canvas",
+  "place": "Philadelphia Museum of Art",
+  "note": "The tenderness is in how little the son intrudes.",
+  "tags": [
+   "portrait",
+   "low key"
+  ],
+  "source_title": "File:Henry Ossawa Tanner, American (active France) - Portrait of the Artist's Mother - Google Art Project.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3AHenry_Ossawa_Tanner%2C_American_%28active_France%29_-_Portrait_of_the_Artist%27s_Mother_-_Google_Art_Project.jpg",
+  "source_license": "Public domain",
+  "source_artist": "Henry Ossawa Tanner",
+  "full": "img/full/tanner-mother.jpg",
+  "thumb": "img/thumb/tanner-mother.jpg",
+  "px": "1600x1201"
+ },
+ {
+  "slug": "ensor-father",
+  "title": "Portrait of the Artist's Father",
+  "artist": "James Ensor (1860-1949)",
+  "date": "1882",
+  "medium": "Oil on canvas",
+  "place": "",
+  "note": "A formal portrait threatening to become a mask.",
+  "tags": [
+   "portrait",
+   "mask"
+  ],
+  "source_title": "File:James Ensor - Portrait of the Artist's Father.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3AJames_Ensor_-_Portrait_of_the_Artist%27s_Father.jpg",
+  "source_license": "Public domain",
+  "source_artist": "James Ensor",
+  "full": "img/full/ensor-father.jpg",
+  "thumb": "img/thumb/ensor-father.jpg",
+  "px": "1600x2018"
+ },
+ {
+  "slug": "mancini-father",
+  "title": "Portrait of the Artist's Father",
+  "artist": "Antonio Mancini (1852-1930)",
+  "date": "undated",
+  "medium": "Oil on canvas",
+  "place": "Private collection",
+  "note": "A likeness that refuses to finish itself.",
+  "tags": [
+   "portrait",
+   "unfinished"
+  ],
+  "source_title": "File:Antonio Mancini - A Portrait of the Artist's Father.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3AAntonio_Mancini_-_A_Portrait_of_the_Artist%27s_Father.jpg",
+  "source_license": "Public domain",
+  "source_artist": "Antonio Mancini",
+  "full": "img/full/mancini-father.jpg",
+  "thumb": "img/thumb/mancini-father.jpg",
+  "px": "1600x2051"
+ },
+ {
+  "slug": "cassatt-oval-mirror",
+  "title": "Mother and Child (The Oval Mirror)",
+  "artist": "Mary Cassatt (1844-1926)",
+  "date": "c. 1899",
+  "medium": "Oil on canvas",
+  "place": "The Metropolitan Museum of Art, New York",
+  "note": "The embrace described by the shape of the frame.",
+  "tags": [
+   "impressionism",
+   "mirror"
+  ],
+  "source_title": "File:Mother and Child (The Oval Mirror) MET DT2025.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3AMother_and_Child_%28The_Oval_Mirror%29_MET_DT2025.jpg",
+  "source_license": "CC0",
+  "source_artist": "Mary Cassatt",
+  "full": "img/full/cassatt-oval-mirror.jpg",
+  "thumb": "img/thumb/cassatt-oval-mirror.jpg",
+  "px": "1600x1967"
+ },
+ {
+  "slug": "cassatt-combing",
+  "title": "Mother Combing Her Child's Hair",
+  "artist": "Mary Cassatt (1844-1926)",
+  "date": "c. 1901",
+  "medium": "Pastel and gouache on tan paper",
+  "place": "Brooklyn Museum, New York",
+  "note": "The chore of hair described as holding still.",
+  "tags": [
+   "pastel",
+   "care"
+  ],
+  "source_title": "File:Brooklyn Museum - Mother Combing Her Child's Hair - Mary Cassatt.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3ABrooklyn_Museum_-_Mother_Combing_Her_Child%27s_Hair_-_Mary_Cassatt.jpg",
+  "source_license": "Public domain",
+  "source_artist": "Mary Cassatt",
+  "full": "img/full/cassatt-combing.jpg",
+  "thumb": "img/thumb/cassatt-combing.jpg",
+  "px": "1600x1281"
+ },
+ {
+  "slug": "cassatt-nurse-reading",
+  "title": "Nurse Reading to a Little Girl",
+  "artist": "Mary Cassatt (1844-1926)",
+  "date": "1895",
+  "medium": "Pastel on wove paper, mounted on canvas",
+  "place": "The Metropolitan Museum of Art, New York",
+  "note": "Two people agreeing to spend one quiet hour.",
+  "tags": [
+   "pastel",
+   "reading"
+  ],
+  "source_title": "File:Nurse Reading to a Little Girl MET DT7250.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3ANurse_Reading_to_a_Little_Girl_MET_DT7250.jpg",
+  "source_license": "CC0",
+  "source_artist": "Mary Cassatt",
+  "full": "img/full/cassatt-nurse-reading.jpg",
+  "thumb": "img/thumb/cassatt-nurse-reading.jpg",
+  "px": "1600x1320"
+ },
+ {
+  "slug": "morisot-garden",
+  "title": "A Woman and Child in a Garden",
+  "artist": "Berthe Morisot (1841-1895)",
+  "date": "c. 1883-84",
+  "medium": "Oil on canvas",
+  "place": "National Galleries of Scotland, Edinburgh",
+  "note": "The garden where the pair is allowed to be ordinary.",
+  "tags": [
+   "impressionism",
+   "garden"
+  ],
+  "source_title": "File:Berthe Morisot - A Woman and Child in a Garden - NG 2269 - National Galleries of Scotland.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3ABerthe_Morisot_-_A_Woman_and_Child_in_a_Garden_-_NG_2269_-_National_Galleries_of_Scotland.jpg",
+  "source_license": "Public domain",
+  "source_artist": "Berthe Morisot",
+  "full": "img/full/morisot-garden.jpg",
+  "thumb": "img/thumb/morisot-garden.jpg",
+  "px": "1600x1307"
+ },
+ {
+  "slug": "morisot-meadow",
+  "title": "Woman and Child Seated in a Meadow",
+  "artist": "Berthe Morisot (1841-1895)",
+  "date": "1871",
+  "medium": "Watercolour on paper",
+  "place": "",
+  "note": "Two figures on grass, and nothing else at all.",
+  "tags": [
+   "watercolour",
+   "leisure"
+  ],
+  "source_title": "File:Berthe Morisot - Woman and Child Seated in a Meadow (1871).jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3ABerthe_Morisot_-_Woman_and_Child_Seated_in_a_Meadow_%281871%29.jpg",
+  "source_license": "Public domain",
+  "source_artist": "Berthe Morisot",
+  "full": "img/full/morisot-meadow.jpg",
+  "thumb": "img/thumb/morisot-meadow.jpg",
+  "px": "1600x1308"
+ },
+ {
+  "slug": "bouguereau-pieta",
+  "title": "Piet\u00e0",
+  "artist": "William-Adolphe Bouguereau (1825-1905)",
+  "date": "1876",
+  "medium": "Oil on canvas",
+  "place": "",
+  "note": "Academic finish makes the loss harder to look at.",
+  "tags": [
+   "academic",
+   "mourning"
+  ],
+  "source_title": "File:William-Adolphe Bouguereau (1825-1905) - Pieta (1876).jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3AWilliam-Adolphe_Bouguereau_%281825-1905%29_-_Pieta_%281876%29.jpg",
+  "source_license": "Public domain",
+  "source_artist": "William-Adolphe Bouguereau",
+  "full": "img/full/bouguereau-pieta.jpg",
+  "thumb": "img/thumb/bouguereau-pieta.jpg",
+  "px": "1600x2513"
+ },
+ {
+  "slug": "michelangelo-pieta",
+  "title": "Piet\u00e0",
+  "artist": "Michelangelo (1475-1564)",
+  "date": "1498-99",
+  "medium": "Marble",
+  "place": "St Peter's Basilica, Vatican City",
+  "note": "The moment a parent outlives the child.",
+  "tags": [
+   "sculpture",
+   "marble"
+  ],
+  "source_title": "File:Michelangelo's Piet\u00e0 Saint Peter's Basilica Vatican City.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3AMichelangelo%27s_Piet%C3%A0_Saint_Peter%27s_Basilica_Vatican_City.jpg",
+  "source_license": "CC0",
+  "source_artist": "Jebulon",
+  "full": "img/full/michelangelo-pieta.jpg",
+  "thumb": "img/thumb/michelangelo-pieta.jpg",
+  "px": "1600x1477"
+ },
+ {
+  "slug": "klimt-death-life",
+  "title": "Death and Life",
+  "artist": "Gustav Klimt (1862-1918)",
+  "date": "1910/15",
+  "medium": "Oil on canvas",
+  "place": "Leopold Museum, Vienna",
+  "note": "The family is what death has to pry apart.",
+  "tags": [
+   "symbolism",
+   "sleep"
+  ],
+  "source_title": "File:Gustav Klimt - Death and Life - Google Art Project.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3AGustav_Klimt_-_Death_and_Life_-_Google_Art_Project.jpg",
+  "source_license": "Public domain",
+  "source_artist": "Gustav Klimt",
+  "full": "img/full/klimt-death-life.jpg",
+  "thumb": "img/thumb/klimt-death-life.jpg",
+  "px": "1600x1393"
+ },
+ {
+  "slug": "munch-deathbed",
+  "title": "At the Deathbed",
+  "artist": "Edvard Munch (1863-1944)",
+  "date": "1895",
+  "medium": "Oil and tempera on canvas",
+  "place": "Bergen Kunstmuseum",
+  "note": "A household turning into a row of separate people.",
+  "tags": [
+   "expressionism",
+   "grief"
+  ],
+  "source_title": "File:'At the Deathbed' by Edvard Munch, 1895, Bergen Kunstmuseum.JPG",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3A%27At_the_Deathbed%27_by_Edvard_Munch%2C_1895%2C_Bergen_Kunstmuseum.JPG",
+  "source_license": "Public domain",
+  "source_artist": "Edvard Munch",
+  "full": "img/full/munch-deathbed.jpg",
+  "thumb": "img/thumb/munch-deathbed.jpg",
+  "px": "1600x1207"
+ },
+ {
+  "slug": "munch-sickroom",
+  "title": "Death in the Sickroom",
+  "artist": "Edvard Munch (1863-1944)",
+  "date": "1893",
+  "medium": "Pastel",
+  "place": "Munch Museum, Oslo",
+  "note": "The room is the illness; sitting still is comfort.",
+  "tags": [
+   "expressionism",
+   "illness"
+  ],
+  "source_title": "File:Edvard Munch - Death in the Sickroom - MM.M.00214 - Munch Museum.jpg",
+  "source_page": "https://commons.wikimedia.org/wiki/File%3AEdvard_Munch_-_Death_in_the_Sickroom_-_MM.M.00214_-_Munch_Museum.jpg",
+  "source_license": "Public domain",
+  "source_artist": "Edvard Munch",
+  "full": "img/full/munch-sickroom.jpg",
+  "thumb": "img/thumb/munch-sickroom.jpg",
+  "px": "1600x1322"
+ }
+]

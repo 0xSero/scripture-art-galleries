@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Love, Abstracted &mdash; a gallery of classical art</title>
+<meta name="description" content="46 public-domain works in which love is dissolved into line, mass, ornament and symbol while remaining unmistakably human.">
+<style>
+:root {
+  --paper: #fcfbf9;
+  --ink: #17161a;
+  --muted: #6c6862;
+  --rule: #ddd8d0;
+  --rule-soft: #ebe7e1;
+  --accent: #8a3b3b;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --measure: 68ch;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #14140f;
+    --ink: #ece8e1;
+    --muted: #9b958c;
+    --rule: #34322c;
+    --rule-soft: #24231e;
+    --accent: #d08a7a;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+}
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px 96px; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+header.masthead { padding: 72px 0 0; border-bottom: 1px solid var(--rule); }
+.kicker { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin: 0 0 20px; }
+h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 6vw, 58px); line-height: 1.04; letter-spacing: -.015em; margin: 0 0 18px; }
+h1 em { font-style: italic; color: var(--accent); }
+.lede { font-family: var(--serif); font-size: clamp(17px, 2.1vw, 21px); line-height: 1.5; max-width: var(--measure); color: var(--ink); margin: 0 0 16px; }
+.method { max-width: var(--measure); font-size: 14px; line-height: 1.65; color: var(--muted); margin: 0 0 40px; }
+.method b { color: var(--ink); font-weight: 600; }
+
+nav.toc { padding: 34px 0 30px; border-bottom: 1px solid var(--rule); }
+nav.toc ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 26px; }
+nav.toc a { text-decoration: none; font-size: 13.5px; color: var(--ink); border-bottom: 1px solid transparent; }
+nav.toc a:hover { border-bottom-color: var(--accent); }
+nav.toc .n { font-family: var(--serif); color: var(--accent); margin-right: 5px; }
+
+.sec { padding-top: 76px; }
+.sec-h { border-top: 1px solid var(--ink); padding-top: 16px; margin-bottom: 40px; }
+.numeral { font-family: var(--serif); font-size: 12px; letter-spacing: .2em; color: var(--accent); margin: 0 0 8px; }
+.sec-h h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(23px, 3.4vw, 31px); letter-spacing: -.01em; margin: 0 0 12px; }
+.blurb { font-family: var(--serif); font-size: 16px; line-height: 1.55; color: var(--muted); max-width: var(--measure); margin: 0; }
+
+.plates { column-width: 268px; column-gap: 30px; }
+.plate { margin: 0 0 40px; break-inside: avoid; }
+.frame { display: block; position: relative; padding: 0; border: 0; background: none; cursor: zoom-in; width: 100%; line-height: 0; }
+.frame img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); background: #fff; }
+.zoom { position: absolute; right: 9px; bottom: 9px; font-family: var(--sans); font-size: 10px; letter-spacing: .13em; text-transform: uppercase; color: var(--paper); background: rgba(23,22,26,.72); padding: 4px 8px; opacity: 0; transition: opacity .18s ease; }
+.frame:hover .zoom, .frame:focus-visible .zoom { opacity: 1; }
+figcaption { padding-top: 11px; }
+.no { font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 7px; }
+.dot { margin: 0 7px; }
+.ttl { font-family: var(--serif); font-weight: 400; font-size: 18px; line-height: 1.25; margin: 0 0 4px; }
+.by { font-size: 13px; margin: 0 0 2px; }
+.md, .kw, .src { font-size: 12.5px; color: var(--muted); margin: 0; }
+.md { margin-bottom: 9px; }
+.note { font-family: var(--serif); font-size: 14.5px; line-height: 1.55; margin: 0 0 10px; }
+.verse { margin: 0 0 11px; padding-left: 12px; border-left: 2px solid var(--accent); }
+.verse p { font-family: var(--serif); font-size: 14.5px; line-height: 1.5; margin: 0 0 4px; }
+.verse cite { font-style: normal; font-size: 10.5px; letter-spacing: .13em; text-transform: uppercase; color: var(--accent); }
+.tag { display: inline-block; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--rule); padding: 2px 7px; margin: 0 5px 5px 0; }
+.src { border-top: 1px solid var(--rule-soft); padding-top: 8px; display: flex; justify-content: space-between; gap: 12px; }
+.src a { color: var(--muted); }
+.src a:hover { color: var(--accent); }
+.lic { white-space: nowrap; }
+
+#index { padding-top: 76px; }
+#index h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(23px, 3.4vw, 31px); border-top: 1px solid var(--ink); padding-top: 16px; margin: 0 0 22px; }
+table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+caption { text-align: left; font-size: 12.5px; color: var(--muted); padding-bottom: 12px; }
+th { text-align: left; font-weight: 600; font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--rule); padding: 0 14px 8px 0; }
+td { border-bottom: 1px solid var(--rule-soft); padding: 9px 14px 9px 0; vertical-align: top; }
+td a { text-decoration: none; border-bottom: 1px solid var(--rule); }
+td a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.c-no { width: 46px; font-family: var(--serif); color: var(--accent); }
+.c-dat { white-space: nowrap; }
+.c-med { color: var(--muted); }
+.c-verse { white-space: nowrap; font-size: 12px; letter-spacing: .06em; color: var(--accent); }
+tbody tr:hover { background: var(--rule-soft); }
+
+footer { margin-top: 84px; border-top: 1px solid var(--rule); padding-top: 26px; font-size: 13px; line-height: 1.7; color: var(--muted); max-width: var(--measure); }
+footer h2 { font-family: var(--serif); font-weight: 400; font-size: 17px; color: var(--ink); margin: 0 0 12px; }
+footer code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+
+.companion { margin-top: 20px; padding-top: 14px; border-top: 1px solid var(--rule-soft); }
+.companion a { color: var(--accent); }
+.lb { position: fixed; inset: 0; z-index: 50; display: none; background: rgba(12,11,10,.985); color: #f2efe9; padding: 22px; }
+.lb[data-open="1"] { display: grid; grid-template-rows: 1fr auto; }
+.lb-stage { position: relative; display: flex; align-items: center; justify-content: center; min-height: 0; }
+.lb-stage img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.lb-x { position: absolute; top: 0; right: 0; background: none; border: 1px solid rgba(242,239,233,.4); color: inherit; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; padding: 7px 11px; cursor: pointer; }
+.lb-cap { max-width: 760px; margin: 16px auto 0; font-size: 13px; line-height: 1.5; }
+.lb-cap .t { font-family: var(--serif); font-size: 17px; }
+.lb-cap .m { color: #b8b2a8; }
+.lb-cap .v { display: block; margin-top: 6px; font-family: var(--serif); font-size: 14.5px; }
+.lb-cap .r { display: block; margin-top: 3px; font-size: 10.5px; letter-spacing: .13em; text-transform: uppercase; color: #b8b2a8; }
+.lb-nav { display: flex; gap: 10px; justify-content: center; margin-top: 14px; }
+.lb-nav button { background: none; border: 1px solid rgba(242,239,233,.4); color: inherit; padding: 7px 14px; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; }
+.lb-nav button:hover { border-color: #f2efe9; }
+body.lb-open { overflow: hidden; }
+@media (hover: none) { .zoom { opacity: 1; } }
+@media (max-width: 640px) {
+  .wrap { padding: 0 18px 72px; }
+  .c-med { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media print {
+  .frame .zoom, .lb, nav.toc { display: none; }
+  .plates { column-width: 45%; }
+  .plate { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="kicker">A gallery of classical art &middot; 46 public-domain works</p>
+    <h1>Love, <em>Abstracted</em></h1>
+    <p class="lede">Love is difficult to paint directly, so most of the works here approach it sideways. The figure is never abandoned, but it is continually on the way to becoming something else &mdash; a vortex of limbs, a single silhouette, a block of marble that has not finished releasing two bodies, a gold pattern in which two faces are almost lost.</p>
+    <p class="method">The selection below follows that bias: <b>works where abstraction and the human survive together</b>. They are arranged from allegory, through Symbolism, line and carved mass, to the threshold of modernity. Every image is public domain or CC0, reproduced from <b>Wikimedia Commons</b>, and stored locally beside this page so the gallery works offline. Each plate carries a psalm verse set into the image itself, in the King James Version. Click any plate to enlarge it; use the arrow keys to move through the catalogue.</p>
+  </header>
+
+  <nav class="toc" aria-label="Contents">
+    <ol>
+      <li><a href="#sec-I"><span class="n">I</span> Allegory and Emblem</a></li><li><a href="#sec-II"><span class="n">II</span> The Symbolist Dream</a></li><li><a href="#sec-III"><span class="n">III</span> Line and Gesture</a></li><li><a href="#sec-IV"><span class="n">IV</span> The Body as Form</a></li><li><a href="#sec-V"><span class="n">V</span> The Threshold of Modernity</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <section class="sec" id="sec-I">
+      <header class="sec-h">
+        <p class="numeral">I</p>
+        <h2>Allegory and Emblem</h2>
+        <p class="blurb">Love as an argument rather than an event: figures arranged so that the idea outweighs the bodies carrying it, from Botticelli's weather to Veronese's knot.</p>
+      </header>
+      <div class="plates">
+      <figure class="plate" id="p1">
+        <button class="frame" type="button" data-plate="1"
+                aria-label="Enlarge plate 1: Sacred and Profane Love">
+          <img src="img/versed-thumb/sacred-profane-love.jpg" width="700" alt="Sacred and Profane Love by Titian (c. 1488/90-1576), with Psalm 45:13" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 1</span><span class="dot">&middot;</span><span class="yr">c. 1514</span></p>
+          <h3 class="ttl">Sacred and Profane Love</h3>
+          <p class="by">Titian (c. 1488/90-1576)</p>
+          <p class="md">Oil on canvas &middot; Galleria Borghese, Rome</p>
+          <p class="note">Two women sit at a well — one dressed, one bare — while a child stirs the water between them. The allegory is left unresolved on purpose: the same body shown twice, as thought and as feeling.</p>
+          <blockquote class="verse"><p>The king’s daughter is all glorious within: her clothing is of wrought gold.</p><cite>Psalm 45:13</cite></blockquote>
+          <p class="kw"><span class="tag">allegory</span><span class="tag">venetian colour</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ATiziano_-_Amor_Sacro_y_Amor_Profano_%28Galer%C3%ADa_Borghese%2C_Roma%2C_1514%29.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p2">
+        <button class="frame" type="button" data-plate="2"
+                aria-label="Enlarge plate 2: Venus and Mars">
+          <img src="img/versed-thumb/venus-and-mars.jpg" width="700" alt="Venus and Mars by Sandro Botticelli (c. 1445-1510), with Psalm 121:4" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 2</span><span class="dot">&middot;</span><span class="yr">c. 1485</span></p>
+          <h3 class="ttl">Venus and Mars</h3>
+          <p class="by">Sandro Botticelli (c. 1445-1510)</p>
+          <p class="md">Tempera and oil on poplar &middot; National Gallery, London</p>
+          <p class="note">Mars sleeps while wasps hum about his head and Venus watches, propped and awake. Love here is not an event but a condition — vigilance kept beside oblivion.</p>
+          <blockquote class="verse"><p>Behold, he that keepeth Israel shall neither slumber nor sleep.</p><cite>Psalm 121:4</cite></blockquote>
+          <p class="kw"><span class="tag">allegory</span><span class="tag">line</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AVenus_and_Mars_National_Gallery.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p3">
+        <button class="frame" type="button" data-plate="3"
+                aria-label="Enlarge plate 3: An Allegory with Venus and Cupid">
+          <img src="img/versed-thumb/allegory-venus-cupid.jpg" width="700" alt="An Allegory with Venus and Cupid by Agnolo Bronzino (1503-1572), with Psalm 8:4" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 3</span><span class="dot">&middot;</span><span class="yr">c. 1545</span></p>
+          <h3 class="ttl">An Allegory with Venus and Cupid</h3>
+          <p class="by">Agnolo Bronzino (1503-1572)</p>
+          <p class="md">Oil on panel &middot; National Gallery, London</p>
+          <p class="note">Cold, enamelled, almost mineral flesh, with Time and Folly drawing back the curtain. Desire is argued as geometry rather than felt on the skin.</p>
+          <blockquote class="verse"><p>What is man, that thou art mindful of him? and the son of man, that thou visitest him?</p><cite>Psalm 8:4</cite></blockquote>
+          <p class="kw"><span class="tag">mannerism</span><span class="tag">allegory</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AAngelo_Bronzino_-_Venus%2C_Cupid%2C_Folly_and_Time_-_National_Gallery%2C_London.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p4">
+        <button class="frame" type="button" data-plate="4"
+                aria-label="Enlarge plate 4: Primavera">
+          <img src="img/versed-thumb/primavera.jpg" width="700" alt="Primavera by Sandro Botticelli (c. 1445-1510), with Psalm 65:11" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 4</span><span class="dot">&middot;</span><span class="yr">c. 1480</span></p>
+          <h3 class="ttl">Primavera</h3>
+          <p class="by">Sandro Botticelli (c. 1445-1510)</p>
+          <p class="md">Tempera on panel &middot; Galleria degli Uffizi, Florence</p>
+          <p class="note">Nine figures stand in an orange grove and almost none of them touch. Spring, love and fertility are arranged as a diagram — an argument made out of bodies.</p>
+          <blockquote class="verse"><p>Thou crownest the year with thy goodness; and thy paths drop fatness.</p><cite>Psalm 65:11</cite></blockquote>
+          <p class="kw"><span class="tag">allegory</span><span class="tag">neoplatonism</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ASandro_Botticelli_-_La_Primavera_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p5">
+        <button class="frame" type="button" data-plate="5"
+                aria-label="Enlarge plate 5: Venus of Urbino">
+          <img src="img/versed-thumb/venus-of-urbino.jpg" width="700" alt="Venus of Urbino by Titian (c. 1488/90-1576), with Psalm 139:1" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 5</span><span class="dot">&middot;</span><span class="yr">1538</span></p>
+          <h3 class="ttl">Venus of Urbino</h3>
+          <p class="by">Titian (c. 1488/90-1576)</p>
+          <p class="md">Oil on canvas &middot; Galleria degli Uffizi, Florence</p>
+          <p class="note">A goddess installed in an ordinary Venetian bedroom, looking straight out of the picture. The body has become a painted surface first and a person second, which is exactly what makes the gaze so unsettled.</p>
+          <blockquote class="verse"><p>O LORD, thou hast searched me, and known me.</p><cite>Psalm 139:1</cite></blockquote>
+          <p class="kw"><span class="tag">venetian colour</span><span class="tag">gaze</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ATiziano_-_Venere_di_Urbino_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p6">
+        <button class="frame" type="button" data-plate="6"
+                aria-label="Enlarge plate 6: The Birth of Venus">
+          <img src="img/versed-thumb/birth-of-venus.jpg" width="700" alt="The Birth of Venus by Sandro Botticelli (c. 1445-1510), with Psalm 93:3" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 6</span><span class="dot">&middot;</span><span class="yr">c. 1485</span></p>
+          <h3 class="ttl">The Birth of Venus</h3>
+          <p class="by">Sandro Botticelli (c. 1445-1510)</p>
+          <p class="md">Tempera on canvas &middot; Galleria degli Uffizi, Florence</p>
+          <p class="note">Venus arrives on a shell blown in by the winds, and love is staged as a birth rather than a meeting. Botticelli paints desire as weather, flowers and hair, with the body barely touching anything.</p>
+          <blockquote class="verse"><p>The floods have lifted up, O LORD, the floods have lifted up their voice; the floods lift up their waves.</p><cite>Psalm 93:3</cite></blockquote>
+          <p class="kw"><span class="tag">allegory</span><span class="tag">mythology</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ASandro_Botticelli_046.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p7">
+        <button class="frame" type="button" data-plate="7"
+                aria-label="Enlarge plate 7: Venus with a Mirror">
+          <img src="img/versed-thumb/venus-with-mirror.jpg" width="700" alt="Venus with a Mirror by Titian (c. 1488/90-1576), with Psalm 139:23" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 7</span><span class="dot">&middot;</span><span class="yr">c. 1555</span></p>
+          <h3 class="ttl">Venus with a Mirror</h3>
+          <p class="by">Titian (c. 1488/90-1576)</p>
+          <p class="md">Oil on canvas &middot; National Gallery of Art, Washington</p>
+          <p class="note">The goddess looks at herself while a cupid holds the mirror, and the only love in the picture is self-regard. The body has become a surface being admired, and the admirer is her.</p>
+          <blockquote class="verse"><p>Search me, O God, and know my heart: try me, and know my thoughts:</p><cite>Psalm 139:23</cite></blockquote>
+          <p class="kw"><span class="tag">venetian colour</span><span class="tag">the mirror</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ATitian_-_Venus_with_a_Mirror_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p8">
+        <button class="frame" type="button" data-plate="8"
+                aria-label="Enlarge plate 8: The Garden of Love">
+          <img src="img/versed-thumb/garden-of-love.jpg" width="700" alt="The Garden of Love by Peter Paul Rubens (1577-1640), with Psalm 68:6" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 8</span><span class="dot">&middot;</span><span class="yr">c. 1633</span></p>
+          <h3 class="ttl">The Garden of Love</h3>
+          <p class="by">Peter Paul Rubens (1577-1640)</p>
+          <p class="md">Oil on canvas &middot; Museo del Prado, Madrid</p>
+          <p class="note">Rubens gathers his wife, his friends and a fountain of Venus into one garden, and love is described as a social occasion rather than a private one.</p>
+          <blockquote class="verse"><p>God setteth the solitary in families: he bringeth out those which are bound with chains: but the rebellious dwell in a dry land.</p><cite>Psalm 68:6</cite></blockquote>
+          <p class="kw"><span class="tag">baroque</span><span class="tag">allegory</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AEl_Jard%C3%ADn_del_Amor_%28Rubens%29.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p9">
+        <button class="frame" type="button" data-plate="9"
+                aria-label="Enlarge plate 9: The Embarkation for Cythera">
+          <img src="img/versed-thumb/embarkation-cythera.jpg" width="700" alt="The Embarkation for Cythera by Antoine Watteau (1684-1721), with Psalm 126:1" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 9</span><span class="dot">&middot;</span><span class="yr">1717</span></p>
+          <h3 class="ttl">The Embarkation for Cythera</h3>
+          <p class="by">Antoine Watteau (1684-1721)</p>
+          <p class="md">Oil on canvas &middot; Musée du Louvre, Paris</p>
+          <p class="note">Lovers set out for the island of Venus, or are returning from it, and nobody can tell which. Love painted as a departure that has already become a memory.</p>
+          <blockquote class="verse"><p>When the LORD turned again the captivity of Zion, we were like them that dream.</p><cite>Psalm 126:1</cite></blockquote>
+          <p class="kw"><span class="tag">rococo</span><span class="tag">allegory</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AL%27Embarquement_pour_Cyth%C3%A8re%2C_by_Antoine_Watteau%2C_from_C2RMF_retouched.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p10">
+        <button class="frame" type="button" data-plate="10"
+                aria-label="Enlarge plate 10: Mars and Venus United by Love">
+          <img src="img/versed-thumb/mars-venus-veronese.jpg" width="700" alt="Mars and Venus United by Love by Paolo Veronese (1528-1588), with Psalm 85:10" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 10</span><span class="dot">&middot;</span><span class="yr">c. 1570</span></p>
+          <h3 class="ttl">Mars and Venus United by Love</h3>
+          <p class="by">Paolo Veronese (1528-1588)</p>
+          <p class="md">Oil on canvas &middot; The Metropolitan Museum of Art, New York</p>
+          <p class="note">Veronese ties the god of war to the goddess with a knot of ribbon while a cupid pulls it tight, and love is literally a knot in the composition.</p>
+          <blockquote class="verse"><p>Mercy and truth are met together; righteousness and peace have kissed each other.</p><cite>Psalm 85:10</cite></blockquote>
+          <p class="kw"><span class="tag">venetian colour</span><span class="tag">allegory</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AMars_and_Venus_United_by_Love_MET_DP136513.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">CC0</span></p>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <section class="sec" id="sec-II">
+      <header class="sec-h">
+        <p class="numeral">II</p>
+        <h2>The Symbolist Dream</h2>
+        <p class="blurb">The figure kept, the flesh withdrawn. Faces are withheld, doubled, or replaced, and longing is handed over to colour, flower and dream.</p>
+      </header>
+      <div class="plates">
+      <figure class="plate" id="p11">
+        <button class="frame" type="button" data-plate="11"
+                aria-label="Enlarge plate 11: The Cyclops">
+          <img src="img/versed-thumb/the-cyclops.jpg" width="700" alt="The Cyclops by Odilon Redon (1840-1916), with Psalm 32:8" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 11</span><span class="dot">&middot;</span><span class="yr">c. 1914</span></p>
+          <h3 class="ttl">The Cyclops</h3>
+          <p class="by">Odilon Redon (1840-1916)</p>
+          <p class="md">Oil on canvas &middot; Kröller-Müller Museum, Otterlo</p>
+          <p class="note">One enormous eye rises over the hills to look at a sleeping woman. Desire is reduced to a single organ, watching — the most abstract thing a body can do.</p>
+          <blockquote class="verse"><p>I will guide thee with mine eye.</p><cite>Psalm 32:8</cite></blockquote>
+          <p class="kw"><span class="tag">symbolism</span><span class="tag">dream</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AOdilon_Redon_-_The_Cyclops%2C_c._1914.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p12">
+        <button class="frame" type="button" data-plate="12"
+                aria-label="Enlarge plate 12: The Caress">
+          <img src="img/versed-thumb/the-caress.jpg" width="700" alt="The Caress by Fernand Khnopff (1858-1921), with Psalm 63:7" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 12</span><span class="dot">&middot;</span><span class="yr">1896</span></p>
+          <h3 class="ttl">The Caress</h3>
+          <p class="by">Fernand Khnopff (1858-1921)</p>
+          <p class="md">Oil on canvas &middot; Musées royaux des Beaux-Arts, Brussels</p>
+          <p class="note">A woman with a cheetah's head rests her cheek against a young man's. Tenderness and predation share one silhouette, and the human face is withheld altogether.</p>
+          <blockquote class="verse"><p>Because thou hast been my help, therefore in the shadow of thy wings will I rejoice.</p><cite>Psalm 63:7</cite></blockquote>
+          <p class="kw"><span class="tag">symbolism</span><span class="tag">sphinx</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AFernand_Khnopff_-_Caresses_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p13">
+        <button class="frame" type="button" data-plate="13"
+                aria-label="Enlarge plate 13: Jupiter and Semele">
+          <img src="img/versed-thumb/jupiter-and-semele.jpg" width="700" alt="Jupiter and Semele by Gustave Moreau (1826-1898), with Psalm 97:5" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 13</span><span class="dot">&middot;</span><span class="yr">1894-95</span></p>
+          <h3 class="ttl">Jupiter and Semele</h3>
+          <p class="by">Gustave Moreau (1826-1898)</p>
+          <p class="md">Oil on canvas &middot; Musée Gustave Moreau, Paris</p>
+          <p class="note">The god arrives as a wall of gold and flowers, and the mortal dissolves into the ornament that destroys her. Love rendered as architecture.</p>
+          <blockquote class="verse"><p>The hills melted like wax at the presence of the LORD, at the presence of the Lord of the whole earth.</p><cite>Psalm 97:5</cite></blockquote>
+          <p class="kw"><span class="tag">symbolism</span><span class="tag">ornament</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AJupiter_and_Semele_by_Gustave_Moreau.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p14">
+        <button class="frame" type="button" data-plate="14"
+                aria-label="Enlarge plate 14: The Kiss of the Sphinx">
+          <img src="img/versed-thumb/kiss-of-the-sphinx.jpg" width="700" alt="The Kiss of the Sphinx by Franz von Stuck (1863-1928), with Psalm 55:21" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 14</span><span class="dot">&middot;</span><span class="yr">1895</span></p>
+          <h3 class="ttl">The Kiss of the Sphinx</h3>
+          <p class="by">Franz von Stuck (1863-1928)</p>
+          <p class="md">Oil on canvas &middot; Museum Villa Stuck, Munich</p>
+          <p class="note">The embrace is also an ambush. Two bodies lock into a single dark mass and it is impossible to tell which one is being consumed.</p>
+          <blockquote class="verse"><p>The words of his mouth were smoother than butter, but war was in his heart: his words were softer than oil, yet were they drawn swords.</p><cite>Psalm 55:21</cite></blockquote>
+          <p class="kw"><span class="tag">symbolism</span><span class="tag">sphinx</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AFranz_von_Stuck_-_The_Kiss_of_the_Sphinx_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p15">
+        <button class="frame" type="button" data-plate="15"
+                aria-label="Enlarge plate 15: The Lovers' Whirlwind, Paolo and Francesca">
+          <img src="img/versed-thumb/lovers-whirlwind.jpg" width="700" alt="The Lovers' Whirlwind, Paolo and Francesca by William Blake (1757-1827), with Psalm 18:10" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 15</span><span class="dot">&middot;</span><span class="yr">c. 1824-27</span></p>
+          <h3 class="ttl">The Lovers' Whirlwind, Paolo and Francesca</h3>
+          <p class="by">William Blake (1757-1827)</p>
+          <p class="md">Graphite, ink and watercolour on paper &middot; Birmingham Museum and Art Gallery</p>
+          <p class="note">The adulterous lovers are spun through hell as one vortex of limbs. Blake draws passion as weather — bodies turned into motion rather than flesh.</p>
+          <blockquote class="verse"><p>And he rode upon a cherub, and did fly: yea, he did fly upon the wings of the wind.</p><cite>Psalm 18:10</cite></blockquote>
+          <p class="kw"><span class="tag">line</span><span class="tag">visionary</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ABlake_Dante_Hell_V.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p16">
+        <button class="frame" type="button" data-plate="16"
+                aria-label="Enlarge plate 16: Beata Beatrix">
+          <img src="img/versed-thumb/beata-beatrix.jpg" width="700" alt="Beata Beatrix by Dante Gabriel Rossetti (1828-1882), with Psalm 17:15" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 16</span><span class="dot">&middot;</span><span class="yr">1864-70</span></p>
+          <h3 class="ttl">Beata Beatrix</h3>
+          <p class="by">Dante Gabriel Rossetti (1828-1882)</p>
+          <p class="md">Oil on canvas &middot; Tate Britain, London</p>
+          <p class="note">Beatrice sits with closed eyes while a red bird drops a white poppy into her hand. Love and death occupy the same still, luminous face.</p>
+          <blockquote class="verse"><p>As for me, I will behold thy face in righteousness: I shall be satisfied, when I awake, with thy likeness.</p><cite>Psalm 17:15</cite></blockquote>
+          <p class="kw"><span class="tag">pre-raphaelite</span><span class="tag">memorial</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ADante_Gabriel_Rossetti_-_Beata_Beatrix%2C_1864-1870.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p17">
+        <button class="frame" type="button" data-plate="17"
+                aria-label="Enlarge plate 17: Ophelia among the Flowers">
+          <img src="img/versed-thumb/ophelia-redon.jpg" width="700" alt="Ophelia among the Flowers by Odilon Redon (1840-1916), with Psalm 69:1" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 17</span><span class="dot">&middot;</span><span class="yr">c. 1905-08</span></p>
+          <h3 class="ttl">Ophelia among the Flowers</h3>
+          <p class="by">Odilon Redon (1840-1916)</p>
+          <p class="md">Pastel and charcoal &middot; National Gallery, London</p>
+          <p class="note">Ophelia floats in a river of flowers with her mouth open, and Redon paints love's grief as a colour rather than an event. The face is almost lost in the blue.</p>
+          <blockquote class="verse"><p>Save me, O God; for the waters are come in unto my soul.</p><cite>Psalm 69:1</cite></blockquote>
+          <p class="kw"><span class="tag">symbolism</span><span class="tag">dream</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AOdilon_Redon%2C_Ophelia_among_the_Flowers%2C_The_National_Gallery%2C_London.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p18">
+        <button class="frame" type="button" data-plate="18"
+                aria-label="Enlarge plate 18: The Apparition">
+          <img src="img/versed-thumb/the-apparition.jpg" width="700" alt="The Apparition by Gustave Moreau (1826-1898), with Psalm 73:25" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 18</span><span class="dot">&middot;</span><span class="yr">1876</span></p>
+          <h3 class="ttl">The Apparition</h3>
+          <p class="by">Gustave Moreau (1826-1898)</p>
+          <p class="md">Oil on canvas &middot; Musée Gustave Moreau, Paris</p>
+          <p class="note">Salome stands before the head of the man she desired and the vision glows in the air between them. Moreau paints obsession as an apparition, and the body as ornament.</p>
+          <blockquote class="verse"><p>Whom have I in heaven but thee? and there is none upon earth that I desire beside thee.</p><cite>Psalm 73:25</cite></blockquote>
+          <p class="kw"><span class="tag">symbolism</span><span class="tag">ornament</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AGustave_Moreau_A_apari%C3%A7%C3%A3o.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p19">
+        <button class="frame" type="button" data-plate="19"
+                aria-label="Enlarge plate 19: Love Among the Ruins">
+          <img src="img/versed-thumb/love-among-ruins.jpg" width="700" alt="Love Among the Ruins by Edward Burne-Jones (1833-1898), with Psalm 49:4" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 19</span><span class="dot">&middot;</span><span class="yr">1870-73</span></p>
+          <h3 class="ttl">Love Among the Ruins</h3>
+          <p class="by">Edward Burne-Jones (1833-1898)</p>
+          <p class="md">Oil on canvas &middot; Wightwick Manor, Wolverhampton</p>
+          <p class="note">Two lovers sit among brambles while a figure behind them plays a lute, and love is described as a place rather than a feeling.</p>
+          <blockquote class="verse"><p>I will incline mine ear to a parable: I will open my dark saying upon the harp.</p><cite>Psalm 49:4</cite></blockquote>
+          <p class="kw"><span class="tag">pre-raphaelite</span><span class="tag">allegory</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AEdward_Burne-Jones_Love_Among_the_Ruins.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p20">
+        <button class="frame" type="button" data-plate="20"
+                aria-label="Enlarge plate 20: The Beloved">
+          <img src="img/versed-thumb/the-beloved.jpg" width="700" alt="The Beloved by Dante Gabriel Rossetti (1828-1882), with Psalm 45:14" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 20</span><span class="dot">&middot;</span><span class="yr">1865-66</span></p>
+          <h3 class="ttl">The Beloved</h3>
+          <p class="by">Dante Gabriel Rossetti (1828-1882)</p>
+          <p class="md">Oil on canvas &middot; Tate Britain, London</p>
+          <p class="note">Rossetti crowds the bride with her companions until her face is only one among many, and love is painted as an enclosed garden.</p>
+          <blockquote class="verse"><p>She shall be brought unto the king in raiment of needlework: the virgins her companions that follow her shall be brought unto thee.</p><cite>Psalm 45:14</cite></blockquote>
+          <p class="kw"><span class="tag">pre-raphaelite</span><span class="tag">the garden</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AThe_Beloved_D-G-Rossetti-1866.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <section class="sec" id="sec-III">
+      <header class="sec-h">
+        <p class="numeral">III</p>
+        <h2>Line and Gesture</h2>
+        <p class="blurb">Bodies reduced to contour. A few strokes of chalk, copper or pencil carry the whole of tenderness, and nothing else is needed.</p>
+      </header>
+      <div class="plates">
+      <figure class="plate" id="p21">
+        <button class="frame" type="button" data-plate="21"
+                aria-label="Enlarge plate 21: Mars, Venus, and Cupid">
+          <img src="img/versed-thumb/mars-venus-cupid.jpg" width="700" alt="Mars, Venus, and Cupid by Marcantonio Raimondi (c. 1480-1534), after Raphael, with Psalm 76:3" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 21</span><span class="dot">&middot;</span><span class="yr">1508</span></p>
+          <h3 class="ttl">Mars, Venus, and Cupid</h3>
+          <p class="by">Marcantonio Raimondi (c. 1480-1534), after Raphael</p>
+          <p class="md">Engraving &middot; The Metropolitan Museum of Art, New York</p>
+          <p class="note">War disarmed by desire: the god of battle stripped of his armour and reduced to a seated outline, watched by a small winged boy.</p>
+          <blockquote class="verse"><p>There brake he the arrows of the bow, the shield, and the sword, and the battle. Selah.</p><cite>Psalm 76:3</cite></blockquote>
+          <p class="kw"><span class="tag">line</span><span class="tag">engraving</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AMars%2C_Venus%2C_and_Cupid%2C_by_Marcantonio_Raimondi%2C_1508%2C_engraving_-_National_Museum_of_Western_Art%2C_Tokyo_-_DSC08241.JPG" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p22">
+        <button class="frame" type="button" data-plate="22"
+                aria-label="Enlarge plate 22: Venus Disarming Cupid">
+          <img src="img/versed-thumb/venus-disarming-cupid.jpg" width="700" alt="Venus Disarming Cupid by Parmigianino (1503-1540), with Psalm 45:1" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 22</span><span class="dot">&middot;</span><span class="yr">c. 1524-30</span></p>
+          <h3 class="ttl">Venus Disarming Cupid</h3>
+          <p class="by">Parmigianino (1503-1540)</p>
+          <p class="md">Drawing</p>
+          <p class="note">A few hundred strokes and the whole of a love affair exists: Venus takes Cupid's arrow from him while he twists away. Mannerist drawing at its most abstract, the figure stated as curve and shadow and very little else.</p>
+          <blockquote class="verse"><p>My heart is inditing a good matter: I speak of the things which I have made touching the king: my tongue is the pen of a ready writer.</p><cite>Psalm 45:1</cite></blockquote>
+          <p class="kw"><span class="tag">line</span><span class="tag">mannerism</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AParmigianino_-_Venus_Disarming_Cupid_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p23">
+        <button class="frame" type="button" data-plate="23"
+                aria-label="Enlarge plate 23: Self-Portrait with Saskia">
+          <img src="img/versed-thumb/saskia.jpg" width="700" alt="Self-Portrait with Saskia by Rembrandt van Rijn (1606-1669), with Psalm 63:3" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 23</span><span class="dot">&middot;</span><span class="yr">1636</span></p>
+          <h3 class="ttl">Self-Portrait with Saskia</h3>
+          <p class="by">Rembrandt van Rijn (1606-1669)</p>
+          <p class="md">Etching &middot; The Metropolitan Museum of Art, New York</p>
+          <p class="note">Rembrandt draws himself and his wife at a tavern table in a few dozen etched lines. Tenderness recorded as a shared glance and a raised glass.</p>
+          <blockquote class="verse"><p>Because thy lovingkindness is better than life, my lips shall praise thee.</p><cite>Psalm 63:3</cite></blockquote>
+          <p class="kw"><span class="tag">etching</span><span class="tag">intimacy</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ASelf-Portrait_with_Saskia_MET_DP814514.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">CC0</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p24">
+        <button class="frame" type="button" data-plate="24"
+                aria-label="Enlarge plate 24: Paolo and Francesca">
+          <img src="img/versed-thumb/paolo-francesca.jpg" width="700" alt="Paolo and Francesca by Gustave Doré (1832-1883), with Psalm 130:1" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 24</span><span class="dot">&middot;</span><span class="yr">1861</span></p>
+          <h3 class="ttl">Paolo and Francesca</h3>
+          <p class="by">Gustave Doré (1832-1883)</p>
+          <p class="md">Wood engraving for Dante's Inferno, Canto V</p>
+          <p class="note">The two lovers drift in the circle of the lustful, still entwined, weightless and unrepentant. Doré engraves damnation as a texture of light and air.</p>
+          <blockquote class="verse"><p>Out of the depths have I cried unto thee, O LORD.</p><cite>Psalm 130:1</cite></blockquote>
+          <p class="kw"><span class="tag">line</span><span class="tag">engraving</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AGustave_Dor%C3%A9_-_Paolo_and_Francesca_da_Rimini.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p25">
+        <button class="frame" type="button" data-plate="25"
+                aria-label="Enlarge plate 25: Venus and Cupid in a Niche">
+          <img src="img/versed-thumb/venus-cupid-niche.jpg" width="700" alt="Venus and Cupid in a Niche by Marcantonio Raimondi (c. 1480-1534), with Psalm 45:2" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 25</span><span class="dot">&middot;</span><span class="yr">c. 1500-27</span></p>
+          <h3 class="ttl">Venus and Cupid in a Niche</h3>
+          <p class="by">Marcantonio Raimondi (c. 1480-1534)</p>
+          <p class="md">Engraving &middot; The Metropolitan Museum of Art, New York</p>
+          <p class="note">A goddess and a small winged boy stand inside a shell-shaped niche, and love is described by hatching and architecture alone.</p>
+          <blockquote class="verse"><p>Thou art fairer than the children of men: grace is poured into thy lips: therefore God hath blessed thee for ever.</p><cite>Psalm 45:2</cite></blockquote>
+          <p class="kw"><span class="tag">line</span><span class="tag">engraving</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AVenus_and_Cupid_standing_in_a_niche_MET_DP854062.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">CC0</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p26">
+        <button class="frame" type="button" data-plate="26"
+                aria-label="Enlarge plate 26: The Ill-Assorted Couple">
+          <img src="img/versed-thumb/ill-assorted-couple.jpg" width="700" alt="The Ill-Assorted Couple by Albrecht Dürer (1471-1528), with Psalm 62:10" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 26</span><span class="dot">&middot;</span><span class="yr">c. 1495</span></p>
+          <h3 class="ttl">The Ill-Assorted Couple</h3>
+          <p class="by">Albrecht Dürer (1471-1528)</p>
+          <p class="md">Engraving</p>
+          <p class="note">An old man and a young woman walk together and exchange a glance that is entirely about money. Dürer engraves a love affair as a transaction, which is one of the most honest images of one.</p>
+          <blockquote class="verse"><p>Trust not in oppression, and become not vain in robbery: if riches increase, set not your heart upon them.</p><cite>Psalm 62:10</cite></blockquote>
+          <p class="kw"><span class="tag">line</span><span class="tag">engraving</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AAlbrecht_D%C3%BCrer%2C_The_Ill-Assorted_Couple%2C_1495-1496%2C_NGA_6572.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">CC0</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p27">
+        <button class="frame" type="button" data-plate="27"
+                aria-label="Enlarge plate 27: Jupiter and Antiope">
+          <img src="img/versed-thumb/jupiter-antiope.jpg" width="700" alt="Jupiter and Antiope by Rembrandt van Rijn (1606-1669), with Psalm 18:11" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 27</span><span class="dot">&middot;</span><span class="yr">1659</span></p>
+          <h3 class="ttl">Jupiter and Antiope</h3>
+          <p class="by">Rembrandt van Rijn (1606-1669)</p>
+          <p class="md">Etching &middot; Rijksmuseum, Amsterdam</p>
+          <p class="note">Jupiter approaches the sleeping Antiope in the dark, and the whole of desire is in one raised hand and one shadow. Rembrandt etches seduction as an arrangement of light.</p>
+          <blockquote class="verse"><p>He made darkness his secret place; his pavilion round about him were dark waters and thick clouds of the skies.</p><cite>Psalm 18:11</cite></blockquote>
+          <p class="kw"><span class="tag">etching</span><span class="tag">desire</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ARembrandt_van_Rijn%2C_Jupiter_og_Antiope%2C_1659%2C_KKS2568%2C_Statens_Museum_for_Kunst.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p28">
+        <button class="frame" type="button" data-plate="28"
+                aria-label="Enlarge plate 28: Lovers">
+          <img src="img/versed-thumb/liebespaar-klimt.jpg" width="700" alt="Lovers by Gustav Klimt (1862-1918), with Psalm 42:1" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 28</span><span class="dot">&middot;</span><span class="yr">c. 1913</span></p>
+          <h3 class="ttl">Lovers</h3>
+          <p class="by">Gustav Klimt (1862-1918)</p>
+          <p class="md">Pencil and white chalk on paper</p>
+          <p class="note">Two lovers are drawn as a single line of pencil and chalk with their heads pressed together. The drawing is almost entirely contour, and unmistakably two people.</p>
+          <blockquote class="verse"><p>As the hart panteth after the water brooks, so panteth my soul after thee, O God.</p><cite>Psalm 42:1</cite></blockquote>
+          <p class="kw"><span class="tag">line</span><span class="tag">drawing</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AGustav_Klimt_Liebespaar_nach_rechts_c1913.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p29">
+        <button class="frame" type="button" data-plate="29"
+                aria-label="Enlarge plate 29: Lovers">
+          <img src="img/versed-thumb/liebespaar-schiele.jpg" width="700" alt="Lovers by Egon Schiele (1890-1918), with Psalm 31:7" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 29</span><span class="dot">&middot;</span><span class="yr">c. 1917</span></p>
+          <h3 class="ttl">Lovers</h3>
+          <p class="by">Egon Schiele (1890-1918)</p>
+          <p class="md">Pencil and gouache on paper</p>
+          <p class="note">Schiele draws two bodies as angles and stains, awkward and specific, and the tenderness survives every distortion.</p>
+          <blockquote class="verse"><p>I will be glad and rejoice in thy mercy: for thou hast considered my trouble; thou hast known my soul in adversities;</p><cite>Psalm 31:7</cite></blockquote>
+          <p class="kw"><span class="tag">line</span><span class="tag">expressionism</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AEgon_Schiele_-_Liebespaar_-_1913.jpeg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <section class="sec" id="sec-IV">
+      <header class="sec-h">
+        <p class="numeral">IV</p>
+        <h2>The Body as Form</h2>
+        <p class="blurb">Two people carved as one mass, from Canova's linked graces to Rodin's lovers pulled apart in mid-air. The most literal subject made the most sculptural.</p>
+      </header>
+      <div class="plates">
+      <figure class="plate" id="p30">
+        <button class="frame" type="button" data-plate="30"
+                aria-label="Enlarge plate 30: The Kiss (detail)">
+          <img src="img/versed-thumb/the-kiss-rodin.jpg" width="700" alt="The Kiss (detail) by Auguste Rodin (1840-1917), with Psalm 139:14" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 30</span><span class="dot">&middot;</span><span class="yr">1882, carved 1901-04</span></p>
+          <h3 class="ttl">The Kiss (detail)</h3>
+          <p class="by">Auguste Rodin (1840-1917)</p>
+          <p class="md">Marble &middot; Musée Rodin, Paris</p>
+          <p class="note">Two bodies cut from a single block, so the embrace is also one mass. The most literal of subjects made the most sculptural.</p>
+          <blockquote class="verse"><p>I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well.</p><cite>Psalm 139:14</cite></blockquote>
+          <p class="kw"><span class="tag">sculpture</span><span class="tag">marble</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ALe_Baiser_%28detail%2C_Musee_Rodin%2C_Paris%29-2014-05.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p31">
+        <button class="frame" type="button" data-plate="31"
+                aria-label="Enlarge plate 31: Eternal Springtime">
+          <img src="img/versed-thumb/eternal-springtime.jpg" width="700" alt="Eternal Springtime by Auguste Rodin (1840-1917), with Psalm 104:30" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 31</span><span class="dot">&middot;</span><span class="yr">1884, cast c. 1886</span></p>
+          <h3 class="ttl">Eternal Springtime</h3>
+          <p class="by">Auguste Rodin (1840-1917)</p>
+          <p class="md">Bronze &middot; Huntington Museum of Art</p>
+          <p class="note">The figures lean out of the block they were never fully freed from. Movement and tenderness held in the same unfinished gesture.</p>
+          <blockquote class="verse"><p>Thou sendest forth thy spirit, they are created: and thou renewest the face of the earth.</p><cite>Psalm 104:30</cite></blockquote>
+          <p class="kw"><span class="tag">sculpture</span><span class="tag">bronze</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AEternal_Springtime%2C_Auguste_Rodin%2C_c._1886%2C_bronze_-_Huntington_Museum_of_Art_-_DSC05255.JPG" rel="noopener">Wikimedia Commons</a><span class="lic">CC0</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p32">
+        <button class="frame" type="button" data-plate="32"
+                aria-label="Enlarge plate 32: Psyche Revived by Cupid's Kiss">
+          <img src="img/versed-thumb/psyche-revived.jpg" width="700" alt="Psyche Revived by Cupid's Kiss by Antonio Canova (1757-1822), with Psalm 23:3" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 32</span><span class="dot">&middot;</span><span class="yr">1787-93</span></p>
+          <h3 class="ttl">Psyche Revived by Cupid's Kiss</h3>
+          <p class="by">Antonio Canova (1757-1822)</p>
+          <p class="md">Marble &middot; Musée du Louvre, Paris</p>
+          <p class="note">Cupid's hands and wings are the only support; Psyche's body is weightless, held up by tenderness. Neoclassical marble at its most tender.</p>
+          <blockquote class="verse"><p>He restoreth my soul: he leadeth me in the paths of righteousness for his name’s sake.</p><cite>Psalm 23:3</cite></blockquote>
+          <p class="kw"><span class="tag">sculpture</span><span class="tag">marble</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3APsych%C3%A9_ranim%C3%A9e_par_le_baiser_de_l%27Amour%2C_Louvre.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">CC0</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p33">
+        <button class="frame" type="button" data-plate="33"
+                aria-label="Enlarge plate 33: The Waltz">
+          <img src="img/versed-thumb/the-waltz.jpg" width="700" alt="The Waltz by Camille Claudel (1864-1943), with Psalm 149:3" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 33</span><span class="dot">&middot;</span><span class="yr">1889-1905</span></p>
+          <h3 class="ttl">The Waltz</h3>
+          <p class="by">Camille Claudel (1864-1943)</p>
+          <p class="md">Bronze &middot; Musée Camille Claudel, Nogent-sur-Seine</p>
+          <p class="note">Two figures turn until the dress becomes the movement itself. Claudel sculpts the turn rather than the dancers.</p>
+          <blockquote class="verse"><p>Let them praise his name in the dance: let them sing praises unto him with the timbrel and harp.</p><cite>Psalm 149:3</cite></blockquote>
+          <p class="kw"><span class="tag">sculpture</span><span class="tag">movement</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ACamille_Claudel%2C_%22La_Valse%22%2C_1889-1905%2C_bronze_fonte_%281%29.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p34">
+        <button class="frame" type="button" data-plate="34"
+                aria-label="Enlarge plate 34: The Three Graces">
+          <img src="img/versed-thumb/three-graces-canova.jpg" width="700" alt="The Three Graces by Antonio Canova (1757-1822), with Psalm 34:3" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 34</span><span class="dot">&middot;</span><span class="yr">1814-17</span></p>
+          <h3 class="ttl">The Three Graces</h3>
+          <p class="by">Antonio Canova (1757-1822)</p>
+          <p class="md">Marble &middot; Hermitage Museum, Saint Petersburg</p>
+          <p class="note">Three women stand linked by their arms and shoulders, and the group is one continuous soft curve. Grace described as a single line rather than three bodies.</p>
+          <blockquote class="verse"><p>O magnify the LORD with me, and let us exalt his name together.</p><cite>Psalm 34:3</cite></blockquote>
+          <p class="kw"><span class="tag">sculpture</span><span class="tag">marble</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ACanova_-_The_Three_Graces%2C_between_1813_and_1816%2C_%D0%9D.%D1%81%D0%BA-506.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p35">
+        <button class="frame" type="button" data-plate="35"
+                aria-label="Enlarge plate 35: Amor and Psyche">
+          <img src="img/versed-thumb/amor-psyche-canova.jpg" width="700" alt="Amor and Psyche by Antonio Canova (1757-1822), with Psalm 73:23" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 35</span><span class="dot">&middot;</span><span class="yr">1793</span></p>
+          <h3 class="ttl">Amor and Psyche</h3>
+          <p class="by">Antonio Canova (1757-1822)</p>
+          <p class="md">Marble &middot; Hermitage Museum, Saint Petersburg</p>
+          <p class="note">Cupid stands with his arm around Psyche and a butterfly resting on his hand, and love is described as a balance between two standing bodies.</p>
+          <blockquote class="verse"><p>Nevertheless I am continually with thee: thou hast holden me by my right hand.</p><cite>Psalm 73:23</cite></blockquote>
+          <p class="kw"><span class="tag">sculpture</span><span class="tag">marble</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AAmor_en_Psyche_Sculpturen_van_Antonio_Canova_%28serietitel%29%2C_RP-P-OB-39.103.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">CC0</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p36">
+        <button class="frame" type="button" data-plate="36"
+                aria-label="Enlarge plate 36: Eros Stringing the Bow">
+          <img src="img/versed-thumb/eros-stringing-bow.jpg" width="700" alt="Eros Stringing the Bow by Roman, after Lysippos, with Psalm 45:5" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 36</span><span class="dot">&middot;</span><span class="yr">1st-2nd century AD</span></p>
+          <h3 class="ttl">Eros Stringing the Bow</h3>
+          <p class="by">Roman, after Lysippos</p>
+          <p class="md">Marble</p>
+          <p class="note">The god of love bends his bow and looks up, and the whole of desire is in the tension of one arm. Ancient sculpture at its most abstract and most human.</p>
+          <blockquote class="verse"><p>Thine arrows are sharp in the heart of the king’s enemies; whereby the people fall under thee.</p><cite>Psalm 45:5</cite></blockquote>
+          <p class="kw"><span class="tag">marble</span><span class="tag">desire</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AEros_with_Bow%2C_Roman_Marble_Copy_of_Bronze_Greek_Original%2C_c._2nd_C._AD_%2828309098915%29.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">CC0</span></p>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <section class="sec" id="sec-V">
+      <header class="sec-h">
+        <p class="numeral">V</p>
+        <h2>The Threshold of Modernity</h2>
+        <p class="blurb">The human dissolved on purpose: into gold, into pattern, into a single unreadable feature, and still unmistakably a person.</p>
+      </header>
+      <div class="plates">
+      <figure class="plate" id="p37">
+        <button class="frame" type="button" data-plate="37"
+                aria-label="Enlarge plate 37: The Kiss">
+          <img src="img/versed-thumb/kiss-klimt.jpg" width="700" alt="The Kiss by Gustav Klimt (1862-1918), with Psalm 45:9" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 37</span><span class="dot">&middot;</span><span class="yr">1907-08</span></p>
+          <h3 class="ttl">The Kiss</h3>
+          <p class="by">Gustav Klimt (1862-1918)</p>
+          <p class="md">Oil and gold leaf on canvas &middot; Österreichische Galerie Belvedere, Vienna</p>
+          <p class="note">Two faces are almost lost inside the gold. Klimt buries the human in ornament, and the tenderness survives the pattern.</p>
+          <blockquote class="verse"><p>Kings’ daughters were among thy honourable women: upon thy right hand did stand the queen in gold of Ophir.</p><cite>Psalm 45:9</cite></blockquote>
+          <p class="kw"><span class="tag">gold</span><span class="tag">ornament</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AKlimt_-_The_Kiss.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p38">
+        <button class="frame" type="button" data-plate="38"
+                aria-label="Enlarge plate 38: Love">
+          <img src="img/versed-thumb/liebe-klimt.jpg" width="700" alt="Love by Gustav Klimt (1862-1918), with Psalm 27:8" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 38</span><span class="dot">&middot;</span><span class="yr">1895</span></p>
+          <h3 class="ttl">Love</h3>
+          <p class="by">Gustav Klimt (1862-1918)</p>
+          <p class="md">Oil on canvas &middot; Kunsthistorisches Museum, Vienna</p>
+          <p class="note">A stack of pale, doubled faces, haloed and interchangeable. Love painted as a condition shared rather than a scene observed.</p>
+          <blockquote class="verse"><p>When thou saidst, Seek ye my face; my heart said unto thee, Thy face, LORD, will I seek.</p><cite>Psalm 27:8</cite></blockquote>
+          <p class="kw"><span class="tag">symbolism</span><span class="tag">ornament</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AKlimt_-_Liebe_-_1895.jpeg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p39">
+        <button class="frame" type="button" data-plate="39"
+                aria-label="Enlarge plate 39: Madonna">
+          <img src="img/versed-thumb/madonna-munch.jpg" width="700" alt="Madonna by Edvard Munch (1863-1944), with Psalm 116:15" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 39</span><span class="dot">&middot;</span><span class="yr">1894-95</span></p>
+          <h3 class="ttl">Madonna</h3>
+          <p class="by">Edvard Munch (1863-1944)</p>
+          <p class="md">Oil on canvas &middot; Munch Museum, Oslo</p>
+          <p class="note">Love and death share one body, and the halo is also the red halo of pain. The face is bowed into anonymity.</p>
+          <blockquote class="verse"><p>Precious in the sight of the LORD is the death of his saints.</p><cite>Psalm 116:15</cite></blockquote>
+          <p class="kw"><span class="tag">expressionism</span><span class="tag">symbolism</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AEdvard_Munch_-_Madonna_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p40">
+        <button class="frame" type="button" data-plate="40"
+                aria-label="Enlarge plate 40: The Kiss">
+          <img src="img/versed-thumb/kiss-munch.jpg" width="700" alt="The Kiss by Edvard Munch (1863-1944), with Psalm 73:26" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 40</span><span class="dot">&middot;</span><span class="yr">1897</span></p>
+          <h3 class="ttl">The Kiss</h3>
+          <p class="by">Edvard Munch (1863-1944)</p>
+          <p class="md">Oil on canvas &middot; Munch Museum, Oslo</p>
+          <p class="note">Two faces merge into a single featureless mass. Munch paints the moment identity stops at the edge of the other person.</p>
+          <blockquote class="verse"><p>My flesh and my heart faileth: but God is the strength of my heart, and my portion for ever.</p><cite>Psalm 73:26</cite></blockquote>
+          <p class="kw"><span class="tag">expressionism</span><span class="tag">frieze</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AEdvard_Munch_-_The_Kiss_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p41">
+        <button class="frame" type="button" data-plate="41"
+                aria-label="Enlarge plate 41: The Embrace">
+          <img src="img/versed-thumb/umarmung-schiele.jpg" width="700" alt="The Embrace by Egon Schiele (1890-1918), with Psalm 139:15" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 41</span><span class="dot">&middot;</span><span class="yr">1917</span></p>
+          <h3 class="ttl">The Embrace</h3>
+          <p class="by">Egon Schiele (1890-1918)</p>
+          <p class="md">Oil on canvas &middot; Österreichische Galerie Belvedere, Vienna</p>
+          <p class="note">Bodies drawn as angles and stains, awkward and specific. Schiele keeps every joint human while the colour runs free of the contour.</p>
+          <blockquote class="verse"><p>My substance was not hid from thee, when I was made in secret, and curiously wrought in the lowest parts of the earth.</p><cite>Psalm 139:15</cite></blockquote>
+          <p class="kw"><span class="tag">expressionism</span><span class="tag">line</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AEgon_Schiele_-_Umarmung_%281917%29.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p42">
+        <button class="frame" type="button" data-plate="42"
+                aria-label="Enlarge plate 42: The Dance of Life">
+          <img src="img/versed-thumb/dance-of-life.jpg" width="700" alt="The Dance of Life by Edvard Munch (1863-1944), with Psalm 30:11" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 42</span><span class="dot">&middot;</span><span class="yr">1899-1900</span></p>
+          <h3 class="ttl">The Dance of Life</h3>
+          <p class="by">Edvard Munch (1863-1944)</p>
+          <p class="md">Oil on canvas &middot; National Museum, Oslo</p>
+          <p class="note">Three women stand on a summer shore while couples dance behind them: the white of innocence, the red of love, the black of grief. A whole life arranged as one dance.</p>
+          <blockquote class="verse"><p>Thou hast turned for me my mourning into dancing: thou hast put off my sackcloth, and girded me with gladness;</p><cite>Psalm 30:11</cite></blockquote>
+          <p class="kw"><span class="tag">allegory</span><span class="tag">frieze</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AEdvard_Munch_-_The_dance_of_life_%281899-1900%29.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p43">
+        <button class="frame" type="button" data-plate="43"
+                aria-label="Enlarge plate 43: Danaë">
+          <img src="img/versed-thumb/danae-klimt.jpg" width="700" alt="Danaë by Gustav Klimt (1862-1918), with Psalm 68:13" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 43</span><span class="dot">&middot;</span><span class="yr">1907-08</span></p>
+          <h3 class="ttl">Danaë</h3>
+          <p class="by">Gustav Klimt (1862-1918)</p>
+          <p class="md">Oil on canvas &middot; Galerie Belvedere, Vienna</p>
+          <p class="note">Danaë curls into a spiral inside a veil of gold with her face almost hidden, and love is painted as a shower of gold rather than as a body.</p>
+          <blockquote class="verse"><p>Though ye have lien among the pots, yet shall ye be as the wings of a dove covered with silver, and her feathers with yellow gold.</p><cite>Psalm 68:13</cite></blockquote>
+          <p class="kw"><span class="tag">gold</span><span class="tag">ornament</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AKlimt_-_Danae_-_1907-08.jpeg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p44">
+        <button class="frame" type="button" data-plate="44"
+                aria-label="Enlarge plate 44: Water Serpents">
+          <img src="img/versed-thumb/water-serpents.jpg" width="700" alt="Water Serpents by Gustav Klimt (1862-1918), with Psalm 46:4" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 44</span><span class="dot">&middot;</span><span class="yr">1904-07</span></p>
+          <h3 class="ttl">Water Serpents</h3>
+          <p class="by">Gustav Klimt (1862-1918)</p>
+          <p class="md">Oil on canvas &middot; Galerie Belvedere, Vienna</p>
+          <p class="note">Two women embrace in water until their hair and their bodies dissolve into pattern. Klimt paints desire as ornament, and ornament as desire.</p>
+          <blockquote class="verse"><p>There is a river, the streams whereof shall make glad the city of God, the holy place of the tabernacles of the most High.</p><cite>Psalm 46:4</cite></blockquote>
+          <p class="kw"><span class="tag">gold</span><span class="tag">ornament</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AGustav_Klimt_-_Water_Serpents_II.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p45">
+        <button class="frame" type="button" data-plate="45"
+                aria-label="Enlarge plate 45: Vampire (Love and Pain)">
+          <img src="img/versed-thumb/vampire-munch.jpg" width="700" alt="Vampire (Love and Pain) by Edvard Munch (1863-1944), with Psalm 38:9" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 45</span><span class="dot">&middot;</span><span class="yr">1893</span></p>
+          <h3 class="ttl">Vampire (Love and Pain)</h3>
+          <p class="by">Edvard Munch (1863-1944)</p>
+          <p class="md">Oil on canvas &middot; Munch Museum, Oslo</p>
+          <p class="note">A woman bends over a man's neck and his face is buried in her hair, and the red hair covers the whole composition. Munch paints love as a wound.</p>
+          <blockquote class="verse"><p>Lord, all my desire is before thee; and my groaning is not hid from thee.</p><cite>Psalm 38:9</cite></blockquote>
+          <p class="kw"><span class="tag">expressionism</span><span class="tag">frieze</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AEdvard_Munch_-_Vampire_%281893%29%2C_Munchmuseet.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p46">
+        <button class="frame" type="button" data-plate="46"
+                aria-label="Enlarge plate 46: Ashes">
+          <img src="img/versed-thumb/ashes-munch.jpg" width="700" alt="Ashes by Edvard Munch (1863-1944), with Psalm 102:3" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 46</span><span class="dot">&middot;</span><span class="yr">1894</span></p>
+          <h3 class="ttl">Ashes</h3>
+          <p class="by">Edvard Munch (1863-1944)</p>
+          <p class="md">Oil on canvas &middot; National Museum, Oslo</p>
+          <p class="note">A woman stands upright in the forest while a man sits with his head in his hands, and the fire between them is already out. Love painted as aftermath.</p>
+          <blockquote class="verse"><p>For my days are consumed like smoke, and my bones are burned as an hearth.</p><cite>Psalm 102:3</cite></blockquote>
+          <p class="kw"><span class="tag">expressionism</span><span class="tag">frieze</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AEdvard_Munch_-_Ashes_%281895%29.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <section id="index">
+      <h2>Index of works</h2>
+      <table>
+        <caption>All 46 plates in catalogue order, with artist, date and medium.</caption>
+        <thead>
+          <tr><th>No.</th><th>Title</th><th>Artist</th><th>Date</th><th class="c-med">Medium</th><th class="c-verse">Psalm</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="c-no"><a href="#p1">1</a></td><td class="c-ttl"><a href="#p1">Sacred and Profane Love</a></td><td class="c-art">Titian (c. 1488/90-1576)</td><td class="c-dat">c. 1514</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 45:13</td></tr>
+          <tr><td class="c-no"><a href="#p2">2</a></td><td class="c-ttl"><a href="#p2">Venus and Mars</a></td><td class="c-art">Sandro Botticelli (c. 1445-1510)</td><td class="c-dat">c. 1485</td><td class="c-med">Tempera and oil on poplar</td><td class="c-verse">Psalm 121:4</td></tr>
+          <tr><td class="c-no"><a href="#p3">3</a></td><td class="c-ttl"><a href="#p3">An Allegory with Venus and Cupid</a></td><td class="c-art">Agnolo Bronzino (1503-1572)</td><td class="c-dat">c. 1545</td><td class="c-med">Oil on panel</td><td class="c-verse">Psalm 8:4</td></tr>
+          <tr><td class="c-no"><a href="#p4">4</a></td><td class="c-ttl"><a href="#p4">Primavera</a></td><td class="c-art">Sandro Botticelli (c. 1445-1510)</td><td class="c-dat">c. 1480</td><td class="c-med">Tempera on panel</td><td class="c-verse">Psalm 65:11</td></tr>
+          <tr><td class="c-no"><a href="#p5">5</a></td><td class="c-ttl"><a href="#p5">Venus of Urbino</a></td><td class="c-art">Titian (c. 1488/90-1576)</td><td class="c-dat">1538</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 139:1</td></tr>
+          <tr><td class="c-no"><a href="#p6">6</a></td><td class="c-ttl"><a href="#p6">The Birth of Venus</a></td><td class="c-art">Sandro Botticelli (c. 1445-1510)</td><td class="c-dat">c. 1485</td><td class="c-med">Tempera on canvas</td><td class="c-verse">Psalm 93:3</td></tr>
+          <tr><td class="c-no"><a href="#p7">7</a></td><td class="c-ttl"><a href="#p7">Venus with a Mirror</a></td><td class="c-art">Titian (c. 1488/90-1576)</td><td class="c-dat">c. 1555</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 139:23</td></tr>
+          <tr><td class="c-no"><a href="#p8">8</a></td><td class="c-ttl"><a href="#p8">The Garden of Love</a></td><td class="c-art">Peter Paul Rubens (1577-1640)</td><td class="c-dat">c. 1633</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 68:6</td></tr>
+          <tr><td class="c-no"><a href="#p9">9</a></td><td class="c-ttl"><a href="#p9">The Embarkation for Cythera</a></td><td class="c-art">Antoine Watteau (1684-1721)</td><td class="c-dat">1717</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 126:1</td></tr>
+          <tr><td class="c-no"><a href="#p10">10</a></td><td class="c-ttl"><a href="#p10">Mars and Venus United by Love</a></td><td class="c-art">Paolo Veronese (1528-1588)</td><td class="c-dat">c. 1570</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 85:10</td></tr>
+          <tr><td class="c-no"><a href="#p11">11</a></td><td class="c-ttl"><a href="#p11">The Cyclops</a></td><td class="c-art">Odilon Redon (1840-1916)</td><td class="c-dat">c. 1914</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 32:8</td></tr>
+          <tr><td class="c-no"><a href="#p12">12</a></td><td class="c-ttl"><a href="#p12">The Caress</a></td><td class="c-art">Fernand Khnopff (1858-1921)</td><td class="c-dat">1896</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 63:7</td></tr>
+          <tr><td class="c-no"><a href="#p13">13</a></td><td class="c-ttl"><a href="#p13">Jupiter and Semele</a></td><td class="c-art">Gustave Moreau (1826-1898)</td><td class="c-dat">1894-95</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 97:5</td></tr>
+          <tr><td class="c-no"><a href="#p14">14</a></td><td class="c-ttl"><a href="#p14">The Kiss of the Sphinx</a></td><td class="c-art">Franz von Stuck (1863-1928)</td><td class="c-dat">1895</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 55:21</td></tr>
+          <tr><td class="c-no"><a href="#p15">15</a></td><td class="c-ttl"><a href="#p15">The Lovers' Whirlwind, Paolo and Francesca</a></td><td class="c-art">William Blake (1757-1827)</td><td class="c-dat">c. 1824-27</td><td class="c-med">Graphite, ink and watercolour on paper</td><td class="c-verse">Psalm 18:10</td></tr>
+          <tr><td class="c-no"><a href="#p16">16</a></td><td class="c-ttl"><a href="#p16">Beata Beatrix</a></td><td class="c-art">Dante Gabriel Rossetti (1828-1882)</td><td class="c-dat">1864-70</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 17:15</td></tr>
+          <tr><td class="c-no"><a href="#p17">17</a></td><td class="c-ttl"><a href="#p17">Ophelia among the Flowers</a></td><td class="c-art">Odilon Redon (1840-1916)</td><td class="c-dat">c. 1905-08</td><td class="c-med">Pastel and charcoal</td><td class="c-verse">Psalm 69:1</td></tr>
+          <tr><td class="c-no"><a href="#p18">18</a></td><td class="c-ttl"><a href="#p18">The Apparition</a></td><td class="c-art">Gustave Moreau (1826-1898)</td><td class="c-dat">1876</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 73:25</td></tr>
+          <tr><td class="c-no"><a href="#p19">19</a></td><td class="c-ttl"><a href="#p19">Love Among the Ruins</a></td><td class="c-art">Edward Burne-Jones (1833-1898)</td><td class="c-dat">1870-73</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 49:4</td></tr>
+          <tr><td class="c-no"><a href="#p20">20</a></td><td class="c-ttl"><a href="#p20">The Beloved</a></td><td class="c-art">Dante Gabriel Rossetti (1828-1882)</td><td class="c-dat">1865-66</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 45:14</td></tr>
+          <tr><td class="c-no"><a href="#p21">21</a></td><td class="c-ttl"><a href="#p21">Mars, Venus, and Cupid</a></td><td class="c-art">Marcantonio Raimondi (c. 1480-1534), after Raphael</td><td class="c-dat">1508</td><td class="c-med">Engraving</td><td class="c-verse">Psalm 76:3</td></tr>
+          <tr><td class="c-no"><a href="#p22">22</a></td><td class="c-ttl"><a href="#p22">Venus Disarming Cupid</a></td><td class="c-art">Parmigianino (1503-1540)</td><td class="c-dat">c. 1524-30</td><td class="c-med">Drawing</td><td class="c-verse">Psalm 45:1</td></tr>
+          <tr><td class="c-no"><a href="#p23">23</a></td><td class="c-ttl"><a href="#p23">Self-Portrait with Saskia</a></td><td class="c-art">Rembrandt van Rijn (1606-1669)</td><td class="c-dat">1636</td><td class="c-med">Etching</td><td class="c-verse">Psalm 63:3</td></tr>
+          <tr><td class="c-no"><a href="#p24">24</a></td><td class="c-ttl"><a href="#p24">Paolo and Francesca</a></td><td class="c-art">Gustave Doré (1832-1883)</td><td class="c-dat">1861</td><td class="c-med">Wood engraving for Dante's Inferno, Canto V</td><td class="c-verse">Psalm 130:1</td></tr>
+          <tr><td class="c-no"><a href="#p25">25</a></td><td class="c-ttl"><a href="#p25">Venus and Cupid in a Niche</a></td><td class="c-art">Marcantonio Raimondi (c. 1480-1534)</td><td class="c-dat">c. 1500-27</td><td class="c-med">Engraving</td><td class="c-verse">Psalm 45:2</td></tr>
+          <tr><td class="c-no"><a href="#p26">26</a></td><td class="c-ttl"><a href="#p26">The Ill-Assorted Couple</a></td><td class="c-art">Albrecht Dürer (1471-1528)</td><td class="c-dat">c. 1495</td><td class="c-med">Engraving</td><td class="c-verse">Psalm 62:10</td></tr>
+          <tr><td class="c-no"><a href="#p27">27</a></td><td class="c-ttl"><a href="#p27">Jupiter and Antiope</a></td><td class="c-art">Rembrandt van Rijn (1606-1669)</td><td class="c-dat">1659</td><td class="c-med">Etching</td><td class="c-verse">Psalm 18:11</td></tr>
+          <tr><td class="c-no"><a href="#p28">28</a></td><td class="c-ttl"><a href="#p28">Lovers</a></td><td class="c-art">Gustav Klimt (1862-1918)</td><td class="c-dat">c. 1913</td><td class="c-med">Pencil and white chalk on paper</td><td class="c-verse">Psalm 42:1</td></tr>
+          <tr><td class="c-no"><a href="#p29">29</a></td><td class="c-ttl"><a href="#p29">Lovers</a></td><td class="c-art">Egon Schiele (1890-1918)</td><td class="c-dat">c. 1917</td><td class="c-med">Pencil and gouache on paper</td><td class="c-verse">Psalm 31:7</td></tr>
+          <tr><td class="c-no"><a href="#p30">30</a></td><td class="c-ttl"><a href="#p30">The Kiss (detail)</a></td><td class="c-art">Auguste Rodin (1840-1917)</td><td class="c-dat">1882, carved 1901-04</td><td class="c-med">Marble</td><td class="c-verse">Psalm 139:14</td></tr>
+          <tr><td class="c-no"><a href="#p31">31</a></td><td class="c-ttl"><a href="#p31">Eternal Springtime</a></td><td class="c-art">Auguste Rodin (1840-1917)</td><td class="c-dat">1884, cast c. 1886</td><td class="c-med">Bronze</td><td class="c-verse">Psalm 104:30</td></tr>
+          <tr><td class="c-no"><a href="#p32">32</a></td><td class="c-ttl"><a href="#p32">Psyche Revived by Cupid's Kiss</a></td><td class="c-art">Antonio Canova (1757-1822)</td><td class="c-dat">1787-93</td><td class="c-med">Marble</td><td class="c-verse">Psalm 23:3</td></tr>
+          <tr><td class="c-no"><a href="#p33">33</a></td><td class="c-ttl"><a href="#p33">The Waltz</a></td><td class="c-art">Camille Claudel (1864-1943)</td><td class="c-dat">1889-1905</td><td class="c-med">Bronze</td><td class="c-verse">Psalm 149:3</td></tr>
+          <tr><td class="c-no"><a href="#p34">34</a></td><td class="c-ttl"><a href="#p34">The Three Graces</a></td><td class="c-art">Antonio Canova (1757-1822)</td><td class="c-dat">1814-17</td><td class="c-med">Marble</td><td class="c-verse">Psalm 34:3</td></tr>
+          <tr><td class="c-no"><a href="#p35">35</a></td><td class="c-ttl"><a href="#p35">Amor and Psyche</a></td><td class="c-art">Antonio Canova (1757-1822)</td><td class="c-dat">1793</td><td class="c-med">Marble</td><td class="c-verse">Psalm 73:23</td></tr>
+          <tr><td class="c-no"><a href="#p36">36</a></td><td class="c-ttl"><a href="#p36">Eros Stringing the Bow</a></td><td class="c-art">Roman, after Lysippos</td><td class="c-dat">1st-2nd century AD</td><td class="c-med">Marble</td><td class="c-verse">Psalm 45:5</td></tr>
+          <tr><td class="c-no"><a href="#p37">37</a></td><td class="c-ttl"><a href="#p37">The Kiss</a></td><td class="c-art">Gustav Klimt (1862-1918)</td><td class="c-dat">1907-08</td><td class="c-med">Oil and gold leaf on canvas</td><td class="c-verse">Psalm 45:9</td></tr>
+          <tr><td class="c-no"><a href="#p38">38</a></td><td class="c-ttl"><a href="#p38">Love</a></td><td class="c-art">Gustav Klimt (1862-1918)</td><td class="c-dat">1895</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 27:8</td></tr>
+          <tr><td class="c-no"><a href="#p39">39</a></td><td class="c-ttl"><a href="#p39">Madonna</a></td><td class="c-art">Edvard Munch (1863-1944)</td><td class="c-dat">1894-95</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 116:15</td></tr>
+          <tr><td class="c-no"><a href="#p40">40</a></td><td class="c-ttl"><a href="#p40">The Kiss</a></td><td class="c-art">Edvard Munch (1863-1944)</td><td class="c-dat">1897</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 73:26</td></tr>
+          <tr><td class="c-no"><a href="#p41">41</a></td><td class="c-ttl"><a href="#p41">The Embrace</a></td><td class="c-art">Egon Schiele (1890-1918)</td><td class="c-dat">1917</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 139:15</td></tr>
+          <tr><td class="c-no"><a href="#p42">42</a></td><td class="c-ttl"><a href="#p42">The Dance of Life</a></td><td class="c-art">Edvard Munch (1863-1944)</td><td class="c-dat">1899-1900</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 30:11</td></tr>
+          <tr><td class="c-no"><a href="#p43">43</a></td><td class="c-ttl"><a href="#p43">Danaë</a></td><td class="c-art">Gustav Klimt (1862-1918)</td><td class="c-dat">1907-08</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 68:13</td></tr>
+          <tr><td class="c-no"><a href="#p44">44</a></td><td class="c-ttl"><a href="#p44">Water Serpents</a></td><td class="c-art">Gustav Klimt (1862-1918)</td><td class="c-dat">1904-07</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 46:4</td></tr>
+          <tr><td class="c-no"><a href="#p45">45</a></td><td class="c-ttl"><a href="#p45">Vampire (Love and Pain)</a></td><td class="c-art">Edvard Munch (1863-1944)</td><td class="c-dat">1893</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 38:9</td></tr>
+          <tr><td class="c-no"><a href="#p46">46</a></td><td class="c-ttl"><a href="#p46">Ashes</a></td><td class="c-art">Edvard Munch (1863-1944)</td><td class="c-dat">1894</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 102:3</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      <h2>On the images</h2>
+      <p>All 46 reproductions are public domain or released under CC0, taken from Wikimedia Commons and the open-access programmes of the Metropolitan Museum of Art, the Huntington Museum of Art, the Musee du Louvre and the Google Art Project. Each plate links to its source record. Images are downloaded into <code>img/full</code> at 1600&nbsp;px on the long edge, with 700&nbsp;px copies in <code>img/thumb</code> for this page; the plates shown here are the versed copies in <code>img/versed</code> and <code>img/versed-thumb</code>. No photograph carrying a share-alike or attribution licence was used.</p>
+      <p>Captions give the artist, date, medium and holding collection as recorded by the source institution; the notes are editorial and describe what each work does to the human figure. The gallery is ordered by argument, not by date &mdash; the index at the end gives the works in catalogue order.</p>
+      <p class="companion">Companion galleries: <a href="../parents-gallery/index.html">Parents, Abstracted</a> &middot; <a href="../friends-gallery/index.html">Friends, Abstracted</a> &mdash; twenty-five works each, in the same format.</p>
+    </footer>
+  </main>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Enlarged plate">
+  <div class="lb-stage">
+    <img id="lb-img" alt="">
+    <button class="lb-x" id="lb-x" type="button">Close</button>
+  </div>
+  <div>
+    <div class="lb-cap" id="lb-cap"></div>
+    <div class="lb-nav">
+      <button id="lb-prev" type="button">&larr; Previous</button>
+      <button id="lb-next" type="button">Next &rarr;</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const WORKS = [{"n": 1, "full": "img/versed/sacred-profane-love.jpg", "thumb": "img/versed-thumb/sacred-profane-love.jpg", "title": "Sacred and Profane Love", "artist": "Titian (c. 1488/90-1576)", "date": "c. 1514", "medium": "Oil on canvas", "place": "Galleria Borghese, Rome", "note": "Two women sit at a well — one dressed, one bare — while a child stirs the water between them. The allegory is left unresolved on purpose: the same body shown twice, as thought and as feeling.", "source": "https://commons.wikimedia.org/wiki/File%3ATiziano_-_Amor_Sacro_y_Amor_Profano_%28Galer%C3%ADa_Borghese%2C_Roma%2C_1514%29.jpg", "license": "Public domain", "verse": "The king’s daughter is all glorious within: her clothing is of wrought gold.", "ref": "Psalm 45:13"}, {"n": 2, "full": "img/versed/venus-and-mars.jpg", "thumb": "img/versed-thumb/venus-and-mars.jpg", "title": "Venus and Mars", "artist": "Sandro Botticelli (c. 1445-1510)", "date": "c. 1485", "medium": "Tempera and oil on poplar", "place": "National Gallery, London", "note": "Mars sleeps while wasps hum about his head and Venus watches, propped and awake. Love here is not an event but a condition — vigilance kept beside oblivion.", "source": "https://commons.wikimedia.org/wiki/File%3AVenus_and_Mars_National_Gallery.jpg", "license": "Public domain", "verse": "Behold, he that keepeth Israel shall neither slumber nor sleep.", "ref": "Psalm 121:4"}, {"n": 3, "full": "img/versed/allegory-venus-cupid.jpg", "thumb": "img/versed-thumb/allegory-venus-cupid.jpg", "title": "An Allegory with Venus and Cupid", "artist": "Agnolo Bronzino (1503-1572)", "date": "c. 1545", "medium": "Oil on panel", "place": "National Gallery, London", "note": "Cold, enamelled, almost mineral flesh, with Time and Folly drawing back the curtain. Desire is argued as geometry rather than felt on the skin.", "source": "https://commons.wikimedia.org/wiki/File%3AAngelo_Bronzino_-_Venus%2C_Cupid%2C_Folly_and_Time_-_National_Gallery%2C_London.jpg", "license": "Public domain", "verse": "What is man, that thou art mindful of him? and the son of man, that thou visitest him?", "ref": "Psalm 8:4"}, {"n": 4, "full": "img/versed/primavera.jpg", "thumb": "img/versed-thumb/primavera.jpg", "title": "Primavera", "artist": "Sandro Botticelli (c. 1445-1510)", "date": "c. 1480", "medium": "Tempera on panel", "place": "Galleria degli Uffizi, Florence", "note": "Nine figures stand in an orange grove and almost none of them touch. Spring, love and fertility are arranged as a diagram — an argument made out of bodies.", "source": "https://commons.wikimedia.org/wiki/File%3ASandro_Botticelli_-_La_Primavera_-_Google_Art_Project.jpg", "license": "Public domain", "verse": "Thou crownest the year with thy goodness; and thy paths drop fatness.", "ref": "Psalm 65:11"}, {"n": 5, "full": "img/versed/venus-of-urbino.jpg", "thumb": "img/versed-thumb/venus-of-urbino.jpg", "title": "Venus of Urbino", "artist": "Titian (c. 1488/90-1576)", "date": "1538", "medium": "Oil on canvas", "place": "Galleria degli Uffizi, Florence", "note": "A goddess installed in an ordinary Venetian bedroom, looking straight out of the picture. The body has become a painted surface first and a person second, which is exactly what makes the gaze so unsettled.", "source": "https://commons.wikimedia.org/wiki/File%3ATiziano_-_Venere_di_Urbino_-_Google_Art_Project.jpg", "license": "Public domain", "verse": "O LORD, thou hast searched me, and known me.", "ref": "Psalm 139:1"}, {"n": 11, "full": "img/versed/the-cyclops.jpg", "thumb": "img/versed-thumb/the-cyclops.jpg", "title": "The Cyclops", "artist": "Odilon Redon (1840-1916)", "date": "c. 1914", "medium": "Oil on canvas", "place": "Kröller-Müller Museum, Otterlo", "note": "One enormous eye rises over the hills to look at a sleeping woman. Desire is reduced to a single organ, watching — the most abstract thing a body can do.", "source": "https://commons.wikimedia.org/wiki/File%3AOdilon_Redon_-_The_Cyclops%2C_c._1914.jpg", "license": "Public domain", "verse": "I will guide thee with mine eye.", "ref": "Psalm 32:8"}, {"n": 12, "full": "img/versed/the-caress.jpg", "thumb": "img/versed-thumb/the-caress.jpg", "title": "The Caress", "artist": "Fernand Khnopff (1858-1921)", "date": "1896", "medium": "Oil on canvas", "place": "Musées royaux des Beaux-Arts, Brussels", "note": "A woman with a cheetah's head rests her cheek against a young man's. Tenderness and predation share one silhouette, and the human face is withheld altogether.", "source": "https://commons.wikimedia.org/wiki/File%3AFernand_Khnopff_-_Caresses_-_Google_Art_Project.jpg", "license": "Public domain", "verse": "Because thou hast been my help, therefore in the shadow of thy wings will I rejoice.", "ref": "Psalm 63:7"}, {"n": 13, "full": "img/versed/jupiter-and-semele.jpg", "thumb": "img/versed-thumb/jupiter-and-semele.jpg", "title": "Jupiter and Semele", "artist": "Gustave Moreau (1826-1898)", "date": "1894-95", "medium": "Oil on canvas", "place": "Musée Gustave Moreau, Paris", "note": "The god arrives as a wall of gold and flowers, and the mortal dissolves into the ornament that destroys her. Love rendered as architecture.", "source": "https://commons.wikimedia.org/wiki/File%3AJupiter_and_Semele_by_Gustave_Moreau.jpg", "license": "Public domain", "verse": "The hills melted like wax at the presence of the LORD, at the presence of the Lord of the whole earth.", "ref": "Psalm 97:5"}, {"n": 14, "full": "img/versed/kiss-of-the-sphinx.jpg", "thumb": "img/versed-thumb/kiss-of-the-sphinx.jpg", "title": "The Kiss of the Sphinx", "artist": "Franz von Stuck (1863-1928)", "date": "1895", "medium": "Oil on canvas", "place": "Museum Villa Stuck, Munich", "note": "The embrace is also an ambush. Two bodies lock into a single dark mass and it is impossible to tell which one is being consumed.", "source": "https://commons.wikimedia.org/wiki/File%3AFranz_von_Stuck_-_The_Kiss_of_the_Sphinx_-_Google_Art_Project.jpg", "license": "Public domain", "verse": "The words of his mouth were smoother than butter, but war was in his heart: his words were softer than oil, yet were they drawn swords.", "ref": "Psalm 55:21"}, {"n": 15, "full": "img/versed/lovers-whirlwind.jpg", "thumb": "img/versed-thumb/lovers-whirlwind.jpg", "title": "The Lovers' Whirlwind, Paolo and Francesca", "artist": "William Blake (1757-1827)", "date": "c. 1824-27", "medium": "Graphite, ink and watercolour on paper", "place": "Birmingham Museum and Art Gallery", "note": "The adulterous lovers are spun through hell as one vortex of limbs. Blake draws passion as weather — bodies turned into motion rather than flesh.", "source": "https://commons.wikimedia.org/wiki/File%3ABlake_Dante_Hell_V.jpg", "license": "Public domain", "verse": "And he rode upon a cherub, and did fly: yea, he did fly upon the wings of the wind.", "ref": "Psalm 18:10"}, {"n": 16, "full": "img/versed/beata-beatrix.jpg", "thumb": "img/versed-thumb/beata-beatrix.jpg", "title": "Beata Beatrix", "artist": "Dante Gabriel Rossetti (1828-1882)", "date": "1864-70", "medium": "Oil on canvas", "place": "Tate Britain, London", "note": "Beatrice sits with closed eyes while a red bird drops a white poppy into her hand. Love and death occupy the same still, luminous face.", "source": "https://commons.wikimedia.org/wiki/File%3ADante_Gabriel_Rossetti_-_Beata_Beatrix%2C_1864-1870.jpg", "license": "Public domain", "verse": "As for me, I will behold thy face in righteousness: I shall be satisfied, when I awake, with thy likeness.", "ref": "Psalm 17:15"}, {"n": 21, "full": "img/versed/mars-venus-cupid.jpg", "thumb": "img/versed-thumb/mars-venus-cupid.jpg", "title": "Mars, Venus, and Cupid", "artist": "Marcantonio Raimondi (c. 1480-1534), after Raphael", "date": "1508", "medium": "Engraving", "place": "The Metropolitan Museum of Art, New York", "note": "War disarmed by desire: the god of battle stripped of his armour and reduced to a seated outline, watched by a small winged boy.", "source": "https://commons.wikimedia.org/wiki/File%3AMars%2C_Venus%2C_and_Cupid%2C_by_Marcantonio_Raimondi%2C_1508%2C_engraving_-_National_Museum_of_Western_Art%2C_Tokyo_-_DSC08241.JPG", "license": "Public domain", "verse": "There brake he the arrows of the bow, the shield, and the sword, and the battle. Selah.", "ref": "Psalm 76:3"}, {"n": 22, "full": "img/versed/venus-disarming-cupid.jpg", "thumb": "img/versed-thumb/venus-disarming-cupid.jpg", "title": "Venus Disarming Cupid", "artist": "Parmigianino (1503-1540)", "date": "c. 1524-30", "medium": "Drawing", "place": "", "note": "A few hundred strokes and the whole of a love affair exists: Venus takes Cupid's arrow from him while he twists away. Mannerist drawing at its most abstract, the figure stated as curve and shadow and very little else.", "source": "https://commons.wikimedia.org/wiki/File%3AParmigianino_-_Venus_Disarming_Cupid_-_Google_Art_Project.jpg", "license": "Public domain", "verse": "My heart is inditing a good matter: I speak of the things which I have made touching the king: my tongue is the pen of a ready writer.", "ref": "Psalm 45:1"}, {"n": 23, "full": "img/versed/saskia.jpg", "thumb": "img/versed-thumb/saskia.jpg", "title": "Self-Portrait with Saskia", "artist": "Rembrandt van Rijn (1606-1669)", "date": "1636", "medium": "Etching", "place": "The Metropolitan Museum of Art, New York", "note": "Rembrandt draws himself and his wife at a tavern table in a few dozen etched lines. Tenderness recorded as a shared glance and a raised glass.", "source": "https://commons.wikimedia.org/wiki/File%3ASelf-Portrait_with_Saskia_MET_DP814514.jpg", "license": "CC0", "verse": "Because thy lovingkindness is better than life, my lips shall praise thee.", "ref": "Psalm 63:3"}, {"n": 24, "full": "img/versed/paolo-francesca.jpg", "thumb": "img/versed-thumb/paolo-francesca.jpg", "title": "Paolo and Francesca", "artist": "Gustave Doré (1832-1883)", "date": "1861", "medium": "Wood engraving for Dante's Inferno, Canto V", "place": "", "note": "The two lovers drift in the circle of the lustful, still entwined, weightless and unrepentant. Doré engraves damnation as a texture of light and air.", "source": "https://commons.wikimedia.org/wiki/File%3AGustave_Dor%C3%A9_-_Paolo_and_Francesca_da_Rimini.jpg", "license": "Public domain", "verse": "Out of the depths have I cried unto thee, O LORD.", "ref": "Psalm 130:1"}, {"n": 30, "full": "img/versed/the-kiss-rodin.jpg", "thumb": "img/versed-thumb/the-kiss-rodin.jpg", "title": "The Kiss (detail)", "artist": "Auguste Rodin (1840-1917)", "date": "1882, carved 1901-04", "medium": "Marble", "place": "Musée Rodin, Paris", "note": "Two bodies cut from a single block, so the embrace is also one mass. The most literal of subjects made the most sculptural.", "source": "https://commons.wikimedia.org/wiki/File%3ALe_Baiser_%28detail%2C_Musee_Rodin%2C_Paris%29-2014-05.jpg", "license": "Public domain", "verse": "I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well.", "ref": "Psalm 139:14"}, {"n": 31, "full": "img/versed/eternal-springtime.jpg", "thumb": "img/versed-thumb/eternal-springtime.jpg", "title": "Eternal Springtime", "artist": "Auguste Rodin (1840-1917)", "date": "1884, cast c. 1886", "medium": "Bronze", "place": "Huntington Museum of Art", "note": "The figures lean out of the block they were never fully freed from. Movement and tenderness held in the same unfinished gesture.", "source": "https://commons.wikimedia.org/wiki/File%3AEternal_Springtime%2C_Auguste_Rodin%2C_c._1886%2C_bronze_-_Huntington_Museum_of_Art_-_DSC05255.JPG", "license": "CC0", "verse": "Thou sendest forth thy spirit, they are created: and thou renewest the face of the earth.", "ref": "Psalm 104:30"}, {"n": 32, "full": "img/versed/psyche-revived.jpg", "thumb": "img/versed-thumb/psyche-revived.jpg", "title": "Psyche Revived by Cupid's Kiss", "artist": "Antonio Canova (1757-1822)", "date": "1787-93", "medium": "Marble", "place": "Musée du Louvre, Paris", "note": "Cupid's hands and wings are the only support; Psyche's body is weightless, held up by tenderness. Neoclassical marble at its most tender.", "source": "https://commons.wikimedia.org/wiki/File%3APsych%C3%A9_ranim%C3%A9e_par_le_baiser_de_l%27Amour%2C_Louvre.jpg", "license": "CC0", "verse": "He restoreth my soul: he leadeth me in the paths of righteousness for his name’s sake.", "ref": "Psalm 23:3"}, {"n": 33, "full": "img/versed/the-waltz.jpg", "thumb": "img/versed-thumb/the-waltz.jpg", "title": "The Waltz", "artist": "Camille Claudel (1864-1943)", "date": "1889-1905", "medium": "Bronze", "place": "Musée Camille Claudel, Nogent-sur-Seine", "note": "Two figures turn until the dress becomes the movement itself. Claudel sculpts the turn rather than the dancers.", "source": "https://commons.wikimedia.org/wiki/File%3ACamille_Claudel%2C_%22La_Valse%22%2C_1889-1905%2C_bronze_fonte_%281%29.jpg", "license": "Public domain", "verse": "Let them praise his name in the dance: let them sing praises unto him with the timbrel and harp.", "ref": "Psalm 149:3"}, {"n": 37, "full": "img/versed/kiss-klimt.jpg", "thumb": "img/versed-thumb/kiss-klimt.jpg", "title": "The Kiss", "artist": "Gustav Klimt (1862-1918)", "date": "1907-08", "medium": "Oil and gold leaf on canvas", "place": "Österreichische Galerie Belvedere, Vienna", "note": "Two faces are almost lost inside the gold. Klimt buries the human in ornament, and the tenderness survives the pattern.", "source": "https://commons.wikimedia.org/wiki/File%3AKlimt_-_The_Kiss.jpg", "license": "Public domain", "verse": "Kings’ daughters were among thy honourable women: upon thy right hand did stand the queen in gold of Ophir.", "ref": "Psalm 45:9"}, {"n": 38, "full": "img/versed/liebe-klimt.jpg", "thumb": "img/versed-thumb/liebe-klimt.jpg", "title": "Love", "artist": "Gustav Klimt (1862-1918)", "date": "1895", "medium": "Oil on canvas", "place": "Kunsthistorisches Museum, Vienna", "note": "A stack of pale, doubled faces, haloed and interchangeable. Love painted as a condition shared rather than a scene observed.", "source": "https://commons.wikimedia.org/wiki/File%3AKlimt_-_Liebe_-_1895.jpeg", "license": "Public domain", "verse": "When thou saidst, Seek ye my face; my heart said unto thee, Thy face, LORD, will I seek.", "ref": "Psalm 27:8"}, {"n": 39, "full": "img/versed/madonna-munch.jpg", "thumb": "img/versed-thumb/madonna-munch.jpg", "title": "Madonna", "artist": "Edvard Munch (1863-1944)", "date": "1894-95", "medium": "Oil on canvas", "place": "Munch Museum, Oslo", "note": "Love and death share one body, and the halo is also the red halo of pain. The face is bowed into anonymity.", "source": "https://commons.wikimedia.org/wiki/File%3AEdvard_Munch_-_Madonna_-_Google_Art_Project.jpg", "license": "Public domain", "verse": "Precious in the sight of the LORD is the death of his saints.", "ref": "Psalm 116:15"}, {"n": 40, "full": "img/versed/kiss-munch.jpg", "thumb": "img/versed-thumb/kiss-munch.jpg", "title": "The Kiss", "artist": "Edvard Munch (1863-1944)", "date": "1897", "medium": "Oil on canvas", "place": "Munch Museum, Oslo", "note": "Two faces merge into a single featureless mass. Munch paints the moment identity stops at the edge of the other person.", "source": "https://commons.wikimedia.org/wiki/File%3AEdvard_Munch_-_The_Kiss_-_Google_Art_Project.jpg", "license": "Public domain", "verse": "My flesh and my heart faileth: but God is the strength of my heart, and my portion for ever.", "ref": "Psalm 73:26"}, {"n": 41, "full": "img/versed/umarmung-schiele.jpg", "thumb": "img/versed-thumb/umarmung-schiele.jpg", "title": "The Embrace", "artist": "Egon Schiele (1890-1918)", "date": "1917", "medium": "Oil on canvas", "place": "Österreichische Galerie Belvedere, Vienna", "note": "Bodies drawn as angles and stains, awkward and specific. Schiele keeps every joint human while the colour runs free of the contour.", "source": "https://commons.wikimedia.org/wiki/File%3AEgon_Schiele_-_Umarmung_%281917%29.jpg", "license": "Public domain", "verse": "My substance was not hid from thee, when I was made in secret, and curiously wrought in the lowest parts of the earth.", "ref": "Psalm 139:15"}, {"n": 42, "full": "img/versed/dance-of-life.jpg", "thumb": "img/versed-thumb/dance-of-life.jpg", "title": "The Dance of Life", "artist": "Edvard Munch (1863-1944)", "date": "1899-1900", "medium": "Oil on canvas", "place": "National Museum, Oslo", "note": "Three women stand on a summer shore while couples dance behind them: the white of innocence, the red of love, the black of grief. A whole life arranged as one dance.", "source": "https://commons.wikimedia.org/wiki/File%3AEdvard_Munch_-_The_dance_of_life_%281899-1900%29.jpg", "license": "Public domain", "verse": "Thou hast turned for me my mourning into dancing: thou hast put off my sackcloth, and girded me with gladness;", "ref": "Psalm 30:11"}, {"n": 6, "full": "img/versed/birth-of-venus.jpg", "thumb": "img/versed-thumb/birth-of-venus.jpg", "title": "The Birth of Venus", "artist": "Sandro Botticelli (c. 1445-1510)", "date": "c. 1485", "medium": "Tempera on canvas", "place": "Galleria degli Uffizi, Florence", "note": "Venus arrives on a shell blown in by the winds, and love is staged as a birth rather than a meeting. Botticelli paints desire as weather, flowers and hair, with the body barely touching anything.", "source": "https://commons.wikimedia.org/wiki/File%3ASandro_Botticelli_046.jpg", "license": "Public domain", "verse": "The floods have lifted up, O LORD, the floods have lifted up their voice; the floods lift up their waves.", "ref": "Psalm 93:3"}, {"n": 7, "full": "img/versed/venus-with-mirror.jpg", "thumb": "img/versed-thumb/venus-with-mirror.jpg", "title": "Venus with a Mirror", "artist": "Titian (c. 1488/90-1576)", "date": "c. 1555", "medium": "Oil on canvas", "place": "National Gallery of Art, Washington", "note": "The goddess looks at herself while a cupid holds the mirror, and the only love in the picture is self-regard. The body has become a surface being admired, and the admirer is her.", "source": "https://commons.wikimedia.org/wiki/File%3ATitian_-_Venus_with_a_Mirror_-_Google_Art_Project.jpg", "license": "Public domain", "verse": "Search me, O God, and know my heart: try me, and know my thoughts:", "ref": "Psalm 139:23"}, {"n": 8, "full": "img/versed/garden-of-love.jpg", "thumb": "img/versed-thumb/garden-of-love.jpg", "title": "The Garden of Love", "artist": "Peter Paul Rubens (1577-1640)", "date": "c. 1633", "medium": "Oil on canvas", "place": "Museo del Prado, Madrid", "note": "Rubens gathers his wife, his friends and a fountain of Venus into one garden, and love is described as a social occasion rather than a private one.", "source": "https://commons.wikimedia.org/wiki/File%3AEl_Jard%C3%ADn_del_Amor_%28Rubens%29.jpg", "license": "Public domain", "verse": "God setteth the solitary in families: he bringeth out those which are bound with chains: but the rebellious dwell in a dry land.", "ref": "Psalm 68:6"}, {"n": 9, "full": "img/versed/embarkation-cythera.jpg", "thumb": "img/versed-thumb/embarkation-cythera.jpg", "title": "The Embarkation for Cythera", "artist": "Antoine Watteau (1684-1721)", "date": "1717", "medium": "Oil on canvas", "place": "Musée du Louvre, Paris", "note": "Lovers set out for the island of Venus, or are returning from it, and nobody can tell which. Love painted as a departure that has already become a memory.", "source": "https://commons.wikimedia.org/wiki/File%3AL%27Embarquement_pour_Cyth%C3%A8re%2C_by_Antoine_Watteau%2C_from_C2RMF_retouched.jpg", "license": "Public domain", "verse": "When the LORD turned again the captivity of Zion, we were like them that dream.", "ref": "Psalm 126:1"}, {"n": 10, "full": "img/versed/mars-venus-veronese.jpg", "thumb": "img/versed-thumb/mars-venus-veronese.jpg", "title": "Mars and Venus United by Love", "artist": "Paolo Veronese (1528-1588)", "date": "c. 1570", "medium": "Oil on canvas", "place": "The Metropolitan Museum of Art, New York", "note": "Veronese ties the god of war to the goddess with a knot of ribbon while a cupid pulls it tight, and love is literally a knot in the composition.", "source": "https://commons.wikimedia.org/wiki/File%3AMars_and_Venus_United_by_Love_MET_DP136513.jpg", "license": "CC0", "verse": "Mercy and truth are met together; righteousness and peace have kissed each other.", "ref": "Psalm 85:10"}, {"n": 17, "full": "img/versed/ophelia-redon.jpg", "thumb": "img/versed-thumb/ophelia-redon.jpg", "title": "Ophelia among the Flowers", "artist": "Odilon Redon (1840-1916)", "date": "c. 1905-08", "medium": "Pastel and charcoal", "place": "National Gallery, London", "note": "Ophelia floats in a river of flowers with her mouth open, and Redon paints love's grief as a colour rather than an event. The face is almost lost in the blue.", "source": "https://commons.wikimedia.org/wiki/File%3AOdilon_Redon%2C_Ophelia_among_the_Flowers%2C_The_National_Gallery%2C_London.jpg", "license": "Public domain", "verse": "Save me, O God; for the waters are come in unto my soul.", "ref": "Psalm 69:1"}, {"n": 18, "full": "img/versed/the-apparition.jpg", "thumb": "img/versed-thumb/the-apparition.jpg", "title": "The Apparition", "artist": "Gustave Moreau (1826-1898)", "date": "1876", "medium": "Oil on canvas", "place": "Musée Gustave Moreau, Paris", "note": "Salome stands before the head of the man she desired and the vision glows in the air between them. Moreau paints obsession as an apparition, and the body as ornament.", "source": "https://commons.wikimedia.org/wiki/File%3AGustave_Moreau_A_apari%C3%A7%C3%A3o.jpg", "license": "Public domain", "verse": "Whom have I in heaven but thee? and there is none upon earth that I desire beside thee.", "ref": "Psalm 73:25"}, {"n": 19, "full": "img/versed/love-among-ruins.jpg", "thumb": "img/versed-thumb/love-among-ruins.jpg", "title": "Love Among the Ruins", "artist": "Edward Burne-Jones (1833-1898)", "date": "1870-73", "medium": "Oil on canvas", "place": "Wightwick Manor, Wolverhampton", "note": "Two lovers sit among brambles while a figure behind them plays a lute, and love is described as a place rather than a feeling.", "source": "https://commons.wikimedia.org/wiki/File%3AEdward_Burne-Jones_Love_Among_the_Ruins.jpg", "license": "Public domain", "verse": "I will incline mine ear to a parable: I will open my dark saying upon the harp.", "ref": "Psalm 49:4"}, {"n": 20, "full": "img/versed/the-beloved.jpg", "thumb": "img/versed-thumb/the-beloved.jpg", "title": "The Beloved", "artist": "Dante Gabriel Rossetti (1828-1882)", "date": "1865-66", "medium": "Oil on canvas", "place": "Tate Britain, London", "note": "Rossetti crowds the bride with her companions until her face is only one among many, and love is painted as an enclosed garden.", "source": "https://commons.wikimedia.org/wiki/File%3AThe_Beloved_D-G-Rossetti-1866.jpg", "license": "Public domain", "verse": "She shall be brought unto the king in raiment of needlework: the virgins her companions that follow her shall be brought unto thee.", "ref": "Psalm 45:14"}, {"n": 25, "full": "img/versed/venus-cupid-niche.jpg", "thumb": "img/versed-thumb/venus-cupid-niche.jpg", "title": "Venus and Cupid in a Niche", "artist": "Marcantonio Raimondi (c. 1480-1534)", "date": "c. 1500-27", "medium": "Engraving", "place": "The Metropolitan Museum of Art, New York", "note": "A goddess and a small winged boy stand inside a shell-shaped niche, and love is described by hatching and architecture alone.", "source": "https://commons.wikimedia.org/wiki/File%3AVenus_and_Cupid_standing_in_a_niche_MET_DP854062.jpg", "license": "CC0", "verse": "Thou art fairer than the children of men: grace is poured into thy lips: therefore God hath blessed thee for ever.", "ref": "Psalm 45:2"}, {"n": 26, "full": "img/versed/ill-assorted-couple.jpg", "thumb": "img/versed-thumb/ill-assorted-couple.jpg", "title": "The Ill-Assorted Couple", "artist": "Albrecht Dürer (1471-1528)", "date": "c. 1495", "medium": "Engraving", "place": "", "note": "An old man and a young woman walk together and exchange a glance that is entirely about money. Dürer engraves a love affair as a transaction, which is one of the most honest images of one.", "source": "https://commons.wikimedia.org/wiki/File%3AAlbrecht_D%C3%BCrer%2C_The_Ill-Assorted_Couple%2C_1495-1496%2C_NGA_6572.jpg", "license": "CC0", "verse": "Trust not in oppression, and become not vain in robbery: if riches increase, set not your heart upon them.", "ref": "Psalm 62:10"}, {"n": 27, "full": "img/versed/jupiter-antiope.jpg", "thumb": "img/versed-thumb/jupiter-antiope.jpg", "title": "Jupiter and Antiope", "artist": "Rembrandt van Rijn (1606-1669)", "date": "1659", "medium": "Etching", "place": "Rijksmuseum, Amsterdam", "note": "Jupiter approaches the sleeping Antiope in the dark, and the whole of desire is in one raised hand and one shadow. Rembrandt etches seduction as an arrangement of light.", "source": "https://commons.wikimedia.org/wiki/File%3ARembrandt_van_Rijn%2C_Jupiter_og_Antiope%2C_1659%2C_KKS2568%2C_Statens_Museum_for_Kunst.jpg", "license": "Public domain", "verse": "He made darkness his secret place; his pavilion round about him were dark waters and thick clouds of the skies.", "ref": "Psalm 18:11"}, {"n": 28, "full": "img/versed/liebespaar-klimt.jpg", "thumb": "img/versed-thumb/liebespaar-klimt.jpg", "title": "Lovers", "artist": "Gustav Klimt (1862-1918)", "date": "c. 1913", "medium": "Pencil and white chalk on paper", "place": "", "note": "Two lovers are drawn as a single line of pencil and chalk with their heads pressed together. The drawing is almost entirely contour, and unmistakably two people.", "source": "https://commons.wikimedia.org/wiki/File%3AGustav_Klimt_Liebespaar_nach_rechts_c1913.jpg", "license": "Public domain", "verse": "As the hart panteth after the water brooks, so panteth my soul after thee, O God.", "ref": "Psalm 42:1"}, {"n": 29, "full": "img/versed/liebespaar-schiele.jpg", "thumb": "img/versed-thumb/liebespaar-schiele.jpg", "title": "Lovers", "artist": "Egon Schiele (1890-1918)", "date": "c. 1917", "medium": "Pencil and gouache on paper", "place": "", "note": "Schiele draws two bodies as angles and stains, awkward and specific, and the tenderness survives every distortion.", "source": "https://commons.wikimedia.org/wiki/File%3AEgon_Schiele_-_Liebespaar_-_1913.jpeg", "license": "Public domain", "verse": "I will be glad and rejoice in thy mercy: for thou hast considered my trouble; thou hast known my soul in adversities;", "ref": "Psalm 31:7"}, {"n": 34, "full": "img/versed/three-graces-canova.jpg", "thumb": "img/versed-thumb/three-graces-canova.jpg", "title": "The Three Graces", "artist": "Antonio Canova (1757-1822)", "date": "1814-17", "medium": "Marble", "place": "Hermitage Museum, Saint Petersburg", "note": "Three women stand linked by their arms and shoulders, and the group is one continuous soft curve. Grace described as a single line rather than three bodies.", "source": "https://commons.wikimedia.org/wiki/File%3ACanova_-_The_Three_Graces%2C_between_1813_and_1816%2C_%D0%9D.%D1%81%D0%BA-506.jpg", "license": "Public domain", "verse": "O magnify the LORD with me, and let us exalt his name together.", "ref": "Psalm 34:3"}, {"n": 35, "full": "img/versed/amor-psyche-canova.jpg", "thumb": "img/versed-thumb/amor-psyche-canova.jpg", "title": "Amor and Psyche", "artist": "Antonio Canova (1757-1822)", "date": "1793", "medium": "Marble", "place": "Hermitage Museum, Saint Petersburg", "note": "Cupid stands with his arm around Psyche and a butterfly resting on his hand, and love is described as a balance between two standing bodies.", "source": "https://commons.wikimedia.org/wiki/File%3AAmor_en_Psyche_Sculpturen_van_Antonio_Canova_%28serietitel%29%2C_RP-P-OB-39.103.jpg", "license": "CC0", "verse": "Nevertheless I am continually with thee: thou hast holden me by my right hand.", "ref": "Psalm 73:23"}, {"n": 36, "full": "img/versed/eros-stringing-bow.jpg", "thumb": "img/versed-thumb/eros-stringing-bow.jpg", "title": "Eros Stringing the Bow", "artist": "Roman, after Lysippos", "date": "1st-2nd century AD", "medium": "Marble", "place": "", "note": "The god of love bends his bow and looks up, and the whole of desire is in the tension of one arm. Ancient sculpture at its most abstract and most human.", "source": "https://commons.wikimedia.org/wiki/File%3AEros_with_Bow%2C_Roman_Marble_Copy_of_Bronze_Greek_Original%2C_c._2nd_C._AD_%2828309098915%29.jpg", "license": "CC0", "verse": "Thine arrows are sharp in the heart of the king’s enemies; whereby the people fall under thee.", "ref": "Psalm 45:5"}, {"n": 43, "full": "img/versed/danae-klimt.jpg", "thumb": "img/versed-thumb/danae-klimt.jpg", "title": "Danaë", "artist": "Gustav Klimt (1862-1918)", "date": "1907-08", "medium": "Oil on canvas", "place": "Galerie Belvedere, Vienna", "note": "Danaë curls into a spiral inside a veil of gold with her face almost hidden, and love is painted as a shower of gold rather than as a body.", "source": "https://commons.wikimedia.org/wiki/File%3AKlimt_-_Danae_-_1907-08.jpeg", "license": "Public domain", "verse": "Though ye have lien among the pots, yet shall ye be as the wings of a dove covered with silver, and her feathers with yellow gold.", "ref": "Psalm 68:13"}, {"n": 44, "full": "img/versed/water-serpents.jpg", "thumb": "img/versed-thumb/water-serpents.jpg", "title": "Water Serpents", "artist": "Gustav Klimt (1862-1918)", "date": "1904-07", "medium": "Oil on canvas", "place": "Galerie Belvedere, Vienna", "note": "Two women embrace in water until their hair and their bodies dissolve into pattern. Klimt paints desire as ornament, and ornament as desire.", "source": "https://commons.wikimedia.org/wiki/File%3AGustav_Klimt_-_Water_Serpents_II.jpg", "license": "Public domain", "verse": "There is a river, the streams whereof shall make glad the city of God, the holy place of the tabernacles of the most High.", "ref": "Psalm 46:4"}, {"n": 45, "full": "img/versed/vampire-munch.jpg", "thumb": "img/versed-thumb/vampire-munch.jpg", "title": "Vampire (Love and Pain)", "artist": "Edvard Munch (1863-1944)", "date": "1893", "medium": "Oil on canvas", "place": "Munch Museum, Oslo", "note": "A woman bends over a man's neck and his face is buried in her hair, and the red hair covers the whole composition. Munch paints love as a wound.", "source": "https://commons.wikimedia.org/wiki/File%3AEdvard_Munch_-_Vampire_%281893%29%2C_Munchmuseet.jpg", "license": "Public domain", "verse": "Lord, all my desire is before thee; and my groaning is not hid from thee.", "ref": "Psalm 38:9"}, {"n": 46, "full": "img/versed/ashes-munch.jpg", "thumb": "img/versed-thumb/ashes-munch.jpg", "title": "Ashes", "artist": "Edvard Munch (1863-1944)", "date": "1894", "medium": "Oil on canvas", "place": "National Museum, Oslo", "note": "A woman stands upright in the forest while a man sits with his head in his hands, and the fire between them is already out. Love painted as aftermath.", "source": "https://commons.wikimedia.org/wiki/File%3AEdvard_Munch_-_Ashes_%281895%29.jpg", "license": "Public domain", "verse": "For my days are consumed like smoke, and my bones are burned as an hearth.", "ref": "Psalm 102:3"}];
+const lb = document.getElementById('lb');
+const img = document.getElementById('lb-img');
+const cap = document.getElementById('lb-cap');
+let at = 0, last = null;
+
+function render(i) {
+  at = (i + WORKS.length) % WORKS.length;
+  const w = WORKS[at];
+  img.src = w.full;
+  img.alt = w.title + ' by ' + w.artist;
+  cap.innerHTML = '<span class="t">Plate ' + w.n + '. ' + w.title + '</span> &mdash; ' +
+    w.artist + ', ' + w.date + '. <span class="m">' + w.medium +
+    (w.place ? ', ' + w.place : '') + '.</span>' +
+    '<span class="v">&ldquo;' + w.verse + '&rdquo;</span>' +
+    '<span class="r">' + w.ref + '</span>';
+}
+function open(i) {
+  last = document.activeElement;
+  render(i);
+  lb.dataset.open = '1';
+  document.body.classList.add('lb-open');
+  document.getElementById('lb-x').focus();
+}
+function close() {
+  lb.dataset.open = '0';
+  document.body.classList.remove('lb-open');
+  img.removeAttribute('src');
+  if (last) last.focus();
+}
+document.querySelectorAll('.frame').forEach(b => {
+  b.addEventListener('click', () => open(Number(b.dataset.plate) - 1));
+});
+document.getElementById('lb-x').addEventListener('click', close);
+document.getElementById('lb-prev').addEventListener('click', () => render(at - 1));
+document.getElementById('lb-next').addEventListener('click', () => render(at + 1));
+lb.addEventListener('click', e => { if (e.target === lb) close(); });
+document.addEventListener('keydown', e => {
+  if (lb.dataset.open !== '1') return;
+  if (e.key === 'Escape') close();
+  if (e.key === 'ArrowLeft') render(at - 1);
+  if (e.key === 'ArrowRight') render(at + 1);
+});
+</script>
+</body>
+</html>

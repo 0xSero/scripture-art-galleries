@@ -1,0 +1,920 @@
+[
+ {
+  "slug": "0x69726875326bbc0ccadecfb65bf26bc461c3f377",
+  "verdict": "keep",
+  "score": 7,
+  "why": "real abstract still life, signed Evola, confident colour"
+ },
+ {
+  "slug": "1565-die-ordnung-der-welt-und-ihre-wunder-des-shaykh-ahmed-misr-",
+  "verdict": "drop",
+  "score": 3,
+  "why": "Islamic manuscript folio scan, not a painting"
+ },
+ {
+  "slug": "1941-red-path-st-prex",
+  "verdict": "keep",
+  "score": 8,
+  "why": "Jawlensky landscape in full colour, real and finished"
+ },
+ {
+  "slug": "art-concret-centrefold",
+  "verdict": "drop",
+  "score": 3,
+  "why": "magazine centrefold of four small prints, page scan"
+ },
+ {
+  "slug": "bagetti-the-benevento-walnut-tree",
+  "verdict": "keep",
+  "score": 7,
+  "why": "finished luminous watercolour, tree and ring of figures"
+ },
+ {
+  "slug": "bible-creation-story-l-6-detail-with-expulsion-from-the-paradise",
+  "verdict": "drop",
+  "score": 2,
+  "why": "black-and-white Romanesque manuscript page, not a painting"
+ },
+ {
+  "slug": "boccioni-boccioni-sobborgo-di-milano-1910-11",
+  "verdict": "keep",
+  "score": 7,
+  "why": "real divisionist oil, Milan suburb glowing pink"
+ },
+ {
+  "slug": "boccioni-dynamism-of-a-biker-1913-by-umberto-boccioni",
+  "verdict": "keep",
+  "score": 8,
+  "why": "major Boccioni oil, dynamism reads strongly"
+ },
+ {
+  "slug": "boccioni-il-sogno-paolo-e-francesca",
+  "verdict": "keep",
+  "score": 7,
+  "why": "large finished symbolist oil, figures and rocks"
+ },
+ {
+  "slug": "boccioni-l-antigrazioso",
+  "verdict": "keep",
+  "score": 8,
+  "why": "strong cubist portrait, finished and forceful"
+ },
+ {
+  "slug": "boccioni-modern-idol",
+  "verdict": "keep",
+  "score": 8,
+  "why": "bold finished oil portrait, strong colour and presence"
+ },
+ {
+  "slug": "boccioni-ritratto-della-signora-busoni",
+  "verdict": "keep",
+  "score": 7,
+  "why": "real oil portrait, brushed and complete"
+ },
+ {
+  "slug": "boccioni-signora-cragnolini-fanna",
+  "verdict": "keep",
+  "score": 7,
+  "why": "finished oil portrait, blue bowl still life"
+ },
+ {
+  "slug": "boccioni-the-morning",
+  "verdict": "keep",
+  "score": 7,
+  "why": "real divisionist landscape, warm light throughout"
+ },
+ {
+  "slug": "boccioni-the-street-pavers-1914-by-umberto-boccioni",
+  "verdict": "keep",
+  "score": 8,
+  "why": "colour oil, labouring figures read at once"
+ },
+ {
+  "slug": "boccioni-the-street-pavers",
+  "verdict": "drop",
+  "score": 3,
+  "why": "black-and-white photograph of the same painting"
+ },
+ {
+  "slug": "boccioni-umberto-boccioni-1912-elasticity-elasticit-oil-on-canva",
+  "verdict": "keep",
+  "score": 8,
+  "why": "major Futurist oil, horse and city fused"
+ },
+ {
+  "slug": "boccioni-umberto-boccioni-1913-dynamism-of-a-cyclist-dinamismo-d",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real oil, cyclist dynamism fully resolved"
+ },
+ {
+  "slug": "boccioni-umberto-boccioni-1913-synth-se-du-dynamisme-humain-synt",
+  "verdict": "drop",
+  "score": 3,
+  "why": "photo of destroyed sculpture, not a painting"
+ },
+ {
+  "slug": "bogomazov-bogomazov-tram-s-1914",
+  "verdict": "keep",
+  "score": 7,
+  "why": "real cubo-futurist oil, tram and street"
+ },
+ {
+  "slug": "caricature-of-cubism",
+  "verdict": "drop",
+  "score": 2,
+  "why": "line cartoon strip mocking cubism, not art"
+ },
+ {
+  "slug": "chaliapin-alexander-pushkin-pushkin-in-the-russian-futurism-futu",
+  "verdict": "drop",
+  "score": 3,
+  "why": "quick ink caricature sketch, not a painting"
+ },
+ {
+  "slug": "corte-corte-mascaronesyrosas",
+  "verdict": "keep",
+  "score": 7,
+  "why": "real baroque floral still life oil, masks and roses"
+ },
+ {
+  "slug": "cubist-costumes-for-salome",
+  "verdict": "drop",
+  "score": 2,
+  "why": "costume design photographs for a theatre production"
+ },
+ {
+  "slug": "cubist-salome-by-wilde",
+  "verdict": "drop",
+  "score": 2,
+  "why": "press photograph of actress in costume"
+ },
+ {
+  "slug": "delaunay-femme-l-ombrelle-ou-la-parisienne",
+  "verdict": "keep",
+  "score": 8,
+  "why": "major Delaunay oil, colour figure fully resolved"
+ },
+ {
+  "slug": "delaunay-pig-carousel",
+  "verdict": "keep",
+  "score": 7,
+  "why": "finished gouache carousel, swirling colour discs"
+ },
+ {
+  "slug": "delaunay-relief-noir-avec-des-cercles-de-couleur",
+  "verdict": "keep",
+  "score": 7,
+  "why": "real painted relief, coloured circles on black"
+ },
+ {
+  "slug": "delaunay-window",
+  "verdict": "keep",
+  "score": 8,
+  "why": "canonical Delaunay window oil, luminous facets"
+ },
+ {
+  "slug": "delville-l-extase-de-dante",
+  "verdict": "keep",
+  "score": 7,
+  "why": "tall finished symbolist oil, veiled figure ascending"
+ },
+ {
+  "slug": "doesburg-arithmetische-komposition-arithmetic-composition-compos",
+  "verdict": "keep",
+  "score": 8,
+  "why": "strong De Stijl oil, black diamonds on cream"
+ },
+ {
+  "slug": "doesburg-collage",
+  "verdict": "drop",
+  "score": 4,
+  "why": "published interior design plate, documentation of a room"
+ },
+ {
+  "slug": "doesburg-composition-in-half-tones-composition-en-demi-valeurs",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real De Stijl canvas, grid and primary blocks"
+ },
+ {
+  "slug": "doesburg-composition-of-proportions-composition-de-rapports-comp",
+  "verdict": "keep",
+  "score": 8,
+  "why": "finished diamond canvas, balanced primary shapes"
+ },
+ {
+  "slug": "doesburg-counter-composition-viiicontra-compositie-viii",
+  "verdict": "drop",
+  "score": 4,
+  "why": "black-and-white reproduction, the colour is lost"
+ },
+ {
+  "slug": "doesburg-dancers",
+  "verdict": "keep",
+  "score": 7,
+  "why": "two-panel stylised dancers, finished painted work"
+ },
+ {
+  "slug": "doesburg-landscape-with-row-of-trees-by-theo-van-doesburg-stedel",
+  "verdict": "keep",
+  "score": 4,
+  "why": "real early landscape but faded to near invisibility"
+ },
+ {
+  "slug": "doesburg-list-of-pupils-of-the-de-stijl-course-held-in-weimar-by",
+  "verdict": "drop",
+  "score": 2,
+  "why": "handwritten pupil list, archive document scan"
+ },
+ {
+  "slug": "doesburg-simultane-kontra-komposition-simultaneous-counter-compo",
+  "verdict": "keep",
+  "score": 8,
+  "why": "major counter-composition oil, diagonals in colour"
+ },
+ {
+  "slug": "doesburg-simultaneous-counter-composition-contrecomposition-simu",
+  "verdict": "keep",
+  "score": 8,
+  "why": "finished oil, floating colour rectangles resolved"
+ },
+ {
+  "slug": "doesburg-theo-van-doesburg-counter-composition-xii",
+  "verdict": "keep",
+  "score": 8,
+  "why": "strong counter-composition oil, blue black white"
+ },
+ {
+  "slug": "doesburg-xvi",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real De Stijl oil, resolved diagonal grid"
+ },
+ {
+  "slug": "doesburg-xx",
+  "verdict": "keep",
+  "score": 7,
+  "why": "finished diamond canvas, deep colour planes"
+ },
+ {
+  "slug": "el-lissitzky-self-portrait-1924",
+  "verdict": "drop",
+  "score": 3,
+  "why": "black-and-white photographic portrait, not a painting"
+ },
+ {
+  "slug": "exter-carnival-in-venice",
+  "verdict": "keep",
+  "score": 8,
+  "why": "large finished oil, harlequin figures in colour"
+ },
+ {
+  "slug": "exter-city-at-night",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real cubo-futurist oil, city in facets"
+ },
+ {
+  "slug": "exter-construction",
+  "verdict": "keep",
+  "score": 8,
+  "why": "strong non-objective oil, floating planes resolved"
+ },
+ {
+  "slug": "exter-non-objective-composition",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real abstract oil, curved and angular planes"
+ },
+ {
+  "slug": "fanelli-peasant-woman-with-geese",
+  "verdict": "keep",
+  "score": 7,
+  "why": "sunlit Italian oil, woman feeding geese"
+ },
+ {
+  "slug": "fauconnier-le-chasseur-the-huntsman",
+  "verdict": "keep",
+  "score": 8,
+  "why": "large cubist oil, huntsman reads at once"
+ },
+ {
+  "slug": "fauconnier-les-montagnards-attaqu-s-par-des-ours-mountaineers-at",
+  "verdict": "keep",
+  "score": 8,
+  "why": "large cubist oil, bears and hunters resolved"
+ },
+ {
+  "slug": "fauconnier-ploumanac-h",
+  "verdict": "keep",
+  "score": 8,
+  "why": "finished Breton landscape oil, rocks and sea"
+ },
+ {
+  "slug": "file-jpg",
+  "verdict": "drop",
+  "score": 3,
+  "why": "suprematist book cover design, printed page"
+ },
+ {
+  "slug": "flumiani-springtime",
+  "verdict": "keep",
+  "score": 7,
+  "why": "real oil, blossoming orchard in full flower"
+ },
+ {
+  "slug": "fresnaye-nature-morte-la-cafeti-re-et-au-melon",
+  "verdict": "keep",
+  "score": 8,
+  "why": "strong cubist still life oil, melon and pot"
+ },
+ {
+  "slug": "giudici-carousel",
+  "verdict": "keep",
+  "score": 5,
+  "why": "loose but real watercolour, carousel and horses"
+ },
+ {
+  "slug": "giudici-man-with-pipe",
+  "verdict": "keep",
+  "score": 6,
+  "why": "bold painted portrait, exaggerated but finished"
+ },
+ {
+  "slug": "giudici-my-study-in-tolmezzo",
+  "verdict": "keep",
+  "score": 7,
+  "why": "real cubist still life oil, clock and stove"
+ },
+ {
+  "slug": "giudici-nice-stranger",
+  "verdict": "keep",
+  "score": 6,
+  "why": "dark expressionist portrait painting, face resolved"
+ },
+ {
+  "slug": "giudici-travelling",
+  "verdict": "keep",
+  "score": 7,
+  "why": "real cubist collage-painting, newspaper and figure resolved"
+ },
+ {
+  "slug": "gleizes-ex-cution-libre-peinture-famili-re",
+  "verdict": "keep",
+  "score": 8,
+  "why": "large colourful Gleizes oil, shapes fully resolved"
+ },
+ {
+  "slug": "gleizes-femmes-deux-hommes-et-enfants",
+  "verdict": "keep",
+  "score": 7,
+  "why": "real oil, nudes and figures in landscape"
+ },
+ {
+  "slug": "gleizes-po-me-onirique",
+  "verdict": "keep",
+  "score": 8,
+  "why": "strong abstract oil, flat colour planes"
+ },
+ {
+  "slug": "gleizes-sans-titre-sc-ne-de-baigneuses",
+  "verdict": "keep",
+  "score": 7,
+  "why": "finished painted bathers, colour and line"
+ },
+ {
+  "slug": "gleizes-sans-titre",
+  "verdict": "keep",
+  "score": 7,
+  "why": "resolved gouache abstraction with clear structure and colour"
+ },
+ {
+  "slug": "gris-juan-gris-exposici-d-art-cubista-galeries-dalmau-barcelona-",
+  "verdict": "drop",
+  "score": 3,
+  "why": "printed exhibition catalogue page, not a painting"
+ },
+ {
+  "slug": "gris-la-guitare-guitar-and-glasses",
+  "verdict": "keep",
+  "score": 8,
+  "why": "major Juan Gris cubist oil, guitar and glasses"
+ },
+ {
+  "slug": "hammersh-i-interior-with-a-mirror",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real Hammershoi interior oil, quiet and complete"
+ },
+ {
+  "slug": "herold-rainbow",
+  "verdict": "keep",
+  "score": 7,
+  "why": "finished oil landscape, rainbow over river"
+ },
+ {
+  "slug": "hora-iu-dimitriu-minuletti-il-futurista-clipa-1925-06-28",
+  "verdict": "drop",
+  "score": 2,
+  "why": "newspaper caricature illustration, ink on paper"
+ },
+ {
+  "slug": "hornel-butterflies-by-edward-hornel",
+  "verdict": "keep",
+  "score": 7,
+  "why": "real oil, girls among flowers, thick paint"
+ },
+ {
+  "slug": "irakli-gamrekeli-leon-trotsky-1924",
+  "verdict": "keep",
+  "score": 6,
+  "why": "finished cubist portrait drawing, fully worked"
+ },
+ {
+  "slug": "ivan-puni-1914-portrait-of-artist-s-wife",
+  "verdict": "keep",
+  "score": 8,
+  "why": "strong cubist oil portrait, facets resolved"
+ },
+ {
+  "slug": "ivanovo-art-museum-kazimir-malevich-suprematism",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real Suprematist canvas, shapes floating free"
+ },
+ {
+  "slug": "j-ngere-augsburger-wunderzeichenbuch-folio-165-sonnenringe-ber-n",
+  "verdict": "drop",
+  "score": 3,
+  "why": "sixteenth-century manuscript folio with text and diagrams"
+ },
+ {
+  "slug": "jawlensky-abstrakter-kopf-abstract-head",
+  "verdict": "keep",
+  "score": 7,
+  "why": "finished watercolour head, inscription and drawing"
+ },
+ {
+  "slug": "jawlensky-abstrakter-kopf-erleuchtung-ii-abstract-head-enlighten",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real abstract head oil, colour fully resolved"
+ },
+ {
+  "slug": "jawlensky-bildnis-bildnis-toni",
+  "verdict": "keep",
+  "score": 8,
+  "why": "strong oil portrait, colour blocks and line"
+ },
+ {
+  "slug": "jawlensky-stillleben-blumen-in-gr-ner-vase-still-life-flowers-in",
+  "verdict": "keep",
+  "score": 7,
+  "why": "real oil still life, flowers in green vase"
+ },
+ {
+  "slug": "jawlensky-variation-mit-haus-und-gartenzaun",
+  "verdict": "keep",
+  "score": 7,
+  "why": "real oil variation, house and fence colour"
+ },
+ {
+  "slug": "jawlensky-variation",
+  "verdict": "keep",
+  "score": 7,
+  "why": "real oil variation, colour patches held together"
+ },
+ {
+  "slug": "kamerny-theatre-curtain",
+  "verdict": "drop",
+  "score": 2,
+  "why": "press photo of theatre curtain with caption"
+ },
+ {
+  "slug": "kandinsky-vassily-kandinsky-1926-several-circles-gugg-0910-25",
+  "verdict": "keep",
+  "score": 9,
+  "why": "canonical Kandinsky oil, circles on dark field"
+ },
+ {
+  "slug": "klee-laternenfest-bauhaus",
+  "verdict": "drop",
+  "score": 4,
+  "why": "lettered festival poster design, not a painting"
+ },
+ {
+  "slug": "klee-luftkampf-h-henkampf",
+  "verdict": "keep",
+  "score": 7,
+  "why": "finished Klee watercolour drawing, aerial combat"
+ },
+ {
+  "slug": "klee-mit-dem-netzfischer-recto-zeichnung-verso",
+  "verdict": "keep",
+  "score": 8,
+  "why": "finished Klee watercolour, fisherman and city"
+ },
+ {
+  "slug": "klee-tropick-les-tropical-forest-tropischer-wald-for-t-tropicale",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real Klee forest painting, vertical colour bands"
+ },
+ {
+  "slug": "klyun",
+  "verdict": "keep",
+  "score": 7,
+  "why": "finished oil portrait, cap and daisy"
+ },
+ {
+  "slug": "kupka-babylon",
+  "verdict": "keep",
+  "score": 8,
+  "why": "major Kupka oil, Babylon in green light"
+ },
+ {
+  "slug": "lega-the-roses-of-spring",
+  "verdict": "keep",
+  "score": 8,
+  "why": "finished Macchiaioli oil, women among roses"
+ },
+ {
+  "slug": "luigi-russolo-1911-souvenir-d-une-nuit-memories-of-a-night-oil-o",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real Russolo oil, night memory swirling in colour"
+ },
+ {
+  "slug": "ma-ek-festival-of-spring-allegoric-scene",
+  "verdict": "keep",
+  "score": 7,
+  "why": "large finished allegorical oil, youths and doves"
+ },
+ {
+  "slug": "malevich-i-v-klyun-klyunkov",
+  "verdict": "keep",
+  "score": 8,
+  "why": "strong cubist portrait oil, planes resolved"
+ },
+ {
+  "slug": "maris-mondrian-painting-on-the-river-gein",
+  "verdict": "drop",
+  "score": 4,
+  "why": "pencil portrait sketch with handwritten inscription"
+ },
+ {
+  "slug": "meissonier-study-of-a-hand-with-book",
+  "verdict": "drop",
+  "score": 4,
+  "why": "small oil study of a hand, a fragment"
+ },
+ {
+  "slug": "modigliani-marie-vassilieff",
+  "verdict": "keep",
+  "score": 8,
+  "why": "finished Modigliani watercolour portrait, colour clear"
+ },
+ {
+  "slug": "mondrian-boerderijgevel",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real early Mondrian oil, farmhouse and trees"
+ },
+ {
+  "slug": "mondrian-houses-and-paltrok-mill-on-the-voorweg",
+  "verdict": "keep",
+  "score": 8,
+  "why": "finished Mondrian oil, mill and bridge"
+ },
+ {
+  "slug": "mondrian-polder-met-gemeerde-vrachtschuit-buiten-amsterdam-ii",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real Mondrian polder oil, boat and field"
+ },
+ {
+  "slug": "morbelli-credenti-incensum-domine-incensum-domine-interno-della-",
+  "verdict": "keep",
+  "score": 8,
+  "why": "major Morbelli oil, dark interior with figures"
+ },
+ {
+  "slug": "olga-rozanova-handbag-c-1917",
+  "verdict": "keep",
+  "score": 7,
+  "why": "real cubo-futurist painting, handbag resolved in colour"
+ },
+ {
+  "slug": "paoletti-springtime-in-venice",
+  "verdict": "keep",
+  "score": 7,
+  "why": "finished Venetian genre oil, girl and lagoon"
+ },
+ {
+  "slug": "photographer-umberto-boccioni-1912-head-house-light-sculpture-de",
+  "verdict": "drop",
+  "score": 3,
+  "why": "photograph of a Boccioni sculpture, not painting"
+ },
+ {
+  "slug": "popova-birsk",
+  "verdict": "keep",
+  "score": 8,
+  "why": "strong cubo-futurist oil, town in facets"
+ },
+ {
+  "slug": "popova-lyubov-popova-the-pianist",
+  "verdict": "keep",
+  "score": 8,
+  "why": "major Popova oil, pianist and keyboard"
+ },
+ {
+  "slug": "popova-six-prints-one-print",
+  "verdict": "keep",
+  "score": 7,
+  "why": "finished Popova linocut, red and black"
+ },
+ {
+  "slug": "popova-the-model-standing-figure",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real cubist oil, standing model in yellow"
+ },
+ {
+  "slug": "popova-untitled",
+  "verdict": "keep",
+  "score": 8,
+  "why": "strong cubist oil, letters and colour planes"
+ },
+ {
+  "slug": "portrait-of-ivan-kliun-kazimir-malevich-1912",
+  "verdict": "drop",
+  "score": 4,
+  "why": "black-and-white printed reproduction of a painting"
+ },
+ {
+  "slug": "proletarian-student-no-2",
+  "verdict": "drop",
+  "score": 3,
+  "why": "1923 book cover design with Cyrillic lettering"
+ },
+ {
+  "slug": "proun-by-el-lissitzky",
+  "verdict": "keep",
+  "score": 7,
+  "why": "finished Lissitzky Proun print, geometry resolved"
+ },
+ {
+  "slug": "psyhetozy-pdf",
+  "verdict": "drop",
+  "score": 2,
+  "why": "1922 futurist book cover, printed title page"
+ },
+ {
+  "slug": "rozanova-cropped",
+  "verdict": "drop",
+  "score": 2,
+  "why": "black-and-white studio photograph of the artist, not art"
+ },
+ {
+  "slug": "rozanova-suprematism",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real Suprematist oil, coloured planes floating"
+ },
+ {
+  "slug": "rozanova",
+  "verdict": "drop",
+  "score": 2,
+  "why": "sepia studio photograph of the artist"
+ },
+ {
+  "slug": "rubens-0-la-paix-embrassant-l-abondance-p-p-rubens-yale-center-f",
+  "verdict": "keep",
+  "score": 8,
+  "why": "finished Rubens oil sketch, figures fully modelled"
+ },
+ {
+  "slug": "russel-wright-costume-for-1923-cubist-circus",
+  "verdict": "drop",
+  "score": 3,
+  "why": "photo of a constructed theatre costume"
+ },
+ {
+  "slug": "russolo-la-musica-luigi-russolo",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real Russolo oil, music as radiant faces"
+ },
+ {
+  "slug": "russolo-profumo",
+  "verdict": "keep",
+  "score": 8,
+  "why": "strong Futurist oil, perfume as swirling colour"
+ },
+ {
+  "slug": "russolo-synth-se-plastique-des-mouvements-d-une-femme",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real Futurist oil, figure in blue motion"
+ },
+ {
+  "slug": "russolo-the-revolt",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real Futurist oil, city rising in red light"
+ },
+ {
+  "slug": "russolo-tower-bridgetower-bridgetower-bridge",
+  "verdict": "keep",
+  "score": 8,
+  "why": "strong Russolo oil, Tower Bridge in blue"
+ },
+ {
+  "slug": "sant-elia-casa-a-gradinata-con-ascensori-dai-quattro-piani-strad",
+  "verdict": "drop",
+  "score": 3,
+  "why": "architectural perspective drawing, not a painting"
+ },
+ {
+  "slug": "sawrassow-the-beginning-of-spring",
+  "verdict": "keep",
+  "score": 7,
+  "why": "finished Russian landscape oil, thaw and rooks"
+ },
+ {
+  "slug": "st-cklin-carl-bittmann-haus-f-r-photosport",
+  "verdict": "drop",
+  "score": 3,
+  "why": "lithographic advertising poster with large commercial lettering"
+ },
+ {
+  "slug": "stijl-vol-04-nr-07-p-107-108",
+  "verdict": "drop",
+  "score": 2,
+  "why": "printed magazine page of type poems"
+ },
+ {
+  "slug": "stijl-vol-05-nr-06-p-081-082",
+  "verdict": "drop",
+  "score": 2,
+  "why": "De Stijl magazine page with article text"
+ },
+ {
+  "slug": "the-secret-of-temptation-malevich-1908-verso-portrait-of-ivan-kl",
+  "verdict": "keep",
+  "score": 5,
+  "why": "finished Malevich pencil portrait, faint but complete"
+ },
+ {
+  "slug": "theo-van-doesburg-bilanz-des-bauhauses",
+  "verdict": "drop",
+  "score": 3,
+  "why": "printed Bauhaus broadside of typography, not a painting"
+ },
+ {
+  "slug": "thoma-spring-melody",
+  "verdict": "keep",
+  "score": 7,
+  "why": "real allegorical oil, harpist and spring meadow"
+ },
+ {
+  "slug": "tobeen-pelotaris",
+  "verdict": "keep",
+  "score": 8,
+  "why": "strong cubist oil, pelota players fully resolved"
+ },
+ {
+  "slug": "trotsky-annenkov-1921-red-army",
+  "verdict": "drop",
+  "score": 4,
+  "why": "monochrome reproduction of a painting, colour lost"
+ },
+ {
+  "slug": "trotsky-annenkow-1922-cartoon",
+  "verdict": "drop",
+  "score": 2,
+  "why": "ink political cartoon, not a painting"
+ },
+ {
+  "slug": "valmier-georges-valmier-1928-les-tulipes-the-tulips-oil-on-canva",
+  "verdict": "keep",
+  "score": 8,
+  "why": "major Valmier oil, tulips as colour planes"
+ },
+ {
+  "slug": "werefkin-ant-hill",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real expressionist oil, red tree and workers"
+ },
+ {
+  "slug": "werefkin-berglandschaft-bei-oschwand",
+  "verdict": "keep",
+  "score": 7,
+  "why": "finished landscape oil, pink houses and hills"
+ },
+ {
+  "slug": "werefkin-golgatha",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real Werefkin oil, crucifixion in dark colour"
+ },
+ {
+  "slug": "werefkin-phantastische-nacht",
+  "verdict": "keep",
+  "score": 8,
+  "why": "strong night landscape oil, bridge and moon"
+ },
+ {
+  "slug": "werefkin-schnee-ber-nacht",
+  "verdict": "keep",
+  "score": 7,
+  "why": "real oil, two women shovelling snow"
+ },
+ {
+  "slug": "werefkin-styx",
+  "verdict": "keep",
+  "score": 8,
+  "why": "finished oil, windmill and wool barges"
+ },
+ {
+  "slug": "werefkin-zwei-frauen",
+  "verdict": "keep",
+  "score": 7,
+  "why": "finished gouache, two women in colour"
+ },
+ {
+  "slug": "williamcrozier-edinburgh-from-salisbury-crags",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real oil, Edinburgh rooftops in light"
+ },
+ {
+  "slug": "zwollo-schaal-rond-met-gevoluteerde-bovenrand-geheel-voorzien-va",
+  "verdict": "drop",
+  "score": 2,
+  "why": "photograph of a silver bowl, not painting"
+ },
+ {
+  "slug": "boccioni-cavallo-case",
+  "verdict": "keep",
+  "score": 7,
+  "why": "finished Boccioni cubist watercolour, horse and houses"
+ },
+ {
+  "slug": "costa-spring-in-the-pontine-marshes",
+  "verdict": "keep",
+  "score": 7,
+  "why": "real oil landscape, olives and flowering meadow"
+ },
+ {
+  "slug": "doesburg-composition-xxi-compositie-xxi-hoek-2000-9068682555-cat",
+  "verdict": "keep",
+  "score": 8,
+  "why": "finished De Stijl oil, primary blocks resolved"
+ },
+ {
+  "slug": "doesburg-theo-van-doesburg-still-life-1906",
+  "verdict": "drop",
+  "score": 4,
+  "why": "dark monochrome reproduction of an early still life"
+ },
+ {
+  "slug": "gleizes-composition",
+  "verdict": "keep",
+  "score": 8,
+  "why": "strong gouache abstraction, signed and finished"
+ },
+ {
+  "slug": "gleizes-nature-morte-la-guitare-ou-composition",
+  "verdict": "keep",
+  "score": 8,
+  "why": "large abstract cubist oil, bold flat shapes"
+ },
+ {
+  "slug": "jawlensky-frauenkopf-mit-blumen-im-haar",
+  "verdict": "keep",
+  "score": 8,
+  "why": "real Jawlensky oil portrait, flower in hair"
+ },
+ {
+  "slug": "macke-studie-zu-hellem-schaufenster-study-for-bright-shop-window",
+  "verdict": "keep",
+  "score": 7,
+  "why": "finished Macke oil study, woman at window"
+ },
+ {
+  "slug": "malczewski-krajobraz-wiosenny-z-rozdo-u",
+  "verdict": "keep",
+  "score": 7,
+  "why": "real watercolour landscape, hills and flooded meadow"
+ },
+ {
+  "slug": "popova-l-popova-untitled",
+  "verdict": "drop",
+  "score": 4,
+  "why": "black-and-white reproduction of a Suprematist work"
+ }
+]

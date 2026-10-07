@@ -1,0 +1,370 @@
+{
+ "sacred-profane-love": {
+  "ref": "Psalm 45:13",
+  "text": "The king’s daughter is all glorious within: her clothing is of wrought gold.",
+  "full": "The king’s daughter is all glorious within: her clothing is of wrought gold.",
+  "excerpt": false,
+  "chapter": 45,
+  "verse": 13
+ },
+ "venus-and-mars": {
+  "ref": "Psalm 121:4",
+  "text": "Behold, he that keepeth Israel shall neither slumber nor sleep.",
+  "full": "Behold, he that keepeth Israel shall neither slumber nor sleep.",
+  "excerpt": false,
+  "chapter": 121,
+  "verse": 4
+ },
+ "allegory-venus-cupid": {
+  "ref": "Psalm 8:4",
+  "text": "What is man, that thou art mindful of him? and the son of man, that thou visitest him?",
+  "full": "What is man, that thou art mindful of him? and the son of man, that thou visitest him?",
+  "excerpt": false,
+  "chapter": 8,
+  "verse": 4
+ },
+ "primavera": {
+  "ref": "Psalm 65:11",
+  "text": "Thou crownest the year with thy goodness; and thy paths drop fatness.",
+  "full": "Thou crownest the year with thy goodness; and thy paths drop fatness.",
+  "excerpt": false,
+  "chapter": 65,
+  "verse": 11
+ },
+ "venus-of-urbino": {
+  "ref": "Psalm 139:1",
+  "text": "O LORD, thou hast searched me, and known me.",
+  "full": "O LORD, thou hast searched me, and known me.",
+  "excerpt": false,
+  "chapter": 139,
+  "verse": 1
+ },
+ "the-cyclops": {
+  "ref": "Psalm 32:8",
+  "text": "I will guide thee with mine eye.",
+  "full": "I will instruct thee and teach thee in the way which thou shalt go: I will guide thee with mine eye.",
+  "excerpt": true,
+  "chapter": 32,
+  "verse": 8
+ },
+ "the-caress": {
+  "ref": "Psalm 63:7",
+  "text": "Because thou hast been my help, therefore in the shadow of thy wings will I rejoice.",
+  "full": "Because thou hast been my help, therefore in the shadow of thy wings will I rejoice.",
+  "excerpt": false,
+  "chapter": 63,
+  "verse": 7
+ },
+ "jupiter-and-semele": {
+  "ref": "Psalm 97:5",
+  "text": "The hills melted like wax at the presence of the LORD, at the presence of the Lord of the whole earth.",
+  "full": "The hills melted like wax at the presence of the LORD, at the presence of the Lord of the whole earth.",
+  "excerpt": false,
+  "chapter": 97,
+  "verse": 5
+ },
+ "kiss-of-the-sphinx": {
+  "ref": "Psalm 55:21",
+  "text": "The words of his mouth were smoother than butter, but war was in his heart: his words were softer than oil, yet were they drawn swords.",
+  "full": "The words of his mouth were smoother than butter, but war was in his heart: his words were softer than oil, yet were they drawn swords.",
+  "excerpt": false,
+  "chapter": 55,
+  "verse": 21
+ },
+ "lovers-whirlwind": {
+  "ref": "Psalm 18:10",
+  "text": "And he rode upon a cherub, and did fly: yea, he did fly upon the wings of the wind.",
+  "full": "And he rode upon a cherub, and did fly: yea, he did fly upon the wings of the wind.",
+  "excerpt": false,
+  "chapter": 18,
+  "verse": 10
+ },
+ "beata-beatrix": {
+  "ref": "Psalm 17:15",
+  "text": "As for me, I will behold thy face in righteousness: I shall be satisfied, when I awake, with thy likeness.",
+  "full": "As for me, I will behold thy face in righteousness: I shall be satisfied, when I awake, with thy likeness.",
+  "excerpt": false,
+  "chapter": 17,
+  "verse": 15
+ },
+ "mars-venus-cupid": {
+  "ref": "Psalm 76:3",
+  "text": "There brake he the arrows of the bow, the shield, and the sword, and the battle. Selah.",
+  "full": "There brake he the arrows of the bow, the shield, and the sword, and the battle. Selah.",
+  "excerpt": false,
+  "chapter": 76,
+  "verse": 3
+ },
+ "venus-disarming-cupid": {
+  "ref": "Psalm 45:1",
+  "text": "My heart is inditing a good matter: I speak of the things which I have made touching the king: my tongue is the pen of a ready writer.",
+  "full": "My heart is inditing a good matter: I speak of the things which I have made touching the king: my tongue is the pen of a ready writer.",
+  "excerpt": false,
+  "chapter": 45,
+  "verse": 1
+ },
+ "saskia": {
+  "ref": "Psalm 63:3",
+  "text": "Because thy lovingkindness is better than life, my lips shall praise thee.",
+  "full": "Because thy lovingkindness is better than life, my lips shall praise thee.",
+  "excerpt": false,
+  "chapter": 63,
+  "verse": 3
+ },
+ "paolo-francesca": {
+  "ref": "Psalm 130:1",
+  "text": "Out of the depths have I cried unto thee, O LORD.",
+  "full": "Out of the depths have I cried unto thee, O LORD.",
+  "excerpt": false,
+  "chapter": 130,
+  "verse": 1
+ },
+ "the-kiss-rodin": {
+  "ref": "Psalm 139:14",
+  "text": "I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well.",
+  "full": "I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well.",
+  "excerpt": false,
+  "chapter": 139,
+  "verse": 14
+ },
+ "eternal-springtime": {
+  "ref": "Psalm 104:30",
+  "text": "Thou sendest forth thy spirit, they are created: and thou renewest the face of the earth.",
+  "full": "Thou sendest forth thy spirit, they are created: and thou renewest the face of the earth.",
+  "excerpt": false,
+  "chapter": 104,
+  "verse": 30
+ },
+ "psyche-revived": {
+  "ref": "Psalm 23:3",
+  "text": "He restoreth my soul: he leadeth me in the paths of righteousness for his name’s sake.",
+  "full": "He restoreth my soul: he leadeth me in the paths of righteousness for his name’s sake.",
+  "excerpt": false,
+  "chapter": 23,
+  "verse": 3
+ },
+ "the-waltz": {
+  "ref": "Psalm 149:3",
+  "text": "Let them praise his name in the dance: let them sing praises unto him with the timbrel and harp.",
+  "full": "Let them praise his name in the dance: let them sing praises unto him with the timbrel and harp.",
+  "excerpt": false,
+  "chapter": 149,
+  "verse": 3
+ },
+ "kiss-klimt": {
+  "ref": "Psalm 45:9",
+  "text": "Kings’ daughters were among thy honourable women: upon thy right hand did stand the queen in gold of Ophir.",
+  "full": "Kings’ daughters were among thy honourable women: upon thy right hand did stand the queen in gold of Ophir.",
+  "excerpt": false,
+  "chapter": 45,
+  "verse": 9
+ },
+ "liebe-klimt": {
+  "ref": "Psalm 27:8",
+  "text": "When thou saidst, Seek ye my face; my heart said unto thee, Thy face, LORD, will I seek.",
+  "full": "When thou saidst, Seek ye my face; my heart said unto thee, Thy face, LORD, will I seek.",
+  "excerpt": false,
+  "chapter": 27,
+  "verse": 8
+ },
+ "madonna-munch": {
+  "ref": "Psalm 116:15",
+  "text": "Precious in the sight of the LORD is the death of his saints.",
+  "full": "Precious in the sight of the LORD is the death of his saints.",
+  "excerpt": false,
+  "chapter": 116,
+  "verse": 15
+ },
+ "kiss-munch": {
+  "ref": "Psalm 73:26",
+  "text": "My flesh and my heart faileth: but God is the strength of my heart, and my portion for ever.",
+  "full": "My flesh and my heart faileth: but God is the strength of my heart, and my portion for ever.",
+  "excerpt": false,
+  "chapter": 73,
+  "verse": 26
+ },
+ "umarmung-schiele": {
+  "ref": "Psalm 139:15",
+  "text": "My substance was not hid from thee, when I was made in secret, and curiously wrought in the lowest parts of the earth.",
+  "full": "My substance was not hid from thee, when I was made in secret, and curiously wrought in the lowest parts of the earth.",
+  "excerpt": false,
+  "chapter": 139,
+  "verse": 15
+ },
+ "dance-of-life": {
+  "ref": "Psalm 30:11",
+  "text": "Thou hast turned for me my mourning into dancing: thou hast put off my sackcloth, and girded me with gladness;",
+  "full": "Thou hast turned for me my mourning into dancing: thou hast put off my sackcloth, and girded me with gladness;",
+  "excerpt": false,
+  "chapter": 30,
+  "verse": 11
+ },
+ "birth-of-venus": {
+  "ref": "Psalm 93:3",
+  "text": "The floods have lifted up, O LORD, the floods have lifted up their voice; the floods lift up their waves.",
+  "full": "The floods have lifted up, O LORD, the floods have lifted up their voice; the floods lift up their waves.",
+  "excerpt": false,
+  "chapter": 93,
+  "verse": 3
+ },
+ "venus-with-mirror": {
+  "ref": "Psalm 139:23",
+  "text": "Search me, O God, and know my heart: try me, and know my thoughts:",
+  "full": "Search me, O God, and know my heart: try me, and know my thoughts:",
+  "excerpt": false,
+  "chapter": 139,
+  "verse": 23
+ },
+ "garden-of-love": {
+  "ref": "Psalm 68:6",
+  "text": "God setteth the solitary in families: he bringeth out those which are bound with chains: but the rebellious dwell in a dry land.",
+  "full": "God setteth the solitary in families: he bringeth out those which are bound with chains: but the rebellious dwell in a dry land.",
+  "excerpt": false,
+  "chapter": 68,
+  "verse": 6
+ },
+ "embarkation-cythera": {
+  "ref": "Psalm 126:1",
+  "text": "When the LORD turned again the captivity of Zion, we were like them that dream.",
+  "full": "When the LORD turned again the captivity of Zion, we were like them that dream.",
+  "excerpt": false,
+  "chapter": 126,
+  "verse": 1
+ },
+ "mars-venus-veronese": {
+  "ref": "Psalm 85:10",
+  "text": "Mercy and truth are met together; righteousness and peace have kissed each other.",
+  "full": "Mercy and truth are met together; righteousness and peace have kissed each other.",
+  "excerpt": false,
+  "chapter": 85,
+  "verse": 10
+ },
+ "ophelia-redon": {
+  "ref": "Psalm 69:1",
+  "text": "Save me, O God; for the waters are come in unto my soul.",
+  "full": "Save me, O God; for the waters are come in unto my soul.",
+  "excerpt": false,
+  "chapter": 69,
+  "verse": 1
+ },
+ "the-apparition": {
+  "ref": "Psalm 73:25",
+  "text": "Whom have I in heaven but thee? and there is none upon earth that I desire beside thee.",
+  "full": "Whom have I in heaven but thee? and there is none upon earth that I desire beside thee.",
+  "excerpt": false,
+  "chapter": 73,
+  "verse": 25
+ },
+ "love-among-ruins": {
+  "ref": "Psalm 49:4",
+  "text": "I will incline mine ear to a parable: I will open my dark saying upon the harp.",
+  "full": "I will incline mine ear to a parable: I will open my dark saying upon the harp.",
+  "excerpt": false,
+  "chapter": 49,
+  "verse": 4
+ },
+ "the-beloved": {
+  "ref": "Psalm 45:14",
+  "text": "She shall be brought unto the king in raiment of needlework: the virgins her companions that follow her shall be brought unto thee.",
+  "full": "She shall be brought unto the king in raiment of needlework: the virgins her companions that follow her shall be brought unto thee.",
+  "excerpt": false,
+  "chapter": 45,
+  "verse": 14
+ },
+ "venus-cupid-niche": {
+  "ref": "Psalm 45:2",
+  "text": "Thou art fairer than the children of men: grace is poured into thy lips: therefore God hath blessed thee for ever.",
+  "full": "Thou art fairer than the children of men: grace is poured into thy lips: therefore God hath blessed thee for ever.",
+  "excerpt": false,
+  "chapter": 45,
+  "verse": 2
+ },
+ "ill-assorted-couple": {
+  "ref": "Psalm 62:10",
+  "text": "Trust not in oppression, and become not vain in robbery: if riches increase, set not your heart upon them.",
+  "full": "Trust not in oppression, and become not vain in robbery: if riches increase, set not your heart upon them.",
+  "excerpt": false,
+  "chapter": 62,
+  "verse": 10
+ },
+ "jupiter-antiope": {
+  "ref": "Psalm 18:11",
+  "text": "He made darkness his secret place; his pavilion round about him were dark waters and thick clouds of the skies.",
+  "full": "He made darkness his secret place; his pavilion round about him were dark waters and thick clouds of the skies.",
+  "excerpt": false,
+  "chapter": 18,
+  "verse": 11
+ },
+ "liebespaar-klimt": {
+  "ref": "Psalm 42:1",
+  "text": "As the hart panteth after the water brooks, so panteth my soul after thee, O God.",
+  "full": "As the hart panteth after the water brooks, so panteth my soul after thee, O God.",
+  "excerpt": false,
+  "chapter": 42,
+  "verse": 1
+ },
+ "liebespaar-schiele": {
+  "ref": "Psalm 31:7",
+  "text": "I will be glad and rejoice in thy mercy: for thou hast considered my trouble; thou hast known my soul in adversities;",
+  "full": "I will be glad and rejoice in thy mercy: for thou hast considered my trouble; thou hast known my soul in adversities;",
+  "excerpt": false,
+  "chapter": 31,
+  "verse": 7
+ },
+ "three-graces-canova": {
+  "ref": "Psalm 34:3",
+  "text": "O magnify the LORD with me, and let us exalt his name together.",
+  "full": "O magnify the LORD with me, and let us exalt his name together.",
+  "excerpt": false,
+  "chapter": 34,
+  "verse": 3
+ },
+ "amor-psyche-canova": {
+  "ref": "Psalm 73:23",
+  "text": "Nevertheless I am continually with thee: thou hast holden me by my right hand.",
+  "full": "Nevertheless I am continually with thee: thou hast holden me by my right hand.",
+  "excerpt": false,
+  "chapter": 73,
+  "verse": 23
+ },
+ "eros-stringing-bow": {
+  "ref": "Psalm 45:5",
+  "text": "Thine arrows are sharp in the heart of the king’s enemies; whereby the people fall under thee.",
+  "full": "Thine arrows are sharp in the heart of the king’s enemies; whereby the people fall under thee.",
+  "excerpt": false,
+  "chapter": 45,
+  "verse": 5
+ },
+ "danae-klimt": {
+  "ref": "Psalm 68:13",
+  "text": "Though ye have lien among the pots, yet shall ye be as the wings of a dove covered with silver, and her feathers with yellow gold.",
+  "full": "Though ye have lien among the pots, yet shall ye be as the wings of a dove covered with silver, and her feathers with yellow gold.",
+  "excerpt": false,
+  "chapter": 68,
+  "verse": 13
+ },
+ "water-serpents": {
+  "ref": "Psalm 46:4",
+  "text": "There is a river, the streams whereof shall make glad the city of God, the holy place of the tabernacles of the most High.",
+  "full": "There is a river, the streams whereof shall make glad the city of God, the holy place of the tabernacles of the most High.",
+  "excerpt": false,
+  "chapter": 46,
+  "verse": 4
+ },
+ "vampire-munch": {
+  "ref": "Psalm 38:9",
+  "text": "Lord, all my desire is before thee; and my groaning is not hid from thee.",
+  "full": "Lord, all my desire is before thee; and my groaning is not hid from thee.",
+  "excerpt": false,
+  "chapter": 38,
+  "verse": 9
+ },
+ "ashes-munch": {
+  "ref": "Psalm 102:3",
+  "text": "For my days are consumed like smoke, and my bones are burned as an hearth.",
+  "full": "For my days are consumed like smoke, and my bones are burned as an hearth.",
+  "excerpt": false,
+  "chapter": 102,
+  "verse": 3
+ }
+}

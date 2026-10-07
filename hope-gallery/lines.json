@@ -1,0 +1,1901 @@
+{
+ "fauconnier-ploumanac-h": {
+  "ref": "Isaiah 9:2",
+  "text": "walked in darkness have seen a great light",
+  "words": 8,
+  "approved": true,
+  "theme": "Darkness walked into light; paint beside a canvas still in shadow.",
+  "register": "light",
+  "impact": 10
+ },
+ "russolo-profumo": {
+  "ref": "1 Peter 2:9",
+  "text": "out of darkness into his marvelous light",
+  "words": 7,
+  "approved": true,
+  "theme": "Prison dark to blazing light; place beside a shaft of dawn.",
+  "register": "light",
+  "impact": 9
+ },
+ "exter-carnival-in-venice": {
+  "ref": "Song of Solomon 8:6",
+  "text": "Set me as a seal on your heart",
+  "words": 8,
+  "approved": true,
+  "theme": "a seal pressed into the heart; paint one form stamped on another",
+  "register": "merge",
+  "impact": 9
+ },
+ "werefkin-phantastische-nacht": {
+  "ref": "2 Samuel 6:14",
+  "text": "David danced before Yahweh with all his might",
+  "words": 8,
+  "approved": true,
+  "theme": "a king losing himself in dance, for a figure in motion",
+  "register": "joy",
+  "impact": 9
+ },
+ "doesburg-simultaneous-counter-composition-contrecomposition-simu": {
+  "ref": "Colossians 1:27",
+  "text": "Christ in you, the hope of glory.",
+  "words": 7,
+  "approved": true,
+  "theme": "glory dwelling inside a person; beside a quiet face",
+  "register": "hope",
+  "impact": 9
+ },
+ "bagetti-the-benevento-walnut-tree": {
+  "ref": "Proverbs 18:24",
+  "text": "a friend who sticks closer than a brother",
+  "words": 8,
+  "approved": true,
+  "theme": "friendship outlasts blood; paint two men closer than brothers",
+  "register": "merge",
+  "impact": 9
+ },
+ "hammersh-i-interior-with-a-mirror": {
+  "ref": "Ephesians 5:8",
+  "text": "you were once darkness, but are now light",
+  "words": 8,
+  "approved": true,
+  "theme": "Was dark, now luminous; set beside a figure stepping out.",
+  "register": "light",
+  "impact": 9
+ },
+ "corte-grotesques-with-flowers": {
+  "ref": "Isaiah 58:8",
+  "text": "your light will break out as the morning",
+  "words": 8,
+  "approved": true,
+  "theme": "Light breaking out; paint beside a black field at sunrise.",
+  "register": "light",
+  "impact": 9
+ },
+ "delaunay-window": {
+  "ref": "Isaiah 60:1",
+  "text": "Arise, shine; for your light has come",
+  "words": 7,
+  "approved": true,
+  "theme": "Light has arrived; put beside a figure standing up.",
+  "register": "light",
+  "impact": 9
+ },
+ "russolo-synth-se-plastique-des-mouvements-d-une-femme": {
+  "ref": "Isaiah 40:31",
+  "text": "mount up with wings like eagles",
+  "words": 6,
+  "approved": true,
+  "theme": "Rising on wings; set beside an upward line breaking free.",
+  "register": "light",
+  "impact": 9
+ },
+ "exter-construction": {
+  "ref": "Exodus 17:12",
+  "text": "Aaron and Hur held up his hands",
+  "words": 7,
+  "approved": true,
+  "theme": "two men hold up one man's arms; paint raised hands",
+  "register": "merge",
+  "impact": 8
+ },
+ "werefkin-golgatha": {
+  "ref": "Jeremiah 31:13",
+  "text": "I will turn their mourning into joy",
+  "words": 7,
+  "approved": true,
+  "theme": "the turn itself, for a black-clad figure stepping into light",
+  "register": "joy",
+  "impact": 9
+ },
+ "doesburg-simultane-kontra-komposition-simultaneous-counter-compo": {
+  "ref": "Hebrews 6:19",
+  "text": "an anchor of the soul, a hope",
+  "words": 7,
+  "approved": true,
+  "theme": "hope as an anchor; beside black storm water",
+  "register": "hope",
+  "impact": 9
+ },
+ "delville-l-extase-de-dante": {
+  "ref": "Ecclesiastes 9:7",
+  "text": "drink your wine with a merry heart",
+  "words": 7,
+  "approved": true,
+  "theme": "wine and a light heart, for a table still life",
+  "register": "joy",
+  "impact": 8
+ },
+ "morbelli-credenti-incensum-domine-incensum-domine-interno-della-": {
+  "ref": "Isaiah 55:1",
+  "text": "Come, everyone who thirsts, to the waters",
+  "words": 7,
+  "approved": true,
+  "theme": "Thirst answered by water; place beside a cracked clay jug.",
+  "register": "new",
+  "impact": 9
+ },
+ "corte-vase-of-flowers": {
+  "ref": "Job 38:7",
+  "text": "when the morning stars sang together",
+  "words": 6,
+  "approved": true,
+  "theme": "Stars singing at creation; paint beside a dark dawn sky.",
+  "register": "light",
+  "impact": 9
+ },
+ "delaunay-femme-l-ombrelle-ou-la-parisienne": {
+  "ref": "2 Corinthians 4:6",
+  "text": "Light will shine out of darkness",
+  "words": 6,
+  "approved": true,
+  "theme": "Light invented inside darkness; set beside a black ground.",
+  "register": "light",
+  "impact": 8
+ },
+ "russolo-the-revolt": {
+  "ref": "Luke 1:78",
+  "text": "the dawn from on high will visit us",
+  "words": 8,
+  "approved": true,
+  "theme": "Dawn visiting the earth; set beside first light on a horizon.",
+  "register": "light",
+  "impact": 9
+ },
+ "exter-non-objective-composition": {
+  "ref": "Isaiah 43:19",
+  "text": "Behold, I will do a new thing",
+  "words": 7,
+  "approved": true,
+  "theme": "God announcing novelty; set beside a blank white canvas.",
+  "register": "new",
+  "impact": 8
+ },
+ "werefkin-styx": {
+  "ref": "John 16:20",
+  "text": "your sorrow will be turned into joy",
+  "words": 7,
+  "approved": true,
+  "theme": "grief flipped inside one clause, beside a dark canvas",
+  "register": "joy",
+  "impact": 9
+ },
+ "doesburg-composition-of-proportions-composition-de-rapports-comp": {
+  "ref": "Joel 2:25",
+  "text": "I will restore to you the years",
+  "words": 7,
+  "approved": true,
+  "theme": "the locust years given back; beside a stripped field",
+  "register": "hope",
+  "impact": 9
+ },
+ "corte-corte-mascaronesyrosas": {
+  "ref": "Psalms 104:15",
+  "text": "wine that makes the heart of man glad",
+  "words": 8,
+  "approved": true,
+  "theme": "wine as gladness, for a still life with a glass",
+  "register": "joy",
+  "impact": 8
+ },
+ "lega-the-roses-of-spring": {
+  "ref": "Isaiah 42:16",
+  "text": "I will make darkness light before them",
+  "words": 7,
+  "approved": true,
+  "theme": "Darkness made light; paint beside a path through black.",
+  "register": "light",
+  "impact": 8
+ },
+ "corte-vase-of-flowers-2": {
+  "ref": "Psalms 139:9",
+  "text": "If I take the wings of the dawn",
+  "words": 8,
+  "approved": true,
+  "theme": "Dawn given wings; set beside a figure flying east.",
+  "register": "light",
+  "impact": 9
+ },
+ "gris-la-guitare-guitar-and-glasses": {
+  "ref": "2 Peter 1:19",
+  "text": "The morning star arises in your hearts",
+  "words": 7,
+  "approved": true,
+  "theme": "Night yields to morning star; paint beside predawn blackness.",
+  "register": "light",
+  "impact": 8
+ },
+ "boccioni-modern-idol": {
+  "ref": "Malachi 4:2",
+  "text": "arise with healing in its wings",
+  "words": 6,
+  "approved": true,
+  "theme": "Healing sunrise with wings; set beside a wing-lit sky.",
+  "register": "light",
+  "impact": 9
+ },
+ "rozanova-suprematism": {
+  "ref": "Isaiah 65:17",
+  "text": "I create new heavens and a new earth",
+  "words": 8,
+  "approved": true,
+  "theme": "Whole cosmos replaced; paint beside a black square.",
+  "register": "new",
+  "impact": 8
+ },
+ "klee-tropick-les-tropical-forest-tropischer-wald-for-t-tropicale": {
+  "ref": "Genesis 21:6",
+  "text": "God has made me laugh",
+  "words": 5,
+  "approved": true,
+  "theme": "barrenness answered with laughter, for an old woman's face",
+  "register": "joy",
+  "impact": 8
+ },
+ "doesburg-xvi": {
+  "ref": "1 Peter 1:3",
+  "text": "born again to a living hope",
+  "words": 6,
+  "approved": true,
+  "theme": "birth out of death; beside a grey dawn",
+  "register": "hope",
+  "impact": 8
+ },
+ "fanelli-peasant-woman-with-geese": {
+  "ref": "John 12:24",
+  "text": "if it dies, it bears much fruit",
+  "words": 7,
+  "approved": true,
+  "theme": "Buried seed bears fruit; place beside a dark field.",
+  "register": "light",
+  "impact": 8
+ },
+ "corte-still-life-of-flowers-in-a-woven-b": {
+  "ref": "Isaiah 12:3",
+  "text": "with joy you will draw water",
+  "words": 6,
+  "approved": true,
+  "theme": "thirst answered joyfully, for a figure at a well",
+  "register": "joy",
+  "impact": 8
+ },
+ "fresnaye-nature-morte-la-cafeti-re-et-au-melon": {
+  "ref": "Isaiah 65:25",
+  "text": "The wolf and the lamb will feed together",
+  "words": 8,
+  "approved": true,
+  "theme": "Wolf and lamb together; paint beside old enemies sharing ground.",
+  "register": "light",
+  "impact": 8
+ },
+ "russolo-tower-bridgetower-bridgetower-bridge": {
+  "ref": "Revelation 14:3",
+  "text": "They sing a new song before the throne",
+  "words": 8,
+  "approved": true,
+  "theme": "a new song at the throne, for a visionary panel",
+  "register": "joy",
+  "impact": 8
+ },
+ "exter-city-at-night": {
+  "ref": "Ezekiel 37:17",
+  "text": "that they may become one in your hand",
+  "words": 8,
+  "approved": true,
+  "theme": "two sticks gripped as one; paint two shapes meeting inside a hand",
+  "register": "merge",
+  "impact": 7
+ },
+ "werefkin-ant-hill": {
+  "ref": "Isaiah 54:1",
+  "text": "Sing, barren, you who didn't give birth",
+  "words": 7,
+  "approved": true,
+  "theme": "the childless woman told to sing, for an empty room",
+  "register": "joy",
+  "impact": 8
+ },
+ "doesburg-arithmetische-komposition-arithmetic-composition-compos": {
+  "ref": "Habakkuk 2:3",
+  "text": "wait for it; because it will surely come.",
+  "words": 8,
+  "approved": true,
+  "theme": "delay with a fixed end; beside a long road",
+  "register": "hope",
+  "impact": 8
+ },
+ "flumiani-springtime": {
+  "ref": "Hosea 14:5",
+  "text": "He will blossom like the lily",
+  "words": 6,
+  "approved": true,
+  "theme": "Dead nation flowering; place beside a white lily.",
+  "register": "new",
+  "impact": 8
+ },
+ "corte-flowers-in-a-basket": {
+  "ref": "Matthew 13:43",
+  "text": "The righteous will shine like the sun",
+  "words": 7,
+  "approved": true,
+  "theme": "Ordinary faces turned to sun; beside a bright field.",
+  "register": "light",
+  "impact": 8
+ },
+ "gleizes-ex-cution-libre-peinture-famili-re": {
+  "ref": "Luke 2:9",
+  "text": "the glory of the Lord shone around them",
+  "words": 8,
+  "approved": true,
+  "theme": "Night sky burst open; put beside a terrified crowd.",
+  "register": "light",
+  "impact": 8
+ },
+ "boccioni-umberto-boccioni-1912-elasticity-elasticit-oil-on-canva": {
+  "ref": "1 Thessalonians 4:16",
+  "text": "The dead in Christ will rise first",
+  "words": 7,
+  "approved": true,
+  "theme": "Grave opens upward; put beside a rising vertical line.",
+  "register": "light",
+  "impact": 8
+ },
+ "malevich-i-v-klyun-klyunkov": {
+  "ref": "Psalms 139:10",
+  "text": "your right hand will hold me",
+  "words": 6,
+  "approved": true,
+  "theme": "a hand that holds and leads; paint a figure upheld from behind",
+  "register": "merge",
+  "impact": 7
+ },
+ "1941-red-path-st-prex": {
+  "ref": "Isaiah 61:3",
+  "text": "the oil of joy for mourning",
+  "words": 6,
+  "approved": true,
+  "theme": "oil exchanged for ashes, for a solemn portrait",
+  "register": "joy",
+  "impact": 8
+ },
+ "doesburg-composition-in-half-tones-composition-en-demi-valeurs": {
+  "ref": "Hebrews 11:1",
+  "text": "faith is assurance of things hoped for,",
+  "words": 7,
+  "approved": true,
+  "theme": "assurance of what is unseen; beside a dark doorway",
+  "register": "hope",
+  "impact": 8
+ },
+ "thoma-spring-melody": {
+  "ref": "Isaiah 35:1",
+  "text": "The desert will rejoice and blossom",
+  "words": 6,
+  "approved": true,
+  "theme": "Dry ground flowering; paint beside a rose breaking stone.",
+  "register": "new",
+  "impact": 8
+ },
+ "arellano-vase-of-flowers": {
+  "ref": "Isaiah 58:11",
+  "text": "You will be like a watered garden",
+  "words": 7,
+  "approved": true,
+  "theme": "Dry soul irrigated; place beside an irrigated garden bed.",
+  "register": "new",
+  "impact": 8
+ },
+ "gleizes-po-me-onirique": {
+  "ref": "1 Samuel 18:1",
+  "text": "the soul of Jonathan was knit",
+  "words": 6,
+  "approved": true,
+  "theme": "two men fused at the soul; paint two figures sharing one outline",
+  "register": "merge",
+  "impact": 8
+ },
+ "boccioni-l-antigrazioso": {
+  "ref": "Isaiah 52:2",
+  "text": "Shake yourself from the dust! Arise, sit up",
+  "words": 8,
+  "approved": true,
+  "theme": "Dust shaken off; put beside a figure standing upright.",
+  "register": "light",
+  "impact": 8
+ },
+ "popova-the-model-standing-figure": {
+  "ref": "2 Corinthians 3:3",
+  "text": "tablets that are hearts of flesh",
+  "words": 6,
+  "approved": true,
+  "theme": "Stone tablets turned flesh; set beside carved stone.",
+  "register": "new",
+  "impact": 7
+ },
+ "jawlensky-frauenkopf-mit-blumen-im-haar": {
+  "ref": "Nehemiah 12:43",
+  "text": "the joy of Jerusalem was heard",
+  "words": 6,
+  "approved": true,
+  "theme": "joy loud enough to carry over walls, for a cityscape",
+  "register": "joy",
+  "impact": 8
+ },
+ "doesburg-theo-van-doesburg-counter-composition-xii": {
+  "ref": "James 5:7",
+  "text": "Behold, the farmer waits for the precious fruit",
+  "words": 8,
+  "approved": true,
+  "theme": "a farmer's patience; beside a furrowed field",
+  "register": "hope",
+  "impact": 8
+ },
+ "paoletti-springtime-in-venice": {
+  "ref": "Jeremiah 17:8",
+  "text": "as a tree planted by the waters",
+  "words": 7,
+  "approved": true,
+  "theme": "Tree rooted by water; paint beside a riverbank trunk.",
+  "register": "new",
+  "impact": 8
+ },
+ "arellano-basket-of-flowers": {
+  "ref": "Job 14:9",
+  "text": "through the scent of water it will bud",
+  "words": 8,
+  "approved": true,
+  "theme": "Stump scenting water budding; paint beside cut wood.",
+  "register": "new",
+  "impact": 8
+ },
+ "gleizes-composition": {
+  "ref": "Ephesians 4:25",
+  "text": "we are members of one another",
+  "words": 6,
+  "approved": true,
+  "theme": "each body belongs to the other; paint limbs interlocking and overlapping",
+  "register": "merge",
+  "impact": 8
+ },
+ "boccioni-the-street-pavers-1914-by-umberto-boccioni": {
+  "ref": "Romans 6:4",
+  "text": "we also might walk in newness of life",
+  "words": 8,
+  "approved": true,
+  "theme": "Buried then walking; set beside a figure leaving a tomb.",
+  "register": "light",
+  "impact": 8
+ },
+ "popova-birsk": {
+  "ref": "Ezekiel 11:19",
+  "text": "the stony heart out of their flesh",
+  "words": 7,
+  "approved": true,
+  "theme": "Stone heart removed; paint beside a heart of rock.",
+  "register": "new",
+  "impact": 7
+ },
+ "jawlensky-stillleben-blumen-in-gr-ner-vase-still-life-flowers-in": {
+  "ref": "Psalms 126:2",
+  "text": "Then our mouth was filled with laughter",
+  "words": 7,
+  "approved": true,
+  "theme": "a whole people laughing at once, for a crowded table",
+  "register": "joy",
+  "impact": 8
+ },
+ "doesburg-composition-xxi-compositie-xxi-hoek-2000-9068682555-cat": {
+  "ref": "Job 14:7",
+  "text": "there is hope for a tree",
+  "words": 6,
+  "approved": true,
+  "theme": "hope for a felled tree; beside a cut stump",
+  "register": "hope",
+  "impact": 8
+ },
+ "herold-rainbow": {
+  "ref": "Psalms 107:35",
+  "text": "He turns a desert into a pool",
+  "words": 7,
+  "approved": true,
+  "theme": "Desert flooded; paint beside a dry basin.",
+  "register": "new",
+  "impact": 8
+ },
+ "arellano-basket-of-flowers-on-a-plinth": {
+  "ref": "Isaiah 32:15",
+  "text": "the wilderness becomes a fruitful field",
+  "words": 6,
+  "approved": true,
+  "theme": "Wasteland turning green; paint beside a thorny field.",
+  "register": "new",
+  "impact": 7
+ },
+ "gleizes-nature-morte-la-guitare-ou-composition": {
+  "ref": "John 10:16",
+  "text": "They will become one flock with one shepherd",
+  "words": 8,
+  "approved": true,
+  "theme": "scattered flocks merged under one keeper; paint many sheep in one shape",
+  "register": "merge",
+  "impact": 8
+ },
+ "boccioni-the-morning": {
+  "ref": "Psalms 148:3",
+  "text": "Praise him, all you shining stars",
+  "words": 6,
+  "approved": true,
+  "theme": "the night sky in chorus, for a starry canvas",
+  "register": "joy",
+  "impact": 7
+ },
+ "popova-untitled": {
+  "ref": "Ezekiel 37:6",
+  "text": "I will lay sinews on you",
+  "words": 6,
+  "approved": true,
+  "theme": "Bones clothed in flesh; put beside a bleached skeleton.",
+  "register": "new",
+  "impact": 7
+ },
+ "werefkin-zwei-frauen": {
+  "ref": "Psalms 150:4",
+  "text": "Praise him with tambourine and dancing",
+  "words": 6,
+  "approved": true,
+  "theme": "drum and body in one line, for a dancing figure",
+  "register": "joy",
+  "impact": 8
+ },
+ "doesburg-xx": {
+  "ref": "Psalms 130:5",
+  "text": "I wait for Yahweh. My soul waits.",
+  "words": 7,
+  "approved": true,
+  "theme": "waiting doubled into certainty; beside a night watch",
+  "register": "hope",
+  "impact": 8
+ },
+ "hornel-butterflies-by-edward-hornel": {
+  "ref": "Isaiah 51:3",
+  "text": "her desert like the garden of Yahweh",
+  "words": 7,
+  "approved": true,
+  "theme": "Desert made Eden; paint beside a flowering waste.",
+  "register": "new",
+  "impact": 7
+ },
+ "p-rez-vase-of-flowers": {
+  "ref": "Jeremiah 31:12",
+  "text": "Their soul will be as a watered garden",
+  "words": 8,
+  "approved": true,
+  "theme": "Grief watered into garden; set beside a green channel.",
+  "register": "new",
+  "impact": 7
+ },
+ "delaunay-relief-noir-avec-des-cercles-de-couleur": {
+  "ref": "2 Chronicles 5:13",
+  "text": "the trumpeters and singers were as one",
+  "words": 7,
+  "approved": true,
+  "theme": "many instruments sounding one note; paint musicians merged in a chord",
+  "register": "merge",
+  "impact": 7
+ },
+ "boccioni-il-sogno-paolo-e-francesca": {
+  "ref": "Psalms 40:3",
+  "text": "a new song in my mouth",
+  "words": 6,
+  "approved": true,
+  "theme": "song placed on a tongue, for a singer's face",
+  "register": "joy",
+  "impact": 7
+ },
+ "popova-lyubov-popova-the-pianist": {
+  "ref": "Lamentations 3:23",
+  "text": "They are new every morning",
+  "words": 5,
+  "approved": true,
+  "theme": "Mercy renewed daily; put beside a dawn horizon.",
+  "register": "new",
+  "impact": 7
+ },
+ "werefkin-schnee-ber-nacht": {
+  "ref": "Psalms 47:5",
+  "text": "God has gone up with a shout",
+  "words": 7,
+  "approved": true,
+  "theme": "ascent heard as noise, for a rising crowd",
+  "register": "joy",
+  "impact": 8
+ },
+ "doesburg-dancers": {
+  "ref": "Psalms 40:1",
+  "text": "I waited patiently for Yahweh.",
+  "words": 5,
+  "approved": true,
+  "theme": "waiting that ends in being heard; beside a long corridor",
+  "register": "hope",
+  "impact": 8
+ },
+ "ma-ek-festival-of-spring-allegoric-scene": {
+  "ref": "Psalms 114:8",
+  "text": "Turned the rock into a pool of water",
+  "words": 8,
+  "approved": true,
+  "theme": "Rock struck to water; set beside a split boulder.",
+  "register": "new",
+  "impact": 7
+ },
+ "p-rez-garland-of-flowers-with-st-anthony": {
+  "ref": "Song of Solomon 2:12",
+  "text": "The flowers appear on the earth",
+  "words": 6,
+  "approved": true,
+  "theme": "First flowers; set beside a spring meadow.",
+  "register": "new",
+  "impact": 7
+ },
+ "gleizes-femmes-deux-hommes-et-enfants": {
+  "ref": "Colossians 2:19",
+  "text": "all the body, being supplied and knit together",
+  "words": 8,
+  "approved": true,
+  "theme": "every joint knits the body; paint limbs joined at the seams",
+  "register": "merge",
+  "impact": 7
+ },
+ "boccioni-ritratto-della-signora-busoni": {
+  "ref": "Ephesians 5:14",
+  "text": "Christ will shine on you",
+  "words": 5,
+  "approved": true,
+  "theme": "Sleeping figures commanded up; place beside any resurrection scene.",
+  "register": "light",
+  "impact": 5
+ },
+ "popova-six-prints-one-print": {
+  "ref": "Galatians 2:9",
+  "text": "the right hand of fellowship",
+  "words": 5,
+  "approved": true,
+  "theme": "a handclasp seals partnership; paint two hands gripping wrists",
+  "register": "merge",
+  "impact": 6
+ },
+ "werefkin-berglandschaft-bei-oschwand": {
+  "ref": "Zephaniah 3:14",
+  "text": "Sing, daughter of Zion! Shout, Israel!",
+  "words": 6,
+  "approved": true,
+  "theme": "a whole city told to sing, for a crowd scene",
+  "register": "joy",
+  "impact": 8
+ },
+ "doesburg-figure-on-the-blauwpoortsbrug": {
+  "ref": "Lamentations 3:24",
+  "text": "“Therefore I will hope in him.”",
+  "words": 6,
+  "approved": true,
+  "theme": "a resolution spoken into ruin; beside rubble",
+  "register": "hope",
+  "impact": 7
+ },
+ "sawrassow-the-beginning-of-spring": {
+  "ref": "Psalms 72:6",
+  "text": "like rain on the mown grass",
+  "words": 6,
+  "approved": true,
+  "theme": "Rain on cut grass; set beside a grey field.",
+  "register": "new",
+  "impact": 7
+ },
+ "i-bouquet-in-a-clay-vase": {
+  "ref": "Song of Solomon 2:13",
+  "text": "The vines are in blossom",
+  "words": 5,
+  "approved": true,
+  "theme": "Vines budding; paint beside a trellised vine.",
+  "register": "new",
+  "impact": 7
+ },
+ "gleizes-sans-titre-sc-ne-de-baigneuses": {
+  "ref": "Galatians 3:28",
+  "text": "you are all one in Christ Jesus",
+  "words": 7,
+  "approved": true,
+  "theme": "old divisions erased into one; paint barriers dissolving into one field",
+  "register": "merge",
+  "impact": 7
+ },
+ "boccioni-signora-cragnolini-fanna": {
+  "ref": "Exodus 10:23",
+  "text": "light in their dwellings",
+  "words": 4,
+  "approved": true,
+  "theme": "Darkness outside, light inside; paint beside lit windows.",
+  "register": "light",
+  "impact": 4
+ },
+ "rodchenko-portrait-of-n-a-rusakov": {
+  "ref": "Acts 4:32",
+  "text": "one heart and soul",
+  "words": 4,
+  "approved": true,
+  "theme": "a whole crowd with one heartbeat; paint massed bodies one pulse",
+  "register": "merge",
+  "impact": 5
+ },
+ "macke-studie-zu-hellem-schaufenster-study-for-bright-shop-window": {
+  "ref": "Acts 16:25",
+  "text": "praying and singing hymns to God",
+  "words": 6,
+  "approved": true,
+  "theme": "song in a midnight cell, for a dark interior",
+  "register": "joy",
+  "impact": 7
+ },
+ "doesburg-houses": {
+  "ref": "Psalms 42:11",
+  "text": "Hope in God! For I shall still praise",
+  "words": 8,
+  "approved": true,
+  "theme": "an argument with the self; beside a divided face",
+  "register": "hope",
+  "impact": 7
+ },
+ "costa-spring-in-the-pontine-marshes": {
+  "ref": "Song of Solomon 2:11",
+  "text": "The rain is over and gone",
+  "words": 6,
+  "approved": true,
+  "theme": "Winter ending; put beside a clearing sky.",
+  "register": "new",
+  "impact": 7
+ },
+ "seghers-flowers-in-a-glass-vase": {
+  "ref": "Isaiah 44:3",
+  "text": "water on him who is thirsty",
+  "words": 6,
+  "approved": true,
+  "theme": "Water poured on dust; set beside a parched field.",
+  "register": "new",
+  "impact": 6
+ },
+ "gleizes-sans-titre": {
+  "ref": "John 17:21",
+  "text": "that they may all be one",
+  "words": 6,
+  "approved": true,
+  "theme": "the many become a single one; paint separate forms dissolving into one",
+  "register": "merge",
+  "impact": 7
+ },
+ "boccioni-cavallo-case": {
+  "ref": "Psalms 98:8",
+  "text": "Let the rivers clap their hands",
+  "words": 6,
+  "approved": true,
+  "theme": "water given hands, for a landscape in applause",
+  "register": "joy",
+  "impact": 9
+ },
+ "popova-the-traveler": {
+  "ref": "Isaiah 11:6",
+  "text": "The wolf will live with the lamb",
+  "words": 7,
+  "approved": true,
+  "theme": "predator and prey share a bed; paint wolf and lamb at rest",
+  "register": "merge",
+  "impact": 9
+ },
+ "marc-die-weltenkuh-the-world-cow": {
+  "ref": "Ecclesiastes 10:19",
+  "text": "A feast is made for laughter",
+  "words": 6,
+  "approved": true,
+  "theme": "a table explained by laughing, for a tavern interior",
+  "register": "joy",
+  "impact": 7
+ },
+ "doesburg-composition-iv-still-life": {
+  "ref": "Exodus 19:4",
+  "text": "I bore you on eagles’ wings,",
+  "words": 6,
+  "approved": true,
+  "theme": "a freed people carried on wings; beside a swept horizon",
+  "register": "hope",
+  "impact": 9
+ },
+ "malczewski-krajobraz-wiosenny-z-rozdo-u": {
+  "ref": "Isaiah 41:18",
+  "text": "I will open rivers on the bare heights",
+  "words": 8,
+  "approved": true,
+  "theme": "Springs breaking dry ground; paint beside split rock.",
+  "register": "new",
+  "impact": 6
+ },
+ "hecke-fruit-and-flowers-in-a-basket": {
+  "ref": "Numbers 17:8",
+  "text": "Sprouted, budded, produced blossoms",
+  "words": 4,
+  "approved": true,
+  "theme": "Dead staff flowering; paint beside an almond branch.",
+  "register": "new",
+  "impact": 6
+ },
+ "delaunay-pig-carousel": {
+  "ref": "Judges 20:11",
+  "text": "knit together as one man",
+  "words": 5,
+  "approved": true,
+  "theme": "many tribes welded into one body; paint ranks fused into one column",
+  "register": "merge",
+  "impact": 7
+ },
+ "boccioni-plastic-dynamism-horse-house": {
+  "ref": "1 Corinthians 15:54",
+  "text": "Death is swallowed up in victory",
+  "words": 6,
+  "approved": true,
+  "theme": "Death defeated; put beside an empty tomb or open grave.",
+  "register": "light",
+  "impact": 9
+ },
+ "popova-painterly-force-construction-by-lyubov-popova-1921": {
+  "ref": "Isaiah 2:4",
+  "text": "They shall beat their swords into plowshares",
+  "words": 7,
+  "approved": true,
+  "theme": "weapons hammered into tools; paint swords bent into plough blades",
+  "register": "merge",
+  "impact": 9
+ },
+ "jawlensky-dunkle-augen": {
+  "ref": "Isaiah 14:7",
+  "text": "They break out in song",
+  "words": 5,
+  "approved": true,
+  "theme": "a quiet earth suddenly singing, for a still landscape",
+  "register": "joy",
+  "impact": 7
+ },
+ "doesburg-the-cardplayers": {
+  "ref": "Ezekiel 37:5",
+  "text": "I will cause breath to enter into you,",
+  "words": 8,
+  "approved": true,
+  "theme": "breath entering dry bones; beside a bleached skeleton",
+  "register": "hope",
+  "impact": 9
+ },
+ "sawrassow-the-arrival-of-spring": {
+  "ref": "1 Samuel 2:8",
+  "text": "He lifts up the needy from the dunghill",
+  "words": 8,
+  "approved": true,
+  "theme": "Needy lifted from the dunghill; paint beside a figure raised high.",
+  "register": "light",
+  "impact": 8
+ },
+ "balen-still-life-with-flowers-cherries-a": {
+  "ref": "Amos 9:13",
+  "text": "sweet wine will drip from the mountains",
+  "words": 7,
+  "approved": true,
+  "theme": "wine coming off the hills, for a vineyard slope",
+  "register": "joy",
+  "impact": 8
+ },
+ "gleizes-personnages": {
+  "ref": "Romans 12:5",
+  "text": "we, who are many, are one body",
+  "words": 7,
+  "approved": true,
+  "theme": "many limbs share one trunk; paint many bodies from one stem",
+  "register": "merge",
+  "impact": 7
+ },
+ "boccioni-still-life-watermelon": {
+  "ref": "Isaiah 35:10",
+  "text": "sorrow and sighing will flee away",
+  "words": 6,
+  "approved": true,
+  "theme": "grief walking out of frame, for a road into distance",
+  "register": "joy",
+  "impact": 8
+ },
+ "popova-architectonic-painting": {
+  "ref": "Ecclesiastes 4:12",
+  "text": "a threefold cord is not quickly broken",
+  "words": 7,
+  "approved": true,
+  "theme": "three strands braided into one rope; paint a cord that cannot snap",
+  "register": "merge",
+  "impact": 8
+ },
+ "werefkin-bahnhof-prerow-d-nenlandschaft": {
+  "ref": "Luke 15:25",
+  "text": "he heard music and dancing",
+  "words": 5,
+  "approved": true,
+  "theme": "music arriving before the door, for a lit window",
+  "register": "joy",
+  "impact": 7
+ },
+ "doesburg-theo-van-doesburg-counter-composition-x-1924": {
+  "ref": "Isaiah 35:6",
+  "text": "the lame man will leap like a deer,",
+  "words": 8,
+  "approved": true,
+  "theme": "a lame man leaping; beside a crowd of the disabled",
+  "register": "hope",
+  "impact": 9
+ },
+ "moore-the-green-butterfly": {
+  "ref": "Daniel 12:2",
+  "text": "Awake, some to everlasting life",
+  "words": 5,
+  "approved": true,
+  "theme": "Dust sleepers waking; place beside a grave opening.",
+  "register": "light",
+  "impact": 8
+ },
+ "ii-still-life-of-flowers-in-an-urn": {
+  "ref": "Hosea 6:2",
+  "text": "the third day he will raise us up",
+  "words": 8,
+  "approved": true,
+  "theme": "Raised on the third day; beside a figure rising from ground.",
+  "register": "light",
+  "impact": 8
+ },
+ "gleizes-tudes-bermudes": {
+  "ref": "Zechariah 2:11",
+  "text": "Many nations shall join themselves to Yahweh",
+  "words": 7,
+  "approved": true,
+  "theme": "foreign nations grafted into one people; paint strangers inside a crowd",
+  "register": "merge",
+  "impact": 7
+ },
+ "boccioni-dynamism-of-a-man-s-head": {
+  "ref": "Isaiah 26:19",
+  "text": "Your dead shall live",
+  "words": 4,
+  "approved": true,
+  "theme": "The dead live; set beside dust rising into light.",
+  "register": "light",
+  "impact": 8
+ },
+ "popova-liubov-popova-traveling-woman-1915-oil-on-canvas-158-5x12": {
+  "ref": "Isaiah 40:11",
+  "text": "He will gather the lambs in his arm",
+  "words": 8,
+  "approved": true,
+  "theme": "the shepherd gathers lambs into his arm; paint a carried body",
+  "register": "merge",
+  "impact": 8
+ },
+ "werefkin-christmas-tree": {
+  "ref": "Psalms 150:3",
+  "text": "Praise him with the sounding of the trumpet",
+  "words": 8,
+  "approved": true,
+  "theme": "brass raised in praise, for a crowd of players",
+  "register": "joy",
+  "impact": 7
+ },
+ "doesburg-landscape-with-row-of-trees-by-theo-van-doesburg-stedel": {
+  "ref": "Isaiah 43:2",
+  "text": "When you pass through the waters,",
+  "words": 6,
+  "approved": true,
+  "theme": "deep water with a presence in it; beside a flooded river",
+  "register": "hope",
+  "impact": 9
+ },
+ "gioli-spring-three-girls-and-sheep-on-a-flowery-meadow": {
+  "ref": "Isaiah 29:18",
+  "text": "The eyes of the blind will see",
+  "words": 7,
+  "approved": true,
+  "theme": "Blind eyes opened; set beside a face turning toward light.",
+  "register": "light",
+  "impact": 8
+ },
+ "i-bouquet-of-flowers-in-a-serpentine-vas": {
+  "ref": "Isaiah 35:7",
+  "text": "The burning sand will become a pool",
+  "words": 7,
+  "approved": true,
+  "theme": "Sand turned to water; put beside a bleached desert floor.",
+  "register": "new",
+  "impact": 8
+ },
+ "gleizes-t-te-de-clown-ou-t-te-d-homme": {
+  "ref": "1 Corinthians 12:12",
+  "text": "the body is one, and has many members",
+  "words": 8,
+  "approved": true,
+  "theme": "one body with many parts; paint limbs branching from a trunk",
+  "register": "merge",
+  "impact": 6
+ },
+ "boccioni-study-for-sculpture-empty-and-full-abstracts-of-a-head": {
+  "ref": "1 Kings 1:40",
+  "text": "so that the earth shook with their sound",
+  "words": 8,
+  "approved": true,
+  "theme": "sound made visible as shaking ground, for a procession",
+  "register": "joy",
+  "impact": 7
+ },
+ "popova-popova-la-sorella-ol-ga-1909": {
+  "ref": "Zephaniah 3:9",
+  "text": "to serve him shoulder to shoulder",
+  "words": 6,
+  "approved": true,
+  "theme": "shoulders touching in shared work; paint a row of touching shoulders",
+  "register": "merge",
+  "impact": 8
+ },
+ "werefkin-marianne-von-werefkin-at-the-caf": {
+  "ref": "Ezra 3:11",
+  "text": "All the people shouted",
+  "words": 4,
+  "approved": true,
+  "theme": "a whole crowd shouting at once, for a massed chorus",
+  "register": "joy",
+  "impact": 5
+ },
+ "abbati-country-house-window": {
+  "ref": "Psalms 126:5",
+  "text": "Those who sow in tears will reap",
+  "words": 7,
+  "approved": true,
+  "theme": "Sowing grief, reaping joy; set beside a sown field.",
+  "register": "new",
+  "impact": 8
+ },
+ "huijsum-terracotta-vase-with-flowers-and": {
+  "ref": "Esther 9:22",
+  "text": "from mourning into a good day",
+  "words": 6,
+  "approved": true,
+  "theme": "the exact turn from black to festival light",
+  "register": "joy",
+  "impact": 7
+ },
+ "delaunay-portuguese-woman": {
+  "ref": "1 Samuel 18:3",
+  "text": "he loved him as his own soul",
+  "words": 7,
+  "approved": true,
+  "theme": "two friends bind their futures; paint two hands clasped over a sword",
+  "register": "merge",
+  "impact": 6
+ },
+ "boccioni-female-portrait": {
+  "ref": "Isaiah 55:12",
+  "text": "The mountains and the hills will break out",
+  "words": 8,
+  "approved": true,
+  "theme": "the land breaking into sound, for a mountain painting",
+  "register": "joy",
+  "impact": 7
+ },
+ "popova-kubistische-stadtlandschaft": {
+  "ref": "2 Samuel 1:23",
+  "text": "In their death, they were not divided",
+  "words": 7,
+  "approved": true,
+  "theme": "two friends not parted by death; paint two figures side by side",
+  "register": "merge",
+  "impact": 7
+ },
+ "werefkin-l-ouvreuse": {
+  "ref": "Joel 2:24",
+  "text": "The threshing floors will be full of wheat",
+  "words": 8,
+  "approved": true,
+  "theme": "floors heaped with grain, for a barn interior",
+  "register": "joy",
+  "impact": 7
+ },
+ "wright-landscape-with-rainbow": {
+  "ref": "Acts 12:7",
+  "text": "His chains fell off his hands",
+  "words": 6,
+  "approved": true,
+  "theme": "Chains drop in a lit cell; paint beside a prisoner standing.",
+  "register": "light",
+  "impact": 7
+ },
+ "huysum-still-life-with-flowers-and-fruit": {
+  "ref": "Mark 4:28",
+  "text": "first the blade, then the ear",
+  "words": 6,
+  "approved": true,
+  "theme": "Growth in stages; paint beside a green shoot.",
+  "register": "new",
+  "impact": 7
+ },
+ "gleizes-jean-cocteau": {
+  "ref": "Ephesians 4:16",
+  "text": "all the body, being fitted and knit together",
+  "words": 8,
+  "approved": true,
+  "theme": "separate hearts woven like thread; paint interlocking strokes of colour",
+  "register": "merge",
+  "impact": 6
+ },
+ "boccioni-scomposizione-di-testa-di-donna": {
+  "ref": "Acts 26:18",
+  "text": "to open their eyes",
+  "words": 4,
+  "approved": true,
+  "theme": "Blind eyes turning; place beside a figure facing the light.",
+  "register": "light",
+  "impact": 5
+ },
+ "popova-stillleben-mit-gitarre": {
+  "ref": "Genesis 33:4",
+  "text": "Esau ran to meet him, embraced him",
+  "words": 7,
+  "approved": true,
+  "theme": "estranged brothers collide and hold; paint two bodies crashing into embrace",
+  "register": "merge",
+  "impact": 7
+ },
+ "werefkin-marianne-von-werefkin-the-storm": {
+  "ref": "2 Peter 3:13",
+  "text": "in which righteousness dwells",
+  "words": 4,
+  "approved": true,
+  "theme": "Cosmos remade; paint beside a horizon opening.",
+  "register": "new",
+  "impact": 6
+ },
+ "vallayer-coster-still-life-with-fruit-and-a-butterfly": {
+  "ref": "Exodus 17:6",
+  "text": "You shall strike the rock",
+  "words": 5,
+  "approved": true,
+  "theme": "Rock giving water; place beside a struck cliff.",
+  "register": "new",
+  "impact": 5
+ },
+ "huysum-still-life-with-flowers": {
+  "ref": "Titus 3:5",
+  "text": "according to his mercy, he saved us",
+  "words": 7,
+  "approved": true,
+  "theme": "Bath of rebirth; place beside water over stone.",
+  "register": "new",
+  "impact": 5
+ },
+ "gleizes-cirque": {
+  "ref": "Nehemiah 4:6",
+  "text": "all the wall was joined together",
+  "words": 6,
+  "approved": true,
+  "theme": "separate stones become one wall; paint bricks fused into a plane",
+  "register": "merge",
+  "impact": 6
+ },
+ "boccioni-ritratto-della-signora-adalgisa-maffi": {
+  "ref": "Isaiah 65:24",
+  "text": "before they call, I will answer;",
+  "words": 6,
+  "approved": true,
+  "theme": "answered before the asking; beside a lifted hand",
+  "register": "hope",
+  "impact": 9
+ },
+ "popova-lineare-komposition": {
+  "ref": "Luke 15:20",
+  "text": "fell on his neck, and kissed him",
+  "words": 7,
+  "approved": true,
+  "theme": "a father sprints to embrace his son; paint running figures colliding",
+  "register": "merge",
+  "impact": 6
+ },
+ "werefkin-mondscheinlandschaft": {
+  "ref": "Job 19:25",
+  "text": "I know that my Redeemer lives.",
+  "words": 6,
+  "approved": true,
+  "theme": "a redeemer who outlives the grave; beside a dark tomb",
+  "register": "hope",
+  "impact": 9
+ },
+ "tour-knabe-bl-st-in-eine-lampe": {
+  "ref": "Micah 7:8",
+  "text": "When I fall, I will arise.",
+  "words": 6,
+  "approved": true,
+  "theme": "a fall that turns into standing; beside a fallen figure",
+  "register": "hope",
+  "impact": 9
+ },
+ "huysum-vase-of-flowers-in-a-niche": {
+  "ref": "1 Corinthians 15:20",
+  "text": "Christ has been raised from the dead.",
+  "words": 7,
+  "approved": true,
+  "theme": "the grave broken open; beside an empty tomb",
+  "register": "hope2",
+  "impact": 9
+ },
+ "gleizes-portrait-d-igor-stravinsky": {
+  "ref": "Psalms 108:2",
+  "text": "I will wake up the dawn",
+  "words": 6,
+  "approved": true,
+  "theme": "music loud enough to wake the sky, for a dawn canvas",
+  "register": "joy2",
+  "impact": 9
+ },
+ "boccioni-moorland": {
+  "ref": "Amos 5:8",
+  "text": "turns the shadow of death into the morning",
+  "words": 8,
+  "approved": true,
+  "theme": "Death's shadow becomes morning; set beside a dark horizon breaking.",
+  "register": "light2",
+  "impact": 9
+ },
+ "werefkin-in-the-theatre-i": {
+  "ref": "Revelation 22:17",
+  "text": "let him take the water of life freely",
+  "words": 8,
+  "approved": true,
+  "theme": "Thirst answered freely; set beside a figure at a spring.",
+  "register": "light2",
+  "impact": 9
+ },
+ "bennett-tales-of-the-armada": {
+  "ref": "Ephesians 2:14",
+  "text": "he is our peace, who made both one",
+  "words": 8,
+  "approved": true,
+  "theme": "the dividing wall broken, two made one; paint a falling wall",
+  "register": "merge2",
+  "impact": 9
+ },
+ "i-flower-still-life": {
+  "ref": "John 15:4",
+  "text": "Remain in me, and I in you",
+  "words": 7,
+  "approved": true,
+  "theme": "two lives intertwined like vine and branch; paint two forms as one",
+  "register": "merge2",
+  "impact": 9
+ },
+ "gleizes-sur-un-th-me-de-cirque": {
+  "ref": "Ruth 1:16",
+  "text": "Your people will be my people",
+  "words": 6,
+  "approved": true,
+  "theme": "a foreigner adopts a people; paint two women walking one road",
+  "register": "merge2",
+  "impact": 9
+ },
+ "vaux-composition-en-demi-valeurs": {
+  "ref": "1 Corinthians 15:53",
+  "text": "this mortal must put on immortality",
+  "words": 6,
+  "approved": true,
+  "theme": "Mortality clothed in immortality; set beside a shrouded figure.",
+  "register": "new2",
+  "impact": 9
+ },
+ "larsson-the-bridge-at-the-harbour": {
+  "ref": "Exodus 16:4",
+  "text": "I will rain bread from the sky",
+  "words": 7,
+  "approved": true,
+  "theme": "Bread falling from the sky; set beside an open sky.",
+  "register": "new2",
+  "impact": 9
+ },
+ "ruysch-still-life-with-flowers-in-a-glas": {
+  "ref": "Ezekiel 47:9",
+  "text": "everything will live wherever the river comes",
+  "words": 7,
+  "approved": true,
+  "theme": "River healing dead water; paint beside a desert delta.",
+  "register": "new2",
+  "impact": 9
+ },
+ "1941-political-drama": {
+  "ref": "John 2:10",
+  "text": "You have kept the good wine until now",
+  "words": 8,
+  "approved": true,
+  "theme": "Water turned to good wine; paint beside a glass.",
+  "register": "new2",
+  "impact": 9
+ },
+ "jawlensky-houses-with-front-gardens": {
+  "ref": "2 Corinthians 4:16",
+  "text": "our inward man is renewed day by day.",
+  "words": 8,
+  "approved": true,
+  "theme": "the hidden self rebuilt daily; beside a weathered face",
+  "register": "hope",
+  "impact": 8
+ },
+ "john-a-corner-of-the-artist-s-room-in-paris-87-rue-du-cherche-mi": {
+  "ref": "Isaiah 52:7",
+  "text": "the feet of him who brings good news,",
+  "words": 8,
+  "approved": true,
+  "theme": "feet arriving over the mountains; beside a dusty road",
+  "register": "hope",
+  "impact": 8
+ },
+ "ruysch-still-life-with-flowers-on-a-marb": {
+  "ref": "Isaiah 61:1",
+  "text": "to proclaim liberty to the captives",
+  "words": 6,
+  "approved": true,
+  "theme": "captives released; beside an open prison door",
+  "register": "hope",
+  "impact": 8
+ },
+ "gleizes-dessin-pour-les-femme-qui-cousent-ou-femmes-cousant": {
+  "ref": "Matthew 11:5",
+  "text": "the blind receive their sight, the lame walk,",
+  "words": 8,
+  "approved": true,
+  "theme": "blind eyes opened, lame legs walking; beside a crowded square",
+  "register": "hope",
+  "impact": 8
+ },
+ "lang-fr-hlingsboten": {
+  "ref": "Psalms 116:8",
+  "text": "For you have delivered my soul from death,",
+  "words": 8,
+  "approved": true,
+  "theme": "a soul pulled back from death; beside an open grave",
+  "register": "hope",
+  "impact": 8
+ },
+ "ruysch-a-vase-of-flowers": {
+  "ref": "Psalms 40:2",
+  "text": "He set my feet on a rock,",
+  "words": 7,
+  "approved": true,
+  "theme": "the pit becomes a standing place; beside wet clay",
+  "register": "hope",
+  "impact": 8
+ },
+ "ruysch-flower-still-life": {
+  "ref": "Hebrews 12:12",
+  "text": "lift up the hands that hang down",
+  "words": 7,
+  "approved": true,
+  "theme": "drooping hands raised; beside a slumped body",
+  "register": "hope2",
+  "impact": 8
+ },
+ "mignon-a-hanging-bouquet-of-flowers": {
+  "ref": "Hebrews 6:18",
+  "text": "take hold of the hope set before us.",
+  "words": 8,
+  "approved": true,
+  "theme": "a hand gripping hope; beside a storm at sea",
+  "register": "hope2",
+  "impact": 8
+ },
+ "mignon-still-life-with-flowers-and-a-wat": {
+  "ref": "Isaiah 45:8",
+  "text": "let the skies pour down righteousness.",
+  "words": 6,
+  "approved": true,
+  "theme": "rain pouring from open sky; beside cracked ground",
+  "register": "hope2",
+  "impact": 8
+ },
+ "mignon-still-life-of-flowers-and-fruits": {
+  "ref": "Lamentations 3:58",
+  "text": "You have redeemed my life.",
+  "words": 5,
+  "approved": true,
+  "theme": "a life bought back; beside an empty courtroom",
+  "register": "hope2",
+  "impact": 8
+ },
+ "mignon-still-life-with-fruit-a-lobster-a": {
+  "ref": "Psalms 18:16",
+  "text": "He drew me out of many waters.",
+  "words": 7,
+  "approved": true,
+  "theme": "a hand reaching into deep water; beside a drowning man",
+  "register": "hope2",
+  "impact": 8
+ },
+ "ast-still-life-of-flowers-fruit-shells-a": {
+  "ref": "Zechariah 14:8",
+  "text": "living waters will go out from Jerusalem:",
+  "words": 7,
+  "approved": true,
+  "theme": "a river leaving the city; beside a dry valley",
+  "register": "hope2",
+  "impact": 8
+ },
+ "ast-flowers-in-a-wan-li-vase": {
+  "ref": "Zechariah 9:12",
+  "text": "I will restore double to you.",
+  "words": 6,
+  "approved": true,
+  "theme": "captives repaid double; beside an open prison gate",
+  "register": "hope2",
+  "impact": 8
+ },
+ "ast-still-life-with-flowers-fruits-and-s": {
+  "ref": "Proverbs 9:5",
+  "text": "Come, eat some of my bread",
+  "words": 6,
+  "approved": true,
+  "theme": "an invitation to bread, for a laid table",
+  "register": "joy2",
+  "impact": 8
+ },
+ "aelst-flower-still-life": {
+  "ref": "Psalms 65:13",
+  "text": "They shout for joy! They also sing",
+  "words": 7,
+  "approved": true,
+  "theme": "harvest fields breaking into song, for a late summer landscape",
+  "register": "joy2",
+  "impact": 8
+ },
+ "aelst-group-of-flowers": {
+  "ref": "Song of Solomon 2:1",
+  "text": "I am a rose of Sharon",
+  "words": 6,
+  "approved": true,
+  "theme": "the flower naming itself, for a flower still life",
+  "register": "joy2",
+  "impact": 8
+ },
+ "heem-still-life-with-flowers-and-fruit": {
+  "ref": "Song of Solomon 5:1",
+  "text": "I have eaten my honeycomb with my honey",
+  "words": 8,
+  "approved": true,
+  "theme": "honey taken from the comb, for a dessert still life",
+  "register": "joy2",
+  "impact": 8
+ },
+ "heem-still-life-with-flowers-and-fruit-2": {
+  "ref": "Isaiah 43:20",
+  "text": "rivers in the desert, to give drink",
+  "words": 7,
+  "approved": true,
+  "theme": "Rivers in desert; paint beside a dry land with water.",
+  "register": "light2",
+  "impact": 8
+ },
+ "heem-flower-still-life": {
+  "ref": "Isaiah 53:2",
+  "text": "as a root out of dry ground",
+  "words": 7,
+  "approved": true,
+  "theme": "A root in dry ground; paint beside bare earth greening.",
+  "register": "light2",
+  "impact": 8
+ },
+ "i-still-life-of-flowers": {
+  "ref": "Isaiah 62:1",
+  "text": "until her righteousness shines out like the dawn",
+  "words": 8,
+  "approved": true,
+  "theme": "Righteousness breaks like dawn; set beside a sky turning pale.",
+  "register": "light2",
+  "impact": 8
+ },
+ "peeters-flower-still-life": {
+  "ref": "Isaiah 66:14",
+  "text": "your bones will flourish like the tender grass",
+  "words": 8,
+  "approved": true,
+  "theme": "Bones flourish like grass; paint beside a body unfolding.",
+  "register": "light2",
+  "impact": 8
+ },
+ "coorte-still-life-with-flowers-shells-an": {
+  "ref": "Psalms 92:12",
+  "text": "The righteous shall flourish like the palm tree",
+  "words": 8,
+  "approved": true,
+  "theme": "Flourishing palm; paint beside a tree in full leaf.",
+  "register": "light2",
+  "impact": 8
+ },
+ "elsheimer-aurora": {
+  "ref": "1 Corinthians 10:17",
+  "text": "we all partake of the one loaf",
+  "words": 7,
+  "approved": true,
+  "theme": "one loaf shared makes many bodies one; paint hands tearing one bread",
+  "register": "merge2",
+  "impact": 8
+ },
+ "neer-village-on-a-river-in-morning-light": {
+  "ref": "1 Corinthians 12:26",
+  "text": "all the members suffer with it",
+  "words": 6,
+  "approved": true,
+  "theme": "one member's pain runs through all; paint shared suffering in many bodies",
+  "register": "merge2",
+  "impact": 8
+ },
+ "cappelle-calm-sea-at-sunset": {
+  "ref": "1 Peter 2:5",
+  "text": "as living stones, are built up",
+  "words": 6,
+  "approved": true,
+  "theme": "loose stones mortared into one house; paint blocks built into a wall",
+  "register": "merge2",
+  "impact": 8
+ },
+ "ruisdael-the-windmill-at-wijk-bij-duurst": {
+  "ref": "Amos 3:3",
+  "text": "Do two walk together, unless they have agreed?",
+  "words": 8,
+  "approved": true,
+  "theme": "two travellers walk together by agreement; paint two figures side by side",
+  "register": "merge2",
+  "impact": 8
+ },
+ "ruisdael-view-of-haarlem-with-bleaching-": {
+  "ref": "Hosea 11:4",
+  "text": "I drew them with cords of a man",
+  "words": 8,
+  "approved": true,
+  "theme": "cords of love draw a people; paint ropes pulling figures together",
+  "register": "merge2",
+  "impact": 8
+ },
+ "ruisdael-landscape-with-cornfields": {
+  "ref": "John 11:52",
+  "text": "gather together into one the children of God",
+  "words": 8,
+  "approved": true,
+  "theme": "scattered children gathered into one; paint fragments drawn into one centre",
+  "register": "merge2",
+  "impact": 8
+ },
+ "hobbema-a-watermill-beside-a-woody-lane": {
+  "ref": "John 17:23",
+  "text": "that they may be perfected into one",
+  "words": 7,
+  "approved": true,
+  "theme": "scattered believers completed into one; paint fragments assembling into one form",
+  "register": "merge2",
+  "impact": 8
+ },
+ "cuyp-piping-shepherds": {
+  "ref": "Matthew 13:30",
+  "text": "gather the wheat into my barn",
+  "words": 6,
+  "approved": true,
+  "theme": "wheat gathered from the whole field; paint sheaves carried into one barn",
+  "register": "merge2",
+  "impact": 8
+ },
+ "cuyp-a-dutch-river-landscape": {
+  "ref": "Proverbs 27:17",
+  "text": "a man sharpens his friend’s countenance",
+  "words": 6,
+  "approved": true,
+  "theme": "two men whet each other sharp; paint two faces leaning close",
+  "register": "merge2",
+  "impact": 8
+ },
+ "lorrain-harbour-scene-at-sunset": {
+  "ref": "Psalms 139:5",
+  "text": "You hem me in behind and before",
+  "words": 7,
+  "approved": true,
+  "theme": "a hand closes in from both sides; paint a held figure",
+  "register": "merge2",
+  "impact": 8
+ },
+ "lorrain-a-harbour-landscape-at-sunset": {
+  "ref": "Romans 11:17",
+  "text": "being a wild olive, were grafted in",
+  "words": 7,
+  "approved": true,
+  "theme": "a wild shoot grafted into an old tree; paint two stems fused",
+  "register": "merge2",
+  "impact": 8
+ },
+ "vernet-seaport-at-sunrise": {
+  "ref": "Hosea 6:3",
+  "text": "He will come to us like the rain",
+  "words": 8,
+  "approved": true,
+  "theme": "Rain arriving; paint beside grey sky over land.",
+  "register": "new2",
+  "impact": 8
+ },
+ "corot-sunrise": {
+  "ref": "Matthew 6:28",
+  "text": "Consider the lilies of the field",
+  "words": 6,
+  "approved": true,
+  "theme": "Lilies growing without toil; paint beside a flower still life.",
+  "register": "new2",
+  "impact": 8
+ },
+ "corot-moonlight": {
+  "ref": "Numbers 13:23",
+  "text": "a branch with one cluster of grapes",
+  "words": 7,
+  "approved": true,
+  "theme": "A grape cluster on a pole; paint beside fruit still life.",
+  "register": "new2",
+  "impact": 8
+ },
+ "turner-sunrise-with-a-boat-between-headl": {
+  "ref": "Proverbs 3:10",
+  "text": "your vats will overflow with new wine",
+  "words": 7,
+  "approved": true,
+  "theme": "Vats brimming with new wine; set beside a harvest still life.",
+  "register": "new2",
+  "impact": 8
+ },
+ "turner-the-lake-petworth-sunrise": {
+  "ref": "Psalms 132:15",
+  "text": "I will satisfy her poor with bread",
+  "words": 7,
+  "approved": true,
+  "theme": "Bread for the hungry; paint beside a bread still life.",
+  "register": "new2",
+  "impact": 8
+ },
+ "turner-moonlight-a-study-at-millbank": {
+  "ref": "2 Timothy 4:8",
+  "text": "the crown of righteousness is stored up",
+  "words": 7,
+  "approved": true,
+  "theme": "a crown already laid up; beside a runner at rest",
+  "register": "hope",
+  "impact": 7
+ },
+ "turner-the-angel-standing-in-the-sun": {
+  "ref": "Amos 9:11",
+  "text": "I will raise up the tent of David",
+  "words": 8,
+  "approved": true,
+  "theme": "a fallen tent stood upright; beside broken rafters",
+  "register": "hope",
+  "impact": 7
+ },
+ "friedrich-the-north-sea-in-moonlight": {
+  "ref": "Psalms 121:1",
+  "text": "I will lift up my eyes",
+  "words": 6,
+  "approved": true,
+  "theme": "the gaze lifted off the ground; beside a low horizon",
+  "register": "hope",
+  "impact": 7
+ },
+ "friedrich-coast-by-moonlight": {
+  "ref": "Psalms 145:14",
+  "text": "Yahweh upholds all who fall",
+  "words": 5,
+  "approved": true,
+  "theme": "a bent back straightened; beside a stooped figure",
+  "register": "hope",
+  "impact": 7
+ },
+ "friedrich-morning-mist-in-the-mountains": {
+  "ref": "Psalms 71:20",
+  "text": "You will bring us up again",
+  "words": 6,
+  "approved": true,
+  "theme": "raised from the depths; beside dark earth",
+  "register": "hope",
+  "impact": 7
+ },
+ "friedrich-man-and-woman-contemplating-th": {
+  "ref": "1 Thessalonians 5:8",
+  "text": "for a helmet, the hope of salvation.",
+  "words": 7,
+  "approved": true,
+  "theme": "hope worn as armour; beside a soldier's helmet",
+  "register": "hope2",
+  "impact": 7
+ },
+ "constable-seascape-study-with-rain-cloud": {
+  "ref": "Isaiah 57:15",
+  "text": "to revive the spirit of the humble,",
+  "words": 7,
+  "approved": true,
+  "theme": "a crushed spirit breathing again; beside a bowed head",
+  "register": "hope2",
+  "impact": 7
+ },
+ "constable-stonehenge": {
+  "ref": "Isaiah 61:2",
+  "text": "to comfort all who mourn,",
+  "words": 5,
+  "approved": true,
+  "theme": "mourning answered with comfort; beside a weeping figure",
+  "register": "hope2",
+  "impact": 7
+ },
+ "constable-study-of-clouds": {
+  "ref": "Jeremiah 30:17",
+  "text": "I will restore health to you,",
+  "words": 6,
+  "approved": true,
+  "theme": "wounds closing over; beside bandaged limbs",
+  "register": "hope2",
+  "impact": 7
+ },
+ "cole-the-oxbow-view-from-mount-holyoke": {
+  "ref": "Psalms 130:6",
+  "text": "more than watchmen long for the morning,",
+  "words": 7,
+  "approved": true,
+  "theme": "watchmen waiting for dawn; beside a dark horizon",
+  "register": "hope2",
+  "impact": 7
+ },
+ "cole-summer-twilight": {
+  "ref": "Isaiah 62:9",
+  "text": "those who have harvested it will eat it",
+  "words": 8,
+  "approved": true,
+  "theme": "the grower finally eating, for a worker among vines",
+  "register": "joy2",
+  "impact": 7
+ },
+ "church-above-the-clouds-at-sunrise": {
+  "ref": "Isaiah 65:21",
+  "text": "They will plant vineyards and eat their fruit",
+  "words": 8,
+  "approved": true,
+  "theme": "planting and eating in one line, for a vineyard slope",
+  "register": "joy2",
+  "impact": 7
+ },
+ "church-the-cordilleras-sunrise": {
+  "ref": "Psalms 1:3",
+  "text": "that produces its fruit in its season",
+  "words": 7,
+  "approved": true,
+  "theme": "a tree fed by water, for a green landscape",
+  "register": "joy2",
+  "impact": 7
+ },
+ "bierstadt-sunlight-and-shadow": {
+  "ref": "Psalms 67:6",
+  "text": "The earth has yielded its increase",
+  "words": 6,
+  "approved": true,
+  "theme": "the ground giving back, for a field at harvest",
+  "register": "joy2",
+  "impact": 7
+ },
+ "bierstadt-cloud-study-with-mountain-peak": {
+  "ref": "Song of Solomon 2:15",
+  "text": "Catch for us the foxes",
+  "words": 5,
+  "approved": true,
+  "theme": "the vineyard caught in flower, for a blossoming wall",
+  "register": "joy2",
+  "impact": 7
+ },
+ "monet-the-clouds-les-nuages": {
+  "ref": "Zechariah 9:17",
+  "text": "Grain will make the young men flourish",
+  "words": 7,
+  "approved": true,
+  "theme": "grain making the young strong, for a harvest figure",
+  "register": "joy2",
+  "impact": 7
+ },
+ "monet-landscape-setting-sun": {
+  "ref": "Isaiah 11:1",
+  "text": "A shoot will come out of the stock",
+  "words": 8,
+  "approved": true,
+  "theme": "A stump puts out a fruiting branch; paint beside new growth.",
+  "register": "light2",
+  "impact": 7
+ },
+ "monet-springtime": {
+  "ref": "Isaiah 27:6",
+  "text": "Israel will blossom and bud",
+  "words": 5,
+  "approved": true,
+  "theme": "Blossom out of a bare root; paint beside new shoots.",
+  "register": "light2",
+  "impact": 7
+ },
+ "pissarro-hoarfrost": {
+  "ref": "Isaiah 55:10",
+  "text": "gives seed to the sower",
+  "words": 5,
+  "approved": true,
+  "theme": "Rain becomes bread; set beside a wheat field and table.",
+  "register": "light2",
+  "impact": 7
+ },
+ "sisley-windy-afternoon-in-may": {
+  "ref": "Isaiah 60:20",
+  "text": "Yahweh will be your everlasting light",
+  "words": 6,
+  "approved": true,
+  "theme": "A sun that never sets; paint beside endless evening light.",
+  "register": "light2",
+  "impact": 7
+ },
+ "aivazovsky-the-black-sea-at-night": {
+  "ref": "Ezekiel 47:12",
+  "text": "It will produce new fruit every month",
+  "words": 7,
+  "approved": true,
+  "theme": "Fruit every month; put beside an orchard riverbank.",
+  "register": "new2",
+  "impact": 7
+ },
+ "aivazovsky-steamship-on-a-moonlit-night": {
+  "ref": "Genesis 2:10",
+  "text": "A river went out of Eden",
+  "words": 6,
+  "approved": true,
+  "theme": "River leaving Eden; set beside a garden with water.",
+  "register": "new2",
+  "impact": 7
+ },
+ "kuindzhi-twilight-at-sea-crimea": {
+  "ref": "Mark 4:27",
+  "text": "the seed should spring up and grow",
+  "words": 7,
+  "approved": true,
+  "theme": "Seed growing unseen; put beside a dark furrow.",
+  "register": "new2",
+  "impact": 7
+ },
+ "boudin-clouds-over-the-sea": {
+  "ref": "Revelation 22:1",
+  "text": "a river of water of life",
+  "words": 6,
+  "approved": true,
+  "theme": "River from the throne; put beside a crystal stream.",
+  "register": "new2",
+  "impact": 7
+ }
+}

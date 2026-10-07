@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parents, Abstracted &mdash; a gallery of classical art</title>
+<meta name="description" content="25 public-domain works on mothers, fathers and children, in which parenthood is dissolved into posture, mass and light while remaining unmistakably human.">
+<style>
+:root {
+  --paper: #fcfbf9;
+  --ink: #17161a;
+  --muted: #6c6862;
+  --rule: #ddd8d0;
+  --rule-soft: #ebe7e1;
+  --accent: #8a3b3b;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --measure: 68ch;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #14140f;
+    --ink: #ece8e1;
+    --muted: #9b958c;
+    --rule: #34322c;
+    --rule-soft: #24231e;
+    --accent: #d08a7a;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+}
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px 96px; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+header.masthead { padding: 72px 0 0; border-bottom: 1px solid var(--rule); }
+.kicker { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin: 0 0 20px; }
+h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 6vw, 58px); line-height: 1.04; letter-spacing: -.015em; margin: 0 0 18px; }
+h1 em { font-style: italic; color: var(--accent); }
+.lede { font-family: var(--serif); font-size: clamp(17px, 2.1vw, 21px); line-height: 1.5; max-width: var(--measure); color: var(--ink); margin: 0 0 16px; }
+.method { max-width: var(--measure); font-size: 14px; line-height: 1.65; color: var(--muted); margin: 0 0 40px; }
+.method b { color: var(--ink); font-weight: 600; }
+
+nav.toc { padding: 34px 0 30px; border-bottom: 1px solid var(--rule); }
+nav.toc ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 26px; }
+nav.toc a { text-decoration: none; font-size: 13.5px; color: var(--ink); border-bottom: 1px solid transparent; }
+nav.toc a:hover { border-bottom-color: var(--accent); }
+nav.toc .n { font-family: var(--serif); color: var(--accent); margin-right: 5px; }
+
+.sec { padding-top: 76px; }
+.sec-h { border-top: 1px solid var(--ink); padding-top: 16px; margin-bottom: 40px; }
+.numeral { font-family: var(--serif); font-size: 12px; letter-spacing: .2em; color: var(--accent); margin: 0 0 8px; }
+.sec-h h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(23px, 3.4vw, 31px); letter-spacing: -.01em; margin: 0 0 12px; }
+.blurb { font-family: var(--serif); font-size: 16px; line-height: 1.55; color: var(--muted); max-width: var(--measure); margin: 0; }
+
+.plates { column-width: 268px; column-gap: 30px; }
+.plate { margin: 0 0 40px; break-inside: avoid; }
+.frame { display: block; position: relative; padding: 0; border: 0; background: none; cursor: zoom-in; width: 100%; line-height: 0; }
+.frame img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); background: #fff; }
+.zoom { position: absolute; right: 9px; bottom: 9px; font-family: var(--sans); font-size: 10px; letter-spacing: .13em; text-transform: uppercase; color: var(--paper); background: rgba(23,22,26,.72); padding: 4px 8px; opacity: 0; transition: opacity .18s ease; }
+.frame:hover .zoom, .frame:focus-visible .zoom { opacity: 1; }
+figcaption { padding-top: 11px; }
+.no { font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 7px; }
+.dot { margin: 0 7px; }
+.ttl { font-family: var(--serif); font-weight: 400; font-size: 18px; line-height: 1.25; margin: 0 0 4px; }
+.by { font-size: 13px; margin: 0 0 2px; }
+.md, .kw, .src { font-size: 12.5px; color: var(--muted); margin: 0; }
+.md { margin-bottom: 9px; }
+.note { font-family: var(--serif); font-size: 14.5px; line-height: 1.55; margin: 0 0 10px; }
+.verse { margin: 0 0 11px; padding-left: 12px; border-left: 2px solid var(--accent); }
+.verse p { font-family: var(--serif); font-size: 14.5px; line-height: 1.5; margin: 0 0 4px; }
+.verse cite { font-style: normal; font-size: 10.5px; letter-spacing: .13em; text-transform: uppercase; color: var(--accent); }
+.tag { display: inline-block; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--rule); padding: 2px 7px; margin: 0 5px 5px 0; }
+.src { border-top: 1px solid var(--rule-soft); padding-top: 8px; display: flex; justify-content: space-between; gap: 12px; }
+.src a { color: var(--muted); }
+.src a:hover { color: var(--accent); }
+.lic { white-space: nowrap; }
+
+#index { padding-top: 76px; }
+#index h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(23px, 3.4vw, 31px); border-top: 1px solid var(--ink); padding-top: 16px; margin: 0 0 22px; }
+table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+caption { text-align: left; font-size: 12.5px; color: var(--muted); padding-bottom: 12px; }
+th { text-align: left; font-weight: 600; font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--rule); padding: 0 14px 8px 0; }
+td { border-bottom: 1px solid var(--rule-soft); padding: 9px 14px 9px 0; vertical-align: top; }
+td a { text-decoration: none; border-bottom: 1px solid var(--rule); }
+td a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.c-no { width: 46px; font-family: var(--serif); color: var(--accent); }
+.c-dat { white-space: nowrap; }
+.c-med { color: var(--muted); }
+.c-verse { white-space: nowrap; font-size: 12px; letter-spacing: .06em; color: var(--accent); }
+tbody tr:hover { background: var(--rule-soft); }
+
+footer { margin-top: 84px; border-top: 1px solid var(--rule); padding-top: 26px; font-size: 13px; line-height: 1.7; color: var(--muted); max-width: var(--measure); }
+footer h2 { font-family: var(--serif); font-weight: 400; font-size: 17px; color: var(--ink); margin: 0 0 12px; }
+footer code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+
+.companion { margin-top: 20px; padding-top: 14px; border-top: 1px solid var(--rule-soft); }
+.companion a { color: var(--accent); }
+.lb { position: fixed; inset: 0; z-index: 50; display: none; background: rgba(12,11,10,.985); color: #f2efe9; padding: 22px; }
+.lb[data-open="1"] { display: grid; grid-template-rows: 1fr auto; }
+.lb-stage { position: relative; display: flex; align-items: center; justify-content: center; min-height: 0; }
+.lb-stage img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.lb-x { position: absolute; top: 0; right: 0; background: none; border: 1px solid rgba(242,239,233,.4); color: inherit; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; padding: 7px 11px; cursor: pointer; }
+.lb-cap { max-width: 760px; margin: 16px auto 0; font-size: 13px; line-height: 1.5; }
+.lb-cap .t { font-family: var(--serif); font-size: 17px; }
+.lb-cap .m { color: #b8b2a8; }
+.lb-cap .v { display: block; margin-top: 6px; font-family: var(--serif); font-size: 14.5px; }
+.lb-cap .r { display: block; margin-top: 3px; font-size: 10.5px; letter-spacing: .13em; text-transform: uppercase; color: #b8b2a8; }
+.lb-nav { display: flex; gap: 10px; justify-content: center; margin-top: 14px; }
+.lb-nav button { background: none; border: 1px solid rgba(242,239,233,.4); color: inherit; padding: 7px 14px; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; }
+.lb-nav button:hover { border-color: #f2efe9; }
+body.lb-open { overflow: hidden; }
+@media (hover: none) { .zoom { opacity: 1; } }
+@media (max-width: 640px) {
+  .wrap { padding: 0 18px 72px; }
+  .c-med { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media print {
+  .frame .zoom, .lb, nav.toc { display: none; }
+  .plates { column-width: 45%; }
+  .plate { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="kicker">A gallery of classical art &middot; 25 public-domain works</p>
+    <h1>Parents, <em>Abstracted</em></h1>
+    <p class="lede">Parenthood is the oldest subject in art and one of the hardest to look at directly, so most of the works here hold two things at once: the abstraction that makes a parent legible as a shape &mdash; a body folded over a child, a hand around an ankle, two heads pressed into one silhouette &mdash; and the ordinary human being underneath it, tired, amused, or grieving.</p>
+    <p class="method">The selection follows the same bias as the love gallery: <b>works where the abstraction and the human survive together</b>. It runs from the oldest formal images of a mother and child, through fathers, through artists painting their own parents, into the everyday labour of care and its grief. Every image is public domain or CC0, reproduced from <b>Wikimedia Commons</b> and stored locally beside this page so the gallery works offline. Each plate carries a short line from the <b>King James Bible</b> &mdash; never more than ten words &mdash; set into the image itself, and the lines are weighted towards the last section, <b>grief, and the night</b>. Click any plate to enlarge it; use the arrow keys to move through the catalogue.</p>
+  </header>
+
+  <nav class="toc" aria-label="Contents">
+    <ol>
+      <li><a href="#sec-I"><span class="n">I</span> Madonna and Child</a></li><li><a href="#sec-II"><span class="n">II</span> Fathers and Sons</a></li><li><a href="#sec-III"><span class="n">III</span> The Artist's Own Parents</a></li><li><a href="#sec-IV"><span class="n">IV</span> The Everyday Work of Care</a></li><li><a href="#sec-V"><span class="n">V</span> Grief, and the Night</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <section class="sec" id="sec-I">
+      <header class="sec-h">
+        <p class="numeral">I</p>
+        <h2>Madonna and Child</h2>
+        <p class="blurb">The mother-and-child pair is the oldest continuous image in Western art, and also the most formal: a seated body holding a smaller one, reduced to a single outline. Every painter here inherits the scheme and then humanises it from inside.</p>
+      </header>
+      <div class="plates">
+      <figure class="plate" id="p1">
+        <button class="frame" type="button" data-plate="1"
+                aria-label="Enlarge plate 1: Madonna Litta">
+          <img src="img/versed-thumb/madonna-litta.jpg" width="700" alt="Madonna Litta by Leonardo da Vinci (1452-1519), with Luke 2:7" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 1</span><span class="dot">&middot;</span><span class="yr">c. 1490-91</span></p>
+          <h3 class="ttl">Madonna Litta</h3>
+          <p class="by">Leonardo da Vinci (1452-1519)</p>
+          <p class="md">Tempera on canvas, transferred from panel &middot; State Hermitage Museum, Saint Petersburg</p>
+          <p class="note">A closed circuit of attention between mother and son.</p>
+          <blockquote class="verse"><p>she brought forth her firstborn son</p><cite>Luke 2:7</cite></blockquote>
+          <p class="kw"><span class="tag">tempera</span><span class="tag">mother and child</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ALeonardo_da_Vinci_-_Madonna_Litta_-_WGA12702.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p2">
+        <button class="frame" type="button" data-plate="2"
+                aria-label="Enlarge plate 2: Madonna del Granduca">
+          <img src="img/versed-thumb/madonna-granduca.jpg" width="700" alt="Madonna del Granduca by Raphael (1483-1520), with Luke 2:19" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 2</span><span class="dot">&middot;</span><span class="yr">1505</span></p>
+          <h3 class="ttl">Madonna del Granduca</h3>
+          <p class="by">Raphael (1483-1520)</p>
+          <p class="md">Oil on panel &middot; Galleria Palatina, Palazzo Pitti, Florence</p>
+          <p class="note">The mother appears out of black, the child held across.</p>
+          <blockquote class="verse"><p>Mary kept all these things, and pondered</p><cite>Luke 2:19</cite></blockquote>
+          <p class="kw"><span class="tag">high renaissance</span><span class="tag">mother and child</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ARaphael_-_Madonna_dell_Granduca.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p3">
+        <button class="frame" type="button" data-plate="3"
+                aria-label="Enlarge plate 3: Madonna of the Pomegranate">
+          <img src="img/versed-thumb/madonna-pomegranate.jpg" width="700" alt="Madonna of the Pomegranate by Sandro Botticelli (c. 1445-1510), with Isaiah 49:15" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 3</span><span class="dot">&middot;</span><span class="yr">1487</span></p>
+          <h3 class="ttl">Madonna of the Pomegranate</h3>
+          <p class="by">Sandro Botticelli (c. 1445-1510)</p>
+          <p class="md">Tempera on panel &middot; Galleria degli Uffizi, Florence</p>
+          <p class="note">An emblem of fruit turned into a family gesture.</p>
+          <blockquote class="verse"><p>Can a woman forget her sucking child</p><cite>Isaiah 49:15</cite></blockquote>
+          <p class="kw"><span class="tag">florentine</span><span class="tag">mother and child</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ABotticelli%2C_madonna_della_melagrana_01.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p4">
+        <button class="frame" type="button" data-plate="4"
+                aria-label="Enlarge plate 4: Madonna and Child with a Dove">
+          <img src="img/versed-thumb/madonna-dove.jpg" width="700" alt="Madonna and Child with a Dove by Piero di Cosimo (1462-1522), with Isaiah 66:13" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 4</span><span class="dot">&middot;</span><span class="yr">c. 1500</span></p>
+          <h3 class="ttl">Madonna and Child with a Dove</h3>
+          <p class="by">Piero di Cosimo (1462-1522)</p>
+          <p class="md">Oil on panel &middot; Musée du Louvre, Paris</p>
+          <p class="note">The child leans out, offering a dove, off-centre.</p>
+          <blockquote class="verse"><p>As one whom his mother comforteth</p><cite>Isaiah 66:13</cite></blockquote>
+          <p class="kw"><span class="tag">florentine</span><span class="tag">dove</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AMadonna_and_Child_with_a_Dove_-_Piero_di_Cosimo_-_Louvre_INV_817.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p5">
+        <button class="frame" type="button" data-plate="5"
+                aria-label="Enlarge plate 5: The Virgin and Child with Saint Anne">
+          <img src="img/versed-thumb/virgin-child-st-anne.jpg" width="700" alt="The Virgin and Child with Saint Anne by Leonardo da Vinci (1452-1519), with 2 Timothy 1:5" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 5</span><span class="dot">&middot;</span><span class="yr">c. 1503-19</span></p>
+          <h3 class="ttl">The Virgin and Child with Saint Anne</h3>
+          <p class="by">Leonardo da Vinci (1452-1519)</p>
+          <p class="md">Oil on poplar &middot; Musée du Louvre, Paris</p>
+          <p class="note">Three generations climbing one another in a single spiral.</p>
+          <blockquote class="verse"><p>which dwelt first in thy grandmother Lois</p><cite>2 Timothy 1:5</cite></blockquote>
+          <p class="kw"><span class="tag">high renaissance</span><span class="tag">three generations</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ALeonardo_da_Vinci_-_Virgin_and_Child_with_St_Anne_C2RMF_retouched.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <section class="sec" id="sec-II">
+      <header class="sec-h">
+        <p class="numeral">II</p>
+        <h2>Fathers and Sons</h2>
+        <p class="blurb">Fatherhood is the harder subject, so painters arrive at it sideways: a hand held back, a banjo put into a boy's hands, a blessing given to the wrong son, a father absent from his own parable.</p>
+      </header>
+      <div class="plates">
+      <figure class="plate" id="p6">
+        <button class="frame" type="button" data-plate="6"
+                aria-label="Enlarge plate 6: The Banjo Lesson">
+          <img src="img/versed-thumb/banjo-lesson.jpg" width="700" alt="The Banjo Lesson by Henry Ossawa Tanner (1859-1937), with Proverbs 22:6" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 6</span><span class="dot">&middot;</span><span class="yr">1893</span></p>
+          <h3 class="ttl">The Banjo Lesson</h3>
+          <p class="by">Henry Ossawa Tanner (1859-1937)</p>
+          <p class="md">Oil on canvas &middot; Hampton University Museum, Virginia</p>
+          <p class="note">A lesson taught by touch, not by speech.</p>
+          <blockquote class="verse"><p>Train up a child in the way he should go</p><cite>Proverbs 22:6</cite></blockquote>
+          <p class="kw"><span class="tag">care</span><span class="tag">teaching</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AHenry_Ossawa_Tanner_-_The_Banjo_Lesson.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p7">
+        <button class="frame" type="button" data-plate="7"
+                aria-label="Enlarge plate 7: Tobit and Anna with the Kid">
+          <img src="img/versed-thumb/tobit-anna.jpg" width="700" alt="Tobit and Anna with the Kid by Rembrandt van Rijn (1606-1669), with Proverbs 13:22" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 7</span><span class="dot">&middot;</span><span class="yr">1626</span></p>
+          <h3 class="ttl">Tobit and Anna with the Kid</h3>
+          <p class="by">Rembrandt van Rijn (1606-1669)</p>
+          <p class="md">Oil on panel &middot; Rijksmuseum, Amsterdam</p>
+          <p class="note">Authority sits in the lap, not in the gesture.</p>
+          <blockquote class="verse"><p>A good man leaveth an inheritance to his children’s children</p><cite>Proverbs 13:22</cite></blockquote>
+          <p class="kw"><span class="tag">interior</span><span class="tag">household</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ATobit_en_Anna_met_het_bokje_Rijksmuseum_SK-A-4717.jpeg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p8">
+        <button class="frame" type="button" data-plate="8"
+                aria-label="Enlarge plate 8: An Old Man and His Grandson">
+          <img src="img/versed-thumb/old-man-grandson.jpg" width="700" alt="An Old Man and His Grandson by Domenico Ghirlandaio (1449-1494), with Proverbs 20:29" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 8</span><span class="dot">&middot;</span><span class="yr">c. 1490</span></p>
+          <h3 class="ttl">An Old Man and His Grandson</h3>
+          <p class="by">Domenico Ghirlandaio (1449-1494)</p>
+          <p class="md">Tempera on panel &middot; Musée du Louvre, Paris</p>
+          <p class="note">Two generations seen in one unmarked glance.</p>
+          <blockquote class="verse"><p>the beauty of old men is the gray head</p><cite>Proverbs 20:29</cite></blockquote>
+          <p class="kw"><span class="tag">portrait</span><span class="tag">generations</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AGhirlandaio%2C_Domenico_-_An_Old_Man_and_His_Grandson_-_Louvre_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p9">
+        <button class="frame" type="button" data-plate="9"
+                aria-label="Enlarge plate 9: Isaac Blessing Jacob">
+          <img src="img/versed-thumb/isaac-blessing-jacob.jpg" width="700" alt="Isaac Blessing Jacob by Govert Flinck (1615-1660), with Genesis 27:38" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 9</span><span class="dot">&middot;</span><span class="yr">1638</span></p>
+          <h3 class="ttl">Isaac Blessing Jacob</h3>
+          <p class="by">Govert Flinck (1615-1660)</p>
+          <p class="md">Oil on canvas &middot; Rijksmuseum, Amsterdam</p>
+          <p class="note">A blessing given to the wrong son, knowingly.</p>
+          <blockquote class="verse"><p>Hast thou but one blessing, my father?</p><cite>Genesis 27:38</cite></blockquote>
+          <p class="kw"><span class="tag">old testament</span><span class="tag">blessing</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AGovert_Flinck_-_Isaac_Blessing_Jacob_-_WGA07930.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p10">
+        <button class="frame" type="button" data-plate="10"
+                aria-label="Enlarge plate 10: The Prodigal Son in the Tavern">
+          <img src="img/versed-thumb/prodigal-tavern.jpg" width="700" alt="The Prodigal Son in the Tavern by Rembrandt van Rijn (1606-1669), with Luke 15:13" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 10</span><span class="dot">&middot;</span><span class="yr">c. 1635</span></p>
+          <h3 class="ttl">The Prodigal Son in the Tavern</h3>
+          <p class="by">Rembrandt van Rijn (1606-1669)</p>
+          <p class="md">Oil on canvas &middot; Gemäldegalerie Alte Meister, Dresden</p>
+          <p class="note">The father is absent, which is the whole point.</p>
+          <blockquote class="verse"><p>and there wasted his substance with riotous living</p><cite>Luke 15:13</cite></blockquote>
+          <p class="kw"><span class="tag">parable</span><span class="tag">self-portrait</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ARembrandt_-_Rembrandt_and_Saskia_in_the_Scene_of_the_Prodigal_Son_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <section class="sec" id="sec-III">
+      <header class="sec-h">
+        <p class="numeral">III</p>
+        <h2>The Artist's Own Parents</h2>
+        <p class="blurb">The most direct approach, and the least polite one: artists painting the two people they came from, until portraiture stops being flattering and becomes a record.</p>
+      </header>
+      <div class="plates">
+      <figure class="plate" id="p11">
+        <button class="frame" type="button" data-plate="11"
+                aria-label="Enlarge plate 11: Portrait of the Artist's Mother">
+          <img src="img/versed-thumb/cezanne-mother.jpg" width="700" alt="Portrait of the Artist's Mother by Paul Cézanne (1839-1906), with Proverbs 31:28" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 11</span><span class="dot">&middot;</span><span class="yr">1866-67</span></p>
+          <h3 class="ttl">Portrait of the Artist's Mother</h3>
+          <p class="by">Paul Cézanne (1839-1906)</p>
+          <p class="md">Oil on canvas &middot; Saint Louis Art Museum</p>
+          <p class="note">A son's first portrait, and his most unsentimental.</p>
+          <blockquote class="verse"><p>Her children arise up, and call her blessed</p><cite>Proverbs 31:28</cite></blockquote>
+          <p class="kw"><span class="tag">portrait</span><span class="tag">unsentimental</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3APortrait_of_the_Artist%E2%80%99s_Mother_by_Paul_C%C3%A9zanne%2C_1866-1867%2C_oil_on_canvas%2C_Saint_Louis_Art_Museum.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">CC0</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p12">
+        <button class="frame" type="button" data-plate="12"
+                aria-label="Enlarge plate 12: Portrait of the Artist's Mother">
+          <img src="img/versed-thumb/orlai-mother.jpg" width="700" alt="Portrait of the Artist's Mother by Soma Orlai Petrich (1822-1880), with Ecclesiastes 12:7" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 12</span><span class="dot">&middot;</span><span class="yr">1853</span></p>
+          <h3 class="ttl">Portrait of the Artist's Mother</h3>
+          <p class="by">Soma Orlai Petrich (1822-1880)</p>
+          <p class="md">Oil on canvas &middot; Private collection</p>
+          <p class="note">Ordinary dress, ordinary room, and no ideal anywhere.</p>
+          <blockquote class="verse"><p>Then shall the dust return to the earth</p><cite>Ecclesiastes 12:7</cite></blockquote>
+          <p class="kw"><span class="tag">portrait</span><span class="tag">domestic</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AOrlai_Portrait_of_the_Artist%27s_Mother_1853.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p13">
+        <button class="frame" type="button" data-plate="13"
+                aria-label="Enlarge plate 13: Portrait of the Artist's Mother">
+          <img src="img/versed-thumb/tanner-mother.jpg" width="700" alt="Portrait of the Artist's Mother by Henry Ossawa Tanner (1859-1937), with Job 14:1" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 13</span><span class="dot">&middot;</span><span class="yr">1897</span></p>
+          <h3 class="ttl">Portrait of the Artist's Mother</h3>
+          <p class="by">Henry Ossawa Tanner (1859-1937)</p>
+          <p class="md">Oil on canvas &middot; Philadelphia Museum of Art</p>
+          <p class="note">The tenderness is in how little the son intrudes.</p>
+          <blockquote class="verse"><p>Man that is born of a woman</p><cite>Job 14:1</cite></blockquote>
+          <p class="kw"><span class="tag">portrait</span><span class="tag">low key</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AHenry_Ossawa_Tanner%2C_American_%28active_France%29_-_Portrait_of_the_Artist%27s_Mother_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p14">
+        <button class="frame" type="button" data-plate="14"
+                aria-label="Enlarge plate 14: Portrait of the Artist's Father">
+          <img src="img/versed-thumb/ensor-father.jpg" width="700" alt="Portrait of the Artist's Father by James Ensor (1860-1949), with 1 Corinthians 13:12" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 14</span><span class="dot">&middot;</span><span class="yr">1882</span></p>
+          <h3 class="ttl">Portrait of the Artist's Father</h3>
+          <p class="by">James Ensor (1860-1949)</p>
+          <p class="md">Oil on canvas</p>
+          <p class="note">A formal portrait threatening to become a mask.</p>
+          <blockquote class="verse"><p>we see through a glass, darkly</p><cite>1 Corinthians 13:12</cite></blockquote>
+          <p class="kw"><span class="tag">portrait</span><span class="tag">mask</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AJames_Ensor_-_Portrait_of_the_Artist%27s_Father.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p15">
+        <button class="frame" type="button" data-plate="15"
+                aria-label="Enlarge plate 15: Portrait of the Artist's Father">
+          <img src="img/versed-thumb/mancini-father.jpg" width="700" alt="Portrait of the Artist's Father by Antonio Mancini (1852-1930), with Job 10:9" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 15</span><span class="dot">&middot;</span><span class="yr">undated</span></p>
+          <h3 class="ttl">Portrait of the Artist's Father</h3>
+          <p class="by">Antonio Mancini (1852-1930)</p>
+          <p class="md">Oil on canvas &middot; Private collection</p>
+          <p class="note">A likeness that refuses to finish itself.</p>
+          <blockquote class="verse"><p>thou hast made me as the clay</p><cite>Job 10:9</cite></blockquote>
+          <p class="kw"><span class="tag">portrait</span><span class="tag">unfinished</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AAntonio_Mancini_-_A_Portrait_of_the_Artist%27s_Father.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <section class="sec" id="sec-IV">
+      <header class="sec-h">
+        <p class="numeral">IV</p>
+        <h2>The Everyday Work of Care</h2>
+        <p class="blurb">Not the emblem but the labour: combing a child's hair, reading aloud for an hour, sitting in a garden, holding a child still long enough to finish.</p>
+      </header>
+      <div class="plates">
+      <figure class="plate" id="p16">
+        <button class="frame" type="button" data-plate="16"
+                aria-label="Enlarge plate 16: Mother and Child (The Oval Mirror)">
+          <img src="img/versed-thumb/cassatt-oval-mirror.jpg" width="700" alt="Mother and Child (The Oval Mirror) by Mary Cassatt (1844-1926), with Matthew 23:37" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 16</span><span class="dot">&middot;</span><span class="yr">c. 1899</span></p>
+          <h3 class="ttl">Mother and Child (The Oval Mirror)</h3>
+          <p class="by">Mary Cassatt (1844-1926)</p>
+          <p class="md">Oil on canvas &middot; The Metropolitan Museum of Art, New York</p>
+          <p class="note">The embrace described by the shape of the frame.</p>
+          <blockquote class="verse"><p>even as a hen gathereth her chickens</p><cite>Matthew 23:37</cite></blockquote>
+          <p class="kw"><span class="tag">impressionism</span><span class="tag">mirror</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AMother_and_Child_%28The_Oval_Mirror%29_MET_DT2025.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">CC0</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p17">
+        <button class="frame" type="button" data-plate="17"
+                aria-label="Enlarge plate 17: Mother Combing Her Child's Hair">
+          <img src="img/versed-thumb/cassatt-combing.jpg" width="700" alt="Mother Combing Her Child's Hair by Mary Cassatt (1844-1926), with 1 Corinthians 11:15" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 17</span><span class="dot">&middot;</span><span class="yr">c. 1901</span></p>
+          <h3 class="ttl">Mother Combing Her Child's Hair</h3>
+          <p class="by">Mary Cassatt (1844-1926)</p>
+          <p class="md">Pastel and gouache on tan paper &middot; Brooklyn Museum, New York</p>
+          <p class="note">The chore of hair described as holding still.</p>
+          <blockquote class="verse"><p>her hair is given her for a covering</p><cite>1 Corinthians 11:15</cite></blockquote>
+          <p class="kw"><span class="tag">pastel</span><span class="tag">care</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ABrooklyn_Museum_-_Mother_Combing_Her_Child%27s_Hair_-_Mary_Cassatt.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p18">
+        <button class="frame" type="button" data-plate="18"
+                aria-label="Enlarge plate 18: Nurse Reading to a Little Girl">
+          <img src="img/versed-thumb/cassatt-nurse-reading.jpg" width="700" alt="Nurse Reading to a Little Girl by Mary Cassatt (1844-1926), with 2 Timothy 3:15" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 18</span><span class="dot">&middot;</span><span class="yr">1895</span></p>
+          <h3 class="ttl">Nurse Reading to a Little Girl</h3>
+          <p class="by">Mary Cassatt (1844-1926)</p>
+          <p class="md">Pastel on wove paper, mounted on canvas &middot; The Metropolitan Museum of Art, New York</p>
+          <p class="note">Two people agreeing to spend one quiet hour.</p>
+          <blockquote class="verse"><p>from a child thou hast known the holy scriptures</p><cite>2 Timothy 3:15</cite></blockquote>
+          <p class="kw"><span class="tag">pastel</span><span class="tag">reading</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ANurse_Reading_to_a_Little_Girl_MET_DT7250.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">CC0</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p19">
+        <button class="frame" type="button" data-plate="19"
+                aria-label="Enlarge plate 19: A Woman and Child in a Garden">
+          <img src="img/versed-thumb/morisot-garden.jpg" width="700" alt="A Woman and Child in a Garden by Berthe Morisot (1841-1895), with Genesis 3:8" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 19</span><span class="dot">&middot;</span><span class="yr">c. 1883-84</span></p>
+          <h3 class="ttl">A Woman and Child in a Garden</h3>
+          <p class="by">Berthe Morisot (1841-1895)</p>
+          <p class="md">Oil on canvas &middot; National Galleries of Scotland, Edinburgh</p>
+          <p class="note">The garden where the pair is allowed to be ordinary.</p>
+          <blockquote class="verse"><p>walking in the garden in the cool of the day</p><cite>Genesis 3:8</cite></blockquote>
+          <p class="kw"><span class="tag">impressionism</span><span class="tag">garden</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ABerthe_Morisot_-_A_Woman_and_Child_in_a_Garden_-_NG_2269_-_National_Galleries_of_Scotland.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p20">
+        <button class="frame" type="button" data-plate="20"
+                aria-label="Enlarge plate 20: Woman and Child Seated in a Meadow">
+          <img src="img/versed-thumb/morisot-meadow.jpg" width="700" alt="Woman and Child Seated in a Meadow by Berthe Morisot (1841-1895), with Isaiah 40:6" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 20</span><span class="dot">&middot;</span><span class="yr">1871</span></p>
+          <h3 class="ttl">Woman and Child Seated in a Meadow</h3>
+          <p class="by">Berthe Morisot (1841-1895)</p>
+          <p class="md">Watercolour on paper</p>
+          <p class="note">Two figures on grass, and nothing else at all.</p>
+          <blockquote class="verse"><p>All flesh is grass, and all the goodliness</p><cite>Isaiah 40:6</cite></blockquote>
+          <p class="kw"><span class="tag">watercolour</span><span class="tag">leisure</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ABerthe_Morisot_-_Woman_and_Child_Seated_in_a_Meadow_%281871%29.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <section class="sec" id="sec-V">
+      <header class="sec-h">
+        <p class="numeral">V</p>
+        <h2>Grief, and the Night</h2>
+        <p class="blurb">What parenthood costs. A mother holding a dead son, a bed, a lamp, a family lit from nowhere, and a room in which everyone sits apart.</p>
+      </header>
+      <div class="plates">
+      <figure class="plate" id="p21">
+        <button class="frame" type="button" data-plate="21"
+                aria-label="Enlarge plate 21: Pietà">
+          <img src="img/versed-thumb/bouguereau-pieta.jpg" width="700" alt="Pietà by William-Adolphe Bouguereau (1825-1905), with Psalm 22:1" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 21</span><span class="dot">&middot;</span><span class="yr">1876</span></p>
+          <h3 class="ttl">Pietà</h3>
+          <p class="by">William-Adolphe Bouguereau (1825-1905)</p>
+          <p class="md">Oil on canvas</p>
+          <p class="note">Academic finish makes the loss harder to look at.</p>
+          <blockquote class="verse"><p>My God, my God, why hast thou forsaken me</p><cite>Psalm 22:1</cite></blockquote>
+          <p class="kw"><span class="tag">academic</span><span class="tag">mourning</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AWilliam-Adolphe_Bouguereau_%281825-1905%29_-_Pieta_%281876%29.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p22">
+        <button class="frame" type="button" data-plate="22"
+                aria-label="Enlarge plate 22: Pietà">
+          <img src="img/versed-thumb/michelangelo-pieta.jpg" width="700" alt="Pietà by Michelangelo (1475-1564), with Psalm 34:18" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 22</span><span class="dot">&middot;</span><span class="yr">1498-99</span></p>
+          <h3 class="ttl">Pietà</h3>
+          <p class="by">Michelangelo (1475-1564)</p>
+          <p class="md">Marble &middot; St Peter's Basilica, Vatican City</p>
+          <p class="note">The moment a parent outlives the child.</p>
+          <blockquote class="verse"><p>nigh unto them that are of a broken heart</p><cite>Psalm 34:18</cite></blockquote>
+          <p class="kw"><span class="tag">sculpture</span><span class="tag">marble</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AMichelangelo%27s_Piet%C3%A0_Saint_Peter%27s_Basilica_Vatican_City.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">CC0</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p23">
+        <button class="frame" type="button" data-plate="23"
+                aria-label="Enlarge plate 23: Death and Life">
+          <img src="img/versed-thumb/klimt-death-life.jpg" width="700" alt="Death and Life by Gustav Klimt (1862-1918), with Psalm 16:11" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 23</span><span class="dot">&middot;</span><span class="yr">1910/15</span></p>
+          <h3 class="ttl">Death and Life</h3>
+          <p class="by">Gustav Klimt (1862-1918)</p>
+          <p class="md">Oil on canvas &middot; Leopold Museum, Vienna</p>
+          <p class="note">The family is what death has to pry apart.</p>
+          <blockquote class="verse"><p>Thou wilt shew me the path of life</p><cite>Psalm 16:11</cite></blockquote>
+          <p class="kw"><span class="tag">symbolism</span><span class="tag">sleep</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AGustav_Klimt_-_Death_and_Life_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p24">
+        <button class="frame" type="button" data-plate="24"
+                aria-label="Enlarge plate 24: At the Deathbed">
+          <img src="img/versed-thumb/munch-deathbed.jpg" width="700" alt="At the Deathbed by Edvard Munch (1863-1944), with Psalm 39:4" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 24</span><span class="dot">&middot;</span><span class="yr">1895</span></p>
+          <h3 class="ttl">At the Deathbed</h3>
+          <p class="by">Edvard Munch (1863-1944)</p>
+          <p class="md">Oil and tempera on canvas &middot; Bergen Kunstmuseum</p>
+          <p class="note">A household turning into a row of separate people.</p>
+          <blockquote class="verse"><p>LORD, make me to know mine end</p><cite>Psalm 39:4</cite></blockquote>
+          <p class="kw"><span class="tag">expressionism</span><span class="tag">grief</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3A%27At_the_Deathbed%27_by_Edvard_Munch%2C_1895%2C_Bergen_Kunstmuseum.JPG" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p25">
+        <button class="frame" type="button" data-plate="25"
+                aria-label="Enlarge plate 25: Death in the Sickroom">
+          <img src="img/versed-thumb/munch-sickroom.jpg" width="700" alt="Death in the Sickroom by Edvard Munch (1863-1944), with Psalm 41:3" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 25</span><span class="dot">&middot;</span><span class="yr">1893</span></p>
+          <h3 class="ttl">Death in the Sickroom</h3>
+          <p class="by">Edvard Munch (1863-1944)</p>
+          <p class="md">Pastel &middot; Munch Museum, Oslo</p>
+          <p class="note">The room is the illness; sitting still is comfort.</p>
+          <blockquote class="verse"><p>The LORD will strengthen him upon the bed of languishing</p><cite>Psalm 41:3</cite></blockquote>
+          <p class="kw"><span class="tag">expressionism</span><span class="tag">illness</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AEdvard_Munch_-_Death_in_the_Sickroom_-_MM.M.00214_-_Munch_Museum.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <section id="index">
+      <h2>Index of works</h2>
+      <table>
+        <caption>All 25 plates in catalogue order, with artist, date and medium.</caption>
+        <thead>
+          <tr><th>No.</th><th>Title</th><th>Artist</th><th>Date</th><th class="c-med">Medium</th><th class="c-verse">Verse</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="c-no"><a href="#p1">1</a></td><td class="c-ttl"><a href="#p1">Madonna Litta</a></td><td class="c-art">Leonardo da Vinci (1452-1519)</td><td class="c-dat">c. 1490-91</td><td class="c-med">Tempera on canvas, transferred from panel</td><td class="c-verse">Luke 2:7</td></tr>
+          <tr><td class="c-no"><a href="#p2">2</a></td><td class="c-ttl"><a href="#p2">Madonna del Granduca</a></td><td class="c-art">Raphael (1483-1520)</td><td class="c-dat">1505</td><td class="c-med">Oil on panel</td><td class="c-verse">Luke 2:19</td></tr>
+          <tr><td class="c-no"><a href="#p3">3</a></td><td class="c-ttl"><a href="#p3">Madonna of the Pomegranate</a></td><td class="c-art">Sandro Botticelli (c. 1445-1510)</td><td class="c-dat">1487</td><td class="c-med">Tempera on panel</td><td class="c-verse">Isaiah 49:15</td></tr>
+          <tr><td class="c-no"><a href="#p4">4</a></td><td class="c-ttl"><a href="#p4">Madonna and Child with a Dove</a></td><td class="c-art">Piero di Cosimo (1462-1522)</td><td class="c-dat">c. 1500</td><td class="c-med">Oil on panel</td><td class="c-verse">Isaiah 66:13</td></tr>
+          <tr><td class="c-no"><a href="#p5">5</a></td><td class="c-ttl"><a href="#p5">The Virgin and Child with Saint Anne</a></td><td class="c-art">Leonardo da Vinci (1452-1519)</td><td class="c-dat">c. 1503-19</td><td class="c-med">Oil on poplar</td><td class="c-verse">2 Timothy 1:5</td></tr>
+          <tr><td class="c-no"><a href="#p6">6</a></td><td class="c-ttl"><a href="#p6">The Banjo Lesson</a></td><td class="c-art">Henry Ossawa Tanner (1859-1937)</td><td class="c-dat">1893</td><td class="c-med">Oil on canvas</td><td class="c-verse">Proverbs 22:6</td></tr>
+          <tr><td class="c-no"><a href="#p7">7</a></td><td class="c-ttl"><a href="#p7">Tobit and Anna with the Kid</a></td><td class="c-art">Rembrandt van Rijn (1606-1669)</td><td class="c-dat">1626</td><td class="c-med">Oil on panel</td><td class="c-verse">Proverbs 13:22</td></tr>
+          <tr><td class="c-no"><a href="#p8">8</a></td><td class="c-ttl"><a href="#p8">An Old Man and His Grandson</a></td><td class="c-art">Domenico Ghirlandaio (1449-1494)</td><td class="c-dat">c. 1490</td><td class="c-med">Tempera on panel</td><td class="c-verse">Proverbs 20:29</td></tr>
+          <tr><td class="c-no"><a href="#p9">9</a></td><td class="c-ttl"><a href="#p9">Isaac Blessing Jacob</a></td><td class="c-art">Govert Flinck (1615-1660)</td><td class="c-dat">1638</td><td class="c-med">Oil on canvas</td><td class="c-verse">Genesis 27:38</td></tr>
+          <tr><td class="c-no"><a href="#p10">10</a></td><td class="c-ttl"><a href="#p10">The Prodigal Son in the Tavern</a></td><td class="c-art">Rembrandt van Rijn (1606-1669)</td><td class="c-dat">c. 1635</td><td class="c-med">Oil on canvas</td><td class="c-verse">Luke 15:13</td></tr>
+          <tr><td class="c-no"><a href="#p11">11</a></td><td class="c-ttl"><a href="#p11">Portrait of the Artist's Mother</a></td><td class="c-art">Paul Cézanne (1839-1906)</td><td class="c-dat">1866-67</td><td class="c-med">Oil on canvas</td><td class="c-verse">Proverbs 31:28</td></tr>
+          <tr><td class="c-no"><a href="#p12">12</a></td><td class="c-ttl"><a href="#p12">Portrait of the Artist's Mother</a></td><td class="c-art">Soma Orlai Petrich (1822-1880)</td><td class="c-dat">1853</td><td class="c-med">Oil on canvas</td><td class="c-verse">Ecclesiastes 12:7</td></tr>
+          <tr><td class="c-no"><a href="#p13">13</a></td><td class="c-ttl"><a href="#p13">Portrait of the Artist's Mother</a></td><td class="c-art">Henry Ossawa Tanner (1859-1937)</td><td class="c-dat">1897</td><td class="c-med">Oil on canvas</td><td class="c-verse">Job 14:1</td></tr>
+          <tr><td class="c-no"><a href="#p14">14</a></td><td class="c-ttl"><a href="#p14">Portrait of the Artist's Father</a></td><td class="c-art">James Ensor (1860-1949)</td><td class="c-dat">1882</td><td class="c-med">Oil on canvas</td><td class="c-verse">1 Corinthians 13:12</td></tr>
+          <tr><td class="c-no"><a href="#p15">15</a></td><td class="c-ttl"><a href="#p15">Portrait of the Artist's Father</a></td><td class="c-art">Antonio Mancini (1852-1930)</td><td class="c-dat">undated</td><td class="c-med">Oil on canvas</td><td class="c-verse">Job 10:9</td></tr>
+          <tr><td class="c-no"><a href="#p16">16</a></td><td class="c-ttl"><a href="#p16">Mother and Child (The Oval Mirror)</a></td><td class="c-art">Mary Cassatt (1844-1926)</td><td class="c-dat">c. 1899</td><td class="c-med">Oil on canvas</td><td class="c-verse">Matthew 23:37</td></tr>
+          <tr><td class="c-no"><a href="#p17">17</a></td><td class="c-ttl"><a href="#p17">Mother Combing Her Child's Hair</a></td><td class="c-art">Mary Cassatt (1844-1926)</td><td class="c-dat">c. 1901</td><td class="c-med">Pastel and gouache on tan paper</td><td class="c-verse">1 Corinthians 11:15</td></tr>
+          <tr><td class="c-no"><a href="#p18">18</a></td><td class="c-ttl"><a href="#p18">Nurse Reading to a Little Girl</a></td><td class="c-art">Mary Cassatt (1844-1926)</td><td class="c-dat">1895</td><td class="c-med">Pastel on wove paper, mounted on canvas</td><td class="c-verse">2 Timothy 3:15</td></tr>
+          <tr><td class="c-no"><a href="#p19">19</a></td><td class="c-ttl"><a href="#p19">A Woman and Child in a Garden</a></td><td class="c-art">Berthe Morisot (1841-1895)</td><td class="c-dat">c. 1883-84</td><td class="c-med">Oil on canvas</td><td class="c-verse">Genesis 3:8</td></tr>
+          <tr><td class="c-no"><a href="#p20">20</a></td><td class="c-ttl"><a href="#p20">Woman and Child Seated in a Meadow</a></td><td class="c-art">Berthe Morisot (1841-1895)</td><td class="c-dat">1871</td><td class="c-med">Watercolour on paper</td><td class="c-verse">Isaiah 40:6</td></tr>
+          <tr><td class="c-no"><a href="#p21">21</a></td><td class="c-ttl"><a href="#p21">Pietà</a></td><td class="c-art">William-Adolphe Bouguereau (1825-1905)</td><td class="c-dat">1876</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 22:1</td></tr>
+          <tr><td class="c-no"><a href="#p22">22</a></td><td class="c-ttl"><a href="#p22">Pietà</a></td><td class="c-art">Michelangelo (1475-1564)</td><td class="c-dat">1498-99</td><td class="c-med">Marble</td><td class="c-verse">Psalm 34:18</td></tr>
+          <tr><td class="c-no"><a href="#p23">23</a></td><td class="c-ttl"><a href="#p23">Death and Life</a></td><td class="c-art">Gustav Klimt (1862-1918)</td><td class="c-dat">1910/15</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 16:11</td></tr>
+          <tr><td class="c-no"><a href="#p24">24</a></td><td class="c-ttl"><a href="#p24">At the Deathbed</a></td><td class="c-art">Edvard Munch (1863-1944)</td><td class="c-dat">1895</td><td class="c-med">Oil and tempera on canvas</td><td class="c-verse">Psalm 39:4</td></tr>
+          <tr><td class="c-no"><a href="#p25">25</a></td><td class="c-ttl"><a href="#p25">Death in the Sickroom</a></td><td class="c-art">Edvard Munch (1863-1944)</td><td class="c-dat">1893</td><td class="c-med">Pastel</td><td class="c-verse">Psalm 41:3</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      <h2>On the images</h2>
+      <p>All 25 reproductions are public domain or released under CC0, taken from Wikimedia Commons and the open-access programmes of the Metropolitan Museum of Art, the Philadelphia Museum of Art, the Rijksmuseum, the Brooklyn Museum and the Google Art Project. Each plate links to its source record. Images are downloaded into <code>img/full</code> at 1600&nbsp;px on the long edge, with 700&nbsp;px copies in <code>img/thumb</code> for this page; the plates shown here are the versed copies in <code>img/versed</code> and <code>img/versed-thumb</code>. No photograph carrying a share-alike or attribution licence was used.</p>
+      <p>Captions give the artist, date, medium and holding collection as recorded by the source institution; the notes are editorial and describe what each work does to the parent and the child. The gallery is ordered by argument, not by date &mdash; the index at the end gives the works in catalogue order.</p>
+      <p class="companion">Companion galleries: <a href="../love-gallery/index.html">Love, Abstracted</a> (46 works) &middot; <a href="../friends-gallery/index.html">Friends, Abstracted</a> (25 works) &mdash; in the same format.</p>
+    </footer>
+  </main>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Enlarged plate">
+  <div class="lb-stage">
+    <img id="lb-img" alt="">
+    <button class="lb-x" id="lb-x" type="button">Close</button>
+  </div>
+  <div>
+    <div class="lb-cap" id="lb-cap"></div>
+    <div class="lb-nav">
+      <button id="lb-prev" type="button">&larr; Previous</button>
+      <button id="lb-next" type="button">Next &rarr;</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const WORKS = [{"n": 1, "full": "img/versed/madonna-litta.jpg", "thumb": "img/versed-thumb/madonna-litta.jpg", "title": "Madonna Litta", "artist": "Leonardo da Vinci (1452-1519)", "date": "c. 1490-91", "medium": "Tempera on canvas, transferred from panel", "place": "State Hermitage Museum, Saint Petersburg", "note": "A closed circuit of attention between mother and son.", "source": "https://commons.wikimedia.org/wiki/File%3ALeonardo_da_Vinci_-_Madonna_Litta_-_WGA12702.jpg", "license": "Public domain", "verse": "she brought forth her firstborn son", "ref": "Luke 2:7"}, {"n": 2, "full": "img/versed/madonna-granduca.jpg", "thumb": "img/versed-thumb/madonna-granduca.jpg", "title": "Madonna del Granduca", "artist": "Raphael (1483-1520)", "date": "1505", "medium": "Oil on panel", "place": "Galleria Palatina, Palazzo Pitti, Florence", "note": "The mother appears out of black, the child held across.", "source": "https://commons.wikimedia.org/wiki/File%3ARaphael_-_Madonna_dell_Granduca.jpg", "license": "Public domain", "verse": "Mary kept all these things, and pondered", "ref": "Luke 2:19"}, {"n": 3, "full": "img/versed/madonna-pomegranate.jpg", "thumb": "img/versed-thumb/madonna-pomegranate.jpg", "title": "Madonna of the Pomegranate", "artist": "Sandro Botticelli (c. 1445-1510)", "date": "1487", "medium": "Tempera on panel", "place": "Galleria degli Uffizi, Florence", "note": "An emblem of fruit turned into a family gesture.", "source": "https://commons.wikimedia.org/wiki/File%3ABotticelli%2C_madonna_della_melagrana_01.jpg", "license": "Public domain", "verse": "Can a woman forget her sucking child", "ref": "Isaiah 49:15"}, {"n": 4, "full": "img/versed/madonna-dove.jpg", "thumb": "img/versed-thumb/madonna-dove.jpg", "title": "Madonna and Child with a Dove", "artist": "Piero di Cosimo (1462-1522)", "date": "c. 1500", "medium": "Oil on panel", "place": "Musée du Louvre, Paris", "note": "The child leans out, offering a dove, off-centre.", "source": "https://commons.wikimedia.org/wiki/File%3AMadonna_and_Child_with_a_Dove_-_Piero_di_Cosimo_-_Louvre_INV_817.jpg", "license": "Public domain", "verse": "As one whom his mother comforteth", "ref": "Isaiah 66:13"}, {"n": 5, "full": "img/versed/virgin-child-st-anne.jpg", "thumb": "img/versed-thumb/virgin-child-st-anne.jpg", "title": "The Virgin and Child with Saint Anne", "artist": "Leonardo da Vinci (1452-1519)", "date": "c. 1503-19", "medium": "Oil on poplar", "place": "Musée du Louvre, Paris", "note": "Three generations climbing one another in a single spiral.", "source": "https://commons.wikimedia.org/wiki/File%3ALeonardo_da_Vinci_-_Virgin_and_Child_with_St_Anne_C2RMF_retouched.jpg", "license": "Public domain", "verse": "which dwelt first in thy grandmother Lois", "ref": "2 Timothy 1:5"}, {"n": 6, "full": "img/versed/banjo-lesson.jpg", "thumb": "img/versed-thumb/banjo-lesson.jpg", "title": "The Banjo Lesson", "artist": "Henry Ossawa Tanner (1859-1937)", "date": "1893", "medium": "Oil on canvas", "place": "Hampton University Museum, Virginia", "note": "A lesson taught by touch, not by speech.", "source": "https://commons.wikimedia.org/wiki/File%3AHenry_Ossawa_Tanner_-_The_Banjo_Lesson.jpg", "license": "Public domain", "verse": "Train up a child in the way he should go", "ref": "Proverbs 22:6"}, {"n": 7, "full": "img/versed/tobit-anna.jpg", "thumb": "img/versed-thumb/tobit-anna.jpg", "title": "Tobit and Anna with the Kid", "artist": "Rembrandt van Rijn (1606-1669)", "date": "1626", "medium": "Oil on panel", "place": "Rijksmuseum, Amsterdam", "note": "Authority sits in the lap, not in the gesture.", "source": "https://commons.wikimedia.org/wiki/File%3ATobit_en_Anna_met_het_bokje_Rijksmuseum_SK-A-4717.jpeg", "license": "Public domain", "verse": "A good man leaveth an inheritance to his children’s children", "ref": "Proverbs 13:22"}, {"n": 8, "full": "img/versed/old-man-grandson.jpg", "thumb": "img/versed-thumb/old-man-grandson.jpg", "title": "An Old Man and His Grandson", "artist": "Domenico Ghirlandaio (1449-1494)", "date": "c. 1490", "medium": "Tempera on panel", "place": "Musée du Louvre, Paris", "note": "Two generations seen in one unmarked glance.", "source": "https://commons.wikimedia.org/wiki/File%3AGhirlandaio%2C_Domenico_-_An_Old_Man_and_His_Grandson_-_Louvre_-_Google_Art_Project.jpg", "license": "Public domain", "verse": "the beauty of old men is the gray head", "ref": "Proverbs 20:29"}, {"n": 9, "full": "img/versed/isaac-blessing-jacob.jpg", "thumb": "img/versed-thumb/isaac-blessing-jacob.jpg", "title": "Isaac Blessing Jacob", "artist": "Govert Flinck (1615-1660)", "date": "1638", "medium": "Oil on canvas", "place": "Rijksmuseum, Amsterdam", "note": "A blessing given to the wrong son, knowingly.", "source": "https://commons.wikimedia.org/wiki/File%3AGovert_Flinck_-_Isaac_Blessing_Jacob_-_WGA07930.jpg", "license": "Public domain", "verse": "Hast thou but one blessing, my father?", "ref": "Genesis 27:38"}, {"n": 10, "full": "img/versed/prodigal-tavern.jpg", "thumb": "img/versed-thumb/prodigal-tavern.jpg", "title": "The Prodigal Son in the Tavern", "artist": "Rembrandt van Rijn (1606-1669)", "date": "c. 1635", "medium": "Oil on canvas", "place": "Gemäldegalerie Alte Meister, Dresden", "note": "The father is absent, which is the whole point.", "source": "https://commons.wikimedia.org/wiki/File%3ARembrandt_-_Rembrandt_and_Saskia_in_the_Scene_of_the_Prodigal_Son_-_Google_Art_Project.jpg", "license": "Public domain", "verse": "and there wasted his substance with riotous living", "ref": "Luke 15:13"}, {"n": 11, "full": "img/versed/cezanne-mother.jpg", "thumb": "img/versed-thumb/cezanne-mother.jpg", "title": "Portrait of the Artist's Mother", "artist": "Paul Cézanne (1839-1906)", "date": "1866-67", "medium": "Oil on canvas", "place": "Saint Louis Art Museum", "note": "A son's first portrait, and his most unsentimental.", "source": "https://commons.wikimedia.org/wiki/File%3APortrait_of_the_Artist%E2%80%99s_Mother_by_Paul_C%C3%A9zanne%2C_1866-1867%2C_oil_on_canvas%2C_Saint_Louis_Art_Museum.jpg", "license": "CC0", "verse": "Her children arise up, and call her blessed", "ref": "Proverbs 31:28"}, {"n": 12, "full": "img/versed/orlai-mother.jpg", "thumb": "img/versed-thumb/orlai-mother.jpg", "title": "Portrait of the Artist's Mother", "artist": "Soma Orlai Petrich (1822-1880)", "date": "1853", "medium": "Oil on canvas", "place": "Private collection", "note": "Ordinary dress, ordinary room, and no ideal anywhere.", "source": "https://commons.wikimedia.org/wiki/File%3AOrlai_Portrait_of_the_Artist%27s_Mother_1853.jpg", "license": "Public domain", "verse": "Then shall the dust return to the earth", "ref": "Ecclesiastes 12:7"}, {"n": 13, "full": "img/versed/tanner-mother.jpg", "thumb": "img/versed-thumb/tanner-mother.jpg", "title": "Portrait of the Artist's Mother", "artist": "Henry Ossawa Tanner (1859-1937)", "date": "1897", "medium": "Oil on canvas", "place": "Philadelphia Museum of Art", "note": "The tenderness is in how little the son intrudes.", "source": "https://commons.wikimedia.org/wiki/File%3AHenry_Ossawa_Tanner%2C_American_%28active_France%29_-_Portrait_of_the_Artist%27s_Mother_-_Google_Art_Project.jpg", "license": "Public domain", "verse": "Man that is born of a woman", "ref": "Job 14:1"}, {"n": 14, "full": "img/versed/ensor-father.jpg", "thumb": "img/versed-thumb/ensor-father.jpg", "title": "Portrait of the Artist's Father", "artist": "James Ensor (1860-1949)", "date": "1882", "medium": "Oil on canvas", "place": "", "note": "A formal portrait threatening to become a mask.", "source": "https://commons.wikimedia.org/wiki/File%3AJames_Ensor_-_Portrait_of_the_Artist%27s_Father.jpg", "license": "Public domain", "verse": "we see through a glass, darkly", "ref": "1 Corinthians 13:12"}, {"n": 15, "full": "img/versed/mancini-father.jpg", "thumb": "img/versed-thumb/mancini-father.jpg", "title": "Portrait of the Artist's Father", "artist": "Antonio Mancini (1852-1930)", "date": "undated", "medium": "Oil on canvas", "place": "Private collection", "note": "A likeness that refuses to finish itself.", "source": "https://commons.wikimedia.org/wiki/File%3AAntonio_Mancini_-_A_Portrait_of_the_Artist%27s_Father.jpg", "license": "Public domain", "verse": "thou hast made me as the clay", "ref": "Job 10:9"}, {"n": 16, "full": "img/versed/cassatt-oval-mirror.jpg", "thumb": "img/versed-thumb/cassatt-oval-mirror.jpg", "title": "Mother and Child (The Oval Mirror)", "artist": "Mary Cassatt (1844-1926)", "date": "c. 1899", "medium": "Oil on canvas", "place": "The Metropolitan Museum of Art, New York", "note": "The embrace described by the shape of the frame.", "source": "https://commons.wikimedia.org/wiki/File%3AMother_and_Child_%28The_Oval_Mirror%29_MET_DT2025.jpg", "license": "CC0", "verse": "even as a hen gathereth her chickens", "ref": "Matthew 23:37"}, {"n": 17, "full": "img/versed/cassatt-combing.jpg", "thumb": "img/versed-thumb/cassatt-combing.jpg", "title": "Mother Combing Her Child's Hair", "artist": "Mary Cassatt (1844-1926)", "date": "c. 1901", "medium": "Pastel and gouache on tan paper", "place": "Brooklyn Museum, New York", "note": "The chore of hair described as holding still.", "source": "https://commons.wikimedia.org/wiki/File%3ABrooklyn_Museum_-_Mother_Combing_Her_Child%27s_Hair_-_Mary_Cassatt.jpg", "license": "Public domain", "verse": "her hair is given her for a covering", "ref": "1 Corinthians 11:15"}, {"n": 18, "full": "img/versed/cassatt-nurse-reading.jpg", "thumb": "img/versed-thumb/cassatt-nurse-reading.jpg", "title": "Nurse Reading to a Little Girl", "artist": "Mary Cassatt (1844-1926)", "date": "1895", "medium": "Pastel on wove paper, mounted on canvas", "place": "The Metropolitan Museum of Art, New York", "note": "Two people agreeing to spend one quiet hour.", "source": "https://commons.wikimedia.org/wiki/File%3ANurse_Reading_to_a_Little_Girl_MET_DT7250.jpg", "license": "CC0", "verse": "from a child thou hast known the holy scriptures", "ref": "2 Timothy 3:15"}, {"n": 19, "full": "img/versed/morisot-garden.jpg", "thumb": "img/versed-thumb/morisot-garden.jpg", "title": "A Woman and Child in a Garden", "artist": "Berthe Morisot (1841-1895)", "date": "c. 1883-84", "medium": "Oil on canvas", "place": "National Galleries of Scotland, Edinburgh", "note": "The garden where the pair is allowed to be ordinary.", "source": "https://commons.wikimedia.org/wiki/File%3ABerthe_Morisot_-_A_Woman_and_Child_in_a_Garden_-_NG_2269_-_National_Galleries_of_Scotland.jpg", "license": "Public domain", "verse": "walking in the garden in the cool of the day", "ref": "Genesis 3:8"}, {"n": 20, "full": "img/versed/morisot-meadow.jpg", "thumb": "img/versed-thumb/morisot-meadow.jpg", "title": "Woman and Child Seated in a Meadow", "artist": "Berthe Morisot (1841-1895)", "date": "1871", "medium": "Watercolour on paper", "place": "", "note": "Two figures on grass, and nothing else at all.", "source": "https://commons.wikimedia.org/wiki/File%3ABerthe_Morisot_-_Woman_and_Child_Seated_in_a_Meadow_%281871%29.jpg", "license": "Public domain", "verse": "All flesh is grass, and all the goodliness", "ref": "Isaiah 40:6"}, {"n": 21, "full": "img/versed/bouguereau-pieta.jpg", "thumb": "img/versed-thumb/bouguereau-pieta.jpg", "title": "Pietà", "artist": "William-Adolphe Bouguereau (1825-1905)", "date": "1876", "medium": "Oil on canvas", "place": "", "note": "Academic finish makes the loss harder to look at.", "source": "https://commons.wikimedia.org/wiki/File%3AWilliam-Adolphe_Bouguereau_%281825-1905%29_-_Pieta_%281876%29.jpg", "license": "Public domain", "verse": "My God, my God, why hast thou forsaken me", "ref": "Psalm 22:1"}, {"n": 22, "full": "img/versed/michelangelo-pieta.jpg", "thumb": "img/versed-thumb/michelangelo-pieta.jpg", "title": "Pietà", "artist": "Michelangelo (1475-1564)", "date": "1498-99", "medium": "Marble", "place": "St Peter's Basilica, Vatican City", "note": "The moment a parent outlives the child.", "source": "https://commons.wikimedia.org/wiki/File%3AMichelangelo%27s_Piet%C3%A0_Saint_Peter%27s_Basilica_Vatican_City.jpg", "license": "CC0", "verse": "nigh unto them that are of a broken heart", "ref": "Psalm 34:18"}, {"n": 23, "full": "img/versed/klimt-death-life.jpg", "thumb": "img/versed-thumb/klimt-death-life.jpg", "title": "Death and Life", "artist": "Gustav Klimt (1862-1918)", "date": "1910/15", "medium": "Oil on canvas", "place": "Leopold Museum, Vienna", "note": "The family is what death has to pry apart.", "source": "https://commons.wikimedia.org/wiki/File%3AGustav_Klimt_-_Death_and_Life_-_Google_Art_Project.jpg", "license": "Public domain", "verse": "Thou wilt shew me the path of life", "ref": "Psalm 16:11"}, {"n": 24, "full": "img/versed/munch-deathbed.jpg", "thumb": "img/versed-thumb/munch-deathbed.jpg", "title": "At the Deathbed", "artist": "Edvard Munch (1863-1944)", "date": "1895", "medium": "Oil and tempera on canvas", "place": "Bergen Kunstmuseum", "note": "A household turning into a row of separate people.", "source": "https://commons.wikimedia.org/wiki/File%3A%27At_the_Deathbed%27_by_Edvard_Munch%2C_1895%2C_Bergen_Kunstmuseum.JPG", "license": "Public domain", "verse": "LORD, make me to know mine end", "ref": "Psalm 39:4"}, {"n": 25, "full": "img/versed/munch-sickroom.jpg", "thumb": "img/versed-thumb/munch-sickroom.jpg", "title": "Death in the Sickroom", "artist": "Edvard Munch (1863-1944)", "date": "1893", "medium": "Pastel", "place": "Munch Museum, Oslo", "note": "The room is the illness; sitting still is comfort.", "source": "https://commons.wikimedia.org/wiki/File%3AEdvard_Munch_-_Death_in_the_Sickroom_-_MM.M.00214_-_Munch_Museum.jpg", "license": "Public domain", "verse": "The LORD will strengthen him upon the bed of languishing", "ref": "Psalm 41:3"}];
+const lb = document.getElementById('lb');
+const img = document.getElementById('lb-img');
+const cap = document.getElementById('lb-cap');
+let at = 0, last = null;
+
+function render(i) {
+  at = (i + WORKS.length) % WORKS.length;
+  const w = WORKS[at];
+  img.src = w.full;
+  img.alt = w.title + ' by ' + w.artist;
+  cap.innerHTML = '<span class="t">Plate ' + w.n + '. ' + w.title + '</span> &mdash; ' +
+    w.artist + ', ' + w.date + '. <span class="m">' + w.medium +
+    (w.place ? ', ' + w.place : '') + '.</span>' +
+    '<span class="v">&ldquo;' + w.verse + '&rdquo;</span>' +
+    '<span class="r">' + w.ref + '</span>';
+}
+function open(i) {
+  last = document.activeElement;
+  render(i);
+  lb.dataset.open = '1';
+  document.body.classList.add('lb-open');
+  document.getElementById('lb-x').focus();
+}
+function close() {
+  lb.dataset.open = '0';
+  document.body.classList.remove('lb-open');
+  img.removeAttribute('src');
+  if (last) last.focus();
+}
+document.querySelectorAll('.frame').forEach(b => {
+  b.addEventListener('click', () => open(Number(b.dataset.plate) - 1));
+});
+document.getElementById('lb-x').addEventListener('click', close);
+document.getElementById('lb-prev').addEventListener('click', () => render(at - 1));
+document.getElementById('lb-next').addEventListener('click', () => render(at + 1));
+lb.addEventListener('click', e => { if (e.target === lb) close(); });
+document.addEventListener('keydown', e => {
+  if (lb.dataset.open !== '1') return;
+  if (e.key === 'Escape') close();
+  if (e.key === 'ArrowLeft') render(at - 1);
+  if (e.key === 'ArrowRight') render(at + 1);
+});
+</script>
+</body>
+</html>

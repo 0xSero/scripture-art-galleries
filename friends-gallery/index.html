@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Friends, Abstracted &mdash; a gallery of classical art</title>
+<meta name="description" content="25 public-domain works on friendship, in which company is dissolved into posture, rhythm and geometry while remaining unmistakably human.">
+<style>
+:root {
+  --paper: #fcfbf9;
+  --ink: #17161a;
+  --muted: #6c6862;
+  --rule: #ddd8d0;
+  --rule-soft: #ebe7e1;
+  --accent: #8a3b3b;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --measure: 68ch;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #14140f;
+    --ink: #ece8e1;
+    --muted: #9b958c;
+    --rule: #34322c;
+    --rule-soft: #24231e;
+    --accent: #d08a7a;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+}
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 28px 96px; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+header.masthead { padding: 72px 0 0; border-bottom: 1px solid var(--rule); }
+.kicker { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin: 0 0 20px; }
+h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 6vw, 58px); line-height: 1.04; letter-spacing: -.015em; margin: 0 0 18px; }
+h1 em { font-style: italic; color: var(--accent); }
+.lede { font-family: var(--serif); font-size: clamp(17px, 2.1vw, 21px); line-height: 1.5; max-width: var(--measure); color: var(--ink); margin: 0 0 16px; }
+.method { max-width: var(--measure); font-size: 14px; line-height: 1.65; color: var(--muted); margin: 0 0 40px; }
+.method b { color: var(--ink); font-weight: 600; }
+
+nav.toc { padding: 34px 0 30px; border-bottom: 1px solid var(--rule); }
+nav.toc ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 26px; }
+nav.toc a { text-decoration: none; font-size: 13.5px; color: var(--ink); border-bottom: 1px solid transparent; }
+nav.toc a:hover { border-bottom-color: var(--accent); }
+nav.toc .n { font-family: var(--serif); color: var(--accent); margin-right: 5px; }
+
+.sec { padding-top: 76px; }
+.sec-h { border-top: 1px solid var(--ink); padding-top: 16px; margin-bottom: 40px; }
+.numeral { font-family: var(--serif); font-size: 12px; letter-spacing: .2em; color: var(--accent); margin: 0 0 8px; }
+.sec-h h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(23px, 3.4vw, 31px); letter-spacing: -.01em; margin: 0 0 12px; }
+.blurb { font-family: var(--serif); font-size: 16px; line-height: 1.55; color: var(--muted); max-width: var(--measure); margin: 0; }
+
+.plates { column-width: 268px; column-gap: 30px; }
+.plate { margin: 0 0 40px; break-inside: avoid; }
+.frame { display: block; position: relative; padding: 0; border: 0; background: none; cursor: zoom-in; width: 100%; line-height: 0; }
+.frame img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); background: #fff; }
+.zoom { position: absolute; right: 9px; bottom: 9px; font-family: var(--sans); font-size: 10px; letter-spacing: .13em; text-transform: uppercase; color: var(--paper); background: rgba(23,22,26,.72); padding: 4px 8px; opacity: 0; transition: opacity .18s ease; }
+.frame:hover .zoom, .frame:focus-visible .zoom { opacity: 1; }
+figcaption { padding-top: 11px; }
+.no { font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 7px; }
+.dot { margin: 0 7px; }
+.ttl { font-family: var(--serif); font-weight: 400; font-size: 18px; line-height: 1.25; margin: 0 0 4px; }
+.by { font-size: 13px; margin: 0 0 2px; }
+.md, .kw, .src { font-size: 12.5px; color: var(--muted); margin: 0; }
+.md { margin-bottom: 9px; }
+.note { font-family: var(--serif); font-size: 14.5px; line-height: 1.55; margin: 0 0 10px; }
+.verse { margin: 0 0 11px; padding-left: 12px; border-left: 2px solid var(--accent); }
+.verse p { font-family: var(--serif); font-size: 14.5px; line-height: 1.5; margin: 0 0 4px; }
+.verse cite { font-style: normal; font-size: 10.5px; letter-spacing: .13em; text-transform: uppercase; color: var(--accent); }
+.tag { display: inline-block; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--rule); padding: 2px 7px; margin: 0 5px 5px 0; }
+.src { border-top: 1px solid var(--rule-soft); padding-top: 8px; display: flex; justify-content: space-between; gap: 12px; }
+.src a { color: var(--muted); }
+.src a:hover { color: var(--accent); }
+.lic { white-space: nowrap; }
+
+#index { padding-top: 76px; }
+#index h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(23px, 3.4vw, 31px); border-top: 1px solid var(--ink); padding-top: 16px; margin: 0 0 22px; }
+table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+caption { text-align: left; font-size: 12.5px; color: var(--muted); padding-bottom: 12px; }
+th { text-align: left; font-weight: 600; font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--rule); padding: 0 14px 8px 0; }
+td { border-bottom: 1px solid var(--rule-soft); padding: 9px 14px 9px 0; vertical-align: top; }
+td a { text-decoration: none; border-bottom: 1px solid var(--rule); }
+td a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.c-no { width: 46px; font-family: var(--serif); color: var(--accent); }
+.c-dat { white-space: nowrap; }
+.c-med { color: var(--muted); }
+.c-verse { white-space: nowrap; font-size: 12px; letter-spacing: .06em; color: var(--accent); }
+tbody tr:hover { background: var(--rule-soft); }
+
+footer { margin-top: 84px; border-top: 1px solid var(--rule); padding-top: 26px; font-size: 13px; line-height: 1.7; color: var(--muted); max-width: var(--measure); }
+footer h2 { font-family: var(--serif); font-weight: 400; font-size: 17px; color: var(--ink); margin: 0 0 12px; }
+footer code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+
+.companion { margin-top: 20px; padding-top: 14px; border-top: 1px solid var(--rule-soft); }
+.companion a { color: var(--accent); }
+.lb { position: fixed; inset: 0; z-index: 50; display: none; background: rgba(12,11,10,.985); color: #f2efe9; padding: 22px; }
+.lb[data-open="1"] { display: grid; grid-template-rows: 1fr auto; }
+.lb-stage { position: relative; display: flex; align-items: center; justify-content: center; min-height: 0; }
+.lb-stage img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.lb-x { position: absolute; top: 0; right: 0; background: none; border: 1px solid rgba(242,239,233,.4); color: inherit; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; padding: 7px 11px; cursor: pointer; }
+.lb-cap { max-width: 760px; margin: 16px auto 0; font-size: 13px; line-height: 1.5; }
+.lb-cap .t { font-family: var(--serif); font-size: 17px; }
+.lb-cap .m { color: #b8b2a8; }
+.lb-cap .v { display: block; margin-top: 6px; font-family: var(--serif); font-size: 14.5px; }
+.lb-cap .r { display: block; margin-top: 3px; font-size: 10.5px; letter-spacing: .13em; text-transform: uppercase; color: #b8b2a8; }
+.lb-nav { display: flex; gap: 10px; justify-content: center; margin-top: 14px; }
+.lb-nav button { background: none; border: 1px solid rgba(242,239,233,.4); color: inherit; padding: 7px 14px; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; }
+.lb-nav button:hover { border-color: #f2efe9; }
+body.lb-open { overflow: hidden; }
+@media (hover: none) { .zoom { opacity: 1; } }
+@media (max-width: 640px) {
+  .wrap { padding: 0 18px 72px; }
+  .c-med { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media print {
+  .frame .zoom, .lb, nav.toc { display: none; }
+  .plates { column-width: 45%; }
+  .plate { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="kicker">A gallery of classical art &middot; 25 public-domain works</p>
+    <h1>Friends, <em>Abstracted</em></h1>
+    <p class="lede">Friendship has no classical emblem &mdash; there is no Venus of it and no Madonna &mdash; so art arrives at it through the pair instead: two bodies that have chosen each other, standing, listening, working or waiting, with the whole relationship carried in a stance.</p>
+    <p class="method">The selection follows the same bias as the love and parents galleries: <b>works where the abstraction and the human survive together</b>. It runs from the pair in ancient sculpture, through ensembles making music, through artists painting the people they worked beside, into ordinary company and the empty chair it leaves. Every image is public domain or CC0, reproduced from <b>Wikimedia Commons</b> and stored locally beside this page so the gallery works offline. Each plate carries a psalm verse set into the image itself, in the King James Version. Click any plate to enlarge it; use the arrow keys to move through the catalogue.</p>
+  </header>
+
+  <nav class="toc" aria-label="Contents">
+    <ol>
+      <li><a href="#sec-I"><span class="n">I</span> Two Figures</a></li><li><a href="#sec-II"><span class="n">II</span> Making Music Together</a></li><li><a href="#sec-III"><span class="n">III</span> A Portrait of Friends</a></li><li><a href="#sec-IV"><span class="n">IV</span> Company in the Everyday</a></li><li><a href="#sec-V"><span class="n">V</span> Old Friends, and the Empty Chair</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <section class="sec" id="sec-I">
+      <header class="sec-h">
+        <p class="numeral">I</p>
+        <h2>Two Figures</h2>
+        <p class="blurb">Friendship has no classical emblem, so art arrives at it through the pair: two bodies that have chosen each other, with the whole relationship carried in a stance.</p>
+      </header>
+      <div class="plates">
+      <figure class="plate" id="p1">
+        <button class="frame" type="button" data-plate="1"
+                aria-label="Enlarge plate 1: Ruth and Naomi">
+          <img src="img/versed-thumb/ruth-naomi.jpg" width="700" alt="Ruth and Naomi by Jan Victors (1619-1676), with Psalm 133:1" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 1</span><span class="dot">&middot;</span><span class="yr">1653</span></p>
+          <h3 class="ttl">Ruth and Naomi</h3>
+          <p class="by">Jan Victors (1619-1676)</p>
+          <p class="md">Oil on canvas</p>
+          <p class="note">Ruth clings to her mother-in-law and refuses to go back to her own people, and the whole of loyalty is in the grip of one woman on another. A friendship chosen against every obligation.</p>
+          <blockquote class="verse"><p>Behold, how good and how pleasant it is for brethren to dwell together in unity!</p><cite>Psalm 133:1</cite></blockquote>
+          <p class="kw"><span class="tag">dutch</span><span class="tag">loyalty</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3A%27Ruth_and_Naomi%27_by_Jan_Victors%2C_1653.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p2">
+        <button class="frame" type="button" data-plate="2"
+                aria-label="Enlarge plate 2: The Visitation">
+          <img src="img/versed-thumb/visitation.jpg" width="700" alt="The Visitation by Giotto di Bondone (c. 1267-1337), with Psalm 122:1" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 2</span><span class="dot">&middot;</span><span class="yr">c. 1306</span></p>
+          <h3 class="ttl">The Visitation</h3>
+          <p class="by">Giotto di Bondone (c. 1267-1337)</p>
+          <p class="md">Fresco &middot; Scrovegni Chapel, Padua</p>
+          <p class="note">Two women greet each other outside a house, and the friendship is entirely in the angle of two bodies leaning in. Giotto makes the embrace architectural.</p>
+          <blockquote class="verse"><p>I was glad when they said unto me, Let us go into the house of the LORD.</p><cite>Psalm 122:1</cite></blockquote>
+          <p class="kw"><span class="tag">fresco</span><span class="tag">the pair</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AGiotto_-_Scrovegni_-_-16-_-_Visitation.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p3">
+        <button class="frame" type="button" data-plate="3"
+                aria-label="Enlarge plate 3: Achilles Tending the Wound of Patroclus">
+          <img src="img/versed-thumb/achilles-patroclus.jpg" width="700" alt="Achilles Tending the Wound of Patroclus by Sosias Painter, Athens, with Psalm 147:3" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 3</span><span class="dot">&middot;</span><span class="yr">c. 500 BC</span></p>
+          <h3 class="ttl">Achilles Tending the Wound of Patroclus</h3>
+          <p class="by">Sosias Painter, Athens</p>
+          <p class="md">Red-figure kylix &middot; Antikensammlung, Berlin</p>
+          <p class="note">One warrior bandages the arm of the other and neither of them looks up. The most tender image of friendship in ancient painting, and it is almost entirely a matter of two bowed heads.</p>
+          <blockquote class="verse"><p>He healeth the broken in heart, and bindeth up their wounds.</p><cite>Psalm 147:3</cite></blockquote>
+          <p class="kw"><span class="tag">red figure</span><span class="tag">care</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AAkhilleus_Patroklos_Antikensammlung_Berlin_F2278.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p4">
+        <button class="frame" type="button" data-plate="4"
+                aria-label="Enlarge plate 4: David and Jonathan">
+          <img src="img/versed-thumb/david-jonathan.jpg" width="700" alt="David and Jonathan by Rembrandt van Rijn (1606-1669), with Psalm 16:3" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 4</span><span class="dot">&middot;</span><span class="yr">1642</span></p>
+          <h3 class="ttl">David and Jonathan</h3>
+          <p class="by">Rembrandt van Rijn (1606-1669)</p>
+          <p class="md">Oil on canvas &middot; Hermitage Museum, Saint Petersburg</p>
+          <p class="note">Jonathan collapses into David's arms while Saul's anger burns behind a curtain. Rembrandt paints the farewell of friends as one dark mass with two heads.</p>
+          <blockquote class="verse"><p>But to the saints that are in the earth, and to the excellent, in whom is all my delight.</p><cite>Psalm 16:3</cite></blockquote>
+          <p class="kw"><span class="tag">baroque</span><span class="tag">the pair</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AHarmensz_van_Rijn_Rembrandt_-_%D0%94%D0%B0%D0%B2%D0%B8%D0%B4_%D0%B8_%D0%98%D0%BE%D0%BD%D0%B0%D1%84%D0%B0%D0%BD_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p5">
+        <button class="frame" type="button" data-plate="5"
+                aria-label="Enlarge plate 5: Two Men Contemplating the Moon">
+          <img src="img/versed-thumb/two-men-moon.jpg" width="700" alt="Two Men Contemplating the Moon by Caspar David Friedrich (1774-1840), with Psalm 8:3" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 5</span><span class="dot">&middot;</span><span class="yr">1819-20</span></p>
+          <h3 class="ttl">Two Men Contemplating the Moon</h3>
+          <p class="by">Caspar David Friedrich (1774-1840)</p>
+          <p class="md">Oil on canvas &middot; Alte Nationalgalerie, Berlin</p>
+          <p class="note">Two men stand with their backs to us looking at the same thing, and the friendship is entirely in the identical posture. Friedrich paints company as a shared direction of attention.</p>
+          <blockquote class="verse"><p>When I consider thy heavens, the work of thy fingers, the moon and the stars, which thou hast ordained;</p><cite>Psalm 8:3</cite></blockquote>
+          <p class="kw"><span class="tag">romanticism</span><span class="tag">attention</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AFriedrich_-_Two_Men_Contemplating_the_Moon.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <section class="sec" id="sec-II">
+      <header class="sec-h">
+        <p class="numeral">II</p>
+        <h2>Making Music Together</h2>
+        <p class="blurb">The most reliable image of friendship in European painting is not an embrace but an ensemble: people who have to listen to each other in order to stay together.</p>
+      </header>
+      <div class="plates">
+      <figure class="plate" id="p6">
+        <button class="frame" type="button" data-plate="6"
+                aria-label="Enlarge plate 6: The Concert">
+          <img src="img/versed-thumb/the-concert-vermeer.jpg" width="700" alt="The Concert by Johannes Vermeer (1632-1675), with Psalm 150:6" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 6</span><span class="dot">&middot;</span><span class="yr">c. 1664</span></p>
+          <h3 class="ttl">The Concert</h3>
+          <p class="by">Johannes Vermeer (1632-1675)</p>
+          <p class="md">Oil on canvas &middot; Isabella Stewart Gardner Museum, Boston</p>
+          <p class="note">Three people make music in a room and the friendship is in the tuning: each of them is listening rather than looking. Vermeer paints company as a shared surface of light.</p>
+          <blockquote class="verse"><p>Let every thing that hath breath praise the LORD. Praise ye the LORD.</p><cite>Psalm 150:6</cite></blockquote>
+          <p class="kw"><span class="tag">music</span><span class="tag">interior</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AVermeer_The_Concert.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p7">
+        <button class="frame" type="button" data-plate="7"
+                aria-label="Enlarge plate 7: The Musicians">
+          <img src="img/versed-thumb/the-musicians-caravaggio.jpg" width="700" alt="The Musicians by Caravaggio (1571-1610), with Psalm 33:3" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 7</span><span class="dot">&middot;</span><span class="yr">c. 1597</span></p>
+          <h3 class="ttl">The Musicians</h3>
+          <p class="by">Caravaggio (1571-1610)</p>
+          <p class="md">Oil on canvas &middot; The Metropolitan Museum of Art, New York</p>
+          <p class="note">Four young men rehearse a song, one of them seen only as a face in the shadow. Caravaggio arranges a group of friends as a single piece of theatre.</p>
+          <blockquote class="verse"><p>Sing unto him a new song; play skilfully with a loud noise.</p><cite>Psalm 33:3</cite></blockquote>
+          <p class="kw"><span class="tag">baroque</span><span class="tag">music</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AThe_Musicians_MET_DP-687-001.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">CC0</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p8">
+        <button class="frame" type="button" data-plate="8"
+                aria-label="Enlarge plate 8: The Three Musicians">
+          <img src="img/versed-thumb/three-musicians.jpg" width="700" alt="The Three Musicians by Diego Velázquez (1599-1660), with Psalm 81:2" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 8</span><span class="dot">&middot;</span><span class="yr">1618</span></p>
+          <h3 class="ttl">The Three Musicians</h3>
+          <p class="by">Diego Velázquez (1599-1660)</p>
+          <p class="md">Oil on canvas &middot; Gemäldegalerie, Berlin</p>
+          <p class="note">Three men sing and play at a plain table, and the comedy is in the way they look at each other rather than at us. Velázquez paints friendship as an exchange of glances.</p>
+          <blockquote class="verse"><p>Take a psalm, and bring hither the timbrel, the pleasant harp with the psaltery.</p><cite>Psalm 81:2</cite></blockquote>
+          <p class="kw"><span class="tag">baroque</span><span class="tag">music</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ADiego_Vel%C3%A1zquez_-_The_Three_Musicians_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p9">
+        <button class="frame" type="button" data-plate="9"
+                aria-label="Enlarge plate 9: The Concert">
+          <img src="img/versed-thumb/concert-honthorst.jpg" width="700" alt="The Concert by Gerrit van Honthorst (1592-1656), with Psalm 18:28" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 9</span><span class="dot">&middot;</span><span class="yr">1624</span></p>
+          <h3 class="ttl">The Concert</h3>
+          <p class="by">Gerrit van Honthorst (1592-1656)</p>
+          <p class="md">Oil on canvas &middot; Musée du Louvre, Paris</p>
+          <p class="note">A group of musicians gathers around a candlelit table, one of them singing from a book. Honthorst paints company as a circle of light with four faces in it.</p>
+          <blockquote class="verse"><p>For thou wilt light my candle: the LORD my God will enlighten my darkness.</p><cite>Psalm 18:28</cite></blockquote>
+          <p class="kw"><span class="tag">caravaggisti</span><span class="tag">music</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AHonthorst_-_Le_Concert%2C_1624%2C_INV_1364.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p10">
+        <button class="frame" type="button" data-plate="10"
+                aria-label="Enlarge plate 10: Music in the Tuileries Gardens">
+          <img src="img/versed-thumb/music-in-the-tuileries.jpg" width="700" alt="Music in the Tuileries Gardens by Édouard Manet (1832-1883), with Psalm 55:14" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 10</span><span class="dot">&middot;</span><span class="yr">1862</span></p>
+          <h3 class="ttl">Music in the Tuileries Gardens</h3>
+          <p class="by">Édouard Manet (1832-1883)</p>
+          <p class="md">Oil on canvas &middot; National Gallery, London</p>
+          <p class="note">Manet crowds his friends into a garden bandstand until the friendship is a density rather than a set of faces. A group portrait dissolved into a crowd.</p>
+          <blockquote class="verse"><p>We took sweet counsel together, and walked unto the house of God in company.</p><cite>Psalm 55:14</cite></blockquote>
+          <p class="kw"><span class="tag">impressionism</span><span class="tag">the crowd</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AMANET_-_M%C3%BAsica_en_las_Tuller%C3%ADas_%28National_Gallery%2C_Londres%2C_1862%29.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <section class="sec" id="sec-III">
+      <header class="sec-h">
+        <p class="numeral">III</p>
+        <h2>A Portrait of Friends</h2>
+        <p class="blurb">Artists painting the people they worked beside, which turns out to be a genre of its own: the studio, the homage, the friend at his easel.</p>
+      </header>
+      <div class="plates">
+      <figure class="plate" id="p11">
+        <button class="frame" type="button" data-plate="11"
+                aria-label="Enlarge plate 11: Hommage à Delacroix">
+          <img src="img/versed-thumb/hommage-delacroix.jpg" width="700" alt="Hommage à Delacroix by Henri Fantin-Latour (1836-1904), with Psalm 112:6" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 11</span><span class="dot">&middot;</span><span class="yr">1864</span></p>
+          <h3 class="ttl">Hommage à Delacroix</h3>
+          <p class="by">Henri Fantin-Latour (1836-1904)</p>
+          <p class="md">Oil on canvas &middot; Musée d'Orsay, Paris</p>
+          <p class="note">Ten artists stand and sit around a portrait of a dead painter, and the homage is arranged as a row of pale faces in dark coats. Friendship as a shared debt.</p>
+          <blockquote class="verse"><p>Surely he shall not be moved for ever: the righteous shall be in everlasting remembrance.</p><cite>Psalm 112:6</cite></blockquote>
+          <p class="kw"><span class="tag">group portrait</span><span class="tag">homage</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AHommage_%C3%A0_Delacroix_-_Henri_Fantin-Latour.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p12">
+        <button class="frame" type="button" data-plate="12"
+                aria-label="Enlarge plate 12: A Studio at Les Batignolles">
+          <img src="img/versed-thumb/studio-batignolles.jpg" width="700" alt="A Studio at Les Batignolles by Henri Fantin-Latour (1836-1904), with Psalm 119:63" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 12</span><span class="dot">&middot;</span><span class="yr">1870</span></p>
+          <h3 class="ttl">A Studio at Les Batignolles</h3>
+          <p class="by">Henri Fantin-Latour (1836-1904)</p>
+          <p class="md">Oil on canvas &middot; Musée d'Orsay, Paris</p>
+          <p class="note">Manet paints at his easel while his friends gather round him, and the group is arranged as a pyramid of attention. Friendship as the act of watching someone work.</p>
+          <blockquote class="verse"><p>I am a companion of all them that fear thee, and of them that keep thy precepts.</p><cite>Psalm 119:63</cite></blockquote>
+          <p class="kw"><span class="tag">group portrait</span><span class="tag">the studio</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AHenri_Fantin-Latour_-_A_Studio_at_Les_Batignolles_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p13">
+        <button class="frame" type="button" data-plate="13"
+                aria-label="Enlarge plate 13: The Studio on the Rue de la Condamine">
+          <img src="img/versed-thumb/rue-de-la-condamine.jpg" width="700" alt="The Studio on the Rue de la Condamine by Frédéric Bazille (1841-1870), with Psalm 111:1" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 13</span><span class="dot">&middot;</span><span class="yr">1870</span></p>
+          <h3 class="ttl">The Studio on the Rue de la Condamine</h3>
+          <p class="by">Frédéric Bazille (1841-1870)</p>
+          <p class="md">Oil on canvas &middot; Musée d'Orsay, Paris</p>
+          <p class="note">Bazille paints his own studio from the inside with his friends scattered up a staircase. A group portrait built as a room.</p>
+          <blockquote class="verse"><p>Praise ye the LORD. I will praise the LORD with my whole heart, in the assembly of the upright, and in the congregation.</p><cite>Psalm 111:1</cite></blockquote>
+          <p class="kw"><span class="tag">group portrait</span><span class="tag">the studio</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AFr%C3%A9d%C3%A9ric_Bazille_-_Bazille%27s_Studio_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p14">
+        <button class="frame" type="button" data-plate="14"
+                aria-label="Enlarge plate 14: Van Gogh Painting Sunflowers">
+          <img src="img/versed-thumb/gauguin-sunflowers.jpg" width="700" alt="Van Gogh Painting Sunflowers by Paul Gauguin (1848-1903), with Psalm 138:8" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 14</span><span class="dot">&middot;</span><span class="yr">1888</span></p>
+          <h3 class="ttl">Van Gogh Painting Sunflowers</h3>
+          <p class="by">Paul Gauguin (1848-1903)</p>
+          <p class="md">Oil on canvas &middot; Van Gogh Museum, Amsterdam</p>
+          <p class="note">Gauguin paints his friend from behind, hunched over the canvas, and the portrait is mostly of the act of painting. Friendship recorded as shared work.</p>
+          <blockquote class="verse"><p>The LORD will perfect that which concerneth me: thy mercy, O LORD, endureth for ever: forsake not the works of thine own hands.</p><cite>Psalm 138:8</cite></blockquote>
+          <p class="kw"><span class="tag">post-impressionism</span><span class="tag">the studio</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3APaul_Gauguin_-_Vincent_van_Gogh_painting_sunflowers_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p15">
+        <button class="frame" type="button" data-plate="15"
+                aria-label="Enlarge plate 15: Claude Monet Painting by the Edge of a Wood">
+          <img src="img/versed-thumb/sargents-monet.jpg" width="700" alt="Claude Monet Painting by the Edge of a Wood by John Singer Sargent (1856-1925), with Psalm 104:33" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 15</span><span class="dot">&middot;</span><span class="yr">1885</span></p>
+          <h3 class="ttl">Claude Monet Painting by the Edge of a Wood</h3>
+          <p class="by">John Singer Sargent (1856-1925)</p>
+          <p class="md">Oil on canvas &middot; Tate Britain, London</p>
+          <p class="note">Monet stands at the edge of a wood with his palette and Sargent paints him working rather than resting. Companionship recorded as shared attention.</p>
+          <blockquote class="verse"><p>I will sing unto the LORD as long as I live: I will sing praise to my God while I have my being.</p><cite>Psalm 104:33</cite></blockquote>
+          <p class="kw"><span class="tag">impressionism</span><span class="tag">the studio</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AJohn_Singer_Sargent_-_Claude_Monet_Painting_by_the_Edge_of_a_Wood_-_N04103_-_National_Gallery.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <section class="sec" id="sec-IV">
+      <header class="sec-h">
+        <p class="numeral">IV</p>
+        <h2>Company in the Everyday</h2>
+        <p class="blurb">Friendship as ordinary proximity: cards, a café table, a theatre box, a line of boys, a quarry full of men.</p>
+      </header>
+      <div class="plates">
+      <figure class="plate" id="p16">
+        <button class="frame" type="button" data-plate="16"
+                aria-label="Enlarge plate 16: The Card Players">
+          <img src="img/versed-thumb/card-players.jpg" width="700" alt="The Card Players by Paul Cézanne (1839-1906), with Psalm 16:6" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 16</span><span class="dot">&middot;</span><span class="yr">c. 1890-95</span></p>
+          <h3 class="ttl">The Card Players</h3>
+          <p class="by">Paul Cézanne (1839-1906)</p>
+          <p class="md">Oil on canvas &middot; Musée d'Orsay, Paris</p>
+          <p class="note">Two men play cards and say nothing, and the friendship is entirely in the table between them. Cézanne paints company as a shared plane.</p>
+          <blockquote class="verse"><p>The lines are fallen unto me in pleasant places; yea, I have a goodly heritage.</p><cite>Psalm 16:6</cite></blockquote>
+          <p class="kw"><span class="tag">post-impressionism</span><span class="tag">silence</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ALes_Joueurs_de_cartes%2C_par_Paul_C%C3%A9zanne.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p17">
+        <button class="frame" type="button" data-plate="17"
+                aria-label="Enlarge plate 17: In a Café (L'Absinthe)">
+          <img src="img/versed-thumb/absinthe-drinker.jpg" width="700" alt="In a Café (L'Absinthe) by Edgar Degas (1834-1917), with Psalm 25:16" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 17</span><span class="dot">&middot;</span><span class="yr">1875-76</span></p>
+          <h3 class="ttl">In a Café (L'Absinthe)</h3>
+          <p class="by">Edgar Degas (1834-1917)</p>
+          <p class="md">Oil on canvas &middot; Musée d'Orsay, Paris</p>
+          <p class="note">A woman and a man sit side by side, each of them looking past the other. Degas paints companionship as two people occupying the same silence.</p>
+          <blockquote class="verse"><p>Turn thee unto me, and have mercy upon me; for I am desolate and afflicted.</p><cite>Psalm 25:16</cite></blockquote>
+          <p class="kw"><span class="tag">impressionism</span><span class="tag">the café</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AEdgar_Degas_-_In_a_Caf%C3%A9_-_Google_Art_Project_2.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p18">
+        <button class="frame" type="button" data-plate="18"
+                aria-label="Enlarge plate 18: The Balcony">
+          <img src="img/versed-thumb/the-balcony.jpg" width="700" alt="The Balcony by Édouard Manet (1832-1883), with Psalm 55:13" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 18</span><span class="dot">&middot;</span><span class="yr">1868-69</span></p>
+          <h3 class="ttl">The Balcony</h3>
+          <p class="by">Édouard Manet (1832-1883)</p>
+          <p class="md">Oil on canvas &middot; Musée d'Orsay, Paris</p>
+          <p class="note">Three friends stand and sit on a balcony and none of them looks at any of the others, with a fourth figure in the doorway behind. Manet paints company as three separate acts of attention in one frame.</p>
+          <blockquote class="verse"><p>But it was thou, a man mine equal, my guide, and mine acquaintance.</p><cite>Psalm 55:13</cite></blockquote>
+          <p class="kw"><span class="tag">impressionism</span><span class="tag">the group</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AEdouard_Manet_-_The_Balcony_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p19">
+        <button class="frame" type="button" data-plate="19"
+                aria-label="Enlarge plate 19: Snap the Whip">
+          <img src="img/versed-thumb/snap-the-whip.jpg" width="700" alt="Snap the Whip by Winslow Homer (1836-1910), with Psalm 122:3" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 19</span><span class="dot">&middot;</span><span class="yr">1872</span></p>
+          <h3 class="ttl">Snap the Whip</h3>
+          <p class="by">Winslow Homer (1836-1910)</p>
+          <p class="md">Oil on canvas &middot; Butler Institute of American Art, Youngstown</p>
+          <p class="note">Boys run in a line holding hands, and the friendship is the chain itself. Homer paints a group as one continuous shape across a field.</p>
+          <blockquote class="verse"><p>Jerusalem is builded as a city that is compact together:</p><cite>Psalm 122:3</cite></blockquote>
+          <p class="kw"><span class="tag">american</span><span class="tag">play</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AWinslow_Homer_-_Snap_the_Whip_%28Butler_Institute_of_American_Art%29.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p20">
+        <button class="frame" type="button" data-plate="20"
+                aria-label="Enlarge plate 20: The Swimming Hole">
+          <img src="img/versed-thumb/swimming-hole.jpg" width="700" alt="The Swimming Hole by Thomas Eakins (1844-1916), with Psalm 103:5" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 20</span><span class="dot">&middot;</span><span class="yr">1884-85</span></p>
+          <h3 class="ttl">The Swimming Hole</h3>
+          <p class="by">Thomas Eakins (1844-1916)</p>
+          <p class="md">Oil on canvas &middot; Amon Carter Museum, Fort Worth</p>
+          <p class="note">Six young men swim in a quarry and the friendship is the arrangement of bodies in the landscape. Eakins builds a group out of geometry, water and light.</p>
+          <blockquote class="verse"><p>Who satisfieth thy mouth with good things; so that thy youth is renewed like the eagle’s.</p><cite>Psalm 103:5</cite></blockquote>
+          <p class="kw"><span class="tag">american</span><span class="tag">the group</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AThomas_Eakins_-_Swimming_%281895%29.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <section class="sec" id="sec-V">
+      <header class="sec-h">
+        <p class="numeral">V</p>
+        <h2>Old Friends, and the Empty Chair</h2>
+        <p class="blurb">What is left when company goes: two old men, a vacant chair, a house still waiting, and a chain of hands in the dark.</p>
+      </header>
+      <div class="plates">
+      <figure class="plate" id="p21">
+        <button class="frame" type="button" data-plate="21"
+                aria-label="Enlarge plate 21: Two Old Men Disputing (Peter and Paul)">
+          <img src="img/versed-thumb/two-old-men-disputing.jpg" width="700" alt="Two Old Men Disputing (Peter and Paul) by Rembrandt van Rijn (1606-1669), with Psalm 92:14" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 21</span><span class="dot">&middot;</span><span class="yr">1628</span></p>
+          <h3 class="ttl">Two Old Men Disputing (Peter and Paul)</h3>
+          <p class="by">Rembrandt van Rijn (1606-1669)</p>
+          <p class="md">Oil on panel &middot; National Gallery of Victoria, Melbourne</p>
+          <p class="note">Two old men lean over a book, one of them talking and the other listening. Rembrandt paints a long friendship as an argument about a text.</p>
+          <blockquote class="verse"><p>They shall still bring forth fruit in old age; they shall be fat and flourishing;</p><cite>Psalm 92:14</cite></blockquote>
+          <p class="kw"><span class="tag">baroque</span><span class="tag">old age</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ATwo_Old_Men_Disputing_%28%E2%80%9CSt._Peter_and_St._Paul%E2%80%9D%29.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p22">
+        <button class="frame" type="button" data-plate="22"
+                aria-label="Enlarge plate 22: Two Old Men Eating Soup">
+          <img src="img/versed-thumb/two-old-men-soup.jpg" width="700" alt="Two Old Men Eating Soup by Francisco de Goya (1746-1828), with Psalm 90:12" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 22</span><span class="dot">&middot;</span><span class="yr">1820-23</span></p>
+          <h3 class="ttl">Two Old Men Eating Soup</h3>
+          <p class="by">Francisco de Goya (1746-1828)</p>
+          <p class="md">Oil on plaster transferred to canvas &middot; Museo del Prado, Madrid</p>
+          <p class="note">Two old men eat at a bare table, one of them with a skull's face at the spoon. Goya paints old company as a black joke about the body.</p>
+          <blockquote class="verse"><p>So teach us to number our days, that we may apply our hearts unto wisdom.</p><cite>Psalm 90:12</cite></blockquote>
+          <p class="kw"><span class="tag">black paintings</span><span class="tag">old age</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AViejos_comiendo_sopa.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p23">
+        <button class="frame" type="button" data-plate="23"
+                aria-label="Enlarge plate 23: Gauguin's Chair">
+          <img src="img/versed-thumb/gauguins-chair.jpg" width="700" alt="Gauguin's Chair by Vincent van Gogh (1853-1890), with Psalm 137:1" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 23</span><span class="dot">&middot;</span><span class="yr">1888</span></p>
+          <h3 class="ttl">Gauguin's Chair</h3>
+          <p class="by">Vincent van Gogh (1853-1890)</p>
+          <p class="md">Oil on canvas &middot; Van Gogh Museum, Amsterdam</p>
+          <p class="note">A chair, a candle and two books, and nobody in the room. Van Gogh paints a friend by painting his empty place, which is the most abstract portrait in this gallery.</p>
+          <blockquote class="verse"><p>By the rivers of Babylon, there we sat down, yea, we wept, when we remembered Zion.</p><cite>Psalm 137:1</cite></blockquote>
+          <p class="kw"><span class="tag">post-impressionism</span><span class="tag">absence</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AVincent_van_Gogh_-_De_stoel_van_Gauguin_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p24">
+        <button class="frame" type="button" data-plate="24"
+                aria-label="Enlarge plate 24: Gassed">
+          <img src="img/versed-thumb/gassed.jpg" width="700" alt="Gassed by John Singer Sargent (1856-1925), with Psalm 48:14" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 24</span><span class="dot">&middot;</span><span class="yr">1919</span></p>
+          <h3 class="ttl">Gassed</h3>
+          <p class="by">John Singer Sargent (1856-1925)</p>
+          <p class="md">Oil on canvas &middot; Imperial War Museum, London</p>
+          <p class="note">A line of blinded soldiers walks with each man's hand on the shoulder of the one in front. Sargent paints comradeship as the only way anyone gets anywhere.</p>
+          <blockquote class="verse"><p>For this God is our God for ever and ever: he will be our guide even unto death.</p><cite>Psalm 48:14</cite></blockquote>
+          <p class="kw"><span class="tag">war</span><span class="tag">the line</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3ASargent%2C_John_Singer_%28RA%29_-_Gassed_-_Google_Art_Project.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+
+      <figure class="plate" id="p25">
+        <button class="frame" type="button" data-plate="25"
+                aria-label="Enlarge plate 25: The Yellow House">
+          <img src="img/versed-thumb/yellow-house.jpg" width="700" alt="The Yellow House by Vincent van Gogh (1853-1890), with Psalm 26:8" loading="lazy" decoding="async">
+          <span class="zoom" aria-hidden="true">Enlarge</span>
+        </button>
+        <figcaption>
+          <p class="no"><span class="plateno">Plate 25</span><span class="dot">&middot;</span><span class="yr">1888</span></p>
+          <h3 class="ttl">The Yellow House</h3>
+          <p class="by">Vincent van Gogh (1853-1890)</p>
+          <p class="md">Oil on canvas &middot; Van Gogh Museum, Amsterdam</p>
+          <p class="note">Van Gogh paints the house he had furnished for a friend who had not arrived yet. Friendship as a building, and as a wait.</p>
+          <blockquote class="verse"><p>LORD, I have loved the habitation of thy house, and the place where thine honour dwelleth.</p><cite>Psalm 26:8</cite></blockquote>
+          <p class="kw"><span class="tag">post-impressionism</span><span class="tag">the house</span></p>
+          <p class="src"><a href="https://commons.wikimedia.org/wiki/File%3AVincent_van_Gogh_-_The_yellow_house_%28%27The_street%27%29.jpg" rel="noopener">Wikimedia Commons</a><span class="lic">Public domain</span></p>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <section id="index">
+      <h2>Index of works</h2>
+      <table>
+        <caption>All 25 plates in catalogue order, with artist, date and medium.</caption>
+        <thead>
+          <tr><th>No.</th><th>Title</th><th>Artist</th><th>Date</th><th class="c-med">Medium</th><th class="c-verse">Psalm</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="c-no"><a href="#p1">1</a></td><td class="c-ttl"><a href="#p1">Ruth and Naomi</a></td><td class="c-art">Jan Victors (1619-1676)</td><td class="c-dat">1653</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 133:1</td></tr>
+          <tr><td class="c-no"><a href="#p2">2</a></td><td class="c-ttl"><a href="#p2">The Visitation</a></td><td class="c-art">Giotto di Bondone (c. 1267-1337)</td><td class="c-dat">c. 1306</td><td class="c-med">Fresco</td><td class="c-verse">Psalm 122:1</td></tr>
+          <tr><td class="c-no"><a href="#p3">3</a></td><td class="c-ttl"><a href="#p3">Achilles Tending the Wound of Patroclus</a></td><td class="c-art">Sosias Painter, Athens</td><td class="c-dat">c. 500 BC</td><td class="c-med">Red-figure kylix</td><td class="c-verse">Psalm 147:3</td></tr>
+          <tr><td class="c-no"><a href="#p4">4</a></td><td class="c-ttl"><a href="#p4">David and Jonathan</a></td><td class="c-art">Rembrandt van Rijn (1606-1669)</td><td class="c-dat">1642</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 16:3</td></tr>
+          <tr><td class="c-no"><a href="#p5">5</a></td><td class="c-ttl"><a href="#p5">Two Men Contemplating the Moon</a></td><td class="c-art">Caspar David Friedrich (1774-1840)</td><td class="c-dat">1819-20</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 8:3</td></tr>
+          <tr><td class="c-no"><a href="#p6">6</a></td><td class="c-ttl"><a href="#p6">The Concert</a></td><td class="c-art">Johannes Vermeer (1632-1675)</td><td class="c-dat">c. 1664</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 150:6</td></tr>
+          <tr><td class="c-no"><a href="#p7">7</a></td><td class="c-ttl"><a href="#p7">The Musicians</a></td><td class="c-art">Caravaggio (1571-1610)</td><td class="c-dat">c. 1597</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 33:3</td></tr>
+          <tr><td class="c-no"><a href="#p8">8</a></td><td class="c-ttl"><a href="#p8">The Three Musicians</a></td><td class="c-art">Diego Velázquez (1599-1660)</td><td class="c-dat">1618</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 81:2</td></tr>
+          <tr><td class="c-no"><a href="#p9">9</a></td><td class="c-ttl"><a href="#p9">The Concert</a></td><td class="c-art">Gerrit van Honthorst (1592-1656)</td><td class="c-dat">1624</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 18:28</td></tr>
+          <tr><td class="c-no"><a href="#p10">10</a></td><td class="c-ttl"><a href="#p10">Music in the Tuileries Gardens</a></td><td class="c-art">Édouard Manet (1832-1883)</td><td class="c-dat">1862</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 55:14</td></tr>
+          <tr><td class="c-no"><a href="#p11">11</a></td><td class="c-ttl"><a href="#p11">Hommage à Delacroix</a></td><td class="c-art">Henri Fantin-Latour (1836-1904)</td><td class="c-dat">1864</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 112:6</td></tr>
+          <tr><td class="c-no"><a href="#p12">12</a></td><td class="c-ttl"><a href="#p12">A Studio at Les Batignolles</a></td><td class="c-art">Henri Fantin-Latour (1836-1904)</td><td class="c-dat">1870</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 119:63</td></tr>
+          <tr><td class="c-no"><a href="#p13">13</a></td><td class="c-ttl"><a href="#p13">The Studio on the Rue de la Condamine</a></td><td class="c-art">Frédéric Bazille (1841-1870)</td><td class="c-dat">1870</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 111:1</td></tr>
+          <tr><td class="c-no"><a href="#p14">14</a></td><td class="c-ttl"><a href="#p14">Van Gogh Painting Sunflowers</a></td><td class="c-art">Paul Gauguin (1848-1903)</td><td class="c-dat">1888</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 138:8</td></tr>
+          <tr><td class="c-no"><a href="#p15">15</a></td><td class="c-ttl"><a href="#p15">Claude Monet Painting by the Edge of a Wood</a></td><td class="c-art">John Singer Sargent (1856-1925)</td><td class="c-dat">1885</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 104:33</td></tr>
+          <tr><td class="c-no"><a href="#p16">16</a></td><td class="c-ttl"><a href="#p16">The Card Players</a></td><td class="c-art">Paul Cézanne (1839-1906)</td><td class="c-dat">c. 1890-95</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 16:6</td></tr>
+          <tr><td class="c-no"><a href="#p17">17</a></td><td class="c-ttl"><a href="#p17">In a Café (L'Absinthe)</a></td><td class="c-art">Edgar Degas (1834-1917)</td><td class="c-dat">1875-76</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 25:16</td></tr>
+          <tr><td class="c-no"><a href="#p18">18</a></td><td class="c-ttl"><a href="#p18">The Balcony</a></td><td class="c-art">Édouard Manet (1832-1883)</td><td class="c-dat">1868-69</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 55:13</td></tr>
+          <tr><td class="c-no"><a href="#p19">19</a></td><td class="c-ttl"><a href="#p19">Snap the Whip</a></td><td class="c-art">Winslow Homer (1836-1910)</td><td class="c-dat">1872</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 122:3</td></tr>
+          <tr><td class="c-no"><a href="#p20">20</a></td><td class="c-ttl"><a href="#p20">The Swimming Hole</a></td><td class="c-art">Thomas Eakins (1844-1916)</td><td class="c-dat">1884-85</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 103:5</td></tr>
+          <tr><td class="c-no"><a href="#p21">21</a></td><td class="c-ttl"><a href="#p21">Two Old Men Disputing (Peter and Paul)</a></td><td class="c-art">Rembrandt van Rijn (1606-1669)</td><td class="c-dat">1628</td><td class="c-med">Oil on panel</td><td class="c-verse">Psalm 92:14</td></tr>
+          <tr><td class="c-no"><a href="#p22">22</a></td><td class="c-ttl"><a href="#p22">Two Old Men Eating Soup</a></td><td class="c-art">Francisco de Goya (1746-1828)</td><td class="c-dat">1820-23</td><td class="c-med">Oil on plaster transferred to canvas</td><td class="c-verse">Psalm 90:12</td></tr>
+          <tr><td class="c-no"><a href="#p23">23</a></td><td class="c-ttl"><a href="#p23">Gauguin's Chair</a></td><td class="c-art">Vincent van Gogh (1853-1890)</td><td class="c-dat">1888</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 137:1</td></tr>
+          <tr><td class="c-no"><a href="#p24">24</a></td><td class="c-ttl"><a href="#p24">Gassed</a></td><td class="c-art">John Singer Sargent (1856-1925)</td><td class="c-dat">1919</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 48:14</td></tr>
+          <tr><td class="c-no"><a href="#p25">25</a></td><td class="c-ttl"><a href="#p25">The Yellow House</a></td><td class="c-art">Vincent van Gogh (1853-1890)</td><td class="c-dat">1888</td><td class="c-med">Oil on canvas</td><td class="c-verse">Psalm 26:8</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      <h2>On the images</h2>
+      <p>All 25 reproductions are public domain or released under CC0, taken from Wikimedia Commons and the open collections of Alte Nationalgalerie, Amon Carter Museum, Antikensammlung, Butler Institute of American Art, Gemäldegalerie, Hermitage Museum, Imperial War Museum, Isabella Stewart Gardner Museum, Museo del Prado, Musée d'Orsay, Musée du Louvre, National Gallery, National Gallery of Victoria, Scrovegni Chapel, Tate Britain, The Metropolitan Museum of Art and Van Gogh Museum, with further images from the Google Art Project. Each plate links to its source record. Images are downloaded into <code>img/full</code> at 1600&nbsp;px on the long edge, with 700&nbsp;px copies in <code>img/thumb</code> for this page; the plates shown here are the versed copies in <code>img/versed</code> and <code>img/versed-thumb</code>. No photograph carrying a share-alike or attribution licence was used.</p>
+      <p>Captions give the artist, date, medium and holding collection as recorded by the source institution; the notes are editorial and describe what each work does to the pair or the group. The gallery is ordered by argument, not by date &mdash; the index at the end gives the works in catalogue order.</p>
+      <p class="companion">Companion galleries: <a href="../love-gallery/index.html">Love, Abstracted</a> &middot; <a href="../parents-gallery/index.html">Parents, Abstracted</a> &mdash; twenty-five works each, in the same format.</p>
+    </footer>
+  </main>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Enlarged plate">
+  <div class="lb-stage">
+    <img id="lb-img" alt="">
+    <button class="lb-x" id="lb-x" type="button">Close</button>
+  </div>
+  <div>
+    <div class="lb-cap" id="lb-cap"></div>
+    <div class="lb-nav">
+      <button id="lb-prev" type="button">&larr; Previous</button>
+      <button id="lb-next" type="button">Next &rarr;</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const WORKS = [{"n": 1, "full": "img/versed/ruth-naomi.jpg", "thumb": "img/versed-thumb/ruth-naomi.jpg", "title": "Ruth and Naomi", "artist": "Jan Victors (1619-1676)", "date": "1653", "medium": "Oil on canvas", "place": "", "note": "Ruth clings to her mother-in-law and refuses to go back to her own people, and the whole of loyalty is in the grip of one woman on another. A friendship chosen against every obligation.", "source": "https://commons.wikimedia.org/wiki/File%3A%27Ruth_and_Naomi%27_by_Jan_Victors%2C_1653.jpg", "license": "Public domain", "verse": "Behold, how good and how pleasant it is for brethren to dwell together in unity!", "ref": "Psalm 133:1"}, {"n": 2, "full": "img/versed/visitation.jpg", "thumb": "img/versed-thumb/visitation.jpg", "title": "The Visitation", "artist": "Giotto di Bondone (c. 1267-1337)", "date": "c. 1306", "medium": "Fresco", "place": "Scrovegni Chapel, Padua", "note": "Two women greet each other outside a house, and the friendship is entirely in the angle of two bodies leaning in. Giotto makes the embrace architectural.", "source": "https://commons.wikimedia.org/wiki/File%3AGiotto_-_Scrovegni_-_-16-_-_Visitation.jpg", "license": "Public domain", "verse": "I was glad when they said unto me, Let us go into the house of the LORD.", "ref": "Psalm 122:1"}, {"n": 3, "full": "img/versed/achilles-patroclus.jpg", "thumb": "img/versed-thumb/achilles-patroclus.jpg", "title": "Achilles Tending the Wound of Patroclus", "artist": "Sosias Painter, Athens", "date": "c. 500 BC", "medium": "Red-figure kylix", "place": "Antikensammlung, Berlin", "note": "One warrior bandages the arm of the other and neither of them looks up. The most tender image of friendship in ancient painting, and it is almost entirely a matter of two bowed heads.", "source": "https://commons.wikimedia.org/wiki/File%3AAkhilleus_Patroklos_Antikensammlung_Berlin_F2278.jpg", "license": "Public domain", "verse": "He healeth the broken in heart, and bindeth up their wounds.", "ref": "Psalm 147:3"}, {"n": 4, "full": "img/versed/david-jonathan.jpg", "thumb": "img/versed-thumb/david-jonathan.jpg", "title": "David and Jonathan", "artist": "Rembrandt van Rijn (1606-1669)", "date": "1642", "medium": "Oil on canvas", "place": "Hermitage Museum, Saint Petersburg", "note": "Jonathan collapses into David's arms while Saul's anger burns behind a curtain. Rembrandt paints the farewell of friends as one dark mass with two heads.", "source": "https://commons.wikimedia.org/wiki/File%3AHarmensz_van_Rijn_Rembrandt_-_%D0%94%D0%B0%D0%B2%D0%B8%D0%B4_%D0%B8_%D0%98%D0%BE%D0%BD%D0%B0%D1%84%D0%B0%D0%BD_-_Google_Art_Project.jpg", "license": "Public domain", "verse": "But to the saints that are in the earth, and to the excellent, in whom is all my delight.", "ref": "Psalm 16:3"}, {"n": 5, "full": "img/versed/two-men-moon.jpg", "thumb": "img/versed-thumb/two-men-moon.jpg", "title": "Two Men Contemplating the Moon", "artist": "Caspar David Friedrich (1774-1840)", "date": "1819-20", "medium": "Oil on canvas", "place": "Alte Nationalgalerie, Berlin", "note": "Two men stand with their backs to us looking at the same thing, and the friendship is entirely in the identical posture. Friedrich paints company as a shared direction of attention.", "source": "https://commons.wikimedia.org/wiki/File%3AFriedrich_-_Two_Men_Contemplating_the_Moon.jpg", "license": "Public domain", "verse": "When I consider thy heavens, the work of thy fingers, the moon and the stars, which thou hast ordained;", "ref": "Psalm 8:3"}, {"n": 6, "full": "img/versed/the-concert-vermeer.jpg", "thumb": "img/versed-thumb/the-concert-vermeer.jpg", "title": "The Concert", "artist": "Johannes Vermeer (1632-1675)", "date": "c. 1664", "medium": "Oil on canvas", "place": "Isabella Stewart Gardner Museum, Boston", "note": "Three people make music in a room and the friendship is in the tuning: each of them is listening rather than looking. Vermeer paints company as a shared surface of light.", "source": "https://commons.wikimedia.org/wiki/File%3AVermeer_The_Concert.jpg", "license": "Public domain", "verse": "Let every thing that hath breath praise the LORD. Praise ye the LORD.", "ref": "Psalm 150:6"}, {"n": 7, "full": "img/versed/the-musicians-caravaggio.jpg", "thumb": "img/versed-thumb/the-musicians-caravaggio.jpg", "title": "The Musicians", "artist": "Caravaggio (1571-1610)", "date": "c. 1597", "medium": "Oil on canvas", "place": "The Metropolitan Museum of Art, New York", "note": "Four young men rehearse a song, one of them seen only as a face in the shadow. Caravaggio arranges a group of friends as a single piece of theatre.", "source": "https://commons.wikimedia.org/wiki/File%3AThe_Musicians_MET_DP-687-001.jpg", "license": "CC0", "verse": "Sing unto him a new song; play skilfully with a loud noise.", "ref": "Psalm 33:3"}, {"n": 8, "full": "img/versed/three-musicians.jpg", "thumb": "img/versed-thumb/three-musicians.jpg", "title": "The Three Musicians", "artist": "Diego Velázquez (1599-1660)", "date": "1618", "medium": "Oil on canvas", "place": "Gemäldegalerie, Berlin", "note": "Three men sing and play at a plain table, and the comedy is in the way they look at each other rather than at us. Velázquez paints friendship as an exchange of glances.", "source": "https://commons.wikimedia.org/wiki/File%3ADiego_Vel%C3%A1zquez_-_The_Three_Musicians_-_Google_Art_Project.jpg", "license": "Public domain", "verse": "Take a psalm, and bring hither the timbrel, the pleasant harp with the psaltery.", "ref": "Psalm 81:2"}, {"n": 9, "full": "img/versed/concert-honthorst.jpg", "thumb": "img/versed-thumb/concert-honthorst.jpg", "title": "The Concert", "artist": "Gerrit van Honthorst (1592-1656)", "date": "1624", "medium": "Oil on canvas", "place": "Musée du Louvre, Paris", "note": "A group of musicians gathers around a candlelit table, one of them singing from a book. Honthorst paints company as a circle of light with four faces in it.", "source": "https://commons.wikimedia.org/wiki/File%3AHonthorst_-_Le_Concert%2C_1624%2C_INV_1364.jpg", "license": "Public domain", "verse": "For thou wilt light my candle: the LORD my God will enlighten my darkness.", "ref": "Psalm 18:28"}, {"n": 10, "full": "img/versed/music-in-the-tuileries.jpg", "thumb": "img/versed-thumb/music-in-the-tuileries.jpg", "title": "Music in the Tuileries Gardens", "artist": "Édouard Manet (1832-1883)", "date": "1862", "medium": "Oil on canvas", "place": "National Gallery, London", "note": "Manet crowds his friends into a garden bandstand until the friendship is a density rather than a set of faces. A group portrait dissolved into a crowd.", "source": "https://commons.wikimedia.org/wiki/File%3AMANET_-_M%C3%BAsica_en_las_Tuller%C3%ADas_%28National_Gallery%2C_Londres%2C_1862%29.jpg", "license": "Public domain", "verse": "We took sweet counsel together, and walked unto the house of God in company.", "ref": "Psalm 55:14"}, {"n": 11, "full": "img/versed/hommage-delacroix.jpg", "thumb": "img/versed-thumb/hommage-delacroix.jpg", "title": "Hommage à Delacroix", "artist": "Henri Fantin-Latour (1836-1904)", "date": "1864", "medium": "Oil on canvas", "place": "Musée d'Orsay, Paris", "note": "Ten artists stand and sit around a portrait of a dead painter, and the homage is arranged as a row of pale faces in dark coats. Friendship as a shared debt.", "source": "https://commons.wikimedia.org/wiki/File%3AHommage_%C3%A0_Delacroix_-_Henri_Fantin-Latour.jpg", "license": "Public domain", "verse": "Surely he shall not be moved for ever: the righteous shall be in everlasting remembrance.", "ref": "Psalm 112:6"}, {"n": 12, "full": "img/versed/studio-batignolles.jpg", "thumb": "img/versed-thumb/studio-batignolles.jpg", "title": "A Studio at Les Batignolles", "artist": "Henri Fantin-Latour (1836-1904)", "date": "1870", "medium": "Oil on canvas", "place": "Musée d'Orsay, Paris", "note": "Manet paints at his easel while his friends gather round him, and the group is arranged as a pyramid of attention. Friendship as the act of watching someone work.", "source": "https://commons.wikimedia.org/wiki/File%3AHenri_Fantin-Latour_-_A_Studio_at_Les_Batignolles_-_Google_Art_Project.jpg", "license": "Public domain", "verse": "I am a companion of all them that fear thee, and of them that keep thy precepts.", "ref": "Psalm 119:63"}, {"n": 13, "full": "img/versed/rue-de-la-condamine.jpg", "thumb": "img/versed-thumb/rue-de-la-condamine.jpg", "title": "The Studio on the Rue de la Condamine", "artist": "Frédéric Bazille (1841-1870)", "date": "1870", "medium": "Oil on canvas", "place": "Musée d'Orsay, Paris", "note": "Bazille paints his own studio from the inside with his friends scattered up a staircase. A group portrait built as a room.", "source": "https://commons.wikimedia.org/wiki/File%3AFr%C3%A9d%C3%A9ric_Bazille_-_Bazille%27s_Studio_-_Google_Art_Project.jpg", "license": "Public domain", "verse": "Praise ye the LORD. I will praise the LORD with my whole heart, in the assembly of the upright, and in the congregation.", "ref": "Psalm 111:1"}, {"n": 14, "full": "img/versed/gauguin-sunflowers.jpg", "thumb": "img/versed-thumb/gauguin-sunflowers.jpg", "title": "Van Gogh Painting Sunflowers", "artist": "Paul Gauguin (1848-1903)", "date": "1888", "medium": "Oil on canvas", "place": "Van Gogh Museum, Amsterdam", "note": "Gauguin paints his friend from behind, hunched over the canvas, and the portrait is mostly of the act of painting. Friendship recorded as shared work.", "source": "https://commons.wikimedia.org/wiki/File%3APaul_Gauguin_-_Vincent_van_Gogh_painting_sunflowers_-_Google_Art_Project.jpg", "license": "Public domain", "verse": "The LORD will perfect that which concerneth me: thy mercy, O LORD, endureth for ever: forsake not the works of thine own hands.", "ref": "Psalm 138:8"}, {"n": 15, "full": "img/versed/sargents-monet.jpg", "thumb": "img/versed-thumb/sargents-monet.jpg", "title": "Claude Monet Painting by the Edge of a Wood", "artist": "John Singer Sargent (1856-1925)", "date": "1885", "medium": "Oil on canvas", "place": "Tate Britain, London", "note": "Monet stands at the edge of a wood with his palette and Sargent paints him working rather than resting. Companionship recorded as shared attention.", "source": "https://commons.wikimedia.org/wiki/File%3AJohn_Singer_Sargent_-_Claude_Monet_Painting_by_the_Edge_of_a_Wood_-_N04103_-_National_Gallery.jpg", "license": "Public domain", "verse": "I will sing unto the LORD as long as I live: I will sing praise to my God while I have my being.", "ref": "Psalm 104:33"}, {"n": 16, "full": "img/versed/card-players.jpg", "thumb": "img/versed-thumb/card-players.jpg", "title": "The Card Players", "artist": "Paul Cézanne (1839-1906)", "date": "c. 1890-95", "medium": "Oil on canvas", "place": "Musée d'Orsay, Paris", "note": "Two men play cards and say nothing, and the friendship is entirely in the table between them. Cézanne paints company as a shared plane.", "source": "https://commons.wikimedia.org/wiki/File%3ALes_Joueurs_de_cartes%2C_par_Paul_C%C3%A9zanne.jpg", "license": "Public domain", "verse": "The lines are fallen unto me in pleasant places; yea, I have a goodly heritage.", "ref": "Psalm 16:6"}, {"n": 17, "full": "img/versed/absinthe-drinker.jpg", "thumb": "img/versed-thumb/absinthe-drinker.jpg", "title": "In a Café (L'Absinthe)", "artist": "Edgar Degas (1834-1917)", "date": "1875-76", "medium": "Oil on canvas", "place": "Musée d'Orsay, Paris", "note": "A woman and a man sit side by side, each of them looking past the other. Degas paints companionship as two people occupying the same silence.", "source": "https://commons.wikimedia.org/wiki/File%3AEdgar_Degas_-_In_a_Caf%C3%A9_-_Google_Art_Project_2.jpg", "license": "Public domain", "verse": "Turn thee unto me, and have mercy upon me; for I am desolate and afflicted.", "ref": "Psalm 25:16"}, {"n": 18, "full": "img/versed/the-balcony.jpg", "thumb": "img/versed-thumb/the-balcony.jpg", "title": "The Balcony", "artist": "Édouard Manet (1832-1883)", "date": "1868-69", "medium": "Oil on canvas", "place": "Musée d'Orsay, Paris", "note": "Three friends stand and sit on a balcony and none of them looks at any of the others, with a fourth figure in the doorway behind. Manet paints company as three separate acts of attention in one frame.", "source": "https://commons.wikimedia.org/wiki/File%3AEdouard_Manet_-_The_Balcony_-_Google_Art_Project.jpg", "license": "Public domain", "verse": "But it was thou, a man mine equal, my guide, and mine acquaintance.", "ref": "Psalm 55:13"}, {"n": 19, "full": "img/versed/snap-the-whip.jpg", "thumb": "img/versed-thumb/snap-the-whip.jpg", "title": "Snap the Whip", "artist": "Winslow Homer (1836-1910)", "date": "1872", "medium": "Oil on canvas", "place": "Butler Institute of American Art, Youngstown", "note": "Boys run in a line holding hands, and the friendship is the chain itself. Homer paints a group as one continuous shape across a field.", "source": "https://commons.wikimedia.org/wiki/File%3AWinslow_Homer_-_Snap_the_Whip_%28Butler_Institute_of_American_Art%29.jpg", "license": "Public domain", "verse": "Jerusalem is builded as a city that is compact together:", "ref": "Psalm 122:3"}, {"n": 20, "full": "img/versed/swimming-hole.jpg", "thumb": "img/versed-thumb/swimming-hole.jpg", "title": "The Swimming Hole", "artist": "Thomas Eakins (1844-1916)", "date": "1884-85", "medium": "Oil on canvas", "place": "Amon Carter Museum, Fort Worth", "note": "Six young men swim in a quarry and the friendship is the arrangement of bodies in the landscape. Eakins builds a group out of geometry, water and light.", "source": "https://commons.wikimedia.org/wiki/File%3AThomas_Eakins_-_Swimming_%281895%29.jpg", "license": "Public domain", "verse": "Who satisfieth thy mouth with good things; so that thy youth is renewed like the eagle’s.", "ref": "Psalm 103:5"}, {"n": 21, "full": "img/versed/two-old-men-disputing.jpg", "thumb": "img/versed-thumb/two-old-men-disputing.jpg", "title": "Two Old Men Disputing (Peter and Paul)", "artist": "Rembrandt van Rijn (1606-1669)", "date": "1628", "medium": "Oil on panel", "place": "National Gallery of Victoria, Melbourne", "note": "Two old men lean over a book, one of them talking and the other listening. Rembrandt paints a long friendship as an argument about a text.", "source": "https://commons.wikimedia.org/wiki/File%3ATwo_Old_Men_Disputing_%28%E2%80%9CSt._Peter_and_St._Paul%E2%80%9D%29.jpg", "license": "Public domain", "verse": "They shall still bring forth fruit in old age; they shall be fat and flourishing;", "ref": "Psalm 92:14"}, {"n": 22, "full": "img/versed/two-old-men-soup.jpg", "thumb": "img/versed-thumb/two-old-men-soup.jpg", "title": "Two Old Men Eating Soup", "artist": "Francisco de Goya (1746-1828)", "date": "1820-23", "medium": "Oil on plaster transferred to canvas", "place": "Museo del Prado, Madrid", "note": "Two old men eat at a bare table, one of them with a skull's face at the spoon. Goya paints old company as a black joke about the body.", "source": "https://commons.wikimedia.org/wiki/File%3AViejos_comiendo_sopa.jpg", "license": "Public domain", "verse": "So teach us to number our days, that we may apply our hearts unto wisdom.", "ref": "Psalm 90:12"}, {"n": 23, "full": "img/versed/gauguins-chair.jpg", "thumb": "img/versed-thumb/gauguins-chair.jpg", "title": "Gauguin's Chair", "artist": "Vincent van Gogh (1853-1890)", "date": "1888", "medium": "Oil on canvas", "place": "Van Gogh Museum, Amsterdam", "note": "A chair, a candle and two books, and nobody in the room. Van Gogh paints a friend by painting his empty place, which is the most abstract portrait in this gallery.", "source": "https://commons.wikimedia.org/wiki/File%3AVincent_van_Gogh_-_De_stoel_van_Gauguin_-_Google_Art_Project.jpg", "license": "Public domain", "verse": "By the rivers of Babylon, there we sat down, yea, we wept, when we remembered Zion.", "ref": "Psalm 137:1"}, {"n": 24, "full": "img/versed/gassed.jpg", "thumb": "img/versed-thumb/gassed.jpg", "title": "Gassed", "artist": "John Singer Sargent (1856-1925)", "date": "1919", "medium": "Oil on canvas", "place": "Imperial War Museum, London", "note": "A line of blinded soldiers walks with each man's hand on the shoulder of the one in front. Sargent paints comradeship as the only way anyone gets anywhere.", "source": "https://commons.wikimedia.org/wiki/File%3ASargent%2C_John_Singer_%28RA%29_-_Gassed_-_Google_Art_Project.jpg", "license": "Public domain", "verse": "For this God is our God for ever and ever: he will be our guide even unto death.", "ref": "Psalm 48:14"}, {"n": 25, "full": "img/versed/yellow-house.jpg", "thumb": "img/versed-thumb/yellow-house.jpg", "title": "The Yellow House", "artist": "Vincent van Gogh (1853-1890)", "date": "1888", "medium": "Oil on canvas", "place": "Van Gogh Museum, Amsterdam", "note": "Van Gogh paints the house he had furnished for a friend who had not arrived yet. Friendship as a building, and as a wait.", "source": "https://commons.wikimedia.org/wiki/File%3AVincent_van_Gogh_-_The_yellow_house_%28%27The_street%27%29.jpg", "license": "Public domain", "verse": "LORD, I have loved the habitation of thy house, and the place where thine honour dwelleth.", "ref": "Psalm 26:8"}];
+const lb = document.getElementById('lb');
+const img = document.getElementById('lb-img');
+const cap = document.getElementById('lb-cap');
+let at = 0, last = null;
+
+function render(i) {
+  at = (i + WORKS.length) % WORKS.length;
+  const w = WORKS[at];
+  img.src = w.full;
+  img.alt = w.title + ' by ' + w.artist;
+  cap.innerHTML = '<span class="t">Plate ' + w.n + '. ' + w.title + '</span> &mdash; ' +
+    w.artist + ', ' + w.date + '. <span class="m">' + w.medium +
+    (w.place ? ', ' + w.place : '') + '.</span>' +
+    '<span class="v">&ldquo;' + w.verse + '&rdquo;</span>' +
+    '<span class="r">' + w.ref + '</span>';
+}
+function open(i) {
+  last = document.activeElement;
+  render(i);
+  lb.dataset.open = '1';
+  document.body.classList.add('lb-open');
+  document.getElementById('lb-x').focus();
+}
+function close() {
+  lb.dataset.open = '0';
+  document.body.classList.remove('lb-open');
+  img.removeAttribute('src');
+  if (last) last.focus();
+}
+document.querySelectorAll('.frame').forEach(b => {
+  b.addEventListener('click', () => open(Number(b.dataset.plate) - 1));
+});
+document.getElementById('lb-x').addEventListener('click', close);
+document.getElementById('lb-prev').addEventListener('click', () => render(at - 1));
+document.getElementById('lb-next').addEventListener('click', () => render(at + 1));
+lb.addEventListener('click', e => { if (e.target === lb) close(); });
+document.addEventListener('keydown', e => {
+  if (lb.dataset.open !== '1') return;
+  if (e.key === 'Escape') close();
+  if (e.key === 'ArrowLeft') render(at - 1);
+  if (e.key === 'ArrowRight') render(at + 1);
+});
+</script>
+</body>
+</html>
